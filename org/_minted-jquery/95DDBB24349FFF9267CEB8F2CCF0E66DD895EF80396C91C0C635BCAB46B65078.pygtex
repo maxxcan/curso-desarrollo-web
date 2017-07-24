@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+\PYG{c+c1}{// algun código que ejecutar...}
+\PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hola Mundo!\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{\PYGZhy{}\PYGZhy{}}\PYG{err}{!} \PYG{n+na}{El} \PYG{n+na}{contenido} \PYG{n+na}{va} \PYG{n+na}{aquí} \PYG{n+na}{\PYGZhy{}\PYGZhy{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

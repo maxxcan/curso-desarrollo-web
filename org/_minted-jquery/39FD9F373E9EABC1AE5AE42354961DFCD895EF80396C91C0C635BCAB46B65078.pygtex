@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Ejecutando una función pulsando un elemento\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}3.2.1.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/css\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{n+nt}{p}\PYG{p}{\PYGZob{}}
+        \PYG{k}{padding}\PYG{p}{:} \PYG{l+m+mi}{20}\PYG{k+kt}{px}\PYG{p}{;}
+        \PYG{k}{font}\PYG{p}{:} \PYG{l+m+mi}{20}\PYG{k+kt}{px} \PYG{k+kc}{sans\PYGZhy{}serif}\PYG{p}{;}
+        \PYG{k}{background}\PYG{p}{:} \PYG{k+kc}{khaki}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{dblclick}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{k}{this}\PYG{p}{).}\PYG{n+nx}{slideUp}\PYG{p}{();}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Pínchame y desapareceré.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Pínchame y desapareceré.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Pínchame y desapareceré.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

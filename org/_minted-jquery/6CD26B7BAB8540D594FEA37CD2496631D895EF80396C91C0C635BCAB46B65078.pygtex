@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Ejemplo de un efecto de mostrar/ocultar animado a distintas velocidades\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}1.12.4.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/css\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{n+nt}{p}\PYG{p}{\PYGZob{}}
+        \PYG{k}{padding}\PYG{p}{:} \PYG{l+m+mi}{15}\PYG{k+kt}{px}\PYG{p}{;}
+        \PYG{k}{background}\PYG{p}{:} \PYG{l+m+mh}{\PYGZsh{}F0E68C}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{c+c1}{// Escondemos los párrafos con distintas velocidades}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}.hide\PYGZhy{}btn\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.normal\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{hide}\PYG{p}{();}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.fast\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{hide}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}fast\PYGZdq{}}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.slow\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{hide}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}slow\PYGZdq{}}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.very\PYGZhy{}fast\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{hide}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.very\PYGZhy{}slow\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{hide}\PYG{p}{(}\PYG{l+m+mi}{2000}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+ \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}.show\PYGZhy{}btn\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.normal\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{();}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.fast\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}fast\PYGZdq{}}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.slow\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}slow\PYGZdq{}}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.very\PYGZhy{}fast\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p.very\PYGZhy{}slow\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{(}\PYG{l+m+mi}{2000}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}hide\PYGZhy{}btn\PYGZdq{}}\PYG{p}{\PYGZgt{}}Esconde los párrafos\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}show\PYGZhy{}btn\PYGZdq{}}\PYG{p}{\PYGZgt{}}Muestra los párrafos\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}very\PYGZhy{}fast\PYGZdq{}}\PYG{p}{\PYGZgt{}}Este párrafo se mostrará/ocultará muy rápido.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}normal\PYGZdq{}}\PYG{p}{\PYGZgt{}}Este párrafo se mostrará/ocultará con velocidad por defecto.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}fast\PYGZdq{}}\PYG{p}{\PYGZgt{}}Este párrafo se mostrará/ocultará de forma rápida.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}slow\PYGZdq{}}\PYG{p}{\PYGZgt{}}Este párrafo se mostrará/ocultará de forma lenta.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}very\PYGZhy{}slow\PYGZdq{}}\PYG{p}{\PYGZgt{}}Este párrafo se mostrará/ocultará de forma muy lenta.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

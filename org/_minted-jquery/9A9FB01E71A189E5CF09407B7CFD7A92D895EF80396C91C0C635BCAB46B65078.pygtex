@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}1.12.4.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}box\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{load}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}/examples/html/test\PYGZhy{}content.html\PYGZdq{}}\PYG{p}{,} \PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{responseTxt}\PYG{p}{,} \PYG{n+nx}{statusTxt}\PYG{p}{,} \PYG{n+nx}{jqXHR}\PYG{p}{)\PYGZob{}}
+            \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{statusTxt} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{)\PYGZob{}}
+                \PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}El nuevo contenido es cargado correctamente!\PYGZdq{}}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{statusTxt} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}}\PYG{p}{)\PYGZob{}}
+                \PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Error: \PYGZdq{}} \PYG{o}{+} \PYG{n+nx}{jqXHR}\PYG{p}{.}\PYG{n+nx}{status} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}} \PYG{o}{+} \PYG{n+nx}{jqXHR}\PYG{p}{.}\PYG{n+nx}{statusText}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{});}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}box\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h2}\PYG{p}{\PYGZgt{}}Pulsa el botón para ver nuevo contenido\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{h2}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{\PYGZgt{}}Carga el contenido\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

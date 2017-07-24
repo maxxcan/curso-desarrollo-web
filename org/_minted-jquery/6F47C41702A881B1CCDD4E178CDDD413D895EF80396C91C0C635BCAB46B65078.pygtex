@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Establecer el valor CSS de múltiples propiedades\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/css\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{n+nt}{p}\PYG{p}{\PYGZob{}}
+        \PYG{k}{font\PYGZhy{}size}\PYG{p}{:} \PYG{l+m+mi}{18}\PYG{k+kt}{px}\PYG{p}{;}
+        \PYG{k}{font\PYGZhy{}family}\PYG{p}{:} \PYG{n}{Arial}\PYG{p}{,} \PYG{k+kc}{sans\PYGZhy{}serif}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}1.12.4.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}background\PYGZhy{}color\PYGZdq{}}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}yellow\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}padding\PYGZdq{}}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}20px\PYGZdq{}}\PYG{p}{\PYGZcb{});}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}Saludos desde la tierra\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{style}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}background\PYGZhy{}color:orange;\PYGZdq{}}\PYG{p}{\PYGZgt{}}Esto es un párrafo.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{style}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}background\PYGZhy{}color:\PYGZsh{}ee82ee;\PYGZdq{}}\PYG{p}{\PYGZgt{}}Esto es otro párrafo.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{style}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}background\PYGZhy{}color:rgb(139,205,50);\PYGZdq{}}\PYG{p}{\PYGZgt{}}Y otro más.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}El último párrafo.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{\PYGZgt{}}Añadiendo estilo CSS\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

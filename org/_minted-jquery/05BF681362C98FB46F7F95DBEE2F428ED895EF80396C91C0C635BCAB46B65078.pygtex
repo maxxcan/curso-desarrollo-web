@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Ejecuta una función cuando en un formulario se envía éste\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}1.12.4.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/css\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{.}\PYG{n+nc}{error}\PYG{p}{\PYGZob{}}
+        \PYG{k}{color}\PYG{p}{:} \PYG{k+kc}{red}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{p}{.}\PYG{n+nc}{success}\PYG{p}{\PYGZob{}}
+        \PYG{k}{color}\PYG{p}{:} \PYG{k+kc}{green}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}form\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{submit}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{event}\PYG{p}{)\PYGZob{}}
+      \PYG{k+kd}{var} \PYG{n+nx}{mob} \PYG{o}{=} \PYG{l+s+sr}{/\PYGZca{}[1\PYGZhy{}9]\PYGZob{}1\PYGZcb{}[0\PYGZhy{}9]\PYGZob{}9\PYGZcb{}\PYGZdl{}/}\PYG{p}{;}
+        \PYG{k+kd}{var} \PYG{n+nx}{currentValue} \PYG{o}{=} \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}inputMobile\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{val}\PYG{p}{();}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{mob}\PYG{p}{.}\PYG{n+nx}{test}\PYG{p}{(}\PYG{n+nx}{currentValue}\PYG{p}{)} \PYG{o}{==} \PYG{k+kc}{false} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n+nx}{currentValue} \PYG{o}{!=} \PYG{l+m+mi}{10}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{html}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Número de teléfono inválido number\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{addClass}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{().}\PYG{n+nx}{fadeOut}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{else}\PYG{p}{\PYGZob{}}
+            \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{html}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Número de teléfono válido number\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{addClass}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{show}\PYG{p}{().}\PYG{n+nx}{fadeOut}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n+nx}{event}\PYG{p}{.}\PYG{n+nx}{preventDefault}\PYG{p}{();}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}inputMobile\PYGZdq{}} \PYG{n+na}{maxlength}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}10\PYGZdq{}} \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Introduce un númemro de teléfono\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}submit\PYGZdq{}} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Submit\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

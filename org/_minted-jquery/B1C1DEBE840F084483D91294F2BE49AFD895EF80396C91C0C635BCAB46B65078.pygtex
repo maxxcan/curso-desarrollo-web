@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Obteniendo la altura y anchura con el margen\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/css\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZsh{}}\PYG{n+nn}{box}\PYG{p}{\PYGZob{}}
+        \PYG{k}{width}\PYG{p}{:} \PYG{l+m+mi}{300}\PYG{k+kt}{px}\PYG{p}{;}
+        \PYG{k}{height}\PYG{p}{:} \PYG{l+m+mi}{200}\PYG{k+kt}{px}\PYG{p}{;}
+        \PYG{k}{padding}\PYG{p}{:} \PYG{l+m+mi}{25}\PYG{k+kt}{px}\PYG{p}{;}
+        \PYG{k}{text\PYGZhy{}align}\PYG{p}{:} \PYG{k+kc}{justify}\PYG{p}{;}
+        \PYG{k}{border}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{k+kt}{px} \PYG{k+kc}{solid} \PYG{l+m+mh}{\PYGZsh{}c6b51a}\PYG{p}{;}
+        \PYG{k}{background}\PYG{p}{:} \PYG{l+m+mh}{\PYGZsh{}f0e68c}\PYG{p}{;}
+        \PYG{k}{margin}\PYG{p}{:} \PYG{l+m+mi}{15}\PYG{k+kt}{px}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}1.12.4.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{k+kd}{var} \PYG{n+nx}{divWidth} \PYG{o}{=} \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}box\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{outerWidth}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+        \PYG{k+kd}{var} \PYG{n+nx}{divHeight} \PYG{o}{=} \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}box\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{outerHeight}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+        \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}result\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{html}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Outer Width: \PYGZdq{}} \PYG{o}{+} \PYG{n+nx}{divWidth} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}, \PYGZdq{}} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}Outer Height: \PYGZdq{}} \PYG{o}{+} \PYG{n+nx}{divHeight}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}box\PYGZdq{}}\PYG{p}{\PYGZgt{}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{\PYGZgt{}}Obten la altura y anchura exteriores con el margen\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}result\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{hr}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}\PYGZlt{}}\PYG{n+nt}{strong}\PYG{p}{\PYGZgt{}}Note:\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{strong}\PYG{p}{\PYGZgt{}\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}outerWidth(true)\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} incluye (\PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}width\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}padding\PYGZhy{}left\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}padding\PYGZhy{}right\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}border\PYGZhy{}left\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}border\PYGZhy{}right\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}margin\PYGZhy{}left\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}margin\PYGZhy{}right\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}), y \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}outerHeight(true)\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} incluye (\PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}height\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}padding\PYGZhy{}top\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}padding\PYGZhy{}bottom\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}border\PYGZhy{}top\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}border\PYGZhy{}bottom\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}margin\PYGZhy{}top\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}} + \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}margin\PYGZhy{}bottom\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}).\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

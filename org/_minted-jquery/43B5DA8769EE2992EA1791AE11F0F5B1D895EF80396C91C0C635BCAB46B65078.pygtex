@@ -1,0 +1,58 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Obteniendo los valores de un formulario\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}1.12.4.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}button.get\PYGZhy{}name\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{k+kd}{var} \PYG{n+nx}{name} \PYG{o}{=} \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}name\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{val}\PYG{p}{();}
+        \PYG{n+nx}{alert}\PYG{p}{(}\PYG{n+nx}{name}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}button.get\PYGZhy{}comment\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{k+kd}{var} \PYG{n+nx}{comment} \PYG{o}{=} \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}comment\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{val}\PYG{p}{();}
+        \PYG{n+nx}{alert}\PYG{p}{(}\PYG{n+nx}{comment}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}button.get\PYGZhy{}city\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{click}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+        \PYG{k+kd}{var} \PYG{n+nx}{city} \PYG{o}{=} \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}city\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{val}\PYG{p}{();}
+        \PYG{n+nx}{alert}\PYG{p}{(}\PYG{n+nx}{city}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{table}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}Nombre:\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}Comentarios:\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{textarea} \PYG{n+na}{rows}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}4\PYGZdq{}} \PYG{n+na}{cols}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}30\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}comment\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{textarea}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}Ciudad:\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{select} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}city\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}London\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}Paris\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}New York\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{select}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{table}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}\PYGZlt{}}\PYG{n+nt}{strong}\PYG{p}{\PYGZgt{}}AVISO:\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{strong}\PYG{p}{\PYGZgt{}} Rellena los siguientes campos.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}get\PYGZhy{}name\PYGZdq{}}\PYG{p}{\PYGZgt{}}Obtén nombre\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}get\PYGZhy{}comment\PYGZdq{}}\PYG{p}{\PYGZgt{}}Obtén comentario\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}get\PYGZhy{}city\PYGZdq{}}\PYG{p}{\PYGZgt{}}Obtén ciudad\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

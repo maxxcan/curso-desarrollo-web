@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nx}{selector}\PYG{p}{).}\PYG{n+nx}{stop}\PYG{p}{(}\PYG{n+nx}{stopAll}\PYG{p}{,} \PYG{n+nx}{goToEnd}\PYG{p}{);}
+\end{Verbatim}

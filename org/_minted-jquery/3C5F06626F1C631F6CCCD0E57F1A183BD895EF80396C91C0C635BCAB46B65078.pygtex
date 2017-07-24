@@ -1,0 +1,76 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Selectores propios de JQuery\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/css\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{c}{/* Añadiendo estilo */}
+    \PYG{o}{*}\PYG{p}{\PYGZob{}}
+        \PYG{k}{padding}\PYG{p}{:} \PYG{l+m+mi}{5}\PYG{k+kt}{px}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}https://code.jquery.com/jquery\PYGZhy{}3.2.1.min.js\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text/javascript\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{).}\PYG{n+nx}{ready}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+    \PYG{c+c1}{// Selecciona las filas pares}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}tr:odd\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}yellow\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Selecciona las filas impares}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}tr:even\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}orange\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Selecciona el primer párrafo de un elemento}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p:first\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Selecciona el último párrafo de un elemento}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}p:last\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Selecciona todo lo tipo text dentro de un formulario}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}form :text\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}purple\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Selecciona todo lo tipo password de un formulario}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}form :password\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Selecciona todo los input de un formulario}
+    \PYG{n+nx}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}form :submit\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{css}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}background\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}violet\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{table} \PYG{n+na}{border}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}1\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{thead}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{th}\PYG{p}{\PYGZgt{}}No.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{th}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{th}\PYG{p}{\PYGZgt{}}Nombre\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{th}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{th}\PYG{p}{\PYGZgt{}}Email\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{th}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{thead}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tbody}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}1\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}Paquito Chocolatero\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}paco\PYGZus{}elsobrao@mail.com\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}2\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}Juan Pérez\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}juansinmiedo@mail.com\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}3\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}John Rambo\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}johnrambo@mail.com\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{td}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tr}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{tbody}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{table}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Esto es un párrafo.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Esto es otro.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}Que cansinos que sois.\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}Nombre: \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}Contraseña: \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}password\PYGZdq{}}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}submit\PYGZdq{}} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Sign In\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}
