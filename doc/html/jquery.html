@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-07-24 lun 09:52 -->
+<!-- 2017-07-25 mar 09:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Introducción a JQuery</title>
@@ -452,14 +452,7 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li><a href="#orgf2b5ffb">Ejercicios</a>
-<ul>
-<li><a href="#org3eeb923">Primer ejemplo:</a></li>
-<li><a href="#org8261a16">Ejercicios para clases presenciales</a></li>
-<li><a href="#org593fd44">Ejemplos hechos con JQuery</a></li>
-<li><a href="#orgc7415ac">Ejercicios del libro JQuery</a></li>
-</ul>
-</li>
+<li><a href="#orgf2b5ffb">Ejercicios</a></li>
 </ul>
 </div>
 </div>
@@ -4797,6 +4790,7 @@ $(document).ready(function(){
 </div>
 
 
+
 <div id="outline-container-org0e17ce7" class="outline-4">
 <h4 id="org0e17ce7">El método not()</h4>
 <div class="outline-text-4" id="text-org0e17ce7">
@@ -5059,46 +5053,125 @@ $(document).ready(function(){
 <div id="outline-container-orgf2b5ffb" class="outline-2">
 <h2 id="orgf2b5ffb">Ejercicios</h2>
 <div class="outline-text-2" id="text-orgf2b5ffb">
-</div><div id="outline-container-org3eeb923" class="outline-3">
-<h3 id="org3eeb923">Primer ejemplo:</h3>
-<div class="outline-text-3" id="text-org3eeb923">
 <p>
-<a href="https://docs.google.com/document/d/1Jk_QBoRh1OaSqt88OXDiWKH-W6Sk9VJMQvW43QYUV-o/edit">https://docs.google.com/document/d/1Jk_QBoRh1OaSqt88OXDiWKH-W6Sk9VJMQvW43QYUV-o/edit</a>#!
+_Vamos a empezar con algo sencillo: _
 </p>
-</div>
-</div>
 
-<div id="outline-container-org8261a16" class="outline-3">
-<h3 id="org8261a16">Ejercicios para clases presenciales</h3>
-<div class="outline-text-3" id="text-org8261a16">
-<p>
-<a href="https://github.com/jonmircha/jquery-ejercicios">https://github.com/jonmircha/jquery-ejercicios</a>
-</p>
-</div>
-</div>
+<ol class="org-ol">
+<li>Crear un documento HTML con un encabezado, dos párrafos y un botón. Al pulsar el botón mediante el selector $(“*”) se debe ocultar todo. Método hide()
+<ol class="org-ol">
+<li>En el mismo documento HTML anterior. Al pulsar el botón debe ocultarse dicho botón</li>
+<li>En el mismo documento HTML anterior. Suponemos que el encabezado y el primer párrafo tienen el atributo class=”intro”.Deberás ocultar al pulsar</li>
+<li>el botón, dicho párrafo.</li>
+</ol></li>
+<li>Selecciona el primer elemento de la primera lista y oculta dicho elemento.</li>
 
-<div id="outline-container-org593fd44" class="outline-3">
-<h3 id="org593fd44">Ejemplos hechos con JQuery</h3>
-<div class="outline-text-3" id="text-org593fd44">
-<p>
-<a href="https://www.noupe.com/development/50-amazing-jquery-examples-part1.html">https://www.noupe.com/development/50-amazing-jquery-examples-part1.html</a>
-</p>
-</div>
-</div>
+<li>Crea un documento con un par de enlaces mediante el atributo href y oculta ambos enlaces.</li>
 
-<div id="outline-container-orgc7415ac" class="outline-3">
-<h3 id="orgc7415ac">Ejercicios del libro JQuery</h3>
-<div class="outline-text-3" id="text-orgc7415ac">
-<p>
-<a href="https://github.com/leandono/librojquery">https://github.com/leandono/librojquery</a>
-</p>
-</div>
+<li>Crea un documento con dos enlaces y dos botones. Uno se tiene que abrir en una nueva ventana (target="<sub>blank</sub>") y el otro no. Cada botón debe ocultar uno de los enlaces en función de su atributo target.</li>
+
+<li>Crear un documento con una tabla. Poner el fondo de las filas pares en rojo (usar el método .css("background-color","red"). A continuación poner el fondo de las filas impares en verde ..css("background-color","green")</li>
+
+<li>Crear un documento con un párrafo, el cuál se oculte al clicar dos veces sobre él</li>
+
+<li>Crear un documento con un párrafo tal que aparezca un aviso alert() cuando se presiona el botón izquierdo del ratón.</li>
+
+<li>Utiliza el método hover() para lanzar un mensaje cuando nos posicionamos sobre un párrafo y otro cuando salgamos de él.</li>
+
+<li>Utiliza los métodos focus() y blur() para cambiar el color de dos cuadros de texto cuando posicionamos el foco y cuando lo retiramos.</li>
+
+<li>Crea un documento con dos tag div, dentro de cada uno de los cuales debe haber un botón para esconder dichos tag.</li>
+
+<li>Crea un documento con un botón, tal que al clickarlo como gestor de vento, agrege la opacidad de tres elementos div mediante el método fadeIn(). El primer fadeIn() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos.</li>
+
+<li>Crea un documento con un botón, tal que al clickarlo nos quite la opacidad de tres elementos div mediante el método fadeOut(). El primer fadeOut() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos</li>
+
+<li>Crea un documento con dos capas, tal que al clickar sobre la primera se despliege hacia abajo la segunda mediante el método slideDown().</li>
+
+<li>Crear un programa, tal que al clickar en un botón se mueva un cuadrado 100 px a la derecha y si dentro del cuadrado pone HELLO aumente el tamaño de la letra.</li>
+
+<li>En el ejercicio anterior incluir un botón para poder detener el efecto.</li>
+
+<li>Mejora el ejercicio anterior añadiendo cuatro botones.
+
+<ol class="org-ol">
+<li>Start. Comienza la animación</li>
+
+<li>Stop. Parar la animación</li>
+
+<li>StopAll. Detiene todas las animaciones</li>
+
+<li>Stop but finish. Detiene las animaciones pero acabando primero la que se encuentra en ejecución</li>
+</ol></li>
+
+<li>Crear un programa con un botón, tal que al hacer clic ponga las letras en rojo de un párrafo, lo oculte con un desplazamiento hacia arriba (slideUp) y lo visualice con un desplazamiento hacia abajo (slideDown).</li>
+
+<li>Mediante tres eventos asociados a tres botones, “SetText”, “SetHTML” y “SetValue” establecer el texto de un primer párrafo a “Hola Mundo ”, establecer el texto de un segundo  párrafo a “Hola Mundo” en negrita y establecer el valor de un cuadro de texto a “Hola Mundo”.</li>
+
+<li>Cambia los atributos href y title de un enlace a Google, mediante un evento asociado a un botón. Ahora href=”<a href="http://www.google.es/intl/es/earth/index.html">http://www.google.es/intl/es/earth/index.html</a>” y el título será “Google Earth”</li>
+
+<li>Cambia un enlace a <a href="http://google.es">http://google.es</a> mediante un evento asociado a un botón y un callback, en el que el nuevo texto introducido sea /intl/es/earth/index.html</li>
+
+<li>Crear un documento con un párrafo, mediante un evento asociado a un botón debemos añadirle (indiferente principio o final) un párrafo creado con HTML, un párrafo creado con jQuery y un párrafo creado con el DOM de JavaScript.</li>
+
+<li>Crea una capa cuadrada (100 x 300 en amarillo) que contenga un par de párrafos. Borra dichos párrafos con el método empty() como gestor de un evento asociado a un botón.</li>
+
+<li>Añade una clase css a distintos elementos de HTML mediante un evento asociado a un botón y como gestor del evento el método addClass. Mediante otro evento asociado a un segundo botón elimina la clase css de los elementos utilizando como gestor el evento removeClass().</li>
+
+<li>Tenemos un documento con 4 párrafos cada uno con un color de fondo. mediante un evento asociado a un botón devuelve mediante una alerta el color de fondo del primer párrafo.</li>
+
+<li>En el mismo documento anterior, mediante un evento asociado a un botón. Cambia el color de fondo de los cuatro párrafos a amarillo y aumenta el tamaño de la letra</li>
+
+<li>Mediante un evento asociado a un botón obtener el ancho y alto de una capa cuadrada. Visualizarlo como texto dentro del elemento div.</li>
+
+<li>Obtener la altura y anchura del documento y de la ventana como respuesta a un evento asociado a un botón.</li>
+
+<li>Selecciona de una lista de 5 ciudades, la segunda,  debes resaltarla  con un color de fondo rojo</li>
+
+<li>Crea una tabla de 8 filas, a continuación pon el fondo rojo a todas aquellas que estén por encima de la tercera (2) y pon el fondo azul a todas aquellas que estén por debajo de la tercera (2)</li>
+
+<li>Selecciona todas las cabeceras de un documento y ponlas en rojo.</li>
+
+<li>Selecciona de una tabla todas las casillas vacías y ponlas un color de fondo amarillo.</li>
+
+<li>Selecciona todos los elementos con el atributo href acabado en .com y a continuación resalta dichos elementos en amarillo</li>
+
+<li>Selecciona todos los elementos de tipo input de tu documento y ponlos con un color de fondo rojo</li>
+
+<li>Realiza el mismo ejercicio que el anterior rodeando con un span en color rojo los elementos input de tipo radio y de tipo checkbox.</li>
+
+<li>Crear un documento con un elemento div y dentro del div  un par de párrafos, de tal manera que al hacer clic en un párrafo cambie el color de ambos párrafos.</li>
+
+<li>Crear un documento con un párrafo, tal que al hacer clic aumente el tamaño de la letra. Sólo se producirá dicho efecto en dos ocasiones, luego el efecto debe desaparecer.</li>
+
+<li>Crea un documento con dos botones, start y stop. Mediante el primero se debe producir la siguiente animación. Debe aparecer un elemento div cuadrado de 40 x 40, desplazarse a la izquierda 200 px, cambiar de color a azul y ocultarse desplazándose hacia arriba. <b>Solución</b></li>
+
+<li>Contar caracteres en un textarea.Crea un plugin para conseguir que un campo textarea de un formulario, informe en todo momento de los caracteres que ha escrito el usuario. Es decir, vamos a hacer un método del objeto jQuery que servirá para que cuente los caracteres en una capa de texto detrás de un textarea. <b>Solución</b></li>
+
+<li>Seguridad en una clave Crea un plugin que realice lo siguiente. Tendremos un formulario con un campo input password. Con jQuery mostraremos dinámicamente un mensaje al lado del campo con la fortaleza de la clave que haya escrita. A medida que el usuario cambie el contenido del campo, se actualizará el mensaje del lado, mostrando la fortaleza de la nueva clave. (&lt;5 no segura, &gt;5 y &lt;8 medianamente segura, &gt;8 segura) <b>Solución</b></li>
+
+<li>Campos adicionales Crear un plugin que permita añadir campos en un formulario. Tendremos un enlace en el formulario con el texto "Más campos" y al pulsarlo, simplemente se inyectará el código HTML para mostrar un campo nuevo en el formulario. <b>Solución</b></li>
+
+<li>Implementar la función tip sobre los elementos del documento.Realiza  un sistema para crear elementos, tal que, al pasar el ratón sobre ellos, muestre un mensaje con una explicación contextual, lo que habitualmente se conoce como "tip" <b>Solución</b></li>
+
+<li>Crear un programa con jQuery para obtener un menú, tal que cada vez que el usuario introduce el puntero  el item se establece de color blanco mediante un efecto persiana. <b>Solución</b></li>
+
+<li>Validar un formulario con jQuery.Se trata de un formulario en el que hay que introducir el nombre,  mail,  asunto y un mensaje. Si no se introduce alguno de los campos o si el mail es incorrecto nos aparecerá un tip informando de dicho asunto. En el enlace siguiente está el código del programa tan sólo falta la parte de jQuery. <b>Solución</b></li>
+
+<li>Hacer un efecto tipo acordeón con jQuery.</li>
+
+<li>Hacer un Slidder con JQuery</li>
+
+<li>Introduce en un documento el plugin jquery.snow.js para crear el efecto de nevando. Deberás implementar el tamaño mínimo del copo de nieve a 12 (minSize), el tamaño máximo a 18 (maxSize) , la frecuencia con la que cae la nieve a 400 (newOn) <b>Solución</b></li>
+
+<li>Realiza un programa en JQuery para que en tu documento aparezcan 8 fotos en orden aleatorio. <b>Solución</b></li>
+</ol>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Patricio Martínez</p>
-<p class="date">Created: 2017-07-24 lun 09:52</p>
+<p class="date">Created: 2017-07-25 mar 09:16</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
