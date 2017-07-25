@@ -1271,6 +1271,8 @@ Para terminar usaremos la etiqueta *<blockquote>* . Veamos un ejemplo:
 </div>
 </body>
 </html>                                		
+
+
 #+end_src
 
 De manera alternativa podemos alinear la cita a la derecha usando la clase *.pull-right* en el elemento *<blockquote>* 
@@ -1304,4 +1306,1398 @@ Ejemplo:
 </body>
 </html>                                		
 #+end_src
+
+* Tablas en Bootstrap
+
+** Qué es una tabla
+
+En HTML las tablas son usadas para presentar datos en un una rejilla con filas y columnas. Usando Bootstrap podremos mejorar mucho la apariencia de la tabla de una manera muy sencilla. 
+
+** Creando una simple tabla con Bootstrap
+
+Podemos creear una tabla con un estilo básico que tangga divisiones horizontales y celdas con poco relleno (8px por defecto), solo añadiendo la clase *.table* al elemento *<table>*.
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tablas simples con Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Fila</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Tablas con filas rayadas
+
+Podemos crear también tablas que alternen los colores de las filas al estilo de un paso de cebra. Para esto añadiremos la clase *.table-striped* a la clase *.table* . 
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tablas rayada con Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <table class="table talbe-striped">
+        <thead>
+            <tr>
+                <th>Fila</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Tablas con bordes en todos lados
+
+[[./img/borde.jpg]]
+
+
+Podemos también añadir bordes a todas las celdas de la tabla añadiendo la clase *.table-bordered* a la clase *.table*  
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tablas con bordes en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Fila</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+#+end_src
+
+** Tablas con sensibilidad al ratón
+
+Podemos habilitar de una forma muy fácil que cuando pase el ratón por las filas están se vean afectadas. Esto lo hará en las filas que tengan el elemento *<tbody>* y para ello añadiremos la clase *.table-hover* a la clase *.table*
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tablas con efecto hover en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Fila</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+#+end_src
+
+** Tabla condensada o compacta
+
+Podemos hacer las tablas más compactas y salvar espacio añadiendo simplemente la clase extra *.table-condensed* a la clase base *.table*. Esta clase hace más compacta la tabla partiendo las celdas por la mitad.
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tablas compacta en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Fila</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+#+end_src
+
+** Tablas resaltadas
+
+Podemos resaltar celdas o filas usando las clases de resaltado o enfatizado tales como success, warning, danger, etc, esto cambiará el color del fondo.
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tabla con filas resaltadas</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Row</th>
+                <th>Impuesto</th>
+                <th>Fecha de pago</th>
+                <th>Estado del pagamiento</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr class="active">
+                <td>1</td>
+                <td>Tarjeta de crédito</td>
+                <td>04/07/2014</td>
+                <td>Llamar para confirmar</td>
+            </tr>
+            <tr class="success">
+                <td>2</td>
+                <td>Agua</td>
+                <td>01/07/2014</td>
+                <td>Pagado</td>
+            </tr>
+            <tr class="info">
+                <td>3</td>
+                <td>Internet</td>
+                <td>05/07/2014</td>
+                <td>Pago cambiado</td>
+            </tr>
+            <tr class="warning">
+                <td>4</td>
+                <td>Electricidad</td>
+                <td>03/07/2014</td>
+                <td>Pendiente</td>
+            </tr>
+            <tr class="danger">
+                <td>5</td>
+                <td>Telefono</td>
+                <td>06/07/2014</td>
+                <td>Vencido</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+#+end_src
+
+** Creando tablas adaptables con Bootstrap
+
+Con Bootstrap podemos también crear tablas que se adapten a sitios con scroll horizontal o a pequeños dispositivos (por debajo de 768px). Sin embargo, si ves la tabla en un dispositivo mayor (con más de 768px) no verás mucha diferencia.
+
+Para hacer una tabla adaptable solo hay que localizar la tabla dentro de un *<div>* y aplicarle la clase *.table-resposive* 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tabla adaptable</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div class="table-responsive"> 
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Biografía</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Carter</td>
+                    <td>johncarter@mail.com</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Peter</td>
+                    <td>Parker</td>
+                    <td>peterparker@mail.com</td>
+                    <td>Vestibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam odio tortor, dictum quis malesuada at, pellentesque.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>John</td>
+                    <td>Rambo</td>
+                    <td>johnrambo@mail.com</td>
+                    <td>Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel, porttitor bibendum enim.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Elementos soportados en las tablas en Bootstrap
+
+Los siguientes elementos HTML para tablas pueden ser usados
+
+| Etiqueta  | Descripción                                                                                      |
+|-----------+--------------------------------------------------------------------------------------------------|
+| <table>   | Envuelve elementos para mostrar datos en forma de tabular                                        |
+| <caption> | Título o resumen de la tabla                                                                     |
+| <thead>   | Elemento para la cabecera de las filas de la tabla <tr> que define la cabecera para las columnas |
+| <tbody>   | Contiene elementos para las filas <tr> que define el cuerpo de una tabla                         |
+| <tr>      | Contiene elementos para un conjunto de celdas (<td> o <th>) que aparecen en una sola filas       |
+| <th>      | Celda especial para la cabecera de columnas                                                      |
+| <td>      | Celda por defecto para poner datos                                                               |
+
+* Listas en Bootstrap
+
+** Creando listas con Bootstrap
+
+   Tenemos tres tipos de listas
+
++ *Desordenadas* -- Es una lista sin orden específico
++ *Ordenada* -- Es una lista ordenada según un orden específico y por lo tanto marcadas con números
++ *Lista de definiciones* -- Es una lista de términos con sus descripciones asociadas
+
+** Listas ordenadas y sin ordenar sin estilo
+
+   Algunas veces queremos borrar todo el estilo por defecto que tengan las listas. Para hacer esto aplicamos la clase *.list-unstyle* a los elementos *<ul>* o *<ol>*
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de lista sin estilo</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+	<h2>Lista desordenada</h2>
+    <ul class="list-unstyled">
+        <li>Inicio</li>
+        <li>Productos
+            <ul>
+                <li>Gadgets</li>
+                <li>Accesorios</li>
+            </ul>
+        </li>
+        <li>Sobre nosotros</li>
+        <li>Contacto</li>
+    </ul>
+    <hr>
+    <h2>Lista ordenada</h2>
+    <ol class="list-unstyled">
+        <li>Inicio</li>
+        <li>Productos
+            <ol>
+                <li>Gadgets</li>
+                <li>Accesorios</li>
+            </ol>
+        </li>
+        <li>Sobre nosotros</li>
+        <li>Contacto</li>
+    </ol>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Situando listas ordenadas y desordenadas en un línea
+
+   Si queremos crear un menú horizontal usando una lista ordenada o desordenada, podemos hacerlo simplemente añadiendo la clase *.list-inline* a los elementos *<ul>* u *<ol>*. La clase *.list-inline* también añade relleno a izquierda y derecha (5px por defecto) entre los elementos.
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de una lista en una línea</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+	<h2>Lista desordenada en una línea</h2>
+    <ul class="list-inline">
+        <li>Inicio</li>
+        <li>Sobre nosotros</li>
+        <li>Productos</li>
+        <li>Servicios</li>
+        <li>Contacto</li>
+    </ul>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Creando listas de definición horizontales
+   
+   Los términos y las descripciones en una lista de definiciones puede situarse una al lado de la otra en Bootstrap gracias a la clase .dl-horizontal. Los términos en la definición horizontal serán truncados si son más largos que determinado tamaño (160px por defecto) para que quepan en la columna de la izquierda. Sin embargo en dispositivos reducidos cambiarán automáticamente a un diseño apilado. 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de lista de definiciones en horizontal</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+	<h2>Listas de definición horizontal</h2>
+    <dl class="dl-horizontal">
+        <dt>Agente de usuario</dt>
+        <dd>EN HTML el agente de usuario es el dispositivo que interpreta el documento HTML.</dd>
+        <dt>Scripting del lado del cliente</dt>
+        <dd>Cuando hablamos de scripting del lado del cliente nos referimos a una categoria de programas de ordenador en la web que son ejecutados en el lado del cliente, por ejemplo, el navegador web.</dd>
+        <dt>Árbol del Documento</dt>
+        <dd>Es el árbol de elementos que se extrae del documento fuente.</dd>
+    </dl>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+
+* Listas de grupos en Bootstrap
+
+** Creando listas de grupos con Bootstrap
+
+La lista de grupos son un muy útil y flexible componente para mostrar lista de elementos de una manera bella. Lo más básico que forma una lista de grupo es una simple lista desordenada con la clase *.list-group*, donde la lista de artículos tiene la clase *.list-group-item*
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de lista de grupos</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.list-group{
+		width: 200px;
+	}
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <ul class="list-group">
+        <li class="list-group-item">Imágenes</li>
+        <li class="list-group-item">Documentos</li>        
+        <li class="list-group-item">Música</li>
+        <li class="list-group-item">Vídeos</li>
+    </ul>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Lista de grupo con artículos enlazados
+
+También podemos tener lista de grupo de *hiperenlaces*. Solo tenemos que cambiar el elemento *<li>* con <a> y usar el elemento *<div>* como padre en vez de *<ul>*. También podemos añadir iconos e insignias a la lista de grupo para hacerlo más elegante. Las insignias son automáticamente posicionados a la derecha. 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de lista de grupo con enlaces</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.list-group{
+		width: 200px;
+	}
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            <span class="glyphicon glyphicon-camera"></span> Imágenes <span class="badge">25</span>
+        </a>
+        <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file"></span> Documentos <span class="badge">145</span>
+        </a>
+        <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-music"></span> Música <span class="badge">50</span>
+        </a>
+        <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-film"></span> Vídeos <span class="badge">8</span>
+        </a>
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+También podemos añadir otros elementos HTML como *cabeceras* y *párrafos* a esa lista de grupos.
+
+#+begin_src html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Linked List Groups</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div class="list-group">
+        <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">Qué es HTML?</h4>
+            <p class="list-group-item-text">HTML son las siglas para Hyper TExt Markup Language. HTML es el principal lenguaje para describir la estructuras de páginas Web.</p>
+        </a>
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">Qué es Bootstrap?</h4>
+            <p class="list-group-item-text">Bootstrap es un poderoso framework para front-end para desarrollar webs de una forma fácil y rápida. Es una colección de plantillas basadas en diseño HTML y CSS</p>
+        </a>
+        <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">Qué es CSS?</h4>
+            <p class="list-group-item-text">CSS son las siglas para Cascading Style Sheet. CSS permite especificar varias propiedades de estilo a elementos HTML tales como colores, fondos, fuentes, etc.</p>
+        </a>
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Lista de grupo con estados contextuales
+
+Como muchos otros componentes podemos usas clases contextuales en las listas de grupo para aplicar resaltados en ellas, tal que así:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de lista de grupos con clases contextuales</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">200 OK: The server successfully processed the request.</li>
+        <li class="list-group-item list-group-item-info">100 Continue: The client should continue with its request.</li>
+        <li class="list-group-item list-group-item-warning">503 Service Unavailable: The server is temporarily unable to handle the request.</li>
+        <li class="list-group-item list-group-item-danger">400 Bad Request: The request cannot be fulfilled due to bad syntax.</li>
+    </ul>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+De igual manera podemos usar la clase *.active* para especificar el elemento de la lista de grupo activo.
+
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de lista de grupo con clases contextuales</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-success">200 OK: The server successfully processed the request.</a>
+        <a href="#" class="list-group-item list-group-item-info active">100 Continue: The client should continue with its request.</a>
+        <a href="#" class="list-group-item list-group-item-warning">503 Service Unavailable: The server is temporarily unable to handle the request.</a>
+        <a href="#" class="list-group-item list-group-item-danger">400 Bad Request: The request cannot be fulfilled due to bad syntax.</a>
+    </div>
+</div>
+</body>
+</html>
+#+end_src
+
+* Formularios en Bootstrap
+
+** Creando formularios en Bootstrap
+
+Los formularios en HTML son una parte integral de páginas web y aplicaciones, pero el estilo del formulario controlado manualmente uno a uno con CSS se puede hacer aburrido y tedioso. Bootstrap simplifica el proceso de estilo y alineamiento de los elementos de control del formulario como son etiquetas, campos de entrada, cajas de selección, áreas de texto, botones, etc, a través de un conjunto predefinido de clases.
+
+Bootstrap ofrece tres tipo de diseños de formularios diferentes.
+
++ Formulario Vertical (el diseño por defecto)
++ Formulario Horizontal
++ Formulario en una línea
+
+Vamos a ver en detalle este tipo de diseños de formularios
+
+** Creando un formulario vertical
+
+Este es el diseño por defecto por defecto aplicado a los elementos del formulario cuando no se añade ninguna clase al elemento <form>.
+
+El formulario en este diseño está apilado con las etiquetas alineadas a la izquierda.
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de formulario con diseño vertical</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <form>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Recuerdame</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Creando un formulario horizontal
+
+En formularios con diseño horizontal las etiquetas están alineadas a la derecha y flotan a la derecha cuando aparecen en la misma línea que un elemento del formulario. El formulario horizontal requiere de varios cambios por defecto. Los pasos a seguir para obtener un formulario horizontal son:
+
++ Añadir la clase *.form-horizontal* al elemento *<form>*
++ Agrupar las etiquetas y los elementos de control del formulario en un elemento *<div>* y aplicarle la clase *.form-group*
++ Usar clases de *rejilla predefinidas* de Bootstrap para alinear etiquetas y elementos de control.
++ Añadir la clase *.control-label* al elemento *<label>*
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de formulario horizontal</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+	/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+    .form-horizontal .control-label{
+        padding-top: 7px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Email</label>
+            <div class="col-xs-10">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Contraseña</label>
+            <div class="col-xs-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <div class="checkbox">
+                    <label><input type="checkbox"> Recuerdame</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>                           
+#+end_src
+
+** Creando formularios en una línea
+
+A veces podemos querer poner todos los elementos de un formulario en una sola línea. Esto es tan fácil como añaddir la clase .form-inline al elmeento <form>
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de formulario en una línea</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label class="sr-only" for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="inputPassword">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Recuerdame</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <br>
+    <div class="alert alert-info">
+        <a href="#" class="close" data-dismiss="alert">×</a>
+        <strong>Nota:</strong> Este formulario en línea se verá en vertical en dispositivos con resoluiones menores de 768px
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+
+* Grupos de entrada en Bootstrap
+
+** Extendiendo los elementos de control de los formularios
+
+El componente grupo de entrada es un componente muy flexible y potente para crear elementos de control interactivos, sin embargo es limitado al elemento de entrada textual.
+
+En las siguientes secciones veremos como extender el input basado en texto añadiendo botones antes o después o a ambos lados para hacerlo más atractivo.
+
+** Creando adjuntos al método inputPassword
+
+Podemos añadir texto e iconos o botones antes o después de una caja de entrada de texto.
+Para hacer esto:
+
++ Envuelve el texto o icono en un elemento <span> con la clase .input-group-addon y le ponemos antes o después el elemento <input>
++ Envolvemos tanto el elemento <span> con el <input> en un elemento <div> y le aplicamos la clase .input-group en él.
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de elemntos antes y después de una entrada de texto</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+	<form>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" placeholder="Nombre Usuario">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cantidad">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control" placeholder="Euros">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr>
+    <form>
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" placeholder="Nombre Usuario">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Cantidad">
+            <span class="input-group-addon">.00</span>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" placeholder="Euros">
+            <span class="input-group-addon">.00</span>
+        </div>
+    </form>
+</div>
+</body>
+</html>         
+#+end_src
+
+** Añadiendo cajas de comprobación y botones de opción
+
+De igual manera podemos poner cajas de comprobación o botones de opciones en un grupo de entrada cerca de la entrada de texto. 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplos de elemtos de grpo de entrada</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <form>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="checkbox">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="radio">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+    </form>
+    <hr>
+    <form>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="radio">
+            </span>
+            <input type="text" class="form-control">
+        </div>
+    </form>
+</div>
+</body>
+</html>        
+#+end_src
+
+** Botones para la entrada de texto
+
+También podemos añadir antes o después botones al lado de la entrada de texto. Si envolvemos los botones con el elemento <span> y le aplicamos la clase .input-group-btn, en vez de la clase .input-group-addon
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de botones de acción al lado de la entrada de texto</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <form>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar&hellip;">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">Ir</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">Acciones</button>
+                        <button type="button" class="btn btn-default">Opciones</button>
+                    </span>
+                    <input type="text" class="form-control"  placeholder="EscribeAlgo&hellip;">
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr>
+    <form>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar&hellip;">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default">Ir</button>
+            </span>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default">Acciones</button>
+                <button type="button" class="btn btn-default">Opciones</button>
+            </span>
+            <input type="text" class="form-control"  placeholder="EscibeAlgo&hellip;">
+        </div>
+    </form>
+</div>
+</body>
+</html>     
+#+end_src
+
+** Añadiendo botones con menús desplegables a entradas de texto
+
+También podemos añadir botones con menús desplegables 
+
+#+begin_src html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de entrada de texto</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <form>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Acción <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Acción</a></li>
+                            <li><a href="#">Otra acción</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">enlace de separación</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Acción <span class="caret"></span></button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="#">Acción</a></li>
+                            <li><a href="#">Otra acción</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">enlace de separación</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr>
+    <form>
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Acción <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Acción</a></li>
+                    <li><a href="#">Otra acción</a></li>
+                    <li><a href="#">Algo más</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">enlace de separación</a></li>
+                </ul>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Acción <span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#">Acción</a></li>
+                    <li><a href="#">Otra acción</a></li>
+                    <li><a href="#">Algo más</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">enlace de separación</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>           
+#+end_src
+
+
+* Botones en Bootstrap
+
+** Creando botones con Bootstrap
+
+Los botones son una parte muy importante de una aplicación o página web. Se usan para varios propósitos como enviar o restablecer un formulario, desarrollar interactivas acciones tales como mostrar o esconder partes de un contenido, etc. Bootstrap ofrece una forma fácil y rápida de crear y personalizar botones.
+
+** Estilos de botones
+
+Diferentes clases están disponibles para tener distintos estilos de botones. Los estilos de botones puede aplicarse a cualquier elemento. Sin embargo, se aplica normalmente a los elementos <a>, <input> y <button> para una mejor visualización.
+
+En la siguiente tabla mostramos los distintos tipos de botones:
+
+| Clase           | Descripción                                                                   |
+|-----------------+-------------------------------------------------------------------------------|
+| btn btn-default | Botón por defecto con gradiente gris                                          |
+| btn btn-primary | Provee un tamaño visual extra para mostrar que el primer botón de un conjunto |
+| btn btn-info    | Puede usarse como alternativa al botón por defecto                            |
+| btn btn-sucess  | Indica un éxito o una acción positiva                                         |
+| btn btn-warning | Indica precaución para ser tomada esta acción                                 |
+| btn btn-danger  | Indica un peligro o un una acción potencialmente negativa                     |
+| btn btn-link    | Botón que hace parecer como un enlace sin un especial comportamiento          |
+
+Veamos estos botones en acción:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de botones en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <button type="button" class="btn btn-default">Por defecto</button>
+    <button type="button" class="btn btn-primary">Primario</button>
+    <button type="button" class="btn btn-info">Información</button>
+    <button type="button" class="btn btn-success">Éxito</button>
+    <button type="button" class="btn btn-warning">Aviso</button>
+    <button type="button" class="btn btn-danger">Peligro</button>
+    <button type="button" class="btn btn-link">Enlace</button>
+	<hr>
+    <input type="button" class="btn btn-default" value="Por defecto">
+    <input type="button" class="btn btn-primary" value="Primario">
+    <input type="button" class="btn btn-info" value="Información">
+    <input type="button" class="btn btn-success" value="Éxito">
+    <input type="button" class="btn btn-warning" value="Aviso">
+    <input type="button" class="btn btn-danger" value="Peligro">
+    <input type="button" class="btn btn-link" value="Enlace">
+    <hr>
+    <a href="#" class="btn btn-default">Por defecto</a>
+    <a href="#" class="btn btn-primary">Primario</a>
+    <a href="#" class="btn btn-info">Información</a>
+    <a href="#" class="btn btn-success">Éxito</a>
+    <a href="#" class="btn btn-warning">Aviso</a>
+    <a href="#" class="btn btn-danger">Peligro</a>
+    <a href="#" class="btn btn-link">Enlace</a>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Cambiando el tamaño de los botones
+
+Bootstrap también nos da la opción de escalar los botones. Para ello usamos las clases .btn-lg, .btn-sm o .btn-xs
+
+Ejemplo:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de tamaño de botones en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <button type="button" class="btn btn-default btn-lg">Por defecto</button>
+    <button type="button" class="btn btn-primary btn-lg">Primario</button>
+    <button type="button" class="btn btn-info btn-lg">Información</button>
+    <button type="button" class="btn btn-success btn-lg">Éxito</button>
+    <button type="button" class="btn btn-warning btn-lg">Aviso</button>
+    <button type="button" class="btn btn-danger btn-lg">Peligro</button>
+    <hr>
+    <button type="button" class="btn btn-default">Por defecto</button>
+    <button type="button" class="btn btn-primary">Primario</button>
+    <button type="button" class="btn btn-info">Información</button>
+    <button type="button" class="btn btn-success">Éxito</button>
+    <button type="button" class="btn btn-warning">Aviso</button>
+    <button type="button" class="btn btn-danger">Peligro</button>
+    <hr> 
+    <button type="button" class="btn btn-default btn-sm">Por defecto</button>
+    <button type="button" class="btn btn-primary btn-sm">Primario</button>
+    <button type="button" class="btn btn-info btn-sm">Información</button>
+    <button type="button" class="btn btn-success btn-sm">Éxito</button>
+    <button type="button" class="btn btn-warning btn-sm">Aviso</button>
+    <button type="button" class="btn btn-danger btn-sm">Peligro</button>
+    <hr>
+    <button type="button" class="btn btn-default btn-xs">Por defecto</button>
+    <button type="button" class="btn btn-primary btn-xs">Primario</button>
+    <button type="button" class="btn btn-info btn-xs">Información</button>
+    <button type="button" class="btn btn-success btn-xs">Éxito</button>
+    <button type="button" class="btn btn-warning btn-xs">Aviso</button>
+    <button type="button" class="btn btn-danger btn-xs">Peligro</button>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+
+** Personalizando botones
+
+Hay más opciones para personalizar los botones, pero para no seguir mostrando más clases directamente mostraré el Personalizador de Botones de la página web [[https://www.tutorialrepublic.com/][tutorial republic]] que es de donde estoy sacando la mayor parte de la información para este manual.
+
+El personalizador de botones de Bootstrap está [[https://www.tutorialrepublic.com/twitter-bootstrap-button-generator.php][Aquí]]
+
+Con él podremos de una forma fácil todas las opciones de botones que nos ofrece Bootstrap y cual es el código que necesitamos.
+
+* Imágenes
 
