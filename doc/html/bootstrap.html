@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-07-25 mar 12:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Introducción a Bootstrap</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Patricio Martínez" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="themes/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Introducción a Bootstrap</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcd3ed7c">Introducción</a>
+<ul>
+<li><a href="#org907f23d">Qué es bootstrap</a></li>
+<li><a href="#orgde8e2b0">Ventajas de Bootstrap</a></li>
+</ul>
+</li>
+<li><a href="#org6b024c5">Empezando con Bootstrap</a>
+<ul>
+<li><a href="#org84818a8">Empezando con Bootstrap</a></li>
+<li><a href="#org931cf56">Descargando los ficheros de Bootstrap</a></li>
+<li><a href="#org00dd5b5">Entendiendo la estructura de archivos</a></li>
+<li><a href="#org7616039">Creando nuestra primera página con Bootstrap</a>
+<ul>
+<li><a href="#org6f3b02b">Paso 1. Creando un fichero HTML básico</a></li>
+<li><a href="#org96b3fd9">Paso 2. Hacer este HTML una plantilla de Bootstrap</a></li>
+<li><a href="#orge5807b8">Incluyendo los ficheros de Bootstrap vía CDN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc141b02">Sistema de rejilla de Bootstrap</a>
+<ul>
+<li><a href="#orgf4c4959">Qué es el sistema de rejilla de Bootstrap</a></li>
+<li><a href="#org332ba15">Creando un diseño de 2 columnas</a></li>
+<li><a href="#orgb4f21df">Creando un diseño de 3 columnas</a></li>
+<li><a href="#org2b395cf">Diseño de Bootstrap con la característica de envoltura de columna</a></li>
+<li><a href="#org948d933">Creando diseños multicolumna con el sistema de rejilla de Bootstrap</a></li>
+<li><a href="#org3d53729">Compensación de las columnas en la rejilla</a></li>
+<li><a href="#org8ebcb32">Rejilla de columnas anidadas</a></li>
+<li><a href="#org16d7ff1">Clases responsivas para Bootstrap</a></li>
+</ul>
+</li>
+<li><a href="#org0402e10">Diseños fijos</a>
+<ul>
+<li><a href="#orgb858b56">Creando diseños fijos</a></li>
+</ul>
+</li>
+<li><a href="#org3dcb90f">Diseños fluidos con Bootstrap</a>
+<ul>
+<li><a href="#org0ab363c">Creando diseños fluidos con Bootstrap</a></li>
+</ul>
+</li>
+<li><a href="#org037ff1c">Tipografía en Bootstrap</a>
+<ul>
+<li><a href="#org3c11ae1">Trabajando con cabeceras</a></li>
+<li><a href="#org7abb227">Trabajando con párrafos</a></li>
+<li><a href="#org00bf998">Formateado de texto</a></li>
+<li><a href="#orgf783d11">Clases para transformar texto</a></li>
+<li><a href="#orga2726d5">Clases para enfatizar el texto</a></li>
+<li><a href="#org8bacdd0">Bloques de citas con estilo</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcd3ed7c" class="outline-2">
+<h2 id="orgcd3ed7c">Introducción</h2>
+<div class="outline-text-2" id="text-orgcd3ed7c">
+</div><div id="outline-container-org907f23d" class="outline-3">
+<h3 id="org907f23d">Qué es bootstrap</h3>
+<div class="outline-text-3" id="text-org907f23d">
+<p>
+Bootstrap es un potente framework para front-end hace más fácil y rápido el desarrollo web. Incluye plantillas de CSS y HTML y componentes comunes para el interfaz de usuario como tipografía, formularios, botones, tablas, desplegables, alertas, pestañas, carruseles y muchas más cosas.
+</p>
+
+<p>
+Bootstrap también ofrece la habilidad de crear páginas responsivas con mucho menos esfuerzo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde8e2b0" class="outline-3">
+<h3 id="orgde8e2b0">Ventajas de Bootstrap</h3>
+<div class="outline-text-3" id="text-orgde8e2b0">
+<p>
+La mayor ventaja de usar Bootstrap es que trae un completo conjunto de herramientas para crear flexibles y responsivas capas web así como componentes para interfaces. 
+</p>
+
+<p>
+Además, usando los datos de la API de Bootstrap podemos crear avanzados componentes de interfaces como Scrollspy y Typeaheads sin escribir ni una sola línea de código javascript. 
+</p>
+
+<p>
+Aquí algunas ventajas más:
+</p>
+
+<ul class="org-ul">
+<li><b>Se salva mucho tiempo</b>. Con Bootstrap se salva mucho tiempo ya que disponemos de gran cantidad de clases y plantillas pudiendo así concentrarnos en otras áreas del desarrollo web.</li>
+<li><b>Características responsivas</b>. Usando Bootstrap podemos fácilmente crear diseños responsivos, así podrán funcionar correcgtamente en distintos dispositvos y a distintas resoluciones.</li>
+<li><b>Diseño consistente</b>. Todos los componentes comparten el mismo diseño y estilos. Así mantenemos una consisgtencia de estilos en el desarrollo.</li>
+<li><b>Fácil de usar</b>. Bootstrap es muy fácil de usar, cualquier persona con básicos conocimientos de HTML y CSS puede empezar a desarrollar con Bootstrap.</li>
+<li><b>Compatibles con navegadores</b>. Bootstrap es creado para los modernos navegadores en mente y para que funcione en cada uno de ellos.</li>
+<li><b>Open Source</b> Esta es la mejor parte, es completamente libre de descargar y usar.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6b024c5" class="outline-2">
+<h2 id="org6b024c5">Empezando con Bootstrap</h2>
+<div class="outline-text-2" id="text-org6b024c5">
+</div><div id="outline-container-org84818a8" class="outline-3">
+<h3 id="org84818a8">Empezando con Bootstrap</h3>
+<div class="outline-text-3" id="text-org84818a8">
+<p>
+Aquí vamos a aprender como crear fácilmente una página con Bootstrap. Para empezar necesitamos un buen editor (Emacs es el mejor) y conocimientos básicos en HTML y CSS.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org931cf56" class="outline-3">
+<h3 id="org931cf56">Descargando los ficheros de Bootstrap</h3>
+<div class="outline-text-3" id="text-org931cf56">
+<p>
+Hay dos versiones para descargar, <b>una compilada</b> y los <b>fuentes</b>. Podemos descargarlo desde <a href="http://getbootstrap.com/getting-started/">aquí</a>
+</p>
+
+<p>
+La versión compilada trae una versión compilada y minimizada de los ficheros JavaScript y CSS, así como iconos y fuentes. Con la versión de <b>fuente</b> tendremos todos los ficheros JavaScript y CSS y además una copia de la documentación.
+</p>
+
+<p>
+Para nuestro caso usaremos la versión compilada, ya que la otra es más bien para desarrollo. Además la versión compilada se ejecuta antes y hace que nuestras paginas se carguen más rápidamente.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00dd5b5" class="outline-3">
+<h3 id="org00dd5b5">Entendiendo la estructura de archivos</h3>
+<div class="outline-text-3" id="text-org00dd5b5">
+<p>
+Una vez descargada la versión compilada si descomprimimos el fichero podemos ver la siguiente estructura:
+</p>
+
+
+<p>
+bootstrap/
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">—— css/</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— bootstrap.css</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— bootstrap.min.css</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— bootstrap-theme.css</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— bootstrap-theme.min.css</td>
+</tr>
+
+<tr>
+<td class="org-left">—— js/</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— bootstrap.js</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— bootstrap.min.js</td>
+</tr>
+
+<tr>
+<td class="org-left">—— fonts/</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— glyphicons-halflings-regular.eot</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— glyphicons-halflings-regular.svg</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— glyphicons-halflings-regular.ttf</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">—— glyphicons-halflings-regular.woff</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org7616039" class="outline-3">
+<h3 id="org7616039">Creando nuestra primera página con Bootstrap</h3>
+<div class="outline-text-3" id="text-org7616039">
+<p>
+Una vez entendida la estructura es hora de ponernos a ello. La plantilla de Bootstrap incluye todo lo que nosotros hemos mencionado en la estructura. 
+</p>
+
+<p>
+Vamos a crear una serie de pasos para crear nuestra primera página con Bootstrap
+</p>
+</div>
+
+<div id="outline-container-org6f3b02b" class="outline-4">
+<h4 id="org6f3b02b">Paso 1. Creando un fichero HTML básico</h4>
+<div class="outline-text-4" id="text-org6f3b02b">
+<p>
+Crearemos un fichero HTML lo más básico posible:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+    &lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">HTML B&#225;sico</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Hola, Mundo!</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96b3fd9" class="outline-4">
+<h4 id="org96b3fd9">Paso 2. Hacer este HTML una plantilla de Bootstrap</h4>
+<div class="outline-text-4" id="text-org96b3fd9">
+<p>
+Para ello incluiremos los ficheros CSS y JavaScript necesarios. Podemos incluir los ficheros JavaScript al final de la página, antes incluso de que se cierre la etiqueta &lt;body&gt; para mejorar el rendimiento de la página web.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Basic Bootstrap Template</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span> <span class="org-variable-name">href</span>=<span class="org-string">"/examples/css/bootstrap.min.css"</span>&gt;
+<span class="org-comment-delimiter">&lt;!-- </span><span class="org-comment">Optional Bootstrap theme </span><span class="org-comment-delimiter">--&gt;</span>
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"/examples/css/bootstrap-theme.min.css"</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Hello, world!</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://code.jquery.com/jquery-1.12.4.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"/examples/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge5807b8" class="outline-4">
+<h4 id="orge5807b8">Incluyendo los ficheros de Bootstrap vía CDN</h4>
+<div class="outline-text-4" id="text-orge5807b8">
+<p>
+También podemos añadir los ficheros JavaScript y CSS vía CDN ( Content Delivery Network). Los beneficios de usar este mecanismo son los mismos que hemos visto en el caso de JQuery.
+</p>
+
+<p>
+Veamos este ejemplo: 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Basic Bootstrap Template</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> <span class="org-variable-name">integrity</span>=<span class="org-string">"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"</span> <span class="org-variable-name">crossorigin</span>=<span class="org-string">"anonymous"</span>&gt;
+<span class="org-comment-delimiter">&lt;!-- </span><span class="org-comment">Optional Bootstrap theme </span><span class="org-comment-delimiter">--&gt;</span>
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"</span> <span class="org-variable-name">integrity</span>=<span class="org-string">"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"</span> <span class="org-variable-name">crossorigin</span>=<span class="org-string">"anonymous"</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Hello, world!</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span> <span class="org-variable-name">integrity</span>=<span class="org-string">"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"</span> <span class="org-variable-name">crossorigin</span>=<span class="org-string">"anonymous"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+Los atributos <b>integrity</b> y <b>crossorigin</b> son para implementar el SRI (Subresources Integrity). Un mecanismo de seguridad para mitigar el riesgo de un ataque originados desde CDN comprometidos. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc141b02" class="outline-2">
+<h2 id="orgc141b02">Sistema de rejilla de Bootstrap</h2>
+<div class="outline-text-2" id="text-orgc141b02">
+</div><div id="outline-container-orgf4c4959" class="outline-3">
+<h3 id="orgf4c4959">Qué es el sistema de rejilla de Bootstrap</h3>
+<div class="outline-text-3" id="text-orgf4c4959">
+<p>
+Bootstrap ofrece un rápido y fácil sistema para crear capas web responsivas. Bootstrap incluye clases de rejilla predefinidas para hacer de manera rápida y fácil capas de rejillas para diferentes dispositivos. Por ejemplo, nosotros podemos usar la clase <b>.col-xs-</b> para crear una rejilla en un dispositivo muy pequeño como es un móvil. La siguiente tabla resume esto:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Característica</th>
+<th scope="col" class="org-left">Dispositivos extra-pequeños</th>
+<th scope="col" class="org-left">Dispositivos Pequeños</th>
+<th scope="col" class="org-left">Dispositivos Medianos</th>
+<th scope="col" class="org-left">Dispositivos grandes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Máximo tamaño del contenedor</td>
+<td class="org-left">Ninguno (auto)</td>
+<td class="org-left">750px</td>
+<td class="org-left">970px</td>
+<td class="org-left">1170px</td>
+</tr>
+
+<tr>
+<td class="org-left">Comportamiento de la rejilla</td>
+<td class="org-left">Todo el tiempo horizontal</td>
+<td class="org-left">Colapsada al principio y ya después.</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Prefijo de la clase</td>
+<td class="org-left">.col-xs-</td>
+<td class="org-left">.col-sm</td>
+<td class="org-left">.col-md-</td>
+<td class="org-left">.col-mx-</td>
+</tr>
+
+<tr>
+<td class="org-left">Máxima anchura columnas</td>
+<td class="org-left">Auto</td>
+<td class="org-left">~62px</td>
+<td class="org-left">~81px</td>
+<td class="org-left">~97px</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+Aquí hay una cosa muy importante, si aplicamos .col-sm- no solo afectará a un elemento de tamaño pequeño sino también a los de tamaño medianos y grandes si las clases .xol-md- y .col-mx- no están presentes. Lo mismo para la clase .col-md- que no solo se aplicará a los dispositivos medianos sino también a los grandes si la clase .col-mx no está presente. 
+</p>
+
+<p>
+Ahora la pregunta llega cuando queremos crear columnas y filas usando este sistema responsivo de rejilla de 12 columnas. La respuesta es muy sencilla, al principio creamos un contenedor que actúa como una envoltura para tus filas y columnas usando la clase <b>.row</b> y creamos columnas dentro de cualquier fila usando la clase .col-xs-, .col-sm, .col-md- y col-mx-. Las columnas estarán contenidas realmente en el área en donde tenemos nuestro contenido 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org332ba15" class="outline-3">
+<h3 id="org332ba15">Creando un diseño de 2 columnas</h3>
+<div class="outline-text-3" id="text-org332ba15">
+<p>
+En el siguiente ejemplo vamos a crear un diseño de dos columnas para dispositivos pequeños, medianos y grandes. Por defecto, las columnas se pondrán en disposición horizontal en lo dispositivos móviles. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"es"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de dise&#241;o de 2 columnas para dispositivos peque&#241;os y medianos</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    /* Some custom styles to beautify this example */
+    .demo-content{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 300px;
+        background: #dbdfe5;
+        margin-bottom: 10px;
+    }
+    .demo-content.bg-alt{
+        background: #abb1b8;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        <span class="org-comment-delimiter">&lt;!-- </span><span class="org-comment">Fila con dos columnas </span><span class="org-comment-delimiter">--&gt;</span>
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-6&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-6&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">hr</span>&gt;
+        <span class="org-comment-delimiter">&lt;!--</span><span class="org-comment">Row with two columns divided in 1:2 ratio</span><span class="org-comment-delimiter">--&gt;</span>
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-4"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-4&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-8"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-8&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">hr</span>&gt;
+        <span class="org-comment-delimiter">&lt;!--</span><span class="org-comment">Row with two columns divided in 1:3 ratio</span><span class="org-comment-delimiter">--&gt;</span>
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-9"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-9&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+Como el sistema de rejilla de Bootstrap es de 12 columnas, nosotros para mantener una columna al lado de la otra tenemos que hacer que la suma de las columnas que pongamos sea <b>12</b>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4f21df" class="outline-3">
+<h3 id="orgb4f21df">Creando un diseño de 3 columnas</h3>
+<div class="outline-text-3" id="text-orgb4f21df">
+<p>
+Vamos a hacer lo mismo pero con un diseño de 3 columnas.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de rejilla con 3 columnas</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    /* Some custom styles to beautify this example */
+    .demo-content{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 300px;
+        background: #dbdfe5;
+        margin-bottom: 10px;
+    }
+    .demo-content.bg-alt{
+        background: #abb1b8;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        <span class="org-comment-delimiter">&lt;!--</span><span class="org-comment">Fila con 4 columnas</span><span class="org-comment-delimiter">--&gt;</span>
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-md-4&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-md-4&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-md-4&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">hr</span>&gt;
+        <span class="org-comment-delimiter">&lt;!--</span><span class="org-comment">Filas con tres columnas con relaci&#243;n 1:4:1</span><span class="org-comment-delimiter">--&gt;</span>
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-2"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-md-2&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-8"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-md-8&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-2"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-md-2&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">hr</span>&gt;
+        <span class="org-comment-delimiter">&lt;!--</span><span class="org-comment">Fila con 3 columnas</span><span class="org-comment-delimiter">--&gt;</span>
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-3"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-md-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-7"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-md-7&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-2"</span>&gt;
+              &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-md-2&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                                                       
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2b395cf" class="outline-3">
+<h3 id="org2b395cf">Diseño de Bootstrap con la característica de envoltura de columna</h3>
+<div class="outline-text-3" id="text-org2b395cf">
+<p>
+Ahora vamos a crear un diseño aún más flexible que cambia la orientación de la columna basado en el tamaño de la vista del usuario (viewport).
+El siguiente ejemplo creará tres columnas en dispositivos medianos pero en pequeños dispositivos se verá con 2 columnas y la tercera se irá al fondo de las dos primeras. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    /* Some custom styles to beautify this example */
+    .demo-content{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 300px;
+        background: #dbdfe5;
+        margin-bottom: 10px;
+    }
+    .demo-content.bg-alt{
+        background: #abb1b8;
+    }
+    /* Some custom media query to make 
+       this example even better */
+    @media screen and (max-width: 991px){
+        .flexible{
+            min-height: 150px;
+        }
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3 col-md-2"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3 .col-md-2&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-9 col-md-8"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-9 .col-md-8&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-12 col-md-2"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content flexible"</span>&gt;.col-sm-12 .col-md-2&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+Como podemos ver la suma de la rejilla de columnas pequeñas (.col-sm-) es 24, mayor que 12. por eso el tercer &lt;div&gt; es envuelto en una nueva línea.
+</p>
+
+<p>
+De manera similar podemos rejillas adaptables a nuestras páginas web y aplicaciones. Más adelante, discutiremos más estos aspectos y veremos más ejemplos pero también podemos ver ejemplos muy interesantes <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-examples.php">aquí</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org948d933" class="outline-3">
+<h3 id="org948d933">Creando diseños multicolumna con el sistema de rejilla de Bootstrap</h3>
+<div class="outline-text-3" id="text-org948d933">
+<p>
+Veamos la siguiente imagen:
+</p>
+
+<p>
+En esta imagen vemos un total de 12 cajas en todos los dispositivos solo que su localización varía según el dispositivo par adaptarse a cada uno de ellos. 
+</p>
+
+<p>
+Ahora la cuestión es como podemos crear semejante diseño responsivo. Vamos a empezar con un dispositivo mediano como un portátil o una computadora de escritorio normal. Vamos a crear un diseño con 3 columnas y 4 filas. El código HTML para conseguir esa estructura podría ser algo así como esto:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de un sistema de varias columnas</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #dbdfe5;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 1&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 2&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 3&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 4&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 5&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 6&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 7&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 8&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 9&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 10&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 11&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 12&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                     
+</pre>
+</div>
+
+<p>
+Si vemos esto en un escritorio normal con una salida más grande o igual a 992px  y menos que 1200px veremos 4 filas donde cada fila tiene 3 columnas dando lugar a una rejilla de 3x4.
+</p>
+
+<p>
+Pero aquí nos podemos encontrar que la altura de algunas columnas puede ser mayor que otras si no limpiamos y rompemos adecuadamente el diseño. Para arreglar esto usamos la clase <b>.clearfix</b> y otras clases responsivas.
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Example of Bootstrap 3 Grid System</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #dbdfe5;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+  <span class="org-comment-delimiter">&lt;!-- </span><span class="org-comment">Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the window to understand how the Bootstrap responsive grid system works. </span><span class="org-comment-delimiter">--&gt;</span>
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 1&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 2&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 3&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 4&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 5&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 6&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 7&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 8&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 9&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 10&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 11&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 12&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                        
+</pre>
+</div>
+
+<p>
+Ahora vamos a optimizar nuestro diseño para otros dispositivos, empezaremos con una rejilla de 2x6 (2 columnas y 6 filas). Para ello usaremos la clase .col-sm-6
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de rejilla para distintos dispositivos</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #dbdfe5;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 1&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 2&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 3&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 4&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 5&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 6&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 7&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 8&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 9&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 10&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 11&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 12&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                            
+</pre>
+</div>
+
+<p>
+Ahora cada 2 columnas col-sm-6 tenemos 12, así que limpiaremos cada 2 filas.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo rejilla para distintos dispositivos</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #dbdfe5;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 1&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 2&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 3&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 4&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 5&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 6&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 7&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 8&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 9&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 10&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 11&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 12&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;              
+</pre>
+</div>
+
+
+<p>
+De manera similar, podemos adaptar el diseño para dispositivos grandes. Finalmente el código queda así:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de rejilla para distintos dispositivos</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #dbdfe5;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 1&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 2&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 3&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 4&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-lg-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 5&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 6&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 7&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 8&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-lg-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 9&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-md-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 10&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"clearfix visible-sm-block"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 11&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-md-4 col-lg-3"</span>&gt;&lt;<span class="org-function-name">p</span>&gt;Box 12&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;            
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d53729" class="outline-3">
+<h3 id="org3d53729">Compensación de las columnas en la rejilla</h3>
+<div class="outline-text-3" id="text-org3d53729">
+<p>
+Podemos mover las columnas en las rejillas a la derecha para propósitos de alineación usando la clase <b>.col-md-offset-</b> , <b>.col-sm-offset</b>, etc.
+</p>
+
+<p>
+Esas clases compensan las columnas incrementando el margen izquierdo. Por ejemplo, la clase .col-sm-offset-4 en la columan .col-sm-8 mueve a la derecha sobre 4 columnas a partir de la posición original.
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de rejilla para varios dispositivos</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .demo-content{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 75px;
+        background: #dbdfe5;
+        margin-bottom: 10px;
+    }
+    .demo-content.bg-alt{
+        background: #abb1b8;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-4"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-4&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-8"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-8&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-8 col-sm-offset-4"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-8 .col-sm-offset-4&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">hr</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-9"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-9&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-6 col-sm-offset-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-6 .col-sm-offset-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">hr</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3 col-sm-offset-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content bg-alt"</span>&gt;.col-sm-3 .col-sm-offset-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-sm-3 col-sm-offset-3"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"demo-content"</span>&gt;.col-sm-3 .col-sm-offset-3&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;           
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8ebcb32" class="outline-3">
+<h3 id="org8ebcb32">Rejilla de columnas anidadas</h3>
+<div class="outline-text-3" id="text-org8ebcb32">
+<p>
+En Bootstrap las rejillas de columnas se pueden anidar, lo que significa que podemos poner filas y columnas dentro de una columna que ya exista. Sin embargo, la formula es la misma, la suma del número de columnas debe ser igual a 12 o menos.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Example of Bootstrap 3 Nested Rows and Columns</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+  /* Some custom styles to beautify this example */
+    .main-content{
+    min-height: 330px;
+        background: #dbdfe5;
+    }
+    .sidebar-content{
+        min-height: 150px;
+        margin-bottom: 30px;
+        background: #b4bac0;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+  <span class="org-comment-delimiter">&lt;!-- </span><span class="org-comment">Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the browser window to understand how the Bootstrap responsive grid system works. </span><span class="org-comment-delimiter">--&gt;</span>
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-8"</span>&gt;
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"main-content"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+                <span class="org-comment-delimiter">&lt;!--</span><span class="org-comment">Nested rows within a column</span><span class="org-comment-delimiter">--&gt;</span>
+                &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+                    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-12"</span>&gt;
+                        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"sidebar-content"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+                    &lt;/<span class="org-function-name">div</span>&gt;
+                &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+                    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-12"</span>&gt;
+                        &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"sidebar-content"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+                    &lt;/<span class="org-function-name">div</span>&gt;
+                &lt;/<span class="org-function-name">div</span>&gt;
+            &lt;/<span class="org-function-name">div</span>&gt;
+        &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org16d7ff1" class="outline-3">
+<h3 id="org16d7ff1">Clases responsivas para Bootstrap</h3>
+<div class="outline-text-3" id="text-org16d7ff1">
+<p>
+Podemos usar las siguientes clases responsivas para habilitar la visibilidad de elementos en determinados dispositivos cuya pantalla caiga en un rango de tamaño especificado. 
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Clase</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">.visible-xs-</td>
+<td class="org-left">Visible solo en los dispositivos de con anchura de menos de 768px</td>
+</tr>
+
+<tr>
+<td class="org-left">.visible-sm-</td>
+<td class="org-left">Para dispositivos entre 768px y 992px</td>
+</tr>
+
+<tr>
+<td class="org-left">.visible-md-</td>
+<td class="org-left">Para dispositivos entre 992px y 1200px</td>
+</tr>
+
+<tr>
+<td class="org-left">.visible-lg-</td>
+<td class="org-left">Para dispositivos mayores de 1200px</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de clases responsivas</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    p{
+        padding: 20px;
+        background: #FFF0F5;
+        border-radius: 5px;
+    }
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"visible-xs"</span>&gt;Este p&#225;rrafo solo se ver&#225; en &lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Dispositivos muy peque&#241;os</span>&lt;/<span class="org-function-name">strong</span>&gt; that has screen width less than &lt;<span class="org-function-name">code</span>&gt;768px&lt;/<span class="org-function-name">code</span>&gt;.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"visible-sm"</span>&gt;Este p&#225;rrafo solo se ver&#225; en &lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Peque&#241;os dispositivos</span>&lt;/<span class="org-function-name">strong</span>&gt; that has screen width greater than equal to &lt;<span class="org-function-name">code</span>&gt;768px&lt;/<span class="org-function-name">code</span>&gt; but less than &lt;<span class="org-function-name">code</span>&gt;992px&lt;/<span class="org-function-name">code</span>&gt;.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"visible-md"</span>&gt;Este p&#225;rrafo solo se ver&#225; en &lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Dispositivos medianos</span>&lt;/<span class="org-function-name">strong</span>&gt; that has screen width greater than or equal to &lt;<span class="org-function-name">code</span>&gt;992px&lt;/<span class="org-function-name">code</span>&gt; but less than &lt;<span class="org-function-name">code</span>&gt;1200px&lt;/<span class="org-function-name">code</span>&gt;.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"visible-lg"</span>&gt;Este p&#225;rrafo solo se ver&#225; en &lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Dispositivos grandes</span>&lt;/<span class="org-function-name">strong</span>&gt; that has screen width greater than or equal to &lt;<span class="org-function-name">code</span>&gt;1200px&lt;/<span class="org-function-name">code</span>&gt;.&lt;/<span class="org-function-name">p</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+También tenemos las clases <b>.hide-xs-, .hide-sm-</b>, etc, que funcionan igual solo que se ocultan en determinados dispositivos.
+</p>
+
+<p>
+Otras clases son las <b>.visible-print-xs, .visible-print-sm</b>, etc, para dispositivos de impresión.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0402e10" class="outline-2">
+<h2 id="org0402e10">Diseños fijos</h2>
+<div class="outline-text-2" id="text-org0402e10">
+</div><div id="outline-container-orgb858b56" class="outline-3">
+<h3 id="orgb858b56">Creando diseños fijos</h3>
+<div class="outline-text-3" id="text-orgb858b56">
+<p>
+Con Bootstrap aunque no es lo más recomendado todavía podemos crear fichero fijos definiendo unos tamaños específicos. 
+El proceso de creación de un diseño no responsivo empieza con la clase <b>.container</b>. Después de crear filas con la clase .row, serán emplazadas con un .container para su adecuada alineación. 
+</p>
+
+<p>
+Veamos el siguiente ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Dise&#241;o fijo con Bootstrap</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    body{
+      padding-top: 70px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">nav</span> <span class="org-variable-name">id</span>=<span class="org-string">"myNavbar"</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar navbar-default navbar-inverse navbar-fixed-top"</span> <span class="org-variable-name">role</span>=<span class="org-string">"navigation"</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar-header"</span>&gt;
+      &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar-toggle"</span> <span class="org-variable-name">data-toggle</span>=<span class="org-string">"collapse"</span> <span class="org-variable-name">data-target</span>=<span class="org-string">"#navbarCollapse"</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"sr-only"</span>&gt;Navegaci&#243;n&lt;/<span class="org-function-name">span</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"icon-bar"</span>&gt;&lt;/<span class="org-function-name">span</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"icon-bar"</span>&gt;&lt;/<span class="org-function-name">span</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"icon-bar"</span>&gt;&lt;/<span class="org-function-name">span</span>&gt;
+      &lt;/<span class="org-function-name">button</span>&gt;
+      &lt;<span class="org-function-name">a</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar-brand"</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span>&gt;Curso de desarrollo web&lt;/<span class="org-function-name">a</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"collapse navbar-collapse"</span> <span class="org-variable-name">id</span>=<span class="org-string">"navbarCollapse"</span>&gt;
+      &lt;<span class="org-function-name">ul</span> <span class="org-variable-name">class</span>=<span class="org-string">"nav navbar-nav"</span>&gt;
+        &lt;<span class="org-function-name">li</span> <span class="org-variable-name">class</span>=<span class="org-string">"active"</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span>&gt;Inicio&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">li</span>&gt;
+        &lt;<span class="org-function-name">li</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span>&gt;Sobre&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">li</span>&gt;
+        &lt;<span class="org-function-name">li</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span>&gt;Contacto&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">li</span>&gt;
+      &lt;/<span class="org-function-name">ul</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">nav</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"jumbotron"</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Aprendiendo a crear p&#225;ginas web</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;Hoy en d&#237;a el navegador se ha convertido el est&#225;ndar universal ya que lo podemos encontrar en gran cantidad de dispositivos tales como la televisi&#243;n, ordenadores, tabletas, m&#243;viles y un largo etcetera. Por ello, aprender a crear p&#225;ginas web, de manera r&#225;pida y profesional es una gran ventaja que se nos ofrece para tener gran cantidad de oportunidades&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://www.maxxcan.com"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success btn-lg"</span>&gt;Empieza hoy&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+      &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">HTML</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;HTML es el lenguaje de marcado universal y su conocimiento nos dar&#225; la posibilidad de crear p&#225;ginas web. Adem&#225;s su entendimiento b&#225;sico nos permitir&#225; introducirnos en la compresi&#243;n de la gran cantidad de tecnolog&#237;a que hay habilitada para crear contenido&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://www.maxxcan.com"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success"</span>&gt;Quiere saber m&#225;s? <span class="org-variable-name">&amp;raquo;</span>&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+      &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">CSS</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;Gracias al CSS podemos enfocarnos en el dise&#241;o de nuetra p&#225;gina o aplicaci&#243;n web mientras en otro proceso u otra persona se encarga del contenido&lt;/<span class="org-function-name">p</span>&gt;  
+      &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://www.maxxcan.com"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success"</span>&gt;Quiere saber m&#225;s? <span class="org-variable-name">&amp;raquo;</span>&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+      &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Bootstrap</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;Bootstrap es un potente framework que nos permite crear de manera sencilla y r&#225;pida p&#225;ginas responsivas de gran calidad&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"http://getbootstrap.com/"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success"</span>&gt;Para aprender ma&#347;<span class="org-variable-name">&amp;raquo;</span>&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;<span class="org-function-name">hr</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-12"</span>&gt;
+      &lt;<span class="org-function-name">footer</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;<span class="org-variable-name">&amp;copy;</span> Copyright 2017 Maxxcan - also Republic Tutorial&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;/<span class="org-function-name">footer</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3dcb90f" class="outline-2">
+<h2 id="org3dcb90f">Diseños fluidos con Bootstrap</h2>
+<div class="outline-text-2" id="text-org3dcb90f">
+</div><div id="outline-container-org0ab363c" class="outline-3">
+<h3 id="org0ab363c">Creando diseños fluidos con Bootstrap</h3>
+<div class="outline-text-3" id="text-org0ab363c">
+<p>
+En Bootstrap podemos usar la clase <b>.container-fluid</b> para crear diseños fluidos los cuales usaran el 100% de la vista de usuario.
+</p>
+
+<p>
+La clase .container-fluid simplemente aplica el margen horizontal con el valor <b>auto</b> y al relleno izquierdo y derecho le dejamos 15px de margen (es decir, margin: 0 -15px).
+</p>
+
+<p>
+Veamos el siguiente código:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Dise&#241;o fijo con Bootstrap</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    body{
+      padding-top: 70px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">nav</span> <span class="org-variable-name">id</span>=<span class="org-string">"myNavbar"</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar navbar-default navbar-inverse navbar-fixed-top"</span> <span class="org-variable-name">role</span>=<span class="org-string">"navigation"</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container-fluid"</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar-header"</span>&gt;
+      &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar-toggle"</span> <span class="org-variable-name">data-toggle</span>=<span class="org-string">"collapse"</span> <span class="org-variable-name">data-target</span>=<span class="org-string">"#navbarCollapse"</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"sr-only"</span>&gt;Navegaci&#243;n&lt;/<span class="org-function-name">span</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"icon-bar"</span>&gt;&lt;/<span class="org-function-name">span</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"icon-bar"</span>&gt;&lt;/<span class="org-function-name">span</span>&gt;
+        &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"icon-bar"</span>&gt;&lt;/<span class="org-function-name">span</span>&gt;
+      &lt;/<span class="org-function-name">button</span>&gt;
+      &lt;<span class="org-function-name">a</span> <span class="org-variable-name">class</span>=<span class="org-string">"navbar-brand"</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span>&gt;Curso de desarrollo web&lt;/<span class="org-function-name">a</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"collapse navbar-collapse"</span> <span class="org-variable-name">id</span>=<span class="org-string">"navbarCollapse"</span>&gt;
+      &lt;<span class="org-function-name">ul</span> <span class="org-variable-name">class</span>=<span class="org-string">"nav navbar-nav"</span>&gt;
+        &lt;<span class="org-function-name">li</span> <span class="org-variable-name">class</span>=<span class="org-string">"active"</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span>&gt;Inicio&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">li</span>&gt;
+        &lt;<span class="org-function-name">li</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span>&gt;Sobre&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">li</span>&gt;
+        &lt;<span class="org-function-name">li</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"#"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span>&gt;Contacto&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">li</span>&gt;
+      &lt;/<span class="org-function-name">ul</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">nav</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container-fluid"</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"jumbotron"</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Aprendiendo a crear p&#225;ginas web</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;Hoy en d&#237;a el navegador se ha convertido el est&#225;ndar universal ya que lo podemos encontrar en gran cantidad de dispositivos tales como la televisi&#243;n, ordenadores, tabletas, m&#243;viles y un largo etcetera. Por ello, aprender a crear p&#225;ginas web, de manera r&#225;pida y profesional es una gran ventaja que se nos ofrece para tener gran cantidad de oportunidades&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://www.maxxcan.com"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success btn-lg"</span>&gt;Empieza hoy&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+      &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">HTML</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;HTML es el lenguaje de marcado universal y su conocimiento nos dar&#225; la posibilidad de crear p&#225;ginas web. Adem&#225;s su entendimiento b&#225;sico nos permitir&#225; introducirnos en la compresi&#243;n de la gran cantidad de tecnolog&#237;a que hay habilitada para crear contenido&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://www.maxxcan.com"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success"</span>&gt;Quiere saber m&#225;s? <span class="org-variable-name">&amp;raquo;</span>&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+      &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">CSS</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;Gracias al CSS podemos enfocarnos en el dise&#241;o de nuetra p&#225;gina o aplicaci&#243;n web mientras en otro proceso u otra persona se encarga del contenido&lt;/<span class="org-function-name">p</span>&gt;  
+      &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://www.maxxcan.com"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success"</span>&gt;Quiere saber m&#225;s? <span class="org-variable-name">&amp;raquo;</span>&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-4"</span>&gt;
+      &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Bootstrap</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;Bootstrap es un potente framework que nos permite crear de manera sencilla y r&#225;pida p&#225;ginas responsivas de gran calidad&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"http://getbootstrap.com/"</span> <span class="org-variable-name">target</span>=<span class="org-string">"_blank"</span> <span class="org-variable-name">class</span>=<span class="org-string">"btn btn-success"</span>&gt;Para aprender ma&#347;<span class="org-variable-name">&amp;raquo;</span>&lt;/<span class="org-function-name">a</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;<span class="org-function-name">hr</span>&gt;
+  &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"row"</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"col-xs-12"</span>&gt;
+      &lt;<span class="org-function-name">footer</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;<span class="org-variable-name">&amp;copy;</span> Copyright 2017 Maxxcan - also Republic Tutorial&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;/<span class="org-function-name">footer</span>&gt;
+    &lt;/<span class="org-function-name">div</span>&gt;
+  &lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org037ff1c" class="outline-2">
+<h2 id="org037ff1c">Tipografía en Bootstrap</h2>
+<div class="outline-text-2" id="text-org037ff1c">
+</div><div id="outline-container-org3c11ae1" class="outline-3">
+<h3 id="org3c11ae1">Trabajando con cabeceras</h3>
+<div class="outline-text-3" id="text-org3c11ae1">
+<p>
+En Bootstrap podemos definir cabeceras HTML usando desde <b>&lt;h1&gt;</b> hasta <b>&lt;h6&gt;</b> de la misma forma que un documento HTML. También podemos usar las clases desde <b>.h1</b> hasta <b>.h6</b>. 
+</p>
+
+<p>
+Veamos este ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Example of Bootstrap 3 Headings</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">h1. Cabeceras en Bootstrap</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">h2. Cabeceras en Bootstrap</span></span>&lt;/<span class="org-function-name">h2</span>&gt;
+    &lt;<span class="org-function-name">h3</span>&gt;<span class="org-underline"><span class="org-italic">h3. Cabeceras en Bootstrap</span></span>&lt;/<span class="org-function-name">h3</span>&gt;
+    &lt;<span class="org-function-name">h4</span>&gt;<span class="org-underline">h4. Cabeceras en Bootstrap</span>&lt;/<span class="org-function-name">h4</span>&gt;
+    &lt;<span class="org-function-name">h5</span>&gt;<span class="org-underline">h5. Cabeceras en Bootstrap</span>&lt;/<span class="org-function-name">h5</span>&gt;
+    &lt;<span class="org-function-name">h6</span>&gt;<span class="org-underline">h6. Cabeceras en Bootstrap</span>&lt;/<span class="org-function-name">h6</span>&gt;
+    &lt;<span class="org-function-name">hr</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"h1"</span>&gt;h1. Cabeceras en Bootstrap&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"h2"</span>&gt;h2. Cabeceras en Bootstrap&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"h3"</span>&gt;h3. Cabeceras en Bootstrap&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"h4"</span>&gt;h4. Cabeceras en Bootstrap&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"h5"</span>&gt;h5. Cabeceras en Bootstrap&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"h6"</span>&gt;h6. Cabeceras en Bootstrap&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+También podemos usar las etiquetas &lt;small&gt; y &lt;span&gt; o la clase .small, tal como vemos en este ejemplo:
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de cabeceras con Bootstrap</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;h1. Cabeceras en Bootstrap &lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto Secundario</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">h2</span>&gt;h2. Cabeceras en Bootstrap &lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto Secundario</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">h2</span>&gt;
+    &lt;<span class="org-function-name">h3</span>&gt;h3. Cabeceras en Bootstrap &lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto Secundario</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">h3</span>&gt;
+    &lt;<span class="org-function-name">h4</span>&gt;h4. Cabeceras en Bootstrap &lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto Secundario</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">h4</span>&gt;
+    &lt;<span class="org-function-name">h5</span>&gt;h5. Cabeceras en Bootstrap &lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto Secundario</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">h5</span>&gt;
+    &lt;<span class="org-function-name">h6</span>&gt;h6. Cabeceras en Bootstrap &lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto Secundario</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">h6</span>&gt;
+    &lt;<span class="org-function-name">hr</span>&gt;
+    &lt;<span class="org-function-name">h1</span>&gt;h1. Cabeceras en Bootstrap &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"small"</span>&gt;Texto Secundario&lt;/<span class="org-function-name">span</span>&gt;&lt;/<span class="org-function-name">h1</span>&gt;
+    &lt;<span class="org-function-name">h2</span>&gt;h2. Cabeceras en Bootstrap &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"small"</span>&gt;Texto Secundario&lt;/<span class="org-function-name">span</span>&gt;&lt;/<span class="org-function-name">h2</span>&gt;
+    &lt;<span class="org-function-name">h3</span>&gt;h3. Cabeceras en Bootstrap &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"small"</span>&gt;Texto Secundario&lt;/<span class="org-function-name">span</span>&gt;&lt;/<span class="org-function-name">h3</span>&gt;
+    &lt;<span class="org-function-name">h4</span>&gt;h4. Cabeceras en Bootstrap &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"small"</span>&gt;Texto Secundario&lt;/<span class="org-function-name">span</span>&gt;&lt;/<span class="org-function-name">h4</span>&gt;
+    &lt;<span class="org-function-name">h5</span>&gt;h5. Cabeceras en Bootstrap &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"small"</span>&gt;Texto Secundario&lt;/<span class="org-function-name">span</span>&gt;&lt;/<span class="org-function-name">h5</span>&gt;
+    &lt;<span class="org-function-name">h6</span>&gt;h6. Cabeceras en Bootstrap &lt;<span class="org-function-name">span</span> <span class="org-variable-name">class</span>=<span class="org-string">"small"</span>&gt;Texto Secundario&lt;/<span class="org-function-name">span</span>&gt;&lt;/<span class="org-function-name">h6</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7abb227" class="outline-3">
+<h3 id="org7abb227">Trabajando con párrafos</h3>
+<div class="outline-text-3" id="text-org7abb227">
+<p>
+Bootstrap por defecto usa un tamaño de fuente de <b>14px</b>. Esto es aplicado a todos los párrafos del &lt;body&gt;. Podemos sin embargo escribir párrafos sin que sigan estas normas con el uso de la clase <b>.lead</b>. 
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de p&#225;rrafos</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;Esto es un p&#225;rrafo normal en Bootstrap.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"lead"</span>&gt;Este p&#225;rrafo no sigue las normas de Bootstrap.&lt;/<span class="org-function-name">p</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+También podemos de una manera muy fácil alinear el texto de un párrafo con las siguientes clases.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de alineaci&#243;n de texto</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-left"</span>&gt;Texto alineado a la izquierda.&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-center"</span>&gt;Texto alineado al centro.&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-right"</span>&gt;Texto alineado a la derecha.&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-justify"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam.&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-nowrap"</span>&gt;Texto palomita suelta.&lt;/<span class="org-function-name">p</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;           
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org00bf998" class="outline-3">
+<h3 id="org00bf998">Formateado de texto</h3>
+<div class="outline-text-3" id="text-org00bf998">
+<p>
+Para formatear texto en Bootstrap podemos usar las etiquetas <b>&lt;strong&gt;,&lt;i&gt;,&lt;small&gt;</b> para tener el texto en negrita, itálica y pequeño.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Example of Bootstrap 3 Text Formatting</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">Texto en negrita</span>&lt;/<span class="org-function-name">b</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">big</span>&gt;<span class="org-bold">Texto grande</span>&lt;/<span class="org-function-name">big</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">code</span>&gt;Texto de computadora&lt;/<span class="org-function-name">code</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">em</span>&gt;<span class="org-italic">Texto emfatizado</span>&lt;/<span class="org-function-name">em</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">i</span>&gt;<span class="org-italic">Texto en it&#225;lica</span>&lt;/<span class="org-function-name">i</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">mark</span>&gt;Texto resaltado&lt;/<span class="org-function-name">mark</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">small</span>&gt;<span class="org-default">Texto peque&#241;o</span>&lt;/<span class="org-function-name">small</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Texto fuertemente emfatizado</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;Esto es un &lt;<span class="org-function-name">sub</span>&gt;sub&#237;ndice&lt;/<span class="org-function-name">sub</span>&gt; y un &lt;<span class="org-function-name">sup</span>&gt;super&#237;ndice&lt;/<span class="org-function-name">sup</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">ins</span>&gt;Texto insertado&lt;/<span class="org-function-name">ins</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">del</span>&gt;Texto eliminado&lt;/<span class="org-function-name">del</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;             
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf783d11" class="outline-3">
+<h3 id="orgf783d11">Clases para transformar texto</h3>
+<div class="outline-text-3" id="text-orgf783d11">
+<p>
+Podemos transformar texto transformándolo en minúscula, mayúscula o en texto capitalizado.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de transformaci&#243;n del texto</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-lowercase"</span>&gt;Ponemos todo el texto en min&#250;scula.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-uppercase"</span>&gt;Ponemos todo el texto en may&#250;scula.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-capitalize"</span>&gt;Capitalizamos el texto.&lt;/<span class="org-function-name">p</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga2726d5" class="outline-3">
+<h3 id="orga2726d5">Clases para enfatizar el texto</h3>
+<div class="outline-text-3" id="text-orga2726d5">
+<p>
+Los colores son muy poderosos para mostrar información y resaltar cierto contenido.
+</p>
+
+<p>
+Bootstrap tiene unas cuantas clases para resaltar este contenido usando distingos colores. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de texto resaltado con Bootstrap</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-muted"</span>&gt;Texto mutado. Se le pone gris para que sea menos visible.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-primary"</span>&gt;Importante: Texto con cierta importancia.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-success"</span>&gt;&#201;xito. Ponemos un color llamativo y alegre.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-info"</span>&gt;Nota: Un color moderado para un mensaje de aviso.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-warning"</span>&gt;Aviso: Texto donde alertamos de algo con un color llamativo&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"text-danger"</span>&gt;Error o peligro: Con este tipo de texto avisamos de algo muy importante y urgente.&lt;/<span class="org-function-name">p</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;              
+
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org8bacdd0" class="outline-3">
+<h3 id="org8bacdd0">Bloques de citas con estilo</h3>
+<div class="outline-text-3" id="text-org8bacdd0">
+<p>
+Para terminar usaremos la etiqueta <b>&lt;blockquote&gt;</b> . Veamos un ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de cita con Bootstrap</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+  &lt;<span class="org-function-name">blockquote</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;S&#243;lo conozco dos cosas infinitas, el universo y la estupidez humana y de lo primero tengo dudas&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;<span class="org-function-name">small</span>&gt;Por &lt;<span class="org-function-name">cite</span>&gt;<span class="org-italic">Albert Einstein</span>&lt;/<span class="org-function-name">cite</span>&gt;&lt;/<span class="org-function-name">small</span>&gt;
+    &lt;/<span class="org-function-name">blockquote</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+
+<p>
+De manera alternativa podemos alinear la cita a la derecha usando la clase <b>.pull-right</b> en el elemento <b>&lt;blockquote&gt;</b> 
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="org-function-name">html</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">http-equiv</span>=<span class="org-string">"X-UA-Compatible"</span> <span class="org-variable-name">content</span>=<span class="org-string">"IE=edge"</span>&gt;
+&lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1"</span>&gt;
+&lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Ejemplo de cita con Bootstrap</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;<span class="org-function-name">link</span> <span class="org-variable-name">rel</span>=<span class="org-string">"stylesheet"</span> <span class="org-variable-name">href</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+&lt;<span class="org-function-name">style</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/css"</span>&gt;
+    .bs-example{
+      margin: 20px;
+    }
+&lt;/<span class="org-function-name">style</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"bs-example"</span>&gt;
+  &lt;<span class="org-function-name">blockquote</span> <span class="org-variable-name">class</span>=<span class="org-string">"pull-right"</span>&gt;
+      &lt;<span class="org-function-name">p</span>&gt;S&#243;lo conozco dos cosas infinitas, el universo y la estupidez humana y de lo primero tengo dudas&lt;/<span class="org-function-name">p</span>&gt;
+      &lt;<span class="org-function-name">small</span>&gt;Por &lt;<span class="org-function-name">cite</span>&gt;<span class="org-italic">Albert Einstein</span>&lt;/<span class="org-function-name">cite</span>&gt;&lt;/<span class="org-function-name">small</span>&gt;
+    &lt;/<span class="org-function-name">blockquote</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;                                   
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Patricio Martínez</p>
+<p class="date">Created: 2017-07-25 mar 12:14</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
