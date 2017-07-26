@@ -2923,3 +2923,379 @@ También podemos insertar contenido HTML como cabeceras, párrafos o botones den
 </html>            
 #+end_src
 
+* Iconos en Bootstrap
+
+Bootstrap incluye una gran cantidad de iconos del proyecto [[http://glyphicons.com/][Glyphicons]]
+
+[[./img/bootstrap-icon.jpg]]
+
+
+** Cómo usar los iconos
+
+Para usar los iconos se requiere la etiqueta *<span>* con la clase *glyphicon* y el icono en concreto que queremos usar *glyphicon-* 
+
+De manera general sería así:
+
+#+begin_src html
+<span class="glyphicon glyphicon-class-name"></span>
+#+end_src
+
+Veamos un ejemplo 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de iconos en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head> 
+<body>
+<div class="bs-example">
+    <form>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+		<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+    </form>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+Más información sobre todos los iconos que tenemos está [[http://getbootstrap.com/components/][aqui]]
+
+* Barras de progreso
+
+** Creación de una barra de progreso con Bootstrap
+
+La barra de progreso puede ser usada para seguir un progreso de una tarea o acción por parte del usuario. Veamos el siguiente ejemplo:
+
+#+begin_src html
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de barra de progreso</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head> 
+<body>
+<div class="bs-example">
+    <div class="progress">
+        <div class="progress-bar" style="width: 60%;">
+            <span class="sr-only">60% Completado</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+#+end_src
+
+Además podemos conseguir muchos estilos visuales de las barras de progreso. Por ejemplo con texto en su interior, con animación, distintos colores, etc. 
+
+Veamos para terminar un ejemplo de una barra de progreso que cambia su valor dinámicamente. 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de barra de progreso que varía dinamicamente</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head> 
+<body>
+<div class="bs-example">
+	<div class="progress progress-striped active">
+		<div class="progress-bar"></div>
+	</div>
+	 
+	<!-- jQuery Script -->
+	<script type="text/javascript">
+		var i = 0;
+		function makeProgress(){
+			if(i < 100){
+				i = i + 1;
+				$(".progress-bar").css("width", i + "%").text(i + " %");
+			}
+			// Wait for sometime before running this script again
+			setTimeout("makeProgress()", 100);
+		}
+		makeProgress();
+	</script>
+</div>
+</body>
+</html>                                		                                		
+#+end_src
+
+* Mostrar contenido con Jumbotron
+
+Bootstrap tiene un componente llamado Jumbotron que es una forma excelente de mostrar contenido clave o información en una página web. Para hacerlo solo tenemos que incluir el contenido en un elemento *<div>* y aplicarle la clase *.jumbotron*
+
+#+begin_src html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Jumbotron</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .jumbotron{
+    	margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+    	<div class="col-xs-12">
+        	<div class="jumbotron">
+                <h1>Aprendiendo a crear páginas web</h1>
+            	<p>Hoy en día es muy importante aprender a hacer páginas web para una gran cantidad de oportunidades de desarrollo y laborales. Si quieres aprender a programar webs como dios manda tendrás los mejores consejos y tutoriales en mi página web.
+            	<p><a href="http://www.maxxcan.com" target="_blank" class="btn btn-primary btn-lg">Empieza Ya mismo</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+
+** Creando una página a tamaño completo con Jumbotron
+
+Para crear una página con jumbotron que no tenga esquinas redondeadas y además ocupe todo el año de la página solo hay que añadir el contenido en un elemento con la clase *.container* 
+
+
+#+begin_src html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Jumbotron</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .jumbotron{
+    	margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+   <div class="jumbotron">
+        <div class="container">
+            <h1>Aprendiendo a crear páginas web</h1>
+            	<p>Hoy en día es muy importante aprender a hacer páginas web para una gran cantidad de oportunidades de desarrollo y laborales. Si quieres aprender a programar webs como dios manda tendrás los mejores consejos y tutoriales en mi página web.
+            	<p><a href="http://www.maxxcan.com" target="_blank" class="btn btn-primary btn-lg">Empieza Ya mismo</a></p>
+        </div>
+   </div>
+</body>
+</html>                                		
+#+end_src
+
+
+* Modales en Bootstrap
+
+** Creando modales en Bootstrap
+
+Un modal básicamente es una caja de diálogo o ventana emergente que es usada para mostrar información importante al usuario o si es necesario algún tipo de acción por parte de éste. Los modales también son usados para mostrar avisos o situaciones donde se requiere de una confirmación para la siguiente acción. 
+
+Es fácil crear inteligentes y flexibles cajas de diálogo con el plugin modal de Bootstrap. 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de modal en Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+</head>
+<body>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Confirmación</h4>
+            </div>
+            <div class="modal-body">
+                <p>Quieres salvar el documento antes de cerrarlo?</p>
+                <p class="text-warning"><small>Si no salvas perderás todos los datos.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Salvar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Cambiando el modal dependiendo del botón desencadenante
+
+Podemos ofrecer varios tipos de modales en una página web.
+
+Por ejemplo podemos usar los eventos de los modales para mostrar diferentes modales basados en el mismo. En el siguiente ejemplo cambiaremos el titulo del modal dependiendo del atributo *data-title* del botón que inicia el modal.
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de eventos modales</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myModal").on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget);  // Button that triggered the modal
+        var titleData = button.data('title'); // Extract value from data-* attributes
+        $(this).find('.modal-title').text(titleData + ' Form');
+    });
+});
+</script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Feedback">Feedback</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Report Error">Reporta un error</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Contact Us">Contactanos</button>
+    
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Ventana Modal</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Mensaje:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+</body>
+</html>                                		
+#+end_src
+
+* Menús desplegables en Bootstrap
+
+** Creando menús desplegables con Bootstrap
+
+En Bootstrap podemos usar el plugin de dropdown para añadir menús desplegables a todo tipo de elementos como enlaces, botones, pestañas, etc. 
+
+** Añadiendo menús desplegables vía Atributos
+
+Bootstrap ofrece una forma fácil y elegante de añadir menús desplegables vía datos de los atributos. Veamos el siguiente ejemplo:
+
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de menu desplegable</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+   <div class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Menú <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Acción</a></li>
+            <li><a href="#">Otra acción</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>                                		
+#+end_src
+
+** Explicación del código
+
+El menú desplegable tiene básicamente dos componentes el elemento que inicia el menú y el menú en sí.
+
++ La clase *.dropdown* especifica el menú
++ La clase .dropdown-toggle define el elemento que dispara el menú, el cual puede ser un hiper enlace o un botón
++ El elemento *.caret* dentro del elemento disparador crea un pequeño triangulo que indica que ese elemento contiene un menú
++ La lista desordenada con la clase *.dropdown-menu* es el menú en sí.
+
+* Ejercicios 1ª Parte
+
+
