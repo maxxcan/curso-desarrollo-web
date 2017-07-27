@@ -1,0 +1,3369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-07-27 jue 10:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Patricio Martínez Cano" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="themes/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc8a05a3">Características</a></li>
+<li><a href="#org8763131">Sintaxis</a></li>
+<li><a href="#org70a6646">Usando Sass</a></li>
+<li><a href="#orgd8cafd5">Extensiones CSS</a>
+<ul>
+<li><a href="#orgfe501ea">Reglas anidadas</a></li>
+<li><a href="#org6f53f43">Refinando a los selectores padre</a></li>
+<li><a href="#org6ec78d5">Propiedades anidadas</a></li>
+<li><a href="#org73b097c">Selectores variables</a></li>
+</ul>
+</li>
+<li><a href="#org923d231">Comentarios</a></li>
+<li><a href="#org2552a88">SassScript</a>
+<ul>
+<li><a href="#org6c83c0f">Shell interactiva</a></li>
+<li><a href="#org2e3a771">Variables</a></li>
+<li><a href="#orgec3b31b">Tipos de datos</a></li>
+<li><a href="#orgd5c8e0e">Cadenas de texto</a></li>
+<li><a href="#org2ce491c">Listas</a></li>
+<li><a href="#org394f6ad">Mapas</a></li>
+<li><a href="#org9e80724">Operadores</a>
+<ul>
+<li><a href="#orgf58fcf2">Operadores para números</a></li>
+<li><a href="#org7817b23">Operadores para colores</a></li>
+<li><a href="#org9795b35">Operadores para cadenas de texto</a></li>
+<li><a href="#orgb67d97a">Operadores para valores lógicos o booleanos</a></li>
+<li><a href="#org33223fd">Operadores para listas</a></li>
+</ul>
+</li>
+<li><a href="#org63e841a">Paréntesis</a></li>
+<li><a href="#org527a42b">Funciones</a>
+<ul>
+<li><a href="#org0a0f51a">Argumentos con nombre</a></li>
+</ul>
+</li>
+<li><a href="#org4b72882">Interpolación</a></li>
+<li><a href="#orgd24f768">Variables con valores por defecto</a></li>
+</ul>
+</li>
+<li><a href="#org90f44ed">Reglas @ y directivas</a>
+<ul>
+<li><a href="#orga19ed68">La regla @import</a></li>
+<li><a href="#orgfa6a364">Hojas de estilo parciales</a></li>
+<li><a href="#orga1cf817">Anidando reglas @import</a></li>
+<li><a href="#orgf2d0361">La regla @media</a></li>
+<li><a href="#orgb184b7f">La regla @extend</a>
+<ul>
+<li><a href="#org72bf3e9">Funcionamiento interno</a></li>
+<li><a href="#orga7b99d1">Extendiendo selectores complejos</a></li>
+<li><a href="#orgc56d01e">Extendiendo de varios selectores</a></li>
+<li><a href="#org3f5c6f9">Extendiendo a varios niveles</a></li>
+<li><a href="#orgad2acfa">Secuencia de selectores</a></li>
+<li><a href="#orgb2efcfe">Selectores exclusivos para reglas @extend</a></li>
+<li><a href="#org7e5d3cb">La opción !optional</a></li>
+<li><a href="#orgf7a5d27">Usando @extend en las directivas</a></li>
+</ul>
+</li>
+<li><a href="#orgdd2946a">La regla @at-root</a>
+<ul>
+<li><a href="#org6409995">Modificando la regla @at-root con with y without</a></li>
+</ul>
+</li>
+<li><a href="#org5771d55">La regla @debug</a></li>
+<li><a href="#org671e491">La regla @warn</a></li>
+</ul>
+</li>
+<li><a href="#orgadcb461">Directivas de control y expresiones</a>
+<ul>
+<li><a href="#org42e702f">La función if()</a></li>
+<li><a href="#org306c919">La directiva @if</a></li>
+<li><a href="#org024e330">La directiva @for</a></li>
+<li><a href="#org30e1ace">La directiva @each</a>
+<ul>
+<li><a href="#org991a330">Asignación múltiple</a></li>
+</ul>
+</li>
+<li><a href="#org9c165f0">La directiva @while</a></li>
+</ul>
+</li>
+<li><a href="#org01c0b88">Directivas mixin</a>
+<ul>
+<li><a href="#org474107a">Definiendo mixins con la directiva @mixin</a></li>
+<li><a href="#org8d6901c">Incluyendo mixins con @include</a></li>
+<li><a href="#orga3dd9ed">Argumentos</a></li>
+<li><a href="#orgd58a30b">Argumentos con nombre</a></li>
+<li><a href="#org884c3f6">Argumentos variables</a></li>
+<li><a href="#orgbd1bd81">Pasando bloques de contenidos a los mixins</a>
+<ul>
+<li><a href="#orgf09ed45">Contexto variables y bloques contenidos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9f30160">Directivas de función</a></li>
+<li><a href="#org1049e80">Formato de salida</a>
+<ul>
+<li><a href="#org1d61419">Formato :nested</a></li>
+<li><a href="#org13f9301">El formato :expanded</a></li>
+<li><a href="#org76696a7">El formato :compact</a></li>
+<li><a href="#org37c8f9c">El formato :compressed</a></li>
+</ul>
+</li>
+<li><a href="#org5918c1d">Extendiendo Sass</a>
+<ul>
+<li><a href="#org49628eb">Definiendo funciones propias para Sass</a></li>
+<li><a href="#org49df0aa">Sistemas de caché</a></li>
+<li><a href="#orgc9173f8">Importadores propios</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Introducción a Sass
+</p>
+
+<div id="outline-container-orgc8a05a3" class="outline-2">
+<h2 id="orgc8a05a3">Características</h2>
+<div class="outline-text-2" id="text-orgc8a05a3">
+<p>
+Sass (acrónimo de Syntactically Awesome StyleSheets) es una extensión de CSS que añade características muy potentes y elegantes a este lenguaje de estilos. Sass permite el uso de variables, reglas CSS anidadas, mixins, importación de hojas de estilos y muchas otras características, al tiempo que mantiene la compatibilidad con CSS.
+</p>
+
+<p>
+Sass permite organizar mejor las hojas de estilos grandes y permite ser mucho más productivo con las hojas de estilos pequeñas, sobre todo gracias a la librería <a href="http://compass-style.org/">compass</a>.
+</p>
+
+<p>
+En definitiva, Sass incluye las siguientes características:
+</p>
+
+<ul class="org-ul">
+<li>100% compatible con CSS3.</li>
+<li>Permite el uso de variables, anidamiento de estilos y <i>mixins</i>.</li>
+<li>Incluye numerosas funciones para manipular con facilidad colores y otros valores.</li>
+<li>Permite el uso de elementos básicos de programación como las directivas de control y las librerías.</li>
+<li>Genera archivos CSS bien formateados y permite configurar su formato.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8763131" class="outline-2">
+<h2 id="org8763131">Sintaxis</h2>
+<div class="outline-text-2" id="text-org8763131">
+<p>
+Sass permite el uso de dos sintaxis diferentes para crear sus archivos. La primera, conocida como SCSS (del inglés, Sassy CSS) es la que vamos a utilizar en este manual y es una extensión de la sintaxis de CSS3. Esto significa que cualquier hoja de estilos CSS3 válida también es un archivo SCSS válido.
+</p>
+
+<p>
+La segunda sintaxis, conocida como "sintaxis indentada" o simplemente "sintaxis sass" permite escribir los estilos CSS de manera más concisa. En este caso, el anidamiento de selectores se indica con tabulaciones en vez de con llaves y las propiedades se separan con saltos de línea en vez de con puntos y coma.
+</p>
+
+<p>
+Algunos diseñadores consideran que esta segunda sintaxis es más sencilla de leer y más rápida de escribir que SCSS. En cualquier caso, las dos sintaxis tienen exactamente las mismas funcionalidades y sólo se diferencia en su sintaxis. Los archivos creados con esta segunda sintaxis utilizan la extensión .sass.
+</p>
+
+<p>
+Una de las ventajas de Sass es que los archivos creados con una sintaxis pueden importar cualquier archivo creado con la otra sintaxis. Además, dispones de una utilidad para la línea de comandos que te permite convertir una sintaxis en otra:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sass-convert estilos.sass estilos.scss
+
+sass-convert estilos.scss estilos.sass
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org70a6646" class="outline-2">
+<h2 id="org70a6646">Usando Sass</h2>
+<div class="outline-text-2" id="text-org70a6646">
+<p>
+Sass se puede usar de tres maneras diferentes:
+</p>
+
+<ol class="org-ol">
+<li>En la consola de comandos</li>
+<li>Como un módulo de Ruby</li>
+<li>Como un plugin de cualquier <i>framework</i> compatible con Rack</li>
+</ol>
+
+<p>
+Independientemente de cómo lo utilices, el primer paso siempre consiste en instalar Sass con el siguiente comando:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">gem install sass
+</pre>
+</div>
+
+<p>
+Si utilizas Windows, es posible que primero tengas que <a href="https://rubyinstaller.org/">instalar Ruby</a>.
+</p>
+
+<p>
+Para utilizar Sass en la línea de comandos, simplemente ejecuta el comando sass:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sass hoja_estilos.scss archivo_generado.css
+</pre>
+</div>
+
+<p>
+Si lo prefieres, también puedes añadir la opción &#x2013;watch para decirle a Sass que vuelva a generar el archivo CSS cada vez que se cambie la hoja de estilos original:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sass --watch hoja_estilos.scss:archivo_generdo.css
+</pre>
+</div>
+
+<p>
+Si dispones de un directorio con muchos archivos Sass, también puedes vigilarlos todos por si se producen cambios en alguno de ellos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sass --watch app/sass:public/stylesheets
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd8cafd5" class="outline-2">
+<h2 id="orgd8cafd5">Extensiones CSS</h2>
+<div class="outline-text-2" id="text-orgd8cafd5">
+</div><div id="outline-container-orgfe501ea" class="outline-3">
+<h3 id="orgfe501ea">Reglas anidadas</h3>
+<div class="outline-text-3" id="text-orgfe501ea">
+<p>
+Sass permite anidar las reglas CSS para que las hojas de estilos sean más concisas y fáciles de escribir. A los selectores anidados se les prefija automáticamente todos los selectores de los niveles superiores. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#main p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-2">#00ff00</span>;
+  <span class="org-css-property">width</span>: 97%;
+
+  <span class="org-css-selector">.redbox </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">background-color</span>: <span class="custom-1">#ff0000</span>;
+    <span class="org-css-property">color</span>: <span class="custom">#000000</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+
+<p>
+El código Sass anterior se convierte automáticamente en el siguiente código CSS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-2">#00ff00</span>;
+  <span class="org-css-property">width</span>: 97%;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main p .redbox </span><span class="org-rainbow-delimiters-depth-1">{</span>
+    <span class="org-css-property">background-color</span>: <span class="custom-1">#ff0000</span>;
+    <span class="org-css-property">color</span>: <span class="custom">#000000</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Gracias a las reglas anidadas, se evita tener que repetir una y otra vez los mismos selectores y se simplifica enormemente la creación de hojas de estilos complejas. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 97%;
+
+  <span class="org-css-selector">p, div </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">font-size</span>: 2em;
+    <span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-3">{</span> <span class="org-css-property">font-weight</span>: bold; <span class="org-rainbow-delimiters-depth-3">}</span>
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+
+  <span class="org-css-selector">pre </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">font-size</span>: 3em; <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+El código Sass anterior se transforma en el siguiente código CSS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 97%;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main p, #main div </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 2em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main p a, #main div a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main pre </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 3em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6f53f43" class="outline-3">
+<h3 id="org6f53f43">Refinando a los selectores padre</h3>
+<div class="outline-text-3" id="text-org6f53f43">
+<p>
+En ocasiones es necesario modificar el comportamiento por defecto de los selectores anidados. Imagina que quieres aplicar estilos especiales en el estado hover del selector o cuando el elemento &lt;body&gt; de la página tiene una determinada clase.
+</p>
+
+<p>
+En estos casos, puedes utilizar el carácter &amp; para hacer referencia al selector padre dentro del cual se encuentra la regla anidada. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">text-decoration</span>: none;
+  <span class="org-css-selector">&amp;:hover </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">text-decoration</span>: underline; <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-css-selector">body.firefox &amp; </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">font-weight</span>: normal; <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código sass anterior se compilará a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">text-decoration</span>: none;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">a:hover </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">text-decoration</span>: underline;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">body.firefox a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: normal;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+El carácter especial &amp; siempre se reemplaza por el selector padre tal y como aparece en el archivo CSS. Esto significa que si tiene una regla anidada, primero se calcula el selector padre completo y después se reemplaza por &amp;. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">black</span>;
+  <span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">font-weight</span>: bold;
+    <span class="org-css-selector">&amp;:hover </span><span class="org-rainbow-delimiters-depth-3">{</span> <span class="org-css-property">color</span>: <span class="custom">red</span>; <span class="org-rainbow-delimiters-depth-3">}</span>
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">black</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main a:hover </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">red</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El carácter &amp; siempre debe aparecer al principio de los selectores compuestos, pero sí que puede ir seguido de un sufijo que se aplicará al selector padre. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">black</span>;
+  <span class="org-css-selector">&amp;-sidebar </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">border</span>: 1px solid; <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">black</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main-sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px solid;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si por cualquier circunstancia no se puede aplicar el sufijo al selector padre, Sass mostrará un mensaje de error indicándote la causa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ec78d5" class="outline-3">
+<h3 id="org6ec78d5">Propiedades anidadas</h3>
+<div class="outline-text-3" id="text-org6ec78d5">
+<p>
+CSS define varias propiedades cuyos nombres paracen estar agrupados de forma lógica. Así por ejemplo, las propiedades font-family, font-size y font-weight están todas relacionadas con el grupo font. En CSS es obligatorio escribir el nombre completo de todas estas propiedades. Sass permite utilizar el siguiente atajo para definir las propiedades relacionadas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.funky </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">family</span>: fantasy;
+    <span class="org-css-property">size</span>: 30em;
+    <span class="org-css-property">weight</span>: bold;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.funky </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-family</span>: fantasy;
+  <span class="org-css-property">font-size</span>: 30em;
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+También es posible aplicar un valor al propio nombre que agrupa las propiedades:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.funky </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: 2px/3px <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">family</span>: fantasy;
+    <span class="org-css-property">size</span>: 30em;
+    <span class="org-css-property">weight</span>: bold;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.funky </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: 2px/3px;
+  <span class="org-css-property">font-family</span>: fantasy;
+  <span class="org-css-property">font-size</span>: 30em;
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org73b097c" class="outline-3">
+<h3 id="org73b097c">Selectores variables</h3>
+<div class="outline-text-3" id="text-org73b097c">
+<p>
+Sass también soporta un tipo especial de selector variable que se parece a los selectores de clase o de ID, pero que utiliza % en vez de # o .. No obstante, estos selectores variables solamente deberían usarse con la directiva @extend, tal y como se explica en los siguientes capítulos.
+</p>
+
+<p>
+Si utilizas estos selectores sin la directiva @extend, el archivo CSS generado ignorará todas esas reglas Sass.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org923d231" class="outline-2">
+<h2 id="org923d231">Comentarios</h2>
+<div class="outline-text-2" id="text-org923d231">
+<p>
+Sass soporta el mismo tipo de comentarios que CSS, que utilizan los delimitadores <i>* y *</i> y pueden ocupar una o más líneas. Además, Sass también soporta los comentarios de una única línea que utilizan los delimitadores // y que son muy comunes en todos los lenguajes de programación.
+</p>
+
+<p>
+La principal diferencia entre estos dos tipos de comentarios es que los comentarios tradicionales (<i>* &#x2026; *</i>) se añaden en el código CSS generado, mientras que los comentarios de una sola línea (// &#x2026;) se eliminan y no aparecen en el código CSS generado. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-comment-delimiter">/* </span><span class="org-comment">Este comentario ocupa varias l&#237;neas,</span>
+<span class="org-comment"> * y utiliza el formato tradicional de CSS.</span>
+<span class="org-comment"> * Su contenido aparecer&#225; en el archivo CSS compilado. */</span>
+<span class="org-css-selector">body </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">color</span>: <span class="custom">black</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-comment-delimiter">/* </span><span class="org-comment">Este comentario ocupa varias l&#237;neas,</span>
+<span class="org-comment"> * y utiliza el formato tradicional de CSS.</span>
+<span class="org-comment"> * Su contenido aparecer&#225; en el archivo CSS compilado. </span><span class="org-comment-delimiter">*/</span>
+<span class="org-css-selector">body </span><span class="org-rainbow-delimiters-depth-1">{</span>
+    <span class="org-css-property">color</span>: <span class="custom-1">black</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+    <span class="org-css-property">color</span>: <span class="custom">green</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Cuando la primera letra de un comentario de una sola línea es !, su contenido siempre se incluye en el archivo CSS compilado. Esto es útil por ejemplo para mantener mensajes como el Copyright de tus hojas de estilos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2552a88" class="outline-2">
+<h2 id="org2552a88">SassScript</h2>
+<div class="outline-text-2" id="text-org2552a88">
+<p>
+Además de extender la sintaxis básica de CSS, Sass incluye una serie de extensiones más avanzadas llamadas SassScript. Gracias a estas extensiones, las propiedades pueden utilizar variables, expresiones matemáticas y otras funciones. Sass permite el uso de SassScript para definir cualquier valor de cualquier propiedad.
+</p>
+</div>
+
+<div id="outline-container-org6c83c0f" class="outline-3">
+<h3 id="org6c83c0f">Shell interactiva</h3>
+<div class="outline-text-3" id="text-org6c83c0f">
+<p>
+Si quieres experimentar con SassScript antes de empezar a utilizarlo en tus hojas de estilos, puedes hacer uso de "la shell interactiva". Para ello, ejecuta el comando sass añadiendo la opción -i y escribe cualquier expresión válida de SassScript. La shell te mostrará el resultado de evaluar esa expresión o un mensaje de error si no es correcta:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">$ sass -i
+&gt;&gt; <span class="org-string">"&#161;Hola Mundo!"</span>
+<span class="org-string">"&#161;Hola Mundo!"</span>
+
+&gt;&gt; 1px + 1px + 1px
+3px
+
+&gt;&gt; <span class="org-comment-delimiter">#</span><span class="org-comment">777 + #777</span>
+<span class="org-comment-delimiter">#</span><span class="org-comment">eeeeee</span>
+
+&gt;&gt; <span class="org-comment-delimiter">#</span><span class="org-comment">777 + #888</span>
+white
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2e3a771" class="outline-3">
+<h3 id="org2e3a771">Variables</h3>
+<div class="outline-text-3" id="text-org2e3a771">
+<p>
+La funcionalidad básica de SassScript es el uso de variables para almacenar valores que utilizas una y otra vez en tus hojas de estilos. Para ello, utiliza cualquier palabra como nombre de la variable, añádele el símbolo $ por delante y establece su valor como si fuera una propiedad CSS normal. Si por ejemplo defines una variable de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$width</span>: 5em;
+</pre>
+</div>
+
+<p>
+Ahora ya puedes utilizar la variable llamada $width como valor de cualquier propiedad CSS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: <span class="org-variable-name">$width</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+
+<p>
+Una limitación importante de las variables es que sólo están disponibles dentro del contexto donde se han definido. Esto significa que si defines la variable dentro de una regla anidada, sólo estará disponible para esas reglas anidadas. Si quieres poder utilizar una variable como valor de cualquier propiedad de la hoja de estilos, defínela fuera de cualquier selector.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec3b31b" class="outline-3">
+<h3 id="orgec3b31b">Tipos de datos</h3>
+<div class="outline-text-3" id="text-orgec3b31b">
+<p>
+SassScript soporta seis tipos de datos:
+</p>
+
+<ul class="org-ul">
+<li>Numeros</li>
+<li>Cadenas de texto con o sin comillas simples o dobles</li>
+<li>Colores</li>
+<li>Valores lógicos o booleanos</li>
+<li>Valores nulos (null)</li>
+<li>Lista de valores, separados por espacios en blanco o comas</li>
+<li>Pares formados por una clave y un valor separado por :</li>
+</ul>
+
+<p>
+SassScript también soporta todos los otros tipos de datos soportados por CSS, como por ejemplo los caracteres Unicode o la palabra reservada !important. No obstante, Sass no trata estos valores de manera especial y se limita a considerarlos como si fuera una cadena de texto normal y corriente.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5c8e0e" class="outline-3">
+<h3 id="orgd5c8e0e">Cadenas de texto</h3>
+<div class="outline-text-3" id="text-orgd5c8e0e">
+<p>
+CSS define dos tipos de cadenas de texto: las que tienen comillas (dobles o simples) como por ejemplo "Lucida Grande" o 'http://sass-lang.com'; y las que no tienen comillas, como por ejemplo sans-serif o bold.
+</p>
+
+<p>
+SassScript soporta y reconoce estos dos tipos de cadenas. En general, el archivo CSS compilado mantendrá el mismo tipo de cadena que el que se utilizó en el archivo Sass original.
+</p>
+
+<p>
+La única excepción es cuando se utiliza la interpolación #{} que se explica en los próximos capítulos. En este caso, las cadenas siempre se generan sin comillas. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">firefox-message</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$selector</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">body.firefox #</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">{</span></span><span class="org-variable-name">$selector</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">}</span></span><span class="org-css-selector">:before </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">content</span>: <span class="org-string">"Hi, Firefox users!"</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-builtin">@include</span> firefox-message<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">".header"</span><span class="org-rainbow-delimiters-depth-1">)</span>;
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">body.firefox .header:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"Hi, Firefox users!"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2ce491c" class="outline-3">
+<h3 id="org2ce491c">Listas</h3>
+<div class="outline-text-3" id="text-org2ce491c">
+<p>
+Las listas son el tipo de dato que utiliza Sass para representar los valores que normalmente se utilizan en las propiedades CSS como margin: 10px 15px 0 0 o font-face: Helvetica, Arial, sans-serif. Las listas son simplemente una colección de valores separados por comas o espacios en blanco. Técnicamente, cada elemento de la lista también se considera una lista simple de un solo elemento.
+</p>
+
+<p>
+Por si solas las listas no sirven para mucho, pero gracias a las funciones para listas definidas por SassScript que se explican en los siguientes capítulos, puedes conseguir resultados muy avanzados. La función nth() por ejemplo permite acceder al enésimo elemento de una lista, la función join() puede concatenar todos los valores y la función append() puede fusionar varias listas en una sola. Por último, la directiva @each permite aplicar estilos a cada elemento de una lista.
+</p>
+
+<p>
+Además de contener valores simples, las listas pueden contener en su interior otras listas. Así por ejemplo, la lista 1px 2px, 5px 6px es una lista de dos elementos, que a su vez son las listas 1px 2px y 5px 6px. Si las listas interiores utilizan el mismo carácter para separar sus elementos que la lista principal, puedes añadir paréntesis para indicar claramente cuáles son los elementos de las listas anidadas. Así por ejemplo, la lista (1px 2px) (5px 6px) también es una lista de dos elementos cuyos valores son a su vez dos listas con los valores 1px 2px y 5px 6px.
+</p>
+
+<p>
+Cuando se genera el archivo CSS, Sass no mantiene los paréntesis de las listas porque CSS no es capaz de entenderlos. Así que los valores (1px 2px) (5px 6px) y 1px 2px 5px 6px de Sass generan el mismo código cuando se compilan a CSS. No obstante, en Sass estos dos valores son diferentes: el primero es una lista que tiene dos listas en su interior y el segundo es una lista de cuatro números.
+</p>
+
+<p>
+Las listas también pueden estar vacías y no contener ningún elemento. Estas listas vacías se representan mediante () y no se pueden incluir directamente en el archivo CSS compilado. Así que si defines una regla como font-family: (), Sass mostrará un mensaje de error. Si una lista contiene valores vacíos o nulos, como por ejemplo 1px 2px () 3px o 1px 2px null 3px, estos valores se eliminan antes de convertir la lista a código CSS.
+</p>
+
+
+<p>
+Las listas separadas por comas pueden incluir una coma después del último elemento. Esto es muy útil por ejemplo para crear listas de un solo elemento. Así por ejemplo (1,) es una lista que contiene el elemento 1, mientras que (1 2 3,) es una lista separada por comas cuyo primer elemento es a su vez una lista separada por espacios en blanco y que contiene los elementos 1, 2 y 3.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org394f6ad" class="outline-3">
+<h3 id="org394f6ad">Mapas</h3>
+<div class="outline-text-3" id="text-org394f6ad">
+<p>
+Los mapas son asociaciones de claves y valores. La clave se utiliza para acceder fácilmente al valor de cualquier elemento del mapa. Se utilizan principalmente para agrupar valores y acceder a ellos dinámicamente. En CSS no existe ningún elemento equivalente a los mapas, pero su sintaxis es similar a las expresiones media query:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$map</span>: <span class="org-rainbow-delimiters-depth-1">(</span>clave1: valor1, clave2: valor2, clave3: valor3<span class="org-rainbow-delimiters-depth-1">)</span>;
+</pre>
+</div>
+
+<p>
+A diferencia de las listas, los mapas siempre se encierran con paréntesis y los pares clave: valor deben separarse con comas. Tanto las claves como los valores de los mapas pueden utilizar cualquier función o expresión de SassScript. Las claves de un mapa deben ser únicas, por lo que si quieres asociar varios valores a una misma clave, debes utilizar una lista.
+</p>
+
+<p>
+Al igual que sucede con las listas, los mapas se pueden manipular mediante funciones de SassScript. La función map-get() por ejemplo busca un valor dentro del mapa a partir de la clave indicada y la función map<sub>merge</sub>() añade nuevos pares clave: valor a un mapa existente. Además, la directiva @each se puede emplear para aplicar estilos a cada par clave: valor de un mapa.
+</p>
+
+<p>
+Los mapas también se pueden utilizar en cualquier función preparada para manipular listas. Si pasas un mapa a una función que espera una lista, el mapa se transforma primero en un lista de pares de valores. Así por ejemplo, si pasas el mapa (clave1: valor1, clave2: valor2) a una función para listas, este se transforma automáticamente en clave1 valor1, clave2 valor2. Lo contrario no es cierto, ya que no puedes utilizar listas en las funciones preparadas para mapas. La única excepción es la lista vacía (), que representa tanto a un mapa vacío como a una lista vacía.
+</p>
+
+<p>
+Los mapas no se pueden convertir directamente a código CSS. Por tanto, si utilizar un mapa como valor de una variable o como argumento de una función CSS, Sass mostrará un mensaje de error.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e80724" class="outline-3">
+<h3 id="org9e80724">Operadores</h3>
+<div class="outline-text-3" id="text-org9e80724">
+<p>
+Todos los tipos de datos soportan el operador de igualdad (<code>= y !</code>) para comprobar si dos valores son iguales o distintos. Además, cada tipo de dato define otros operadores propios.
+</p>
+</div>
+
+<div id="outline-container-orgf58fcf2" class="outline-4">
+<h4 id="orgf58fcf2">Operadores para números</h4>
+<div class="outline-text-4" id="text-orgf58fcf2">
+<p>
+SassScript soporta los cinco operadores aritméticos básicos: suma +, resta -, multiplicación *, división / y módulo %. El operador módulo calcula el resto de la división sin decimales (ejemplo: 5 módulo 2 = 1, % % 2 = 1). Además, si realizas operaciones sobre números con diferentes unidades, Sass convertirá automáticamente las unidades siempre que sea posible:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 1in + 8pt;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código css resultante será:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 1.111in;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+Con los números también se pueden utilizar los operadores relacionales (&lt;, &gt;, &lt;=, &gt;=) y los de igualdad (<code>=, !</code>).
+</p>
+</div>
+
+<ul class="org-ul"><li><a id="orge81d2f8"></a>El problema del carácter / con la división de números<br /><div class="outline-text-5" id="text-orge81d2f8">
+<p>
+CSS permite el uso del carácter / para separar números. Como Sass es totalmente compatible con la sintaxis de CSS, debe soportar el uso de esta característica. El problema es que el carácter / también se utiliza para la operación matemática de dividir números. Por todo esto, si utilizas el carácter / para separar dos números en SassScript, en el archivo CSS compilado aparecerán tal cual los has escrito.
+</p>
+
+<p>
+No obstante, existen tres situaciones en las que el carácter / siempre se interpreta como una división matemática:
+</p>
+
+<ol class="org-ol">
+<li>Si uno de los operandos de la división es una variable o el resultado devuelto por una función.</li>
+<li>Si el valor está encerrado entre paréntesis.</li>
+<li>Si el valor se utiliza como parte de una expresión matemática.</li>
+</ol>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-comment-delimiter">// </span><span class="org-comment">El car&#225;cter '/' se interpreta como c&#243;digo CSS normal</span>
+  <span class="org-css-property">font</span>: 10px/8px;
+  <span class="org-variable-name">$width</span>: 1000px;
+
+  <span class="org-comment-delimiter">// </span><span class="org-comment">El car&#225;cter '/'  se interpreta como una divisi&#243;n</span>
+  <span class="org-css-property">width</span>: <span class="org-variable-name">$width</span>/2;        <span class="org-comment-delimiter">// </span><span class="org-comment">Uno de los operandos es una variable</span>
+  <span class="org-css-property">width</span>: round<span class="org-rainbow-delimiters-depth-2">(</span>1.5<span class="org-rainbow-delimiters-depth-2">)</span>/2;    <span class="org-comment-delimiter">// </span><span class="org-comment">Uno de los operados es el resultado de una funci&#243;n</span>
+  <span class="org-css-property">height</span>: <span class="org-rainbow-delimiters-depth-2">(</span>500px/2<span class="org-rainbow-delimiters-depth-2">)</span>;      <span class="org-comment-delimiter">// </span><span class="org-comment">Los par&#233;nteis encierran la expresi&#243;n</span>
+  <span class="org-css-property">margin-left</span>: 5px + 8px/2px; <span class="org-comment-delimiter">// </span><span class="org-comment">El '+' indica que es una expresi&#243;n matem&#225;tica</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+
+<p>
+El código css que genera es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: 10px/8px;
+  <span class="org-css-property">width</span>: 500px;
+  <span class="org-css-property">height</span>: 250px;
+  <span class="org-css-property">margin-left</span>: 9px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si quieres utilizar el carácter / normal de CSS incluso cuando empleas variables, encierra las variables con #{}. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-variable-name">$font-size</span>: 12px;
+  <span class="org-variable-name">$line-height</span>: 30px;
+  <span class="org-css-property">font</span>: #<span class="org-rainbow-delimiters-depth-2">{</span><span class="org-variable-name">$font-size</span><span class="org-rainbow-delimiters-depth-2">}</span>/#<span class="org-rainbow-delimiters-depth-2">{</span><span class="org-variable-name">$line-height</span><span class="org-rainbow-delimiters-depth-2">}</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código css que genera es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: 12px/30px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div></li></ul>
+</div>
+
+<div id="outline-container-org7817b23" class="outline-4">
+<h4 id="org7817b23">Operadores para colores</h4>
+<div class="outline-text-4" id="text-org7817b23">
+<p>
+Los operadores aritméticos también se pueden aplicar a los valores que representan colores. En este caso, los cálculos siempre se realizan sobre cada componente del color. Esto significa que antes de cada operación, el color se descompone en sus tres componentes R, G y B, para después aplicar la operación a cada componente. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">#010203</span> + <span class="custom">#040506</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Las tres operaciones realizadas son 01 + 04 = 05, 02 + 05 = 07 y 03 + 06 = 09, por lo que el código CSS compilado resultante es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">#050709</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+En la mayoría de los casos, es mejor utilizar las funciones especiales de SassScript para colores que se explicarán más adelante, en vez de realizar operaciones matemáticas sobre ellos.
+</p>
+
+<p>
+Las operaciones matemáticas también se pueden realizar combinando colores y números. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">#010203</span> * 2;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Las tres operaciones realizadas son 01 * 2 = 02, 02 * 2 = 04 y 03 * 2 = 06, por lo que el código CSS compilado resultante es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">#020406</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si realizas operaciones sobre colores que incluyen un canal alpha (por ejemplo los que han sido creados con las funciones rgba() o hsla()) los dos colores deben tener el mismo valor alpha para poder realizar la operación con éxito. El motivo es que los cálculos no afectan al valor alpha. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">rgba(255, 0, 0, 0.75)</span> + <span class="custom">rgba(0, 255, 0, 0.75)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código CSS compilado resultante es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">rgba(255, 255, 0, 0.75)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El canal alpha de un color se puede ajustar con la función opacify() o transparentize(). Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$translucent-red</span>: <span class="custom">rgba(255, 0, 0, 0.5)</span>;
+
+<span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: opacify<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$translucent-red</span>, 0.3<span class="org-rainbow-delimiters-depth-2">)</span>;
+  <span class="org-css-property">background-color</span>: transparentize<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$translucent-red</span>, 0.25<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">rgba(255, 0, 0, 0.8)</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">rgba(255, 0, 0, 0.25)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9795b35" class="outline-4">
+<h4 id="org9795b35">Operadores para cadenas de texto</h4>
+<div class="outline-text-4" id="text-org9795b35">
+<p>
+El operador + se puede utilizar para concatenar dos o más cadenas de texto:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">cursor</span>: e + -resize;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+El código css resultantes será:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">cursor</span>: e-resize;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si la cadena que está a la izquierda del operador + está encerrada por comillas, el resultado de la operación será una cadena con comillas. Igualmente, si la cadena de la izquierda no tiene comillas, el resultado será una cadena sin comillas. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"Foo "</span> + Bar;
+  <span class="org-css-property">font-family</span>: sans- + <span class="org-string">"serif"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código css resultante:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"Foo Bar"</span>;
+  <span class="org-css-property">font-family</span>: sans-serif;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Por defecto, si dos valores son contiguos, se concatenan con un espacio en blanco:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">margin</span>: 3px + 4px auto;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto dará el siguiente css:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">margin</span>: 7px auto;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Dentro de una cadena de texto puedes utilizar la sintaxis #{ } para realizar operaciones matemáticas o para evaluar expresiones antes de incluirlas en la cadena. Esta característica se llama "<b>interpolación de cadenas de texto</b>":
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"&#161;Me he comido #{5 + 10} pasteles!"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código css resultante:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"&#161;Me he comido 15 pasteles!"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Cuando interpolas una cadena de texto, los valores nulos se consideran cadenas vacías:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$value</span>: null;
+
+<span class="org-css-selector">p:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"&#161;Me he comido #{$valor} pasteles!"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto dará:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p:before </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">content</span>: <span class="org-string">"&#161;Me he comido pasteles!"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb67d97a" class="outline-4">
+<h4 id="orgb67d97a">Operadores para valores lógicos o booleanos</h4>
+<div class="outline-text-4" id="text-orgb67d97a">
+<p>
+SassScript soporta el uso de los tradicionales operadores and, or y not sobre los valores lógicos o booleanos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33223fd" class="outline-4">
+<h4 id="org33223fd">Operadores para listas</h4>
+<div class="outline-text-4" id="text-org33223fd">
+<p>
+Sass no define ningún operador específico para las listas de elementos, ya que estas se manipulan mediante las funciones especiales que se explican en los siguientes capítulos.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org63e841a" class="outline-3">
+<h3 id="org63e841a">Paréntesis</h3>
+<div class="outline-text-3" id="text-org63e841a">
+<p>
+Puedes añadir paréntesis a cualquier expresión Sass para afectar al orden en el que se realizan las operaciones:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 1em + <span class="org-rainbow-delimiters-depth-2">(</span>2em * 3<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass se compila:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 7em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org527a42b" class="outline-3">
+<h3 id="org527a42b">Funciones</h3>
+<div class="outline-text-3" id="text-org527a42b">
+<p>
+SassScript define algunas funciones muy útiles para crear las hojas de estilos y que utilizan la misma sintaxis que CSS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">hsl(0, 100%, 50%)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto se compila:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">#ff0000</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org0a0f51a" class="outline-4">
+<h4 id="org0a0f51a">Argumentos con nombre</h4>
+<div class="outline-text-4" id="text-org0a0f51a">
+<p>
+Para que su uso sea más flexible, a las funciones de Sass les puedes pasar argumentos con nombre. De esta manera no es obligatorio respetar el orden en el que se definieron los argumentos, sólo su nombre:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: hsl<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$hue</span>: 0, <span class="org-variable-name">$saturation</span>: 100%, <span class="org-variable-name">$lightness</span>: 50%<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Aunque obviamente esta forma de usar las funciones no es tan concisa, hace que las hojas de estilo resultantes sean mucho más fáciles de leer. Además permite que las funciones tengan interfaces más flexibles y fáciles de usar, aún cuando incluyan muchos argumentos.
+</p>
+
+<p>
+Los argumentos con nombre se pueden pasar en cualquier orden y puedes omitir los que tienen un valor por defecto. Además, como los argumentos con nombre en realidad son nombres de variables, puedes utilizar indistintamente guiones medios y bajos.
+</p>
+
+<p>
+En los próximos capítulos se detalla la lista completa de funciones Sass y los nombres de todos sus argumentos.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4b72882" class="outline-3">
+<h3 id="org4b72882">Interpolación</h3>
+<div class="outline-text-3" id="text-org4b72882">
+<p>
+Las variables definidas con SassScript se pueden utilizar incluso en los nombres de los selectores y de las propiedades:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$name</span>: foo;
+<span class="org-variable-name">$attr</span>: border;
+
+<span class="org-css-selector">p.#</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-1">{</span></span><span class="org-variable-name">$name</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-1">}</span></span><span class="org-css-selector"> </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  #<span class="org-rainbow-delimiters-depth-2">{</span><span class="org-variable-name">$attr</span><span class="org-rainbow-delimiters-depth-2">}</span>-color: <span class="custom">blue</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Que dará lugar a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p.foo </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-color</span>: <span class="custom">blue</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+También es posible usar #{ } en los valores de las propiedades. Normalmente es mejor utilizar una variable, pero la ventaja de usar #{ } es que todas las operaciones que estén cerca suyo se interpretan como código CSS normal y corriente. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-variable-name">$font-size</span>: 12px;
+  <span class="org-variable-name">$line-height</span>: 30px;
+  <span class="org-css-property">font</span>: #<span class="org-rainbow-delimiters-depth-2">{</span><span class="org-variable-name">$font-size</span><span class="org-rainbow-delimiters-depth-2">}</span>/#<span class="org-rainbow-delimiters-depth-2">{</span><span class="org-variable-name">$line-height</span><span class="org-rainbow-delimiters-depth-2">}</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Dando lugar a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: 12px/30px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd24f768" class="outline-3">
+<h3 id="orgd24f768">Variables con valores por defecto</h3>
+<div class="outline-text-3" id="text-orgd24f768">
+<p>
+La palabra reservada !default permite controlar la asignación de valores a las variables de manera mucho más precisa. Si una variable ya tenía un valor asignado, !default hace que se mantenga sin cambios. Si la variable no existía o no tenía ningún valor, se utiliza el nuevo valor asignado. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$contenido</span>: <span class="org-string">"Primer contenido"</span>;
+<span class="org-variable-name">$contenido</span>: <span class="org-string">"&#191;Segundo contenido?"</span> <span class="org-builtin">!default</span>;
+<span class="org-variable-name">$nuevo</span>_contenido: <span class="org-string">"Tercer contenido"</span> <span class="org-builtin">!default</span>;
+
+<span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">contenido</span>: <span class="org-variable-name">$contenido</span>;
+  <span class="org-css-property">nuevo-contenido</span>: <span class="org-variable-name">$nuevo</span>_contenido;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Que dará el siguiente código css:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">contenido</span>: <span class="org-string">"Primer contenido"</span>;
+  <span class="org-css-property">nuevo-contenido</span>: <span class="org-string">"Tercer contenido"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Al utilizar !default, las variables con valores nulos se considera que no han sido asignadas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$contenido</span>: null;
+<span class="org-variable-name">$contenido</span>: <span class="org-string">"Contenido no nulo"</span> <span class="org-builtin">!default</span>;
+
+<span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">contenido</span>: <span class="org-variable-name">$contenido</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">contenido</span>: <span class="org-string">"Contenido no nulo"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org90f44ed" class="outline-2">
+<h2 id="org90f44ed">Reglas @ y directivas</h2>
+<div class="outline-text-2" id="text-org90f44ed">
+<p>
+Sass soporta todas las reglas @ (también llamadas "reglas at") definidas por CSS3. Además, Sass incluye varias reglas específicas llamadas directivas.
+</p>
+</div>
+
+<div id="outline-container-orga19ed68" class="outline-3">
+<h3 id="orga19ed68">La regla @import</h3>
+<div class="outline-text-3" id="text-orga19ed68">
+<p>
+Sass mejora la regla @import de CSS para poder importar también archivos SCSS y Sass. Todos los archivos importados, independientemente de su tipo, acaban fusionándose antes de generar el archivo CSS final. Además, cualquier variable o mixin definidos en los archivos importados se pueden utilizar en la hoja de estilos principal.
+</p>
+
+<p>
+Los archivos importados se buscan automáticamente en el directorio actual. Utiliza la opción de configuración :load<sub>paths</sub> para configurar todos los directorios adicionales en los que quieras buscar archivos. También puedes utilizar la opción &#x2013;load-path del comando sass.
+</p>
+
+<p>
+La regla @import espera como argumento el nombre del archivo a importar. Por defecto busca un archivo Sass y lo importar directamente, pero a veces esta regla se deja tal cual al compilar el archivo CSS:
+</p>
+
+<ul class="org-ul">
+<li>Si la extensión del archivo importado es .css</li>
+<li>Si el nombre del archivo empieza por <a href="http://">http://</a></li>
+<li>Si el nombre del archivo se indica mediante url()</li>
+<li>Si la regla @import tiene alguna <i>media query</i></li>
+</ul>
+
+<p>
+Si no se da ninguna de las anteriores circunstancias, y la extensión del archivo importado es .scss o .sass, entonces se importan directamente los contenidos de ese archivo. Si no se indica la extensión, Sass tratará de buscar un archivo con ese nombre y con las extensiones .scss o .sass. Ejemplos:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Regla @</th>
+<th scope="col" class="org-left">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">@import "foo.scss";</td>
+<td class="org-left">Se importa el archivo foo.scss</td>
+</tr>
+
+<tr>
+<td class="org-left">@import "foo";</td>
+<td class="org-left">Se importa el archivo foo.scss</td>
+</tr>
+
+<tr>
+<td class="org-left">@import "foo.css";</td>
+<td class="org-left">@import "foo.css";</td>
+</tr>
+
+<tr>
+<td class="org-left">@import "foo" screen;</td>
+<td class="org-left">@import "foo" screen</td>
+</tr>
+
+<tr>
+<td class="org-left">@import "<a href="http://foo.com/bar">http://foo.com/bar</a>";</td>
+<td class="org-left">@import "<a href="http://foo.com/bar">http://foo.com/bar</a>";</td>
+</tr>
+
+<tr>
+<td class="org-left">@import url(foo)</td>
+<td class="org-left">@import url(foo)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+También es posible importar varios archivos con una sola regla <b>@import</b>. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@import</span> <span class="org-string">"rounded-corners"</span>, <span class="org-string">"text-shadow"</span>;
+</pre>
+</div>
+
+
+<p>
+El nombre del archivo importado también se puede establecer con la interpolación #{ }, pero con ciertas restricciones. No se puede importar dinámicamente un archivo Sass en base al nombre de una variable, pero sí que se puede importar de esta manera un archivo CSS. De forma que la interpolación solamente funciona en la práctica cuando se utiliza url(). Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$family</span>: unquote<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"Droid+Sans"</span><span class="org-rainbow-delimiters-depth-1">)</span>;
+<span class="org-builtin">@import</span> url<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"http://fonts.googleapis.com/css?family=#{$family}"</span><span class="org-rainbow-delimiters-depth-1">)</span>;
+</pre>
+</div>
+
+<p>
+Esto resultarán en:
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-builtin">@import</span> url<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"http://fonts.googleapis.com/css?family=Droid+Sans"</span><span class="org-rainbow-delimiters-depth-1">)</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa6a364" class="outline-3">
+<h3 id="orgfa6a364">Hojas de estilo parciales</h3>
+<div class="outline-text-3" id="text-orgfa6a364">
+<p>
+Si quieres importar un archivo SCSS o Sass pero no quieres que se compile como archivo CSS, utiliza un guión bajo como primer carácter del nombre del archivo. De esta manera, Sass no generará un archivo CSS para esa hoja de estilos, pero podrás utilizarla importándola dentro de otra hoja de estilos. Este tipo de archivos que no se compilan se denominan "hojas de estilos parciales" o simplemente "parciales" (en inglés, "partials").
+</p>
+
+<p>
+Aunque el nombre del archivo tenga un guión bajo, no es necesario indicarlo en la regla @import. Así por ejemplo, si creas un archivo llamado _colors.scss, entonces no se generará un archivo _colors.css. Sin embargo, podrás utilizarlo en tus hojas de estilos con la regla @import "colors";, que importará el archivo _colors.scss.
+</p>
+
+<p>
+Obviamente no puedes tener en un mismo directorio una hoja de estilos normal y una parcial con el mismo nombre. Siguiendo el ejemplo anterior, en el mismo directorio no puedes tener un archivo llamado _colors.scss y otro llamado colors.scss.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1cf817" class="outline-3">
+<h3 id="orga1cf817">Anidando reglas @import</h3>
+<div class="outline-text-3" id="text-orga1cf817">
+<p>
+Normalmente las reglas @import se colocan en el primer nivel jerárquico de la hoja de estilos. No obstante, también es posible colocarlas dentro de reglas CSS y reglas @media.
+</p>
+
+<p>
+El funcionamiento de las reglas anidadas es el mismo, pero todos los contenidos importados se incluyen en el mismo nivel en el que se hayan importado. Si por ejemplo el archivo example.scss contiene lo siguiente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.example </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">red</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si importas este archivo dentro de una regla CSS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@import</span> <span class="org-string">"example"</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El archivo css compilado será:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main .example </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">red</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Los archivos importados con reglas @import anidadas no pueden contener elementos y directivas que sólo pueden colocarse en el primer nivel jerárquico de las hojas de estilos, como @mixin o @charset.
+</p>
+
+<p>
+Tampoco es posible anidar reglas @import dentro de los mixin y las directivas de control.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2d0361" class="outline-3">
+<h3 id="orgf2d0361">La regla @media</h3>
+<div class="outline-text-3" id="text-orgf2d0361">
+<p>
+Las reglas @media en Sass funcionan prácticamente igual que en CSS, con una salvedad: se pueden anidar dentro de las reglas CSS. Si incluyes una regla @media dentro de una regla CSS, se aplicará a todos los selectores que se encuentren desde esa regla hasta el primer nivel de la hoja de estilos. Esto hace que sea muy fácil definir estilos dependientes de los dispositivos sin tener que repetir los selectores y sin tener que romper el flujo normal de la hoja de estilos Sass. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 300px;
+  <span class="org-builtin">@media</span> screen and <span class="org-rainbow-delimiters-depth-2">(</span>orientation: landscape<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 500px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código dará como resultado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 300px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-builtin">@media</span> screen and <span class="org-rainbow-delimiters-depth-1">(</span>orientation: landscape<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 500px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Las reglas @media también se pueden anidar entre sí. El resultado la combinación de todas ellas utilizando el operador and. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@media</span> screen <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-builtin">@media</span> <span class="org-rainbow-delimiters-depth-3">(</span>orientation: landscape<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+      <span class="org-css-property">width</span>: 500px;
+    <span class="org-rainbow-delimiters-depth-3">}</span>
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Dará lugar a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-builtin">@media</span> screen and <span class="org-rainbow-delimiters-depth-1">(</span>orientation: landscape<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 500px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Por último, las reglas @media también pueden contener expresiones SassScript (incluyendo variables, funciones y operadores) tanto en los nombres como en los valores. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$media</span>: screen;
+<span class="org-variable-name">$feature</span>: -webkit-min-device-pixel-ratio;
+<span class="org-variable-name">$value</span>: 1.5;
+
+<span class="org-builtin">@media</span> #<span class="org-rainbow-delimiters-depth-1">{</span><span class="org-variable-name">$media</span><span class="org-rainbow-delimiters-depth-1">}</span> and <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$feature</span>: <span class="org-variable-name">$value</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 500px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-builtin">@media</span> screen and <span class="org-rainbow-delimiters-depth-1">(</span>-webkit-min-device-pixel-ratio: 1.5<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.sidebar </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 500px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb184b7f" class="outline-3">
+<h3 id="orgb184b7f">La regla @extend</h3>
+<div class="outline-text-3" id="text-orgb184b7f">
+<p>
+En ocasiones, es necesario que una clase CSS contenga todos los estilos aplicados a otra regla CSS, además de sus propios estilos. La solución habitual en estos casos consiste en crear una clase genérica que puedan utilizar los dos elementos. Imagina que quieres aplicar estilos a dos tipos de mensajes de error diferentes, uno normal y otro más grave. El código HTML podría ser algo como:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"error seriousError"</span>&gt;
+  &#161;Acabas de ser hackeado!
+&lt;/<span class="org-function-name">div</span>&gt;
+</pre>
+</div>
+
+<p>
+Los estilos CSS podrían ser los siguientes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El problema de esta solución es que tienes que acordarte que siempre que apliques la clase .seriousError también tienes que aplicar la clase .error. Esto hace que el mantenimiento de las hojas de estilos se complique y el código HTML de las páginas se complique sin una justificación clara.
+</p>
+
+<p>
+Gracias a la regla @extend puedes evitar todos estos problemas. Esta regla le indica a Sass que un determinado selector debería heredar todos los estilos de otro selector. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> .error;
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.error, .seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Ahora, todos los estilos que definas para el selector .error también se aplican automáticamente al selector .seriousError, al margen de los estilos propios que pueda definir .seriousError. En la práctica esto significa que cuando apliques la clase .seriousError es como si estuvieras aplicando a la vez la clase .error.
+</p>
+
+<p>
+Cualquier otra regla que se aplique al selector .error también se aplicará al selector .seriousError. Imagina que defines el siguiente estilo que se aplica simultáneamente a dos clases CSS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.error.intrusion </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"/image/hacked.png"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si ahora añades en tus páginas un elemento como &lt;div class="seriousError intrusion"&gt;, también se le aplicará el estilo definido por el selector .error.intrusion.
+</p>
+</div>
+
+<div id="outline-container-org72bf3e9" class="outline-4">
+<h4 id="org72bf3e9">Funcionamiento interno</h4>
+<div class="outline-text-4" id="text-org72bf3e9">
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.error.intrusion </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"/image/hacked.png"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> .error;
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Este código Sass dará el siguiente código css:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.error, .seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.error.intrusion, .seriousError.intrusion </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"/image/hacked.png"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Al combinar los selectores, la regla @extend es lo bastante inteligente como para evitar las duplicidades innecesarias (un selector como .seriousError.seriousError se transforma automáticamente en .seriousError). También tiene en cuenta los selectores que nunca podrían seleccionar ningún elemento, como por ejemplo #main#footer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7b99d1" class="outline-4">
+<h4 id="orga7b99d1">Extendiendo selectores complejos</h4>
+<div class="outline-text-4" id="text-orga7b99d1">
+<p>
+Además de los selectores de clase, Sass permite extender cualquier otro elemento que haga referencia a un único elemento, como por ejemplo .special.cool, a:hover o a.user[href^="<a href="http://">http://</a>"]. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.hoverlink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a:hover;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Al igual que en el caso de los selectores de clase, este estilo implica que todos los estilos definidos para el selector a:hover también se aplicarán al selector .hoverlink. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.hoverlink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a:hover;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">a:hover </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">text-decoration</span>: underline;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código anterior compilará en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">a:hover, .hoverlink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">text-decoration</span>: underline;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Al igual que sucedía antes con el selector .error.intrusion, cualquier regla que utilice el selector a:hover también funcionará para el selector .hoverlink, incluso cuando se combinan con otros selectores. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.hoverlink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a:hover;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.comment a.user:hover </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior compilará en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.comment a.user:hover, .comment .user.hoverlink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc56d01e" class="outline-4">
+<h4 id="orgc56d01e">Extendiendo de varios selectores</h4>
+<div class="outline-text-4" id="text-orgc56d01e">
+<p>
+Los selectores pueden extender de más de un selector para heredar todos sus estilos. Ejemplo
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-2">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom-1">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.attention </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 3em;
+  <span class="org-css-property">background-color</span>: <span class="custom">#ff0</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> .error;
+  <span class="org-builtin">@extend</span> .attention;
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+El c&#243;digo Sass anterior se compila de la siguiente manera:
+
+<span class="org-css-selector">.error, .seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-2">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom-1">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.attention, .seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 3em;
+  <span class="org-css-property">background-color</span>: <span class="custom">#ff0</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+En este ejemplo, cualquier elemento con la clase .seriousError es como si también tuviera aplicadas las clases .error y .attention. Como importa el orden en el que se extienden los selectores, el selector .seriousError tiene un color de fondo igual a #ff0 en vez de #fdd, ya que .attention se define después que .error.
+</p>
+
+<p>
+La extensión de más de un selector también se puede indicar mediante una lista de selectores separados por comas. Así por ejemplo, el código @extend .error, .attention es equivalente a @extend .error; @extend.attention.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f5c6f9" class="outline-4">
+<h4 id="org3f5c6f9">Extendiendo a varios niveles</h4>
+<div class="outline-text-4" id="text-org3f5c6f9">
+<p>
+Sass también permite extender de un selector que a su vez extiende de otro selector diferente. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> .error;
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.criticalError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> .seriousError;
+  <span class="org-css-property">position</span>: fixed;
+  <span class="org-css-property">top</span>: 10%;
+  <span class="org-css-property">bottom</span>: 10%;
+  <span class="org-css-property">left</span>: 10%;
+  <span class="org-css-property">right</span>: 10%;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Ahora aplicar la clase .seriousError equivale también a aplicar la clase .error y la clase .criticalError equivale a aplicar también las clases .seriousError y .error. El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.error, .seriousError, .criticalError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.seriousError, .criticalError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-width</span>: 3px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.criticalError </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">position</span>: fixed;
+  <span class="org-css-property">top</span>: 10%;
+  <span class="org-css-property">bottom</span>: 10%;
+  <span class="org-css-property">left</span>: 10%;
+  <span class="org-css-property">right</span>: 10%;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad2acfa" class="outline-4">
+<h4 id="orgad2acfa">Secuencia de selectores</h4>
+<div class="outline-text-4" id="text-orgad2acfa">
+<p>
+Las secuencias de selectores, como por ejemplo .foo .bar o .foo + .bar, todavía no se pueden extender. No obstante, sí que es posible utilizar la regla @extend en los selectores anidados. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#fake-links .link </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">blue</span>;
+  <span class="org-css-selector">&amp;:hover </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">text-decoration</span>: underline;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">a, #fake-links .link </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">blue</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">a:hover, #fake-links .link:hover </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">text-decoration</span>: underline;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+
+<ul class="org-ul"><li><a id="org14f40c0"></a>Combinando secuencias de selectores<br /><div class="outline-text-5" id="text-org14f40c0">
+<p>
+En ocasiones una secuencia de selectores extiende otro selector que está incluido en otra secuencia de selectores. En este caso, se combinan las dos secuencias de selectores. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#admin .tabbar a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#demo .overview .fakelink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Aunque técnicamente sería posible generar todos los selectores resultantes de combinar todos los selectores entre sí, esto haría que la hoja de estilos resultante fuera demasiado larga. Un código tan sencillo como el mostrado anteriormente generaría por ejemplo diez selectores. Así que en vez de generar todas las combinaciones posibles, Sass solamente genera aquellos selectores que probablemente van a ser de utilidad.
+</p>
+
+<p>
+Cuando las dos secuencias que se van a combinar no tienen selectores en común, entonces se generan dos nuevos selectores: uno con la primera secuencia por delante de la segunda y otro con la segunda secuencia por delante de la primera. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#admin .tabbar a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#demo .overview .fakelink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código resultante:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#admin .tabbar a,</span>
+<span class="org-css-selector">#admin .tabbar #demo .overview .fakelink,</span>
+<span class="org-css-selector">#demo .overview #admin .tabbar .fakelink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Si las dos secuencias tienen algunos selectores en común, se combinan esos selectores y las diferencias, si exsten, se alternan. En el siguiente ejemplo, las dos secuencias tienen el selector #admin, así que los selectores resultantes serán el resultado de combinar esos dos selectores de id:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#admin .tabbar a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#admin .overview .fakelink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> a;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+El c&#243;digo Sass anterior se compila de la siguiente manera:
+
+<span class="org-css-selector">#admin .tabbar a,</span>
+<span class="org-css-selector">#admin .tabbar .overview .fakelink,</span>
+<span class="org-css-selector">#admin .overview .tabbar .fakelink </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div></li></ul>
+</div>
+
+<div id="outline-container-orgb2efcfe" class="outline-4">
+<h4 id="orgb2efcfe">Selectores exclusivos para reglas @extend</h4>
+<div class="outline-text-4" id="text-orgb2efcfe">
+<p>
+Las hojas de estilos también pueden contener clases que no se utilizan directamente en el código HTML y que sólo se definen para agrupar estilos que luego se utilizan mediante reglas @extend. Esto es común cuando se escriben librerías para Sass, ya que puede ser interesante ofrecer a los diseñadores la posibilidad de extender o ignorar algunas clases en sus estilos.
+</p>
+
+<p>
+Si utilizaras clases normales, acabarías generando un código CSS demasiado grande y poco optimizado. Incluso correrías el peligro de generar colisiones con otras clases que sí que se utilizan en el código HTML. Por este motivo Sass soporta los selectores variables con la sintaxis %foo.
+</p>
+
+<p>
+Los selectores variables (en inglés, "placeholder parameters") se parecen a los selectores de clase o de id, pero utilizan el carácter % en vez de . o #. Estos nuevos selectores se pueden utilizar en cualquier lugar en el que utilices los selectores de clase o de id y están preparados para no generar código CSS al compilar las hojas de estilos. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-comment-delimiter">// </span><span class="org-comment">Este estilo no se incluir&#225; en el archivo CSS compilado</span>
+<span class="org-css-selector">#context a%extreme </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">blue</span>;
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">font-size</span>: 2em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+La ventaja de los selectores variables es que se pueden extender, de la misma manera que el resto de selectores. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.notice </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> %extreme;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#context a.notice </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">blue</span>;
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">font-size</span>: 2em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e5d3cb" class="outline-4">
+<h4 id="org7e5d3cb">La opción !optional</h4>
+<div class="outline-text-4" id="text-org7e5d3cb">
+<p>
+Cuando extiendes un selector que no existe, Sass genera un error. Si utilizas por ejemplo el código a.important {@extend .notice} pero no existe el selector .notice, entonces se produce un error. También se produciría un error si el único selector que contiene la clase .notice fuera h1.notice, ya que h1 entraría en conflicto con a y no se generaría ningún selector.
+</p>
+
+<p>
+No obstante, en ocasiones puede ser útil permitir que @extend no genere ningún selector. Para ello, añade la opción !optional justo después del selector. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">a.important </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@extend</span> .notice <span class="org-builtin">!optional</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf7a5d27" class="outline-4">
+<h4 id="orgf7a5d27">Usando @extend en las directivas</h4>
+<div class="outline-text-4" id="text-orgf7a5d27">
+<p>
+Existen algunas restricciones que impiden usar @extend en el interior de directivas como @media. Sass por ejemplo no es capaz de hacer que las reglas CSS que se encuentran fuera de la directiva @media se apliquen a los selectores de su interior sin generar un código CSS gigantesco con selectores y estilos duplicados por todas partes. Por lo tanto, si utilizas @extend con la directiva @media o con otras directivas CSS, sólo debes extender los selectores que están encerrados por esas directivas.
+</p>
+
+<p>
+El siguiente ejemplo funciona correctamente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@media</span> print <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+    <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-builtin">@extend</span> .error;
+    <span class="org-css-property">border-width</span>: 3px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Pero el siguiente produciría un error:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#fdd</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-builtin">@media</span> print <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.seriousError </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-comment-delimiter">// </span><span class="org-comment">ESTILO INV&#193;LIDO: .error se utiliza fuera de la directiva "@media print"</span>
+    <span class="org-builtin">@extend</span> .error;
+    <span class="org-css-property">border-width</span>: 3px;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd2946a" class="outline-3">
+<h3 id="orgdd2946a">La regla @at-root</h3>
+<div class="outline-text-3" id="text-orgdd2946a">
+<p>
+Las directivas @at-root hacen que una o más reglas se generen en la raíz de la hoja de estilos en vez de anidarse en sus selectores. Se puede utilizar tanto con selectores individuales como con bloques de selectores. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-comment-delimiter">// </span><span class="org-comment">selector individual</span>
+<span class="org-css-selector">.parent </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@at-root</span> .child <span class="org-rainbow-delimiters-depth-2">{</span> ... <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">bloques de selectores</span>
+<span class="org-css-selector">.parent </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@at-root</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-selector">.child1 </span><span class="org-rainbow-delimiters-depth-3">{</span> ... <span class="org-rainbow-delimiters-depth-3">}</span>
+    <span class="org-css-selector">.child2 </span><span class="org-rainbow-delimiters-depth-3">{</span> ... <span class="org-rainbow-delimiters-depth-3">}</span>
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código anterior Sass se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.child </span><span class="org-rainbow-delimiters-depth-1">{</span> ... <span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.child1 </span><span class="org-rainbow-delimiters-depth-1">{</span> ... <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.child2 </span><span class="org-rainbow-delimiters-depth-1">{</span> ... <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org6409995" class="outline-4">
+<h4 id="org6409995">Modificando la regla @at-root con with y without</h4>
+<div class="outline-text-4" id="text-org6409995">
+<p>
+Por defecto la regla @at-root simplemente excluye todos los selectores. No obstante, también es posible modificar su comportamiento para que salga o no de cualquier directiva @media en la que se encuentre esa regla. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@media</span> print <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.page </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 8in;
+    <span class="org-builtin">@at-root</span> <span class="org-rainbow-delimiters-depth-3">(</span>without: media<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+      <span class="org-css-property">color</span>: <span class="custom">red</span>;
+    <span class="org-rainbow-delimiters-depth-3">}</span>
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-builtin">@media</span> print <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.page </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: 8in;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.page </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">red</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+
+<p>
+La regla @at-root (without: &#x2026;) hace que el estilo se aplique en la raíz de la hoja de estilos y fuera de cualquier media query. También es posible excluir varias directivas separándolas con espacios en blanco: @at-root (without: media supports) saca los estilos fuera de las queries @media y @supports.
+</p>
+
+<p>
+La regla @at-root admite otros dos valores especiales. El valor rule se refiere a las reglas CSS normales, por lo que @at-root (without: rule) es equivalente a @at-root sin ninguna query. Por su parte, la regla @at-root (without: all) significa que los estilos deben sacarse de cualquier directiva o regla CSS.
+</p>
+
+<p>
+Si en vez de indicar las directivas o reglas CSS que se excluyen quieres indicar explícitamente las que se inlcuyen, utiliza with en vez de without. Así por ejemplo, los estilos @at-root (with: rule) se moverán fuera de cualquier directiva pero mantendrán todas las reglas CSS.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5771d55" class="outline-3">
+<h3 id="org5771d55">La regla @debug</h3>
+<div class="outline-text-3" id="text-org5771d55">
+<p>
+La regla @debug muestra por la consola el valor de la expresión SassScript indicada. Se trata de una regla útil para depurar hojas de estilos muy complejas y que utilizan expresiones SassScript muy avanzadas. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@debug</span> 10em + 12em;
+</pre>
+</div>
+
+<p>
+El código anterior mostraría en la consola el siguiente mensaje:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">Line 1 DEBUG: 22em
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org671e491" class="outline-3">
+<h3 id="org671e491">La regla @warn</h3>
+<div class="outline-text-3" id="text-org671e491">
+<p>
+La regla @warn muestra el valor de una expresió SaasScript en forma de mensaje de error. Se trata de una regla muy útil para que los creadores de las librerías avisen a los diseñadores sobre el uso de características que se han declarado obsoletas. También sirve para mostrar errores en el uso de mixins que Sass ha podido corregir automáticamente. Existen dos diferencias principales entre @warn y @debug:
+</p>
+
+<ol class="org-ol">
+<li>Puedes desactivar los mensajes de error con la opción <b>&#x2013;quiet</b> de la línea de comandos  o con la opción de configuración :quiet de Sass</li>
+<li>Los mensajes de error de @warn también se incluyen en la hoja de estilos generada para que el usuario pueda ver tanto los errores como el lugar exacto en el que se producen.</li>
+</ol>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">adjust-location</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$x</span>, <span class="org-variable-name">$y</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@if</span> unitless<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$x</span><span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-builtin">@warn</span> <span class="org-string">"Assuming #{$x} to be in pixels"</span>;
+    <span class="org-variable-name">$x</span>: 1px * <span class="org-variable-name">$x</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-builtin">@if</span> unitless<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$y</span><span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-builtin">@warn</span> <span class="org-string">"Assuming #{$y} to be in pixels"</span>;
+    <span class="org-variable-name">$y</span>: 1px * <span class="org-variable-name">$y</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-css-property">position</span>: relative; <span class="org-css-property">left</span>: <span class="org-variable-name">$x</span>; <span class="org-css-property">top</span>: <span class="org-variable-name">$y</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgadcb461" class="outline-2">
+<h2 id="orgadcb461">Directivas de control y expresiones</h2>
+<div class="outline-text-2" id="text-orgadcb461">
+<p>
+SassScript define algunas directivas de control básicas y expresiones para incluir estilos solamente si se cumplen determinadas condiciones o para incluir el mismo estilo varias veces con ligeras variaciones.
+</p>
+
+<p>
+<b>NOTA: Las directivas de control son una característica muy avanzada que rara vez se utiliza directamente en las hojas de estilos. Sin embargo, son muy útiles para definir mixins y otras características avanzadas de librerías como Compass.</b>
+</p>
+</div>
+
+<div id="outline-container-org42e702f" class="outline-3">
+<h3 id="org42e702f">La función if()</h3>
+<div class="outline-text-3" id="text-org42e702f">
+<p>
+La functión if() permite tomar decisiones para que una hoja de estilos incluya unos u otros estilos en función de unas determinadas condiciones. La función if() solamente evalúa el argumento que corresponde al valor que va a devolver, por lo que en el otro valor puedes hacer referencia a variables que no existen o realizar cálculos que en circunstancias normales causarían algún error (como por ejemplo dividir por cero).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org306c919" class="outline-3">
+<h3 id="org306c919">La directiva @if</h3>
+<div class="outline-text-3" id="text-org306c919">
+<p>
+La directiva @if evalúa una expresión SassScript y solamente incluye los estilos definidos en su interior si la expresión devuelve un valor distinto a false o null. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@if</span> 1 + 1 == 2 <span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">border</span>: 1px solid;  <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-builtin">@if</span> 5 &lt; 3      <span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">border</span>: 2px dotted; <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-builtin">@if</span> null       <span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">border</span>: 3px double; <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código anterior compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: 1px solid;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+La directiva @if puede ir seguida de una o más directivas @else if y una directiva @else. Si la expresión evaluada por @if es false o null, Sass evalúa por orden el resto de directivas @else if hasta que alguna no devuelva false o null. Si ninguna directiva @else if llega a ejecutarse, se ejecuta la directiva @else si existe. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$type</span>: monster;
+<span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@if</span> <span class="org-variable-name">$type</span> == ocean <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="custom-3">blue</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-builtin">@else</span> if <span class="org-variable-name">$type</span> == matador <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="custom-2">red</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-builtin">@else</span> if <span class="org-variable-name">$type</span> == monster <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="custom-1">green</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-builtin">@else</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="custom">black</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto va a compilar en: 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">green</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org024e330" class="outline-3">
+<h3 id="org024e330">La directiva @for</h3>
+<div class="outline-text-3" id="text-org024e330">
+<p>
+La directiva @for muestra repetidamente un conjunto de estilos. En cada repetición se utiliza el valor de una variable de tipo contador para ajustar el resultado mostrado. La directiva puede utilizar dos sintaxis: @for $var from &lt;inicio&gt; through &lt;final&gt; and @for $var from &lt;inicio&gt; to &lt;final&gt;.
+</p>
+
+<p>
+La diferencia entre las dos sintaxis es el uso de las palabras clave through o to. El valor $var puede ser cualquier variable, mientras que &lt;inicio&gt; y &lt;final&gt; son expresiones SassScript que deben devolver números enteros. Cuando el valor de &lt;inicio&gt; es mayor que el de &lt;final&gt; el valor del contador se decrementa en vez de incrementarse.
+</p>
+
+<p>
+En cada repetición del bucle, la directiva @for asigna a la variable $var el valor del contador y repite los estilos utilizando el nuevo valor de $var. En la sintaxis from &#x2026; through, los estilos se repiten desde &lt;inicio&gt; hasta &lt;final&gt;, ambos inclusive. Por su parte, en la sintaxis from &#x2026; to los estilos se repiten desde &lt;inicio&gt; hasta &lt;final&gt;, sin incluir este último. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@for</span> <span class="org-variable-name">$i</span> from 1 through 3 <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.item-#</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">{</span></span><span class="org-variable-name">$i</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">}</span></span><span class="org-css-selector"> </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">width</span>: 2em * <span class="org-variable-name">$i</span>; <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compilará en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.item-1 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 2em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.item-2 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 4em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.item-3 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 6em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org30e1ace" class="outline-3">
+<h3 id="org30e1ace">La directiva @each</h3>
+<div class="outline-text-3" id="text-org30e1ace">
+<p>
+La sintaxis habitual de la directiva @each es la siguiente @each $var in &lt;lista o mapa&gt;. El valor $var puede ser cualquier variable y &lt;lista o mapa&gt; es una expresión <b>SassScript*</b> que devuelve una lista o un mapa.
+</p>
+
+<p>
+El funcionamiento de @each es el siguiente: se recorre toda la lista o mapa y en cada iteración, se asigna un valor diferente a la variable $var antes de compilar los estilos. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@each</span> <span class="org-variable-name">$animal</span> in puma, sea-slug, egret, salamander <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.#</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">{</span></span><span class="org-variable-name">$animal</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">}</span></span><span class="org-css-selector">-icon </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'/images/#{$animal}.png'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.puma-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/puma.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.sea-slug-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/sea-slug.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.egret-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/egret.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.salamander-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/salamander.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org991a330" class="outline-4">
+<h4 id="org991a330">Asignación múltiple</h4>
+<div class="outline-text-4" id="text-org991a330">
+<p>
+La directiva @each también puede utilizar varias variables de forma simultánea, como por ejemplo: @each $var1, $var2, &#x2026; in &lt;lista&gt;. Si &lt;lista&gt; es una lista formada por listas, a cada variable se le asigna un elemento de cada sublista. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@each</span> <span class="org-variable-name">$animal</span>, <span class="org-variable-name">$color</span>, <span class="org-variable-name">$cursor</span> in <span class="org-rainbow-delimiters-depth-1">(</span>puma, <span class="custom-2">black</span>, default<span class="org-rainbow-delimiters-depth-1">)</span>,
+                                  <span class="org-rainbow-delimiters-depth-1">(</span>sea-slug, <span class="custom-1">blue</span>, pointer<span class="org-rainbow-delimiters-depth-1">)</span>,
+                                  <span class="org-rainbow-delimiters-depth-1">(</span>egret, <span class="custom">white</span>, move<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.#</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">{</span></span><span class="org-variable-name">$animal</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">}</span></span><span class="org-css-selector">-icon </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'/images/#{$animal}.png'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+    <span class="org-css-property">border</span>: 2px solid <span class="org-variable-name">$color</span>;
+    <span class="org-css-property">cursor</span>: <span class="org-variable-name">$cursor</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.puma-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/puma.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+  <span class="org-css-property">border</span>: 2px solid <span class="custom-2">black</span>;
+  <span class="org-css-property">cursor</span>: default;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.sea-slug-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/sea-slug.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+  <span class="org-css-property">border</span>: 2px solid <span class="custom-1">blue</span>;
+  <span class="org-css-property">cursor</span>: pointer;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.egret-icon </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'/images/egret.png'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+  <span class="org-css-property">border</span>: 2px solid <span class="custom">white</span>;
+  <span class="org-css-property">cursor</span>: move;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+Como los mapas se consideran listas formadas por pares clave: valor, también en este caso se puede utilizar la asignación múltiple. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@each</span> <span class="org-variable-name">$header</span>, <span class="org-variable-name">$size</span> in <span class="org-rainbow-delimiters-depth-1">(</span>h1: 2em, h2: 1.5em, h3: 1.2em<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">#</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">{</span></span><span class="org-variable-name">$header</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">}</span></span><span class="org-css-selector"> </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">font-size</span>: <span class="org-variable-name">$size</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass compilará en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">h1 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 2em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">h2 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 1.5em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">h3 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 1.2em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9c165f0" class="outline-3">
+<h3 id="org9c165f0">La directiva @while</h3>
+<div class="outline-text-3" id="text-org9c165f0">
+<p>
+La directiva @while toma una expresión SassScript y repite indefinidamente los estilos hasta que la expresión da como resultado false. Aunque esta directiva se usa muy poco, se puede utilizar para crear bucles más avanzados que los que se crean con la directiva @for. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$i</span>: 6;
+<span class="org-builtin">@while</span> <span class="org-variable-name">$i</span> &gt; 0 <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">.item-#</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">{</span></span><span class="org-variable-name">$i</span><span class="org-css-selector"><span class="org-rainbow-delimiters-depth-2">}</span></span><span class="org-css-selector"> </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">width</span>: 2em * <span class="org-variable-name">$i</span>; <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-variable-name">$i</span>: <span class="org-variable-name">$i</span> - 2;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compilará en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.item-6 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 12em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.item-4 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 8em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.item-2 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 4em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org01c0b88" class="outline-2">
+<h2 id="org01c0b88">Directivas mixin</h2>
+<div class="outline-text-2" id="text-org01c0b88">
+<p>
+Los <i>mixins</i> permiten definir estilos reutilizables en toda la hoja de estilos sin tener que recurrir a clases CSS no semánticas tipo .float-left. Los <i>mixins</i> también pueden contener reglas CSS y cualquier otro elemento definido por Sass. Los mixins incluso admiten el uso de argumentos, como si fueran funciones, para poder modificar su comportamiento y ofrecer así una mayor flexibilidad.
+</p>
+</div>
+
+<div id="outline-container-org474107a" class="outline-3">
+<h3 id="org474107a">Definiendo mixins con la directiva @mixin</h3>
+<div class="outline-text-3" id="text-org474107a">
+<p>
+Los mixins se definen con la directiva @mixin seguida del nombre del mixin (y opcionalmente una lista de argumentos) y seguida por el bloque de contenidos que definen los estilos del mixin. El siguiente ejemplo define un mixin sin argumentos llamado large-text:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> large-text <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font</span>: <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">family</span>: Arial;
+    <span class="org-css-property">size</span>: 20px;
+    <span class="org-css-property">weight</span>: bold;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-css-property">color</span>: <span class="custom">#ff0000</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Además de estilos, los mixins también pueden contener selectores, incluso con referencias al selector padre. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> clearfix <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">display</span>: inline-block;
+  <span class="org-css-selector">&amp;:after </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">content</span>: <span class="org-string">"."</span>;
+    <span class="org-css-property">display</span>: block;
+    <span class="org-css-property">height</span>: 0;
+    <span class="org-css-property">clear</span>: both;
+    <span class="org-css-property">visibility</span>: hidden;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+  <span class="org-css-selector">* html &amp; </span><span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">height</span>: 1px <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d6901c" class="outline-3">
+<h3 id="org8d6901c">Incluyendo mixins con @include</h3>
+<div class="outline-text-3" id="text-org8d6901c">
+<p>
+Los mixins se incluyen en las hojas de estilos mediante la directiva @include seguida del nombre del mixin y opcionalmente por una lista de argumentos. El resultado es que todos los estilos definidos por el mixin se incluyen en el mismo punto en el que se llama al mixin. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">.page-title </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@include</span> large-text;
+  <span class="org-css-property">padding</span>: 4px;
+  <span class="org-css-property">margin-top</span>: 10px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.page-title </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-family</span>: Arial;
+  <span class="org-css-property">font-size</span>: 20px;
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">color</span>: <span class="custom">#ff0000</span>;
+  <span class="org-css-property">padding</span>: 4px;
+  <span class="org-css-property">margin-top</span>: 10px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Los mixins también se pueden incluir en el nivel jerárquico superior de la hoja de estilos, es decir, fuera de cualquier selector o regla. Obviamente, estos mixins no pueden incluir ninguna referencia al selector padre, ya que se produciría un error. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> silly-links <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="custom-1">blue</span>;
+    <span class="org-css-property">background-color</span>: <span class="custom">red</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-builtin">@include</span> silly-links;
+</pre>
+</div>
+
+<p>
+Esto se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">a </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">blue</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">red</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Los mixins también pueden incluir en su interior otros mixins. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> compound <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@include</span> highlighted-background;
+  <span class="org-builtin">@include</span> header-text;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-builtin">@mixin</span> highlighted-background <span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">background-color</span>: <span class="custom">#fc0</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-builtin">@mixin</span> header-text <span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">font-size</span>: 20px; <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Aunque no es muy habitual, los mixins también pueden incluirse a sí mismos de manera recursiva. En las versiones de Sass anteriores a la 3.3 esta recursividad no estaba permitida.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3dd9ed" class="outline-3">
+<h3 id="orga3dd9ed">Argumentos</h3>
+<div class="outline-text-3" id="text-orga3dd9ed">
+<p>
+Los argumentos de los mixins pueden estar formados por cualquier expresión SassScript. Estos argumentos están disponibles en el interior del mixin en forma de variables.
+</p>
+
+<p>
+Cuando se define un mixin, los argumentos se definen como una serie de variables separadas por comas, y todo ello encerrado entre paréntesis. Después, cuando se utiliza un mixin deben pasarse los valores de los argumentos en ese mismo orden. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">sexy-border</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$color</span>, <span class="org-variable-name">$width</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="org-variable-name">$color</span>;
+    <span class="org-css-property">width</span>: <span class="org-variable-name">$width</span>;
+    <span class="org-css-property">style</span>: dashed;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-builtin">@include</span> sexy-border<span class="org-rainbow-delimiters-depth-2">(</span><span class="custom">blue</span>, 1in<span class="org-rainbow-delimiters-depth-2">)</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Este código se compila como:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-color</span>: <span class="custom">blue</span>;
+  <span class="org-css-property">border-width</span>: 1in;
+  <span class="org-css-property">border-style</span>: dashed;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Los mixins también pueden especificar valores por defecto para sus argumentos. De esta manera, si al llamar a un mixin no se pasa el valor de ese argumento, se utiliza en su lugar el valor por defecto. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">sexy-border</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$color</span>, <span class="org-variable-name">$width</span>: 1in<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border</span>: <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">color</span>: <span class="org-variable-name">$color</span>;
+    <span class="org-css-property">width</span>: <span class="org-variable-name">$width</span>;
+    <span class="org-css-property">style</span>: dashed;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-builtin">@include</span> sexy-border<span class="org-rainbow-delimiters-depth-2">(</span><span class="custom">blue</span><span class="org-rainbow-delimiters-depth-2">)</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">h1 </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-builtin">@include</span> sexy-border<span class="org-rainbow-delimiters-depth-2">(</span><span class="custom">blue</span>, 2in<span class="org-rainbow-delimiters-depth-2">)</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+Esto compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-color</span>: <span class="custom">blue</span>;
+  <span class="org-css-property">border-width</span>: 1in;
+  <span class="org-css-property">border-style</span>: dashed;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">h1 </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">border-color</span>: <span class="custom">blue</span>;
+  <span class="org-css-property">border-width</span>: 2in;
+  <span class="org-css-property">border-style</span>: dashed;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd58a30b" class="outline-3">
+<h3 id="orgd58a30b">Argumentos con nombre</h3>
+<div class="outline-text-3" id="text-orgd58a30b">
+<p>
+Cuando se utiliza un mixin también es posible indicar el nombre de sus argumentos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">p </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-builtin">@include</span> sexy-border<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$color</span>: <span class="custom">blue</span><span class="org-rainbow-delimiters-depth-2">)</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">h1 </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-builtin">@include</span> sexy-border<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$color</span>: <span class="custom">blue</span>, <span class="org-variable-name">$width</span>: 2in<span class="org-rainbow-delimiters-depth-2">)</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Aunque esta sintaxis es menos concisa que la anterior, hace que las hojas de estilos sean más fáciles de leer. Además permite que los mixins tengan interfaces más flexibles y fáciles de usar, aún cuando incluyan muchos argumentos.
+</p>
+
+<p>
+Los argumentos con nombre se pueden pasar en cualquier orden y puedes omitir los que tienen un valor por defecto. Además, como los argumentos con nombre en realidad son nombres de variables, puedes utilizar indistintamente guiones medios y bajos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org884c3f6" class="outline-3">
+<h3 id="org884c3f6">Argumentos variables</h3>
+<div class="outline-text-3" id="text-org884c3f6">
+<p>
+En ocasiones es necesario que un mixin acepte un número indeterminado de argumentos. Si por ejemplo tienes un mixin que añade sombras a los elementos HTML, es preciso que ese mixin acepte cualquier número de sombras como argumentos. Por eso Sass soporta la creación de mixins con un número variable de argumentos.
+</p>
+
+<p>
+Para indicar que un mixin tiene un número variable de argumentos, después del último argumento se añaden tres puntos (&#x2026;). Esto hará que todos los argumentos sobrantes se guarden como una lista en ese último argumento. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">box-shadow</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$shadows</span>...<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-proprietary-property">-moz-box-shadow</span>: <span class="org-variable-name">$shadows</span>;
+  <span class="org-css-proprietary-property">-webkit-box-shadow</span>: <span class="org-variable-name">$shadows</span>;
+  <span class="org-css-property">box-shadow</span>: <span class="org-variable-name">$shadows</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.shadows </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@include</span> box-shadow<span class="org-rainbow-delimiters-depth-2">(</span>0px 4px 5px <span class="custom-1">#666</span>, 2px 6px 10px <span class="custom">#999</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Este código da como resultado de la compilación:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.shadows </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-proprietary-property">-moz-box-shadow</span>: 0px 4px 5px <span class="custom-1">#666</span>, 2px 6px 10px <span class="custom">#999</span>;
+  <span class="org-css-proprietary-property">-webkit-box-shadow</span>: 0px 4px 5px <span class="custom-1">#666</span>, 2px 6px 10px <span class="custom">#999</span>;
+  <span class="org-css-property">box-shadow</span>: 0px 4px 5px <span class="custom-1">#666</span>, 2px 6px 10px <span class="custom">#999</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Los argumentos variables también contienen todos los argumentos con nombre pasados al mixin o función. Puedes acceder a ellos mediante la función keywords($args), que devuelve un mapa de cadenas de texto en las que el nombre de la variable no contiene el carácter $.
+</p>
+
+<p>
+Los argumentos variables también se pueden utilizar cuando se llama a un mixin. Utilizando la misma sintaxis de los tres puntos (&#x2026;) puedes expandir una lista de valores para pasar cada elemento de la lista como si fuera un argumento. Cuando esta sintaxis se utiliza con mapas, cada par clave: valor se transforma en un argumento con el nombre clave. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">colors</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$text</span>, <span class="org-variable-name">$background</span>, <span class="org-variable-name">$border</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="org-variable-name">$text</span>;
+  <span class="org-css-property">background-color</span>: <span class="org-variable-name">$background</span>;
+  <span class="org-css-property">border-color</span>: <span class="org-variable-name">$border</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-variable-name">$values</span>: <span class="custom-2">#ff0000</span>, <span class="custom-1">#00ff00</span>, <span class="custom">#0000ff</span>;
+<span class="org-css-selector">.primary </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@include</span> colors<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$values</span>...<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-variable-name">$value-map</span>: <span class="org-rainbow-delimiters-depth-1">(</span>text: <span class="custom-1">#00ff00</span>, background: <span class="custom">#0000ff</span>, border: <span class="custom-2">#ff0000</span><span class="org-rainbow-delimiters-depth-1">)</span>;
+<span class="org-css-selector">.secondary </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@include</span> colors<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$value-map</span>...<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+</pre>
+</div>
+
+<p>
+Esto compila a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.primary </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-2">#ff0000</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom-1">#00ff00</span>;
+  <span class="org-css-property">border-color</span>: <span class="custom">#0000ff</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.secondary </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom">#0000ff</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom-2">#ff0000</span>;
+  <span class="org-css-property">border-color</span>: <span class="custom-1">#00ff00</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+También es posible pasar una lista de argumentos y un mapa siempre que la lista se pase primero, como por ejemplo: @include colors($values&#x2026;, $map&#x2026;).
+</p>
+
+<p>
+Los argumentos variables pueden servir por ejemplo para crear un mixin que modifique otro mixin existente añadiendo nuevos estilos. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> <span class="org-function-name">wrapped-stylish-mixin</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$args</span>...<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-builtin">@include</span> stylish-mixin<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$args</span>...<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.stylish </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-comment-delimiter">// </span><span class="org-comment">El argumento $width se pasa con nombre al mixin "stylish-mixin"</span>
+  <span class="org-builtin">@include</span> wrapped-stylish-mixin<span class="org-rainbow-delimiters-depth-2">(</span><span class="custom">#00ff00</span>, <span class="org-variable-name">$width</span>: 100px<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd1bd81" class="outline-3">
+<h3 id="orgbd1bd81">Pasando bloques de contenidos a los mixins</h3>
+<div class="outline-text-3" id="text-orgbd1bd81">
+<p>
+A los mixins también se les puede pasar un bloque entero de reglas CSS. Este contenido se incluirá en el lugar donde el mixin haya definido la directiva @content. Gracias a esta característica es posible abstraer ciertas partes de la definición de los selectores y directivas. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-builtin">@mixin</span> apply-to-ie6-only <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">* html </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-builtin">@content</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-builtin">@include</span> apply-to-ie6-only <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-selector">#logo </span><span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">background-image</span>: url<span class="org-default">(</span><span class="org-string">/logo.gif</span><span class="org-default">)</span>;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Esto compila en:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"> <span class="org-css-selector">html #logo </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-image</span>: url<span class="org-default">(</span><span class="org-string">/logo.gif</span><span class="org-default">)</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Estos mixins también se pueden definir mediante los siguientes atajos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss">    <span class="org-builtin">@content</span>
+
++apply-to-ie6-only
+  #logo
+    <span class="org-css-property">background-image</span>: url<span class="org-default">(</span><span class="org-string">/logo.gif</span><span class="org-default">)</span>
+</pre>
+</div>
+
+
+<p>
+<b>NOTA: Cuando se incluye la directiva @content más de una vez o se incluye dentro de un bucle, los contenidos se repiten para cada aparición de @content.</b>
+</p>
+</div>
+<div id="outline-container-orgf09ed45" class="outline-4">
+<h4 id="orgf09ed45">Contexto variables y bloques contenidos</h4>
+<div class="outline-text-4" id="text-orgf09ed45">
+<p>
+Los bloques de contenidos pasados a los mixins se evalúan en el contexto en el que están definidos, no en el contexto del mixin. Esto significa que los bloques de contenidos no pueden utilizar las variables locales definidas en el mixin. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$color</span>: <span class="custom-1">white</span>;
+<span class="org-builtin">@mixin</span> <span class="org-function-name">colors</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$color</span>: <span class="custom">blue</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-color</span>: <span class="org-variable-name">$color</span>;
+  <span class="org-builtin">@content</span>;
+  <span class="org-css-property">border-color</span>: <span class="org-variable-name">$color</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">.colors </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@include</span> colors <span class="org-rainbow-delimiters-depth-2">{</span> <span class="org-css-property">color</span>: <span class="org-variable-name">$color</span>; <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Que compila a:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.colors </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">background-color</span>: <span class="custom-1">blue</span>;
+  <span class="org-css-property">color</span>: <span class="custom">white</span>;
+  <span class="org-css-property">border-color</span>: <span class="custom-1">blue</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+De esta forma, las variables que se utilizan en los bloques que se pasan a los mixins siempre hacen referencia a las variables definidas alrededor de ese bloque o directamente en el nivel jerárquico superior de la hoja de estilos. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-variable-name">$sidebar-width</span>: 300px;
+  <span class="org-css-property">width</span>: <span class="org-variable-name">$sidebar-width</span>;
+  <span class="org-builtin">@include</span> smartphone <span class="org-rainbow-delimiters-depth-2">{</span>
+    <span class="org-css-property">width</span>: <span class="org-variable-name">$sidebar-width</span> / 3;
+  <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f30160" class="outline-2">
+<h2 id="org9f30160">Directivas de función</h2>
+<div class="outline-text-2" id="text-org9f30160">
+<p>
+Al margen de las funciones propias definidas por Sass, también es posible definir funciones propias para que puedas utilizarlas en tus hojas de estilos. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-variable-name">$grid-width</span>: 40px;
+<span class="org-variable-name">$gutter-width</span>: 10px;
+
+<span class="org-builtin">@function</span> grid-width<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">$n</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-builtin">@return</span> <span class="org-variable-name">$n</span> * <span class="org-variable-name">$grid-width</span> + <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$n</span> - 1<span class="org-rainbow-delimiters-depth-2">)</span> * <span class="org-variable-name">$gutter-width</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">#sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">width</span>: grid-width<span class="org-rainbow-delimiters-depth-2">(</span>5<span class="org-rainbow-delimiters-depth-2">)</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El código Sass anterior se compila de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 240px;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Al igual que sucede con los mixins, las funciones pueden acceder a cualquier variable global y también pueden aceptar argumentos. El contenido de una función puede estar formado por varias líneas, pero siempre debe acabar con una directiva de tipo @return para devolver el resultado de su ejecución.
+</p>
+
+<p>
+Las funciones propias también admiten el uso de argumentos con nombre. De hecho, la función del ejemplo anterior también se puede utilizar de la siguiente manera:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scss"><span class="org-css-selector">#sidebar </span><span class="org-rainbow-delimiters-depth-1">{</span> width grid-width<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-variable-name">$n</span>: 5<span class="org-rainbow-delimiters-depth-2">)</span>;<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+Para evitar posibles conflictos en el nombre de las funciones, es aconsejable añadirles un prefijo. Así además los usuarios sabrán claramente que esas funciones no forman parte ni de Sass ni de CSS. Una buena idea consiste en utilizar como prefijo tu nombre o el de tu empresa. Si trabajas por ejemplo para la empresa ACME S.A., la función anterior podría haberse llamado -acme-grid-width.
+</p>
+
+<p>
+Por último, las funciones propias también soportan el uso de un número variable de argumentos, tal y como se explicó en el capítulo de los mixins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1049e80" class="outline-2">
+<h2 id="org1049e80">Formato de salida</h2>
+<div class="outline-text-2" id="text-org1049e80">
+<p>
+El formato utilizado por Sass para compilar los archivos CSS no sólo es adecuado sino que refleja bien la estructura del documento. No obstante, como los gustos (y las necesidades) de los diseñadores/as son muy particulares, Sass permite configurar cómo se generan los archivos.
+</p>
+
+<p>
+En concreto, Sass permite elegir entre cuatro formatos diferentes mediante la opción de configuración :style o mediante la opción &#x2013;style de la consola de comandos.
+</p>
+</div>
+
+<div id="outline-container-org1d61419" class="outline-3">
+<h3 id="org1d61419">Formato :nested</h3>
+<div class="outline-text-3" id="text-org1d61419">
+<p>
+Este es el estilo por defecto de Sass, que indenta y anida todos los selectores y estilos para reflejar fielmente la estructura del archivo Sass original. Cada propiedad se muestra en su propia línea y cada regla se indenta tanto como sea necesario en función de su anidamiento. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">#fff</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#000</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+  <span class="org-css-selector">#main p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+    <span class="org-css-property">width</span>: 10em; <span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.huge </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 10em;
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">text-decoration</span>: underline; <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+
+<p>
+El estilo nested es muy útil cuando se generan hojas de estilos CSS muy complejas, ya que de un vistazo puedes entender toda su estructura.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13f9301" class="outline-3">
+<h3 id="org13f9301">El formato :expanded</h3>
+<div class="outline-text-3" id="text-org13f9301">
+<p>
+Este estilo es más parecido al que utilizaría un diseñador/a al crear manualmente la hoja de estilos CSS. Cada propiedad y cada regla se muestran en una nueva línea, pero las reglas no se indentan de ninguna manera especial. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">color</span>: <span class="custom-1">#fff</span>;
+  <span class="org-css-property">background-color</span>: <span class="custom">#000</span>;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main p </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">width</span>: 10em;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.huge </span><span class="org-rainbow-delimiters-depth-1">{</span>
+  <span class="org-css-property">font-size</span>: 10em;
+  <span class="org-css-property">font-weight</span>: bold;
+  <span class="org-css-property">text-decoration</span>: underline;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org76696a7" class="outline-3">
+<h3 id="org76696a7">El formato :compact</h3>
+<div class="outline-text-3" id="text-org76696a7">
+<p>
+Este estilo ocupa menos líneas que los estilos nested o expanded y prioriza los selectores por encima de las propiedades. De hecho, cada regla CSS solamente ocupa una línea, donde se definen todas las propiedades. Las reglas anidadas se muestran seguidas unas de otras (sin ningún salto de línea) y solamente se añade una línea en blanco para separar los grupos de reglas CSS. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">color</span>: <span class="custom-1">#fff</span>; <span class="org-css-property">background-color</span>: <span class="custom">#000</span>; <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="org-css-selector">#main p </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">width</span>: 10em; <span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-css-selector">.huge </span><span class="org-rainbow-delimiters-depth-1">{</span> <span class="org-css-property">font-size</span>: 10em; <span class="org-css-property">font-weight</span>: bold; <span class="org-css-property">text-decoration</span>: underline; <span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37c8f9c" class="outline-3">
+<h3 id="org37c8f9c">El formato :compressed</h3>
+<div class="outline-text-3" id="text-org37c8f9c">
+<p>
+Este estilo es el más conciso de todos porque no añade ningún espacio en blanco, salvo el que sea estrictamente necesario para separar los selectores. El único salto de línea que se añade es el del final del archivo. Este formato también realiza otras optimizaciones y compresiones en valores como los colores. Aunque no está pensado como formato para que lo lean los humanos, puede ser muy útil para comprimir al máximo las hojas de estilos CSS antes de servirlas a los usuarios. Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">#main</span><span class="org-rainbow-delimiters-depth-1">{</span><span class="org-css-property">color</span>:<span class="custom-1">#fff</span>;<span class="org-css-property">background-color</span>:<span class="custom">#000</span><span class="org-rainbow-delimiters-depth-1">}</span>#main p<span class="org-rainbow-delimiters-depth-1">{</span><span class="org-css-property">width</span>:10em<span class="org-rainbow-delimiters-depth-1">}</span>.huge<span class="org-rainbow-delimiters-depth-1">{</span><span class="org-css-property">font-size</span>:10em;<span class="org-css-property">font-weight</span>:bold;<span class="org-css-property">text-decoration</span>:underline<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5918c1d" class="outline-2">
+<h2 id="org5918c1d">Extendiendo Sass</h2>
+<div class="outline-text-2" id="text-org5918c1d">
+<p>
+Sass proporciona una serie de características adicionales para usuarios que tengan requerimientos muy especiales y dispongan de conocimientos avanzados de Ruby.
+</p>
+</div>
+
+<div id="outline-container-org49628eb" class="outline-3">
+<h3 id="org49628eb">Definiendo funciones propias para Sass</h3>
+<div class="outline-text-3" id="text-org49628eb">
+<p>
+Utilizando la API de Ruby es posible definir tus propias funciones. Consulta la documentación oficial para saber cómo hacerlo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49df0aa" class="outline-3">
+<h3 id="org49df0aa">Sistemas de caché</h3>
+<div class="outline-text-3" id="text-org49df0aa">
+<p>
+Sass cachea la compilación de los archivos Sass o SCSS originales para poder reutilizarlos cuando no se han producido cambios. Por defecto estos archivos se cachean en el directorio indicado por la opción :cache<sub>location</sub>.
+</p>
+
+<p>
+Si no puedes cachear estos archivos en un directorio o quieres compartirlos entre varios procesos Ruby de diferentes máquinas, puedes crear tu propio sistema de caché y utilizarlo mediante la opción de configuración :cache<sub>store</sub>.
+</p>
+
+<p>
+Consulta la <a href="http://sass-lang.com/documentation/Sass/CacheStores/Base.html">documentación de la clase CacheStores::Base</a> para conocer todos los detalles sobre cómo crear tu propio sistema de caché.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9173f8" class="outline-3">
+<h3 id="orgc9173f8">Importadores propios</h3>
+<div class="outline-text-3" id="text-orgc9173f8">
+<p>
+Los importadores de Sass se encargan de encontrar los archivos Sass adecuados a partir de los valores proporcionados en las directivas @import. Por defecto el código siempre se importa desde algún directorio del sistema de archivos, pero también se puede cargar desde una base de datos o incluso mediante servicios web.
+</p>
+
+<p>
+Cada importador se encarga de gestionar un tipo diferente de importación. Todos ellos se pueden configurar en la opción de configuración :load<sub>paths</sub> y se pueden utilizar junto a los importadores normales del sistema de archivos.
+</p>
+
+<p>
+Cuando se resuelve el valor de una directiva @import, Sass recorre todos los importadores registrados hasta encontrar con alguno que pueda importar el valor indicado. Los importadores propios siempre deben heredar de la clase {Sass::Importers::Base}.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Patricio Martínez Cano</p>
+<p class="date">Created: 2017-07-27 jue 10:59</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
