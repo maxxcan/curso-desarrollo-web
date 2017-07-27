@@ -144,7 +144,6 @@ Como vemos text reemplaza el texto. Veamos ahora el siguiente ejemplo:
 
 Ahora vemos como buscamos el elemento button y la acción se ejecuta con el pulsado del botón y lo que hace es a su vez buscar el elemento <p> y sustituir el texto. 
 
-
 * Seleccionando elementos con JQuery
 
 JavaScript es comúnmente usado para obtener o modificar contenido o atributos de los elementos HTML o aplicarles algunos efectos, animaciones, etc. 
