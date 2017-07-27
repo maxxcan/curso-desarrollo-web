@@ -2,9 +2,6 @@
 #+TITLE: Introducción a JQuery
 #+AUTHOR: Patricio Martínez
 #+EMAIL: maxxcan@gmail.com
-#+LATEX_HEADER: \addtolength{\textwidth}{2in}
-#+LATEX_HEADER: \addtolength{\hoffset}{-1in}
-#+LATEX_HEADER: \addtolength{\voffset}{-1in}
 
 * Introducción
 
