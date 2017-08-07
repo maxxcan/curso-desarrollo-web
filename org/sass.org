@@ -1,7 +1,13 @@
-#+TITLE:
- Introducción a Sass
+#+TITLE:Introducción a Sass
 #+AUTHOR: Patricio Martínez Cano
 #+EMAIL: maxxcan@gmail.com
+#+DATE: \today
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, oneside]
+#+LANGUAGE: es
+
+#+latex_header:\textwidth=17cm
+#+latex_header:\oddsidemargin=0.5cm
 
 * Características
 
@@ -1452,7 +1458,6 @@ Ejemplo:
   position: relative; left: $x; top: $y;
 }
 #+end_src
-
 
 * Directivas de control y expresiones
 

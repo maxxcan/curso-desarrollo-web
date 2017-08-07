@@ -2,6 +2,13 @@
 #+TITLE: Introducción a JQuery
 #+AUTHOR: Patricio Martínez
 #+EMAIL: maxxcan@gmail.com
+#+DATE: \today
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, oneside]
+#+LANGUAGE: es
+
+#+latex_header:\textwidth=17cm
+#+latex_header:\oddsidemargin=0.5cm
 
 * Introducción
 
@@ -743,9 +750,11 @@ $(document).ready(function(){
     	var mob = /^[1-9]{1}[0-9]{9}$/;
         var currentValue = $("#inputMobile").val();
         if(mob.test(currentValue) == false && currentValue != 10){
-            $("p").html("Número de teléfono inválido number").addClass("error").show().fadeOut(1000);
+            $("p").html("Número de teléfono inválido
+ number").addClass("error").show().fadeOut(1000);
         } else{
-            $("p").html("Número de teléfono válido number").addClass("success").show().fadeOut(1000);
+            $("p").html("Número de teléfono válido
+ number").addClass("success").show().fadeOut(1000);
         }
         event.preventDefault();
     });
@@ -754,7 +763,8 @@ $(document).ready(function(){
 </head>
 <body>
     <form>
-        <input type="text" id="inputMobile" maxlength="10" placeholder="Introduce un númemro de teléfono">
+        <input type="text" id="inputMobile" maxlength="10"
+ placeholder="Introduce un númemro de teléfono">
         <input type="submit" value="Submit">
         <p></p>
     </form>
@@ -811,7 +821,8 @@ Este método activa una función cuando la ventana del navegador cambia de tama�
 $(document).ready(function(){
     $(window).resize(function() {
         $(window).bind("redimensiona", function(){ 
-            $("p").text("Altura de la ventana: " + $(window).width() + ", " + "Altura de la ventana: " + $(window).height());
+            $("p").text("Altura de la ventana: " + $(window).width() + ", " +
+ "Altura de la ventana: " + $(window).height());
         });
     });
 });
@@ -1675,7 +1686,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <p><label><input type="checkbox"></label>Acepto los términos y condiciones y dejo que me des por donde amargan los pepinos.</p>
+    <p><label><input type="checkbox"></label>Acepto los términos y condiciones</p>
     <button type="button">Comprueba</button>
 </body>
 </html>                                		
@@ -1813,8 +1824,12 @@ $(document).ready(function(){
 <body>
     <button type="button">Inserta Texto</button>
     <div id="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
-        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante.</p>
+        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
+ suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
+ at mattis. Suspendisse potenti.</p>
     </div>
 </body>
 </html>                                		
@@ -1848,8 +1863,12 @@ $(document).ready(function(){
 <body>
     <button type="button">Inserta Texto</button>
     <div id="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
-        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante.</p>
+        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
+ suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
+ at mattis. Suspendisse potenti.</p>
     </div>
 </body>
 </html>                                		
@@ -1882,7 +1901,9 @@ $(document).ready(function(){
 </head>
 <body>
     <button type="button">Inserta Contenido</button>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante, metus ac nisl bibendum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante, metus ac nisl bibendum.</p>
 </body>
 </html>                                		
 #+end_src
@@ -1935,7 +1956,14 @@ $(document).ready(function(){
     <button type="button" class="insert-after">Inserta Después</button>
     <hr>
     <div id="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque
+ non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci
+ sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque
+ aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu,
+ tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque
+ porttitor. Integer faucibus ligula.</p>
        
     </div>
 </body>
@@ -2024,7 +2052,8 @@ $(document).ready(function(){
 <body>
     <div class="container">
         <h1>Buenos días por la mañana!</h1>
-        <p class="hint"><strong>Aviso:</strong> Si pulsas el botón lo borrarás todo incluído el botón</p>
+        <p class="hint"><strong>Aviso:</strong> Si pulsas el botón lo borrarás
+ todo incluído el botón</p>
         <button type="button">Vaciar contenedor</button>
     </div>
 </body>
@@ -2325,7 +2354,8 @@ $(document).ready(function(){
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
-	<p><strong>Aviso:</strong> Pulsa dentro de la caja vacía para llenarla con el color de fondo.</p>
+	<p><strong>Aviso:</strong> Pulsa dentro de la caja vacía para llenarla con el
+ color de fondo.</p>
 </body>
 </html>
 #+end_src
@@ -2419,7 +2449,13 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Obtén la altura y anchura</button>
     <p id="result"></p>
 </body>
@@ -2455,7 +2491,13 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Establece al altura y la anchura</button>
 </body>
 </html>                                		
@@ -2494,11 +2536,20 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Obten la altura y anchura interior</button>
     <p id="result"></p>
 	<hr>
-	<p><strong>Aviso:</strong><b>innerWidth()</b> incluye las propiedades (<b>width</b> + <b>padding-left</b> + <b>padding-right</b>), e <b>innerHeight()</b> incluye (<b>height</b> + <b>padding-top</b> + <b>padding-bottom</b>).</p>
+	<p><strong>Aviso:</strong><b>innerWidth()</b> incluye las propiedades
+ (<b>width</b> + <b>padding-left</b> + <b>padding-right</b>), e
+ <b>innerHeight()</b> incluye (<b>height</b> + <b>padding-top</b> +
+ <b>padding-bottom</b>).</p>
 </body>
 </html>                                		
 #+end_src
@@ -2534,7 +2585,13 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Establecer altura y anchura interiores</button>
 </body>
 </html>                                		
@@ -2574,7 +2631,13 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Obtén la altura y anchura exteriores</button>
     <p id="result"></p>
 	<hr>
@@ -2616,11 +2679,22 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Obten la altura y anchura exteriores con el margen</button>
     <p id="result"></p>
 	<hr>
-	<p><strong>Note:</strong><b>outerWidth(true)</b> incluye (<b>width</b> + <b>padding-left</b> + <b>padding-right</b> + <b>border-left</b> + <b>border-right</b> + <b>margin-left</b> + <b>margin-right</b>), y <b>outerHeight(true)</b> incluye (<b>height</b> + <b>padding-top</b> + <b>padding-bottom</b> + <b>border-top</b> + <b>border-bottom</b> + <b>margin-top</b> + <b>margin-bottom</b>).</p>
+	<p><strong>Note:</strong><b>outerWidth(true)</b> incluye (<b>width</b> +
+ <b>padding-left</b> + <b>padding-right</b> + <b>border-left</b> +
+ <b>border-right</b> + <b>margin-left</b> + <b>margin-right</b>), y
+ <b>outerHeight(true)</b> incluye (<b>height</b> + <b>padding-top</b> +
+ <b>padding-bottom</b> + <b>border-top</b> + <b>border-bottom</b> +
+ <b>margin-top</b> + <b>margin-bottom</b>).</p>
 </body>
 </html>                                		
 #+end_src
@@ -2658,12 +2732,17 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.</div>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.</div>
     <button type="button">Establece la altura y anchura exteriores</button>
 </body>
 </html>                                		
 #+end_src
-
 * JQuery avanzado
 
 ** JQuery Traversing (recorrido)
@@ -2710,7 +2789,6 @@ El diagrama anterior muestra las relaciones padre/hijo entre los elementos:
 + El elemento /<h1>/, /<p>/ y /<ul>/ son *hermanos*, desde que tienen el mismo padre.
 + El elemento /<h1>/ es un *hijo* del elemento /<div>/ y un *descendiente* del elemento /<body>/. Este elemento no tiene ningún hijo
 + El elemento /<p>/ es el padre del elemento /<em>/, *hijo* del elemento /<div>/ y *descendiente* del elemento /<body>/. El elemento /<em>/ es un *hijo* del elemento /<p>/ y un *descendiente* de los elementos /<div>/ y /<body>/
-
 
 *** Recorriendo el árbol DOM
 
@@ -3503,7 +3581,6 @@ $(document).ready(function(){
 </html>                                		
 #+end_src
 
-
 *** Método has()
 
 El método has() filtra el conjunto de elementos coincidentes y devuelve solo esos elementos que tienen un específico elemento descendiente. En el siguiente ejemplo vamos a resaltar todos los elementos <li> que tengan elementos <ul> como descendientes.
@@ -3542,7 +3619,6 @@ $(document).ready(function(){
 </body>
 </html>                                		
 #+end_src
-
 
 
 *** El método not()
@@ -3649,11 +3725,11 @@ Básicamente, con Ajax se hace uso de un objeto basado en JavaScript llamado XmL
 
 *** Ajax con JQuery
 
-Diferentes navegadores implementan Ajax de manera diferente lo que significa que si adoptamos el camino de JavaScript para implementar Ajax habrá que escribir diferente código para los diferentes navegadores para asegurarse de que funciona en todos. 
+ Diferentes navegadores implementan Ajax de manera diferente lo que significa que si adoptamos el camino de JavaScript para implementar Ajax habrá que escribir diferente código para los diferentes navegadores para asegurarse de que funciona en todos. 
 
-Pero afortunadamente JQuery simplifica el proceso implementando Ajax teniendo cuidad de las diferencia entre navegadores. Así que JQuery ofrece métodos tales como *load(), $.get(), $.post()*, etc, para implementar Ajax y que funcione correctamente en todos los navegadores.
+ Pero afortunadamente JQuery simplifica el proceso implementando Ajax teniendo cuidad de las diferencia entre navegadores. Así que JQuery ofrece métodos tales como *load(), $.get(), $.post()*, etc, para implementar Ajax y que funcione correctamente en todos los navegadores.
 
-En los próximos capítulos veremos los métodos para enviar y recibir datos usando HTTP GET y POST.
+ En los próximos capítulos veremos los métodos para enviar y recibir datos usando HTTP GET y POST.
 
 ** Load Ajax en JQuery
 
@@ -3720,7 +3796,8 @@ Ejemplo:
 <script type="text/javascript">
 $(document).ready(function(){
     $("button").click(function(){
-        $("#box").load("/examples/html/test-content.html", function(responseTxt, statusTxt, jqXHR){
+        $("#box").load("/examples/html/test-content.html",
+ function(responseTxt, statusTxt, jqXHR){
             if(statusTxt == "success"){
                 alert("El nuevo contenido es cargado correctamente!");
             }

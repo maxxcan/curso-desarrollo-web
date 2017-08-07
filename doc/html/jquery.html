@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2017-08-07 lun 17:31 -->
+<!-- 2017-08-07 lun 18:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Introducción a JQuery</title>
@@ -236,7 +236,7 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Introducción a JQuery</h1>
 <div id="table-of-contents">
-<h2>Table of Contents</h2>
+<h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#org57842ac">Introducción</a>
@@ -1382,9 +1382,11 @@ $(document).ready(function(){
       var mob = /^[1-9]{1}[0-9]{9}$/;
         var currentValue = $(<span class="org-string">"#inputMobile"</span>).val();
         if(mob.test(currentValue) == false &amp;&amp; currentValue != 10){
-            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono inv&#225;lido number"</span>).addClass(<span class="org-string">"error"</span>).show().fadeOut(1000);
+            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono inv&#225;lido</span>
+<span class="org-string"> number"</span>).addClass(<span class="org-string">"error"</span>).show().fadeOut(1000);
         } else{
-            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono v&#225;lido number"</span>).addClass(<span class="org-string">"success"</span>).show().fadeOut(1000);
+            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono v&#225;lido</span>
+<span class="org-string"> number"</span>).addClass(<span class="org-string">"success"</span>).show().fadeOut(1000);
         }
         event.preventDefault();
     });
@@ -1393,7 +1395,8 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">form</span>&gt;
-        &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"text"</span> <span class="org-variable-name">id</span>=<span class="org-string">"inputMobile"</span> <span class="org-variable-name">maxlength</span>=<span class="org-string">"10"</span> <span class="org-variable-name">placeholder</span>=<span class="org-string">"Introduce un n&#250;memro de tel&#233;fono"</span>&gt;
+        &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"text"</span> <span class="org-variable-name">id</span>=<span class="org-string">"inputMobile"</span> <span class="org-variable-name">maxlength</span>=<span class="org-string">"10"</span>
+ <span class="org-variable-name">placeholder</span>=<span class="org-string">"Introduce un n&#250;memro de tel&#233;fono"</span>&gt;
         &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"submit"</span> <span class="org-variable-name">value</span>=<span class="org-string">"Submit"</span>&gt;
         &lt;<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
     &lt;/<span class="org-function-name">form</span>&gt;
@@ -1467,7 +1470,8 @@ Este método activa una función cuando la ventana del navegador cambia de tama�
 $(document).ready(function(){
     $(window).resize(function() {
         $(window).bind(<span class="org-string">"redimensiona"</span>, function(){ 
-            $(<span class="org-string">"p"</span>).text(<span class="org-string">"Altura de la ventana: "</span> + $(window).width() + <span class="org-string">", "</span> + <span class="org-string">"Altura de la ventana: "</span> + $(window).height());
+            $(<span class="org-string">"p"</span>).text(<span class="org-string">"Altura de la ventana: "</span> + $(window).width() + <span class="org-string">", "</span> +
+ <span class="org-string">"Altura de la ventana: "</span> + $(window).height());
         });
     });
 });
@@ -2528,7 +2532,7 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">label</span>&gt;&lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"checkbox"</span>&gt;&lt;/<span class="org-function-name">label</span>&gt;Acepto los t&#233;rminos y condiciones y dejo que me des por donde amargan los pepinos.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">label</span>&gt;&lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"checkbox"</span>&gt;&lt;/<span class="org-function-name">label</span>&gt;Acepto los t&#233;rminos y condiciones&lt;/<span class="org-function-name">p</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Comprueba&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -2690,8 +2694,12 @@ $(document).ready(function(){
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Inserta Texto&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"container"</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
+ suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
+ at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -2733,8 +2741,12 @@ $(document).ready(function(){
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Inserta Texto&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"container"</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
+ suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
+ at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -2775,7 +2787,9 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Inserta Contenido&lt;/<span class="org-function-name">button</span>&gt;
-    &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante, metus ac nisl bibendum.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante, metus ac nisl bibendum.&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
 </pre>
@@ -2836,7 +2850,14 @@ $(document).ready(function(){
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">class</span>=<span class="org-string">"insert-after"</span>&gt;Inserta Despu&#233;s&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">hr</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"container"</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque
+ non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci
+ sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque
+ aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu,
+ tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque
+ porttitor. Integer faucibus ligula.&lt;/<span class="org-function-name">p</span>&gt;
 
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
@@ -2946,7 +2967,8 @@ $(document).ready(function(){
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
         &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Buenos d&#237;as por la ma&#241;ana!</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
-        &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"hint"</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Si pulsas el bot&#243;n lo borrar&#225;s todo inclu&#237;do el bot&#243;n&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"hint"</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Si pulsas el bot&#243;n lo borrar&#225;s
+ todo inclu&#237;do el bot&#243;n&lt;/<span class="org-function-name">p</span>&gt;
         &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Vaciar contenedor&lt;/<span class="org-function-name">button</span>&gt;
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
@@ -3315,7 +3337,8 @@ $(document).ready(function(){
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"box"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"box"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"box"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
-  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Pulsa dentro de la caja vac&#237;a para llenarla con el color de fondo.&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Pulsa dentro de la caja vac&#237;a para llenarla con el
+ color de fondo.&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;
 </pre>
@@ -3432,7 +3455,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obt&#233;n la altura y anchura&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
@@ -3471,7 +3500,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Establece al altura y la anchura&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -3516,11 +3551,20 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obten la altura y anchura interior&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
   &lt;<span class="org-function-name">hr</span>&gt;
-  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerWidth()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye las propiedades (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt;), e &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerHeight()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerWidth()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye las propiedades
+ (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt;), e
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerHeight()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
 </pre>
@@ -3561,7 +3605,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Establecer altura y anchura interiores&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -3607,7 +3657,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obt&#233;n la altura y anchura exteriores&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
   &lt;<span class="org-function-name">hr</span>&gt;
@@ -3654,11 +3710,22 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obten la altura y anchura exteriores con el margen&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
   &lt;<span class="org-function-name">hr</span>&gt;
-  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Note:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerWidth(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-right</span>&lt;/<span class="org-function-name">b</span>&gt;), y &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerHeight(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Note:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerWidth(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-left</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-right</span>&lt;/<span class="org-function-name">b</span>&gt;), y
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerHeight(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
 </pre>
@@ -3703,7 +3770,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Establece la altura y anchura exteriores&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -3713,7 +3786,6 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
-
 <div id="outline-container-orga5198b8" class="outline-2">
 <h2 id="orga5198b8">JQuery avanzado</h2>
 <div class="outline-text-2" id="text-orga5198b8">
@@ -3782,7 +3854,6 @@ El diagrama anterior muestra las relaciones padre/hijo entre los elementos:
 </ul>
 </div>
 </div>
-
 
 <div id="outline-container-org978ff85" class="outline-4">
 <h4 id="org978ff85">Recorriendo el árbol DOM</h4>
@@ -4742,7 +4813,6 @@ $(document).ready(function(){
 </div>
 </div>
 
-
 <div id="outline-container-org9c55a89" class="outline-4">
 <h4 id="org9c55a89">Método has()</h4>
 <div class="outline-text-4" id="text-org9c55a89">
@@ -4787,7 +4857,6 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
-
 
 
 <div id="outline-container-org39a59ca" class="outline-4">
@@ -5023,7 +5092,8 @@ Ejemplo:
 &lt;<span class="org-function-name">script</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/javascript"</span>&gt;
 $(document).ready(function(){
     $(<span class="org-string">"button"</span>).click(function(){
-        $(<span class="org-string">"#box"</span>).load(<span class="org-string">"/examples/html/test-content.html"</span>, function(responseTxt, statusTxt, jqXHR){
+        $(<span class="org-string">"#box"</span>).load(<span class="org-string">"/examples/html/test-content.html"</span>,
+ function(responseTxt, statusTxt, jqXHR){
             if(statusTxt == <span class="org-string">"success"</span>){
                 alert(<span class="org-string">"El nuevo contenido es cargado correctamente!"</span>);
             }
@@ -5169,8 +5239,9 @@ _Vamos a empezar con algo sencillo: _
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Patricio Martínez</p>
-<p class="date">Created: 2017-08-07 lun 17:31</p>
+<p class="date">Fecha: \today</p>
+<p class="author">Autor: Patricio Martínez</p>
+<p class="date">Created: 2017-08-07 lun 18:00</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
