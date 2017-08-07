@@ -1,7 +1,16 @@
 
+ 
+
 #+TITLE: Introducción a Javascript
 #+AUTHOR: Patricio Martínez Cano
 #+EMAIL: maxxcan@gmail.com
+#+DATE: \today
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, oneside]
+#+LANGUAGE: es
+
+#+latex_header:\textwidth=17cm
+#+latex_header:\oddsidemargin=0.5cm
 
 * Introducción
 
@@ -28,7 +37,6 @@ de programación del lado del cliente.
 
    Con javascript podemos crear efectos especiales en las páginas y definir interactividades con el usuario. El navegador del cliente es el encargado
 de interpretar las instrucciones javascript y ejecutarlas para realizar estos efectos e interacciones. Además gracias  a las *api javascript de html5*, que están disponibles en los navegadores actuales, podemos acceder a todo tipo de recursos adicionales, como la cámara, espacio para almacenamiento de datos, creación de gráficos, etc. 
-
 
 ** Cómo y cuando aprender javascript
 
@@ -153,7 +161,8 @@ Javascript puede cambiar el contenido HTML.  Para ello usaremos el método *getE
 
 <p id="demo">Javascript puede cambiar el contenido HTML</p>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hola Mundo!"'>Pulsame</button>
+<button type="button" 
+onclick='document.getElementById("demo").innerHTML = "Hola Mundo!"'>Pulsame</button>
 
 </body>
 </html>
@@ -172,7 +181,8 @@ Ejemplo:
 
 <p id="demo">Javascript puede cambiar el estilo de un elemento HTML.</p>
 
-<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Pulsame</button>
+<button type="button" 
+onclick="document.getElementById('demo').style.fontSize='35px'">Púlsame</button>
 
 </body>
 </html>
@@ -193,7 +203,8 @@ Ejemplo 1:
 
 <p id="demo">JavaScript puede esconder elementos HTML.</p>
 
-<button type="button" onclick="document.getElementById('demo').style.display='none'">Púlsame</button>
+<button type="button" 
+onclick="document.getElementById('demo').style.display='none'">Púlsame</button>
 
 </body>
 </html>
@@ -210,7 +221,8 @@ Ejemplo 2:
 
 <p id="demo" style="display:none">Hola mundo</p>
 
-<button type="button" onclick="document.getElementById('demo').style.display='block'">Púlsame</button>
+<button type="button" 
+onclick="document.getElementById('demo').style.display='block'">Púlsame</button>
 
 </body>
 </html> 
@@ -580,7 +592,9 @@ Ejemplo:
 <body>
 
 <h2>Variables en JavaScript</h2>
-<p>Esto es un ejemplo, de como definir una variable en JavaScript. Primero tenemos que definir la variable y luego asignarle un valor</p>
+<p>Esto es un ejemplo, de como definir una variable en 
+JavaScript. Primero tenemos que definir la variable y luego 
+asignarle un valor</p>
 
 <p id="demo"></p>
 
@@ -623,7 +637,8 @@ Ejemplo:
 <body>
 
 <h2>Variables en JavaScript</h2>
-<p>Esto es un ejemplo, de como definir una variable en JavaScript. Primero tenemos que definir la variable y luego asignarle un valor</p>
+<p>Esto es un ejemplo, de como definir una variable en JavaScript. Primero
+ tenemos que definir la variable y luego asignarle un valor</p>
 
 <p id="demo"></p>
 
@@ -707,7 +722,8 @@ Un ejemplo sería:
 <body>
 
   <h2><Declara></Declaraciones en JavaScript</h2>
-  <p>Un Código JavaScript <o></o> simplemente un programa JavaScript es una secuencia de declaraciones javascript</p>
+  <p>Un Código JavaScript <o></o> simplemente un programa JavaScript es una
+ secuencia de declaraciones javascript</p>
 
 <p id="demo"></p>
 
@@ -849,7 +865,6 @@ En este ejemplo podemos ver:
 
 Lo importante es que quede claro que las variables como en álgebra almacenan valores.
 
-
 *** Identificadores en Javascript
 
 Todas las variables en javascript deben estar *identificadas* con un *nombre único* 
@@ -863,7 +878,6 @@ Los identificadores pueden ser nombres cortos o nombres más descriptivos. En ge
 + Los nombres también puede empezar con un guión bajo y un signo de dolar (aunque no usaremos esta forma)
 + Los nombres distinguen entre mayúsculas y minúsculas
 + Las palabras reservadas no pueden ser usadas
-
 
 *** Declarando variables en JavaScript
 
@@ -3820,7 +3834,6 @@ document.getElementById("demo").innerHTML = text;
 #+end_src
 
 * Formularios en JavaScript
-
 ** Validación de formularios en JavaScript
 
 Un formulario HTML puede ser validado por JavaScript
@@ -3840,7 +3853,8 @@ function validateForm() {
 Esta función puede ser llamada cuando el formulario sea enviado:
 
 #+begin_src html
-<form name="myForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
+<form name="myForm" action="/action_page_post.php" onsubmit="return
+ validateForm()" method="post">
 Name: <input type="text" name="fnombre">
 <input type="submit" value="Submit">
 </form>
@@ -3915,7 +3929,6 @@ function myFunction() {
 </body>
 </html> 
 #+end_src
-
 
 ** Validación automática de formularios
 
@@ -4461,8 +4474,10 @@ Otro ejemplo sería como podemos alterar la visibilidad de un elemento HTML
 
 <p id="p1"> Hola soy un texto molón que aparece y desaparece  </p>
 
-<input type="button" value="Esconder texto" onclick="document.getElementById('p1').style.visibility='hidden'">
-<input type="button" value="Mostrar texto" onclick="document.getElementById('p1').style.visibility='visible'">
+<input type="button" value="Esconder texto"
+ onclick="document.getElementById('p1').style.visibility='hidden'">
+<input type="button" value="Mostrar texto"
+ onclick="document.getElementById('p1').style.visibility='visible'">
 
 </body>
 </html>
@@ -5208,7 +5223,8 @@ var miPadre = new persona("Eusebio", "Martínez", 55);
 var miMadre = new persona("Maria", "García", 50);
 
 document.getElementById("demo").innerHTML =
-"Mi padre tiene " + miPadre.edad "años de edad" + ". Mi Madre tiene " + miMadre.edad "años de edad"; 
+"Mi padre tiene " + miPadre.edad "años de edad" + ". Mi Madre tiene " +
+ miMadre.edad "años de edad"; 
 </script>
 
 </body>

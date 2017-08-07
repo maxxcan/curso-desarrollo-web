@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-07-27 jue 12:02 -->
+<!-- 2017-08-07 lun 17:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -238,113 +238,113 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc8a05a3">Características</a></li>
-<li><a href="#org8763131">Sintaxis</a></li>
-<li><a href="#org70a6646">Usando Sass</a></li>
-<li><a href="#orgd8cafd5">Extensiones CSS</a>
+<li><a href="#org5c459ed">Características</a></li>
+<li><a href="#org4e22816">Sintaxis</a></li>
+<li><a href="#org87e642b">Usando Sass</a></li>
+<li><a href="#orga84e37e">Extensiones CSS</a>
 <ul>
-<li><a href="#orgfe501ea">Reglas anidadas</a></li>
-<li><a href="#org6f53f43">Refinando a los selectores padre</a></li>
-<li><a href="#org6ec78d5">Propiedades anidadas</a></li>
-<li><a href="#org73b097c">Selectores variables</a></li>
+<li><a href="#org45b6d4a">Reglas anidadas</a></li>
+<li><a href="#org63005f8">Refinando a los selectores padre</a></li>
+<li><a href="#orgc54fbf1">Propiedades anidadas</a></li>
+<li><a href="#org3deb254">Selectores variables</a></li>
 </ul>
 </li>
-<li><a href="#org923d231">Comentarios</a></li>
-<li><a href="#org2552a88">SassScript</a>
+<li><a href="#org0622a82">Comentarios</a></li>
+<li><a href="#org4fba4f2">SassScript</a>
 <ul>
-<li><a href="#org6c83c0f">Shell interactiva</a></li>
-<li><a href="#org2e3a771">Variables</a></li>
-<li><a href="#orgec3b31b">Tipos de datos</a></li>
-<li><a href="#orgd5c8e0e">Cadenas de texto</a></li>
-<li><a href="#org2ce491c">Listas</a></li>
-<li><a href="#org394f6ad">Mapas</a></li>
-<li><a href="#org9e80724">Operadores</a>
+<li><a href="#orga9b775d">Shell interactiva</a></li>
+<li><a href="#org89198f7">Variables</a></li>
+<li><a href="#org648376d">Tipos de datos</a></li>
+<li><a href="#orgf355bef">Cadenas de texto</a></li>
+<li><a href="#org710a07a">Listas</a></li>
+<li><a href="#org7662381">Mapas</a></li>
+<li><a href="#org2502f49">Operadores</a>
 <ul>
-<li><a href="#orgf58fcf2">Operadores para números</a></li>
-<li><a href="#org7817b23">Operadores para colores</a></li>
-<li><a href="#org9795b35">Operadores para cadenas de texto</a></li>
-<li><a href="#orgb67d97a">Operadores para valores lógicos o booleanos</a></li>
-<li><a href="#org33223fd">Operadores para listas</a></li>
+<li><a href="#org221a79d">Operadores para números</a></li>
+<li><a href="#org74ec582">Operadores para colores</a></li>
+<li><a href="#orgcdf1b7e">Operadores para cadenas de texto</a></li>
+<li><a href="#orgbec0c18">Operadores para valores lógicos o booleanos</a></li>
+<li><a href="#org5e6f737">Operadores para listas</a></li>
 </ul>
 </li>
-<li><a href="#org63e841a">Paréntesis</a></li>
-<li><a href="#org527a42b">Funciones</a>
+<li><a href="#org95344cd">Paréntesis</a></li>
+<li><a href="#org9523965">Funciones</a>
 <ul>
-<li><a href="#orgd58a30b">Argumentos con nombre</a></li>
+<li><a href="#orgee111a1">Argumentos con nombre</a></li>
 </ul>
 </li>
-<li><a href="#org4b72882">Interpolación</a></li>
-<li><a href="#orgd24f768">Variables con valores por defecto</a></li>
+<li><a href="#orgecdebd8">Interpolación</a></li>
+<li><a href="#orgd1694cc">Variables con valores por defecto</a></li>
 </ul>
 </li>
-<li><a href="#org90f44ed">Reglas @ y directivas</a>
+<li><a href="#org633df37">Reglas @ y directivas</a>
 <ul>
-<li><a href="#orga19ed68">La regla @import</a></li>
-<li><a href="#orgfa6a364">Hojas de estilo parciales</a></li>
-<li><a href="#orga1cf817">Anidando reglas @import</a></li>
-<li><a href="#orgf2d0361">La regla @media</a></li>
-<li><a href="#orgb184b7f">La regla @extend</a>
+<li><a href="#orgc269cdd">La regla @import</a></li>
+<li><a href="#org572486f">Hojas de estilo parciales</a></li>
+<li><a href="#org2b17c02">Anidando reglas @import</a></li>
+<li><a href="#org37d4549">La regla @media</a></li>
+<li><a href="#org15c72dc">La regla @extend</a>
 <ul>
-<li><a href="#org72bf3e9">Funcionamiento interno</a></li>
-<li><a href="#orga7b99d1">Extendiendo selectores complejos</a></li>
-<li><a href="#orgc56d01e">Extendiendo de varios selectores</a></li>
-<li><a href="#org3f5c6f9">Extendiendo a varios niveles</a></li>
-<li><a href="#orgad2acfa">Secuencia de selectores</a></li>
-<li><a href="#orgb2efcfe">Selectores exclusivos para reglas @extend</a></li>
-<li><a href="#org7e5d3cb">La opción !optional</a></li>
-<li><a href="#orgf7a5d27">Usando @extend en las directivas</a></li>
+<li><a href="#org2866433">Funcionamiento interno</a></li>
+<li><a href="#orga2d3cf0">Extendiendo selectores complejos</a></li>
+<li><a href="#org1a5539f">Extendiendo de varios selectores</a></li>
+<li><a href="#orgb864f9d">Extendiendo a varios niveles</a></li>
+<li><a href="#org4d053c6">Secuencia de selectores</a></li>
+<li><a href="#orgecee109">Selectores exclusivos para reglas @extend</a></li>
+<li><a href="#org4793f50">La opción !optional</a></li>
+<li><a href="#orgcdfd17a">Usando @extend en las directivas</a></li>
 </ul>
 </li>
-<li><a href="#orgdd2946a">La regla @at-root</a>
+<li><a href="#org7bd00f3">La regla @at-root</a>
 <ul>
-<li><a href="#org6409995">Modificando la regla @at-root con with y without</a></li>
+<li><a href="#orgfe14ccc">Modificando la regla @at-root con with y without</a></li>
 </ul>
 </li>
-<li><a href="#org5771d55">La regla @debug</a></li>
-<li><a href="#org671e491">La regla @warn</a></li>
+<li><a href="#org2186e84">La regla @debug</a></li>
+<li><a href="#org73409ba">La regla @warn</a></li>
 </ul>
 </li>
-<li><a href="#orgadcb461">Directivas de control y expresiones</a>
+<li><a href="#org6cc6b51">Directivas de control y expresiones</a>
 <ul>
-<li><a href="#org42e702f">La función if()</a></li>
-<li><a href="#org306c919">La directiva @if</a></li>
-<li><a href="#org024e330">La directiva @for</a></li>
-<li><a href="#org30e1ace">La directiva @each</a>
+<li><a href="#orgf26b33f">La función if()</a></li>
+<li><a href="#org90ebc55">La directiva @if</a></li>
+<li><a href="#org2937c19">La directiva @for</a></li>
+<li><a href="#org745d6a9">La directiva @each</a>
 <ul>
-<li><a href="#org991a330">Asignación múltiple</a></li>
+<li><a href="#org1f7c2ec">Asignación múltiple</a></li>
 </ul>
 </li>
-<li><a href="#org9c165f0">La directiva @while</a></li>
+<li><a href="#org5a7d851">La directiva @while</a></li>
 </ul>
 </li>
-<li><a href="#org01c0b88">Directivas mixin</a>
+<li><a href="#orgf02136b">Directivas mixin</a>
 <ul>
-<li><a href="#org474107a">Definiendo mixins con la directiva @mixin</a></li>
-<li><a href="#org8d6901c">Incluyendo mixins con @include</a></li>
-<li><a href="#orga3dd9ed">Argumentos</a></li>
-<li><a href="#org174e561">Argumentos con nombre</a></li>
-<li><a href="#org884c3f6">Argumentos variables</a></li>
-<li><a href="#orgbd1bd81">Pasando bloques de contenidos a los mixins</a>
+<li><a href="#org1aa7412">Definiendo mixins con la directiva @mixin</a></li>
+<li><a href="#org5866fc5">Incluyendo mixins con @include</a></li>
+<li><a href="#orged9b394">Argumentos</a></li>
+<li><a href="#orgf3623bd">Argumentos con nombre</a></li>
+<li><a href="#org701ab07">Argumentos variables</a></li>
+<li><a href="#orgad64eb4">Pasando bloques de contenidos a los mixins</a>
 <ul>
-<li><a href="#orgf09ed45">Contexto variables y bloques contenidos</a></li>
+<li><a href="#org067518a">Contexto variables y bloques contenidos</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9f30160">Directivas de función</a></li>
-<li><a href="#org1049e80">Formato de salida</a>
+<li><a href="#org747b60b">Directivas de función</a></li>
+<li><a href="#orgef3f07a">Formato de salida</a>
 <ul>
-<li><a href="#org1d61419">Formato :nested</a></li>
-<li><a href="#org13f9301">El formato :expanded</a></li>
-<li><a href="#org76696a7">El formato :compact</a></li>
-<li><a href="#org37c8f9c">El formato :compressed</a></li>
+<li><a href="#orge12fe99">Formato :nested</a></li>
+<li><a href="#orga8cb415">El formato :expanded</a></li>
+<li><a href="#orge96aec0">El formato :compact</a></li>
+<li><a href="#org8bb5531">El formato :compressed</a></li>
 </ul>
 </li>
-<li><a href="#org5918c1d">Extendiendo Sass</a>
+<li><a href="#org7829593">Extendiendo Sass</a>
 <ul>
-<li><a href="#org49628eb">Definiendo funciones propias para Sass</a></li>
-<li><a href="#org49df0aa">Sistemas de caché</a></li>
-<li><a href="#orgc9173f8">Importadores propios</a></li>
+<li><a href="#org90936d5">Definiendo funciones propias para Sass</a></li>
+<li><a href="#orgff50a6e">Sistemas de caché</a></li>
+<li><a href="#org5cd7a65">Importadores propios</a></li>
 </ul>
 </li>
 </ul>
@@ -354,9 +354,9 @@ for the JavaScript code in this tag.
 Introducción a Sass
 </p>
 
-<div id="outline-container-orgc8a05a3" class="outline-2">
-<h2 id="orgc8a05a3">Características</h2>
-<div class="outline-text-2" id="text-orgc8a05a3">
+<div id="outline-container-org5c459ed" class="outline-2">
+<h2 id="org5c459ed">Características</h2>
+<div class="outline-text-2" id="text-org5c459ed">
 <p>
 Sass (acrónimo de Syntactically Awesome StyleSheets) es una extensión de CSS que añade características muy potentes y elegantes a este lenguaje de estilos. Sass permite el uso de variables, reglas CSS anidadas, mixins, importación de hojas de estilos y muchas otras características, al tiempo que mantiene la compatibilidad con CSS.
 </p>
@@ -379,9 +379,9 @@ En definitiva, Sass incluye las siguientes características:
 </div>
 </div>
 
-<div id="outline-container-org8763131" class="outline-2">
-<h2 id="org8763131">Sintaxis</h2>
-<div class="outline-text-2" id="text-org8763131">
+<div id="outline-container-org4e22816" class="outline-2">
+<h2 id="org4e22816">Sintaxis</h2>
+<div class="outline-text-2" id="text-org4e22816">
 <p>
 Sass permite el uso de dos sintaxis diferentes para crear sus archivos. La primera, conocida como SCSS (del inglés, Sassy CSS) es la que vamos a utilizar en este manual y es una extensión de la sintaxis de CSS3. Esto significa que cualquier hoja de estilos CSS3 válida también es un archivo SCSS válido.
 </p>
@@ -408,9 +408,9 @@ sass-convert estilos.scss estilos.sass
 </div>
 </div>
 
-<div id="outline-container-org70a6646" class="outline-2">
-<h2 id="org70a6646">Usando Sass</h2>
-<div class="outline-text-2" id="text-org70a6646">
+<div id="outline-container-org87e642b" class="outline-2">
+<h2 id="org87e642b">Usando Sass</h2>
+<div class="outline-text-2" id="text-org87e642b">
 <p>
 Sass se puede usar de tres maneras diferentes:
 </p>
@@ -463,12 +463,12 @@ Si dispones de un directorio con muchos archivos Sass, también puedes vigilarlo
 </div>
 </div>
 
-<div id="outline-container-orgd8cafd5" class="outline-2">
-<h2 id="orgd8cafd5">Extensiones CSS</h2>
-<div class="outline-text-2" id="text-orgd8cafd5">
-</div><div id="outline-container-orgfe501ea" class="outline-3">
-<h3 id="orgfe501ea">Reglas anidadas</h3>
-<div class="outline-text-3" id="text-orgfe501ea">
+<div id="outline-container-orga84e37e" class="outline-2">
+<h2 id="orga84e37e">Extensiones CSS</h2>
+<div class="outline-text-2" id="text-orga84e37e">
+</div><div id="outline-container-org45b6d4a" class="outline-3">
+<h3 id="org45b6d4a">Reglas anidadas</h3>
+<div class="outline-text-3" id="text-org45b6d4a">
 <p>
 Sass permite anidar las reglas CSS para que las hojas de estilos sean más concisas y fáciles de escribir. A los selectores anidados se les prefija automáticamente todos los selectores de los niveles superiores. Ejemplo:
 </p>
@@ -544,9 +544,9 @@ El código Sass anterior se transforma en el siguiente código CSS:
 </div>
 </div>
 
-<div id="outline-container-org6f53f43" class="outline-3">
-<h3 id="org6f53f43">Refinando a los selectores padre</h3>
-<div class="outline-text-3" id="text-org6f53f43">
+<div id="outline-container-org63005f8" class="outline-3">
+<h3 id="org63005f8">Refinando a los selectores padre</h3>
+<div class="outline-text-3" id="text-org63005f8">
 <p>
 En ocasiones es necesario modificar el comportamiento por defecto de los selectores anidados. Imagina que quieres aplicar estilos especiales en el estado hover del selector o cuando el elemento &lt;body&gt; de la página tiene una determinada clase.
 </p>
@@ -648,9 +648,9 @@ Si por cualquier circunstancia no se puede aplicar el sufijo al selector padre, 
 </div>
 </div>
 
-<div id="outline-container-org6ec78d5" class="outline-3">
-<h3 id="org6ec78d5">Propiedades anidadas</h3>
-<div class="outline-text-3" id="text-org6ec78d5">
+<div id="outline-container-orgc54fbf1" class="outline-3">
+<h3 id="orgc54fbf1">Propiedades anidadas</h3>
+<div class="outline-text-3" id="text-orgc54fbf1">
 <p>
 CSS define varias propiedades cuyos nombres paracen estar agrupados de forma lógica. Así por ejemplo, las propiedades font-family, font-size y font-weight están todas relacionadas con el grupo font. En CSS es obligatorio escribir el nombre completo de todas estas propiedades. Sass permite utilizar el siguiente atajo para definir las propiedades relacionadas:
 </p>
@@ -710,9 +710,9 @@ El código Sass anterior se compila de la siguiente manera:
 </div>
 </div>
 
-<div id="outline-container-org73b097c" class="outline-3">
-<h3 id="org73b097c">Selectores variables</h3>
-<div class="outline-text-3" id="text-org73b097c">
+<div id="outline-container-org3deb254" class="outline-3">
+<h3 id="org3deb254">Selectores variables</h3>
+<div class="outline-text-3" id="text-org3deb254">
 <p>
 Sass también soporta un tipo especial de selector variable que se parece a los selectores de clase o de ID, pero que utiliza % en vez de # o .. No obstante, estos selectores variables solamente deberían usarse con la directiva @extend, tal y como se explica en los siguientes capítulos.
 </p>
@@ -724,9 +724,9 @@ Si utilizas estos selectores sin la directiva @extend, el archivo CSS generado i
 </div>
 </div>
 
-<div id="outline-container-org923d231" class="outline-2">
-<h2 id="org923d231">Comentarios</h2>
-<div class="outline-text-2" id="text-org923d231">
+<div id="outline-container-org0622a82" class="outline-2">
+<h2 id="org0622a82">Comentarios</h2>
+<div class="outline-text-2" id="text-org0622a82">
 <p>
 Sass soporta el mismo tipo de comentarios que CSS, que utilizan los delimitadores <i>* y *</i> y pueden ocupar una o más líneas. Además, Sass también soporta los comentarios de una única línea que utilizan los delimitadores // y que son muy comunes en todos los lenguajes de programación.
 </p>
@@ -768,17 +768,17 @@ Cuando la primera letra de un comentario de una sola línea es !, su contenido s
 </div>
 </div>
 
-<div id="outline-container-org2552a88" class="outline-2">
-<h2 id="org2552a88">SassScript</h2>
-<div class="outline-text-2" id="text-org2552a88">
+<div id="outline-container-org4fba4f2" class="outline-2">
+<h2 id="org4fba4f2">SassScript</h2>
+<div class="outline-text-2" id="text-org4fba4f2">
 <p>
 Además de extender la sintaxis básica de CSS, Sass incluye una serie de extensiones más avanzadas llamadas SassScript. Gracias a estas extensiones, las propiedades pueden utilizar variables, expresiones matemáticas y otras funciones. Sass permite el uso de SassScript para definir cualquier valor de cualquier propiedad.
 </p>
 </div>
 
-<div id="outline-container-org6c83c0f" class="outline-3">
-<h3 id="org6c83c0f">Shell interactiva</h3>
-<div class="outline-text-3" id="text-org6c83c0f">
+<div id="outline-container-orga9b775d" class="outline-3">
+<h3 id="orga9b775d">Shell interactiva</h3>
+<div class="outline-text-3" id="text-orga9b775d">
 <p>
 Si quieres experimentar con SassScript antes de empezar a utilizarlo en tus hojas de estilos, puedes hacer uso de "la shell interactiva". Para ello, ejecuta el comando sass añadiendo la opción -i y escribe cualquier expresión válida de SassScript. La shell te mostrará el resultado de evaluar esa expresión o un mensaje de error si no es correcta:
 </p>
@@ -801,9 +801,9 @@ white
 </div>
 </div>
 
-<div id="outline-container-org2e3a771" class="outline-3">
-<h3 id="org2e3a771">Variables</h3>
-<div class="outline-text-3" id="text-org2e3a771">
+<div id="outline-container-org89198f7" class="outline-3">
+<h3 id="org89198f7">Variables</h3>
+<div class="outline-text-3" id="text-org89198f7">
 <p>
 La funcionalidad básica de SassScript es el uso de variables para almacenar valores que utilizas una y otra vez en tus hojas de estilos. Para ello, utiliza cualquier palabra como nombre de la variable, añádele el símbolo $ por delante y establece su valor como si fuera una propiedad CSS normal. Si por ejemplo defines una variable de la siguiente manera:
 </p>
@@ -831,9 +831,9 @@ Una limitación importante de las variables es que sólo están disponibles dent
 </div>
 </div>
 
-<div id="outline-container-orgec3b31b" class="outline-3">
-<h3 id="orgec3b31b">Tipos de datos</h3>
-<div class="outline-text-3" id="text-orgec3b31b">
+<div id="outline-container-org648376d" class="outline-3">
+<h3 id="org648376d">Tipos de datos</h3>
+<div class="outline-text-3" id="text-org648376d">
 <p>
 SassScript soporta seis tipos de datos:
 </p>
@@ -854,9 +854,9 @@ SassScript también soporta todos los otros tipos de datos soportados por CSS, c
 </div>
 </div>
 
-<div id="outline-container-orgd5c8e0e" class="outline-3">
-<h3 id="orgd5c8e0e">Cadenas de texto</h3>
-<div class="outline-text-3" id="text-orgd5c8e0e">
+<div id="outline-container-orgf355bef" class="outline-3">
+<h3 id="orgf355bef">Cadenas de texto</h3>
+<div class="outline-text-3" id="text-orgf355bef">
 <p>
 CSS define dos tipos de cadenas de texto: las que tienen comillas (dobles o simples) como por ejemplo "Lucida Grande" o 'http://sass-lang.com'; y las que no tienen comillas, como por ejemplo sans-serif o bold.
 </p>
@@ -894,9 +894,9 @@ El código Sass anterior se compila a:
 </div>
 </div>
 
-<div id="outline-container-org2ce491c" class="outline-3">
-<h3 id="org2ce491c">Listas</h3>
-<div class="outline-text-3" id="text-org2ce491c">
+<div id="outline-container-org710a07a" class="outline-3">
+<h3 id="org710a07a">Listas</h3>
+<div class="outline-text-3" id="text-org710a07a">
 <p>
 Las listas son el tipo de dato que utiliza Sass para representar los valores que normalmente se utilizan en las propiedades CSS como margin: 10px 15px 0 0 o font-face: Helvetica, Arial, sans-serif. Las listas son simplemente una colección de valores separados por comas o espacios en blanco. Técnicamente, cada elemento de la lista también se considera una lista simple de un solo elemento.
 </p>
@@ -924,9 +924,9 @@ Las listas separadas por comas pueden incluir una coma después del último elem
 </div>
 </div>
 
-<div id="outline-container-org394f6ad" class="outline-3">
-<h3 id="org394f6ad">Mapas</h3>
-<div class="outline-text-3" id="text-org394f6ad">
+<div id="outline-container-org7662381" class="outline-3">
+<h3 id="org7662381">Mapas</h3>
+<div class="outline-text-3" id="text-org7662381">
 <p>
 Los mapas son asociaciones de claves y valores. La clave se utiliza para acceder fácilmente al valor de cualquier elemento del mapa. Se utilizan principalmente para agrupar valores y acceder a ellos dinámicamente. En CSS no existe ningún elemento equivalente a los mapas, pero su sintaxis es similar a las expresiones media query:
 </p>
@@ -954,17 +954,17 @@ Los mapas no se pueden convertir directamente a código CSS. Por tanto, si utili
 </div>
 </div>
 
-<div id="outline-container-org9e80724" class="outline-3">
-<h3 id="org9e80724">Operadores</h3>
-<div class="outline-text-3" id="text-org9e80724">
+<div id="outline-container-org2502f49" class="outline-3">
+<h3 id="org2502f49">Operadores</h3>
+<div class="outline-text-3" id="text-org2502f49">
 <p>
 Todos los tipos de datos soportan el operador de igualdad (<code>= y !</code>) para comprobar si dos valores son iguales o distintos. Además, cada tipo de dato define otros operadores propios.
 </p>
 </div>
 
-<div id="outline-container-orgf58fcf2" class="outline-4">
-<h4 id="orgf58fcf2">Operadores para números</h4>
-<div class="outline-text-4" id="text-orgf58fcf2">
+<div id="outline-container-org221a79d" class="outline-4">
+<h4 id="org221a79d">Operadores para números</h4>
+<div class="outline-text-4" id="text-org221a79d">
 <p>
 SassScript soporta los cinco operadores aritméticos básicos: suma +, resta -, multiplicación *, división / y módulo %. El operador módulo calcula el resto de la división sin decimales (ejemplo: 5 módulo 2 = 1, % % 2 = 1). Además, si realizas operaciones sobre números con diferentes unidades, Sass convertirá automáticamente las unidades siempre que sea posible:
 </p>
@@ -993,7 +993,7 @@ Con los números también se pueden utilizar los operadores relacionales (&lt;, 
 </p>
 </div>
 
-<ul class="org-ul"><li><a id="orge81d2f8"></a>El problema del carácter / con la división de números<br /><div class="outline-text-5" id="text-orge81d2f8">
+<ul class="org-ul"><li><a id="org9801629"></a>El problema del carácter / con la división de números<br /><div class="outline-text-5" id="text-org9801629">
 <p>
 CSS permite el uso del carácter / para separar números. Como Sass es totalmente compatible con la sintaxis de CSS, debe soportar el uso de esta característica. El problema es que el carácter / también se utiliza para la operación matemática de dividir números. Por todo esto, si utilizas el carácter / para separar dos números en SassScript, en el archivo CSS compilado aparecerán tal cual los has escrito.
 </p>
@@ -1068,9 +1068,9 @@ El código css que genera es:
 </div></li></ul>
 </div>
 
-<div id="outline-container-org7817b23" class="outline-4">
-<h4 id="org7817b23">Operadores para colores</h4>
-<div class="outline-text-4" id="text-org7817b23">
+<div id="outline-container-org74ec582" class="outline-4">
+<h4 id="org74ec582">Operadores para colores</h4>
+<div class="outline-text-4" id="text-org74ec582">
 <p>
 Los operadores aritméticos también se pueden aplicar a los valores que representan colores. En este caso, los cálculos siempre se realizan sobre cada componente del color. Esto significa que antes de cada operación, el color se descompone en sus tres componentes R, G y B, para después aplicar la operación a cada componente. Ejemplo:
 </p>
@@ -1169,9 +1169,9 @@ El código Sass anterior se compila de la siguiente manera:
 </div>
 </div>
 
-<div id="outline-container-org9795b35" class="outline-4">
-<h4 id="org9795b35">Operadores para cadenas de texto</h4>
-<div class="outline-text-4" id="text-org9795b35">
+<div id="outline-container-orgcdf1b7e" class="outline-4">
+<h4 id="orgcdf1b7e">Operadores para cadenas de texto</h4>
+<div class="outline-text-4" id="text-orgcdf1b7e">
 <p>
 El operador + se puede utilizar para concatenar dos o más cadenas de texto:
 </p>
@@ -1289,18 +1289,18 @@ Esto dará:
 </div>
 </div>
 
-<div id="outline-container-orgb67d97a" class="outline-4">
-<h4 id="orgb67d97a">Operadores para valores lógicos o booleanos</h4>
-<div class="outline-text-4" id="text-orgb67d97a">
+<div id="outline-container-orgbec0c18" class="outline-4">
+<h4 id="orgbec0c18">Operadores para valores lógicos o booleanos</h4>
+<div class="outline-text-4" id="text-orgbec0c18">
 <p>
 SassScript soporta el uso de los tradicionales operadores and, or y not sobre los valores lógicos o booleanos.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org33223fd" class="outline-4">
-<h4 id="org33223fd">Operadores para listas</h4>
-<div class="outline-text-4" id="text-org33223fd">
+<div id="outline-container-org5e6f737" class="outline-4">
+<h4 id="org5e6f737">Operadores para listas</h4>
+<div class="outline-text-4" id="text-org5e6f737">
 <p>
 Sass no define ningún operador específico para las listas de elementos, ya que estas se manipulan mediante las funciones especiales que se explican en los siguientes capítulos.
 </p>
@@ -1308,9 +1308,9 @@ Sass no define ningún operador específico para las listas de elementos, ya que
 </div>
 </div>
 
-<div id="outline-container-org63e841a" class="outline-3">
-<h3 id="org63e841a">Paréntesis</h3>
-<div class="outline-text-3" id="text-org63e841a">
+<div id="outline-container-org95344cd" class="outline-3">
+<h3 id="org95344cd">Paréntesis</h3>
+<div class="outline-text-3" id="text-org95344cd">
 <p>
 Puedes añadir paréntesis a cualquier expresión Sass para afectar al orden en el que se realizan las operaciones:
 </p>
@@ -1335,9 +1335,9 @@ El código Sass se compila:
 </div>
 </div>
 
-<div id="outline-container-org527a42b" class="outline-3">
-<h3 id="org527a42b">Funciones</h3>
-<div class="outline-text-3" id="text-org527a42b">
+<div id="outline-container-org9523965" class="outline-3">
+<h3 id="org9523965">Funciones</h3>
+<div class="outline-text-3" id="text-org9523965">
 <p>
 SassScript define algunas funciones muy útiles para crear las hojas de estilos y que utilizan la misma sintaxis que CSS:
 </p>
@@ -1361,9 +1361,9 @@ Esto se compila:
 </div>
 </div>
 
-<div id="outline-container-orgd58a30b" class="outline-4">
-<h4 id="orgd58a30b">Argumentos con nombre</h4>
-<div class="outline-text-4" id="text-orgd58a30b">
+<div id="outline-container-orgee111a1" class="outline-4">
+<h4 id="orgee111a1">Argumentos con nombre</h4>
+<div class="outline-text-4" id="text-orgee111a1">
 <p>
 Para que su uso sea más flexible, a las funciones de Sass les puedes pasar argumentos con nombre. De esta manera no es obligatorio respetar el orden en el que se definieron los argumentos, sólo su nombre:
 </p>
@@ -1390,9 +1390,9 @@ En los próximos capítulos se detalla la lista completa de funciones Sass y los
 </div>
 </div>
 
-<div id="outline-container-org4b72882" class="outline-3">
-<h3 id="org4b72882">Interpolación</h3>
-<div class="outline-text-3" id="text-org4b72882">
+<div id="outline-container-orgecdebd8" class="outline-3">
+<h3 id="orgecdebd8">Interpolación</h3>
+<div class="outline-text-3" id="text-orgecdebd8">
 <p>
 Las variables definidas con SassScript se pueden utilizar incluso en los nombres de los selectores y de las propiedades:
 </p>
@@ -1444,9 +1444,9 @@ Dando lugar a:
 </div>
 </div>
 
-<div id="outline-container-orgd24f768" class="outline-3">
-<h3 id="orgd24f768">Variables con valores por defecto</h3>
-<div class="outline-text-3" id="text-orgd24f768">
+<div id="outline-container-orgd1694cc" class="outline-3">
+<h3 id="orgd1694cc">Variables con valores por defecto</h3>
+<div class="outline-text-3" id="text-orgd1694cc">
 <p>
 La palabra reservada !default permite controlar la asignación de valores a las variables de manera mucho más precisa. Si una variable ya tenía un valor asignado, !default hace que se mantenga sin cambios. Si la variable no existía o no tenía ningún valor, se utiliza el nuevo valor asignado. Ejemplo:
 </p>
@@ -1503,17 +1503,17 @@ El código Sass anterior se compila de la siguiente manera:
 </div>
 </div>
 
-<div id="outline-container-org90f44ed" class="outline-2">
-<h2 id="org90f44ed">Reglas @ y directivas</h2>
-<div class="outline-text-2" id="text-org90f44ed">
+<div id="outline-container-org633df37" class="outline-2">
+<h2 id="org633df37">Reglas @ y directivas</h2>
+<div class="outline-text-2" id="text-org633df37">
 <p>
 Sass soporta todas las reglas @ (también llamadas "reglas at") definidas por CSS3. Además, Sass incluye varias reglas específicas llamadas directivas.
 </p>
 </div>
 
-<div id="outline-container-orga19ed68" class="outline-3">
-<h3 id="orga19ed68">La regla @import</h3>
-<div class="outline-text-3" id="text-orga19ed68">
+<div id="outline-container-orgc269cdd" class="outline-3">
+<h3 id="orgc269cdd">La regla @import</h3>
+<div class="outline-text-3" id="text-orgc269cdd">
 <p>
 Sass mejora la regla @import de CSS para poder importar también archivos SCSS y Sass. Todos los archivos importados, independientemente de su tipo, acaban fusionándose antes de generar el archivo CSS final. Además, cualquier variable o mixin definidos en los archivos importados se pueden utilizar en la hoja de estilos principal.
 </p>
@@ -1614,9 +1614,9 @@ Esto resultarán en:
 </div>
 </div>
 
-<div id="outline-container-orgfa6a364" class="outline-3">
-<h3 id="orgfa6a364">Hojas de estilo parciales</h3>
-<div class="outline-text-3" id="text-orgfa6a364">
+<div id="outline-container-org572486f" class="outline-3">
+<h3 id="org572486f">Hojas de estilo parciales</h3>
+<div class="outline-text-3" id="text-org572486f">
 <p>
 Si quieres importar un archivo SCSS o Sass pero no quieres que se compile como archivo CSS, utiliza un guión bajo como primer carácter del nombre del archivo. De esta manera, Sass no generará un archivo CSS para esa hoja de estilos, pero podrás utilizarla importándola dentro de otra hoja de estilos. Este tipo de archivos que no se compilan se denominan "hojas de estilos parciales" o simplemente "parciales" (en inglés, "partials").
 </p>
@@ -1631,9 +1631,9 @@ Obviamente no puedes tener en un mismo directorio una hoja de estilos normal y u
 </div>
 </div>
 
-<div id="outline-container-orga1cf817" class="outline-3">
-<h3 id="orga1cf817">Anidando reglas @import</h3>
-<div class="outline-text-3" id="text-orga1cf817">
+<div id="outline-container-org2b17c02" class="outline-3">
+<h3 id="org2b17c02">Anidando reglas @import</h3>
+<div class="outline-text-3" id="text-org2b17c02">
 <p>
 Normalmente las reglas @import se colocan en el primer nivel jerárquico de la hoja de estilos. No obstante, también es posible colocarlas dentro de reglas CSS y reglas @media.
 </p>
@@ -1681,9 +1681,9 @@ Tampoco es posible anidar reglas @import dentro de los mixin y las directivas de
 </div>
 </div>
 
-<div id="outline-container-orgf2d0361" class="outline-3">
-<h3 id="orgf2d0361">La regla @media</h3>
-<div class="outline-text-3" id="text-orgf2d0361">
+<div id="outline-container-org37d4549" class="outline-3">
+<h3 id="org37d4549">La regla @media</h3>
+<div class="outline-text-3" id="text-org37d4549">
 <p>
 Las reglas @media en Sass funcionan prácticamente igual que en CSS, con una salvedad: se pueden anidar dentro de las reglas CSS. Si incluyes una regla @media dentro de una regla CSS, se aplicará a todos los selectores que se encuentren desde esa regla hasta el primer nivel de la hoja de estilos. Esto hace que sea muy fácil definir estilos dependientes de los dispositivos sin tener que repetir los selectores y sin tener que romper el flujo normal de la hoja de estilos Sass. Ejemplo:
 </p>
@@ -1775,9 +1775,9 @@ El código Sass anterior se compila de la siguiente manera:
 </div>
 </div>
 
-<div id="outline-container-orgb184b7f" class="outline-3">
-<h3 id="orgb184b7f">La regla @extend</h3>
-<div class="outline-text-3" id="text-orgb184b7f">
+<div id="outline-container-org15c72dc" class="outline-3">
+<h3 id="org15c72dc">La regla @extend</h3>
+<div class="outline-text-3" id="text-org15c72dc">
 <p>
 En ocasiones, es necesario que una clase CSS contenga todos los estilos aplicados a otra regla CSS, además de sus propios estilos. La solución habitual en estos casos consiste en crear una clase genérica que puedan utilizar los dos elementos. Imagina que quieres aplicar estilos a dos tipos de mensajes de error diferentes, uno normal y otro más grave. El código HTML podría ser algo como:
 </p>
@@ -1860,9 +1860,9 @@ Si ahora añades en tus páginas un elemento como &lt;div class="seriousError in
 </p>
 </div>
 
-<div id="outline-container-org72bf3e9" class="outline-4">
-<h4 id="org72bf3e9">Funcionamiento interno</h4>
-<div class="outline-text-4" id="text-org72bf3e9">
+<div id="outline-container-org2866433" class="outline-4">
+<h4 id="org2866433">Funcionamiento interno</h4>
+<div class="outline-text-4" id="text-org2866433">
 <div class="org-src-container">
 <pre class="src src-scss"><span class="org-css-selector">.error </span><span class="org-rainbow-delimiters-depth-1">{</span>
   <span class="org-css-property">border</span>: 1px <span class="custom-1">#f00</span>;
@@ -1904,9 +1904,9 @@ Al combinar los selectores, la regla @extend es lo bastante inteligente como par
 </div>
 </div>
 
-<div id="outline-container-orga7b99d1" class="outline-4">
-<h4 id="orga7b99d1">Extendiendo selectores complejos</h4>
-<div class="outline-text-4" id="text-orga7b99d1">
+<div id="outline-container-orga2d3cf0" class="outline-4">
+<h4 id="orga2d3cf0">Extendiendo selectores complejos</h4>
+<div class="outline-text-4" id="text-orga2d3cf0">
 <p>
 Además de los selectores de clase, Sass permite extender cualquier otro elemento que haga referencia a un único elemento, como por ejemplo .special.cool, a:hover o a.user[href^="<a href="http://">http://</a>"]. Ejemplo:
 </p>
@@ -1970,9 +1970,9 @@ El código Sass anterior compilará en:
 </div>
 </div>
 
-<div id="outline-container-orgc56d01e" class="outline-4">
-<h4 id="orgc56d01e">Extendiendo de varios selectores</h4>
-<div class="outline-text-4" id="text-orgc56d01e">
+<div id="outline-container-org1a5539f" class="outline-4">
+<h4 id="org1a5539f">Extendiendo de varios selectores</h4>
+<div class="outline-text-4" id="text-org1a5539f">
 <p>
 Los selectores pueden extender de más de un selector para heredar todos sus estilos. Ejemplo
 </p>
@@ -2020,9 +2020,9 @@ La extensión de más de un selector también se puede indicar mediante una list
 </div>
 </div>
 
-<div id="outline-container-org3f5c6f9" class="outline-4">
-<h4 id="org3f5c6f9">Extendiendo a varios niveles</h4>
-<div class="outline-text-4" id="text-org3f5c6f9">
+<div id="outline-container-orgb864f9d" class="outline-4">
+<h4 id="orgb864f9d">Extendiendo a varios niveles</h4>
+<div class="outline-text-4" id="text-orgb864f9d">
 <p>
 Sass también permite extender de un selector que a su vez extiende de otro selector diferente. Ejemplo:
 </p>
@@ -2074,9 +2074,9 @@ Ahora aplicar la clase .seriousError equivale también a aplicar la clase .error
 </div>
 </div>
 
-<div id="outline-container-orgad2acfa" class="outline-4">
-<h4 id="orgad2acfa">Secuencia de selectores</h4>
-<div class="outline-text-4" id="text-orgad2acfa">
+<div id="outline-container-org4d053c6" class="outline-4">
+<h4 id="org4d053c6">Secuencia de selectores</h4>
+<div class="outline-text-4" id="text-org4d053c6">
 <p>
 Las secuencias de selectores, como por ejemplo .foo .bar o .foo + .bar, todavía no se pueden extender. No obstante, sí que es posible utilizar la regla @extend en los selectores anidados. Ejemplo:
 </p>
@@ -2110,7 +2110,7 @@ El código Sass anterior se compila de la siguiente manera:
 </div>
 </div>
 
-<ul class="org-ul"><li><a id="org14f40c0"></a>Combinando secuencias de selectores<br /><div class="outline-text-5" id="text-org14f40c0">
+<ul class="org-ul"><li><a id="org8066fea"></a>Combinando secuencias de selectores<br /><div class="outline-text-5" id="text-org8066fea">
 <p>
 En ocasiones una secuencia de selectores extiende otro selector que está incluido en otra secuencia de selectores. En este caso, se combinan las dos secuencias de selectores. Ejemplo:
 </p>
@@ -2179,9 +2179,9 @@ El c&#243;digo Sass anterior se compila de la siguiente manera:
 </div></li></ul>
 </div>
 
-<div id="outline-container-orgb2efcfe" class="outline-4">
-<h4 id="orgb2efcfe">Selectores exclusivos para reglas @extend</h4>
-<div class="outline-text-4" id="text-orgb2efcfe">
+<div id="outline-container-orgecee109" class="outline-4">
+<h4 id="orgecee109">Selectores exclusivos para reglas @extend</h4>
+<div class="outline-text-4" id="text-orgecee109">
 <p>
 Las hojas de estilos también pueden contener clases que no se utilizan directamente en el código HTML y que sólo se definen para agrupar estilos que luego se utilizan mediante reglas @extend. Esto es común cuando se escriben librerías para Sass, ya que puede ser interesante ofrecer a los diseñadores la posibilidad de extender o ignorar algunas clases en sus estilos.
 </p>
@@ -2230,9 +2230,9 @@ El código Sass anterior se compila de la siguiente manera:
 </div>
 </div>
 
-<div id="outline-container-org7e5d3cb" class="outline-4">
-<h4 id="org7e5d3cb">La opción !optional</h4>
-<div class="outline-text-4" id="text-org7e5d3cb">
+<div id="outline-container-org4793f50" class="outline-4">
+<h4 id="org4793f50">La opción !optional</h4>
+<div class="outline-text-4" id="text-org4793f50">
 <p>
 Cuando extiendes un selector que no existe, Sass genera un error. Si utilizas por ejemplo el código a.important {@extend .notice} pero no existe el selector .notice, entonces se produce un error. También se produciría un error si el único selector que contiene la clase .notice fuera h1.notice, ya que h1 entraría en conflicto con a y no se generaría ningún selector.
 </p>
@@ -2250,9 +2250,9 @@ No obstante, en ocasiones puede ser útil permitir que @extend no genere ningún
 </div>
 </div>
 
-<div id="outline-container-orgf7a5d27" class="outline-4">
-<h4 id="orgf7a5d27">Usando @extend en las directivas</h4>
-<div class="outline-text-4" id="text-orgf7a5d27">
+<div id="outline-container-orgcdfd17a" class="outline-4">
+<h4 id="orgcdfd17a">Usando @extend en las directivas</h4>
+<div class="outline-text-4" id="text-orgcdfd17a">
 <p>
 Existen algunas restricciones que impiden usar @extend en el interior de directivas como @media. Sass por ejemplo no es capaz de hacer que las reglas CSS que se encuentran fuera de la directiva @media se apliquen a los selectores de su interior sin generar un código CSS gigantesco con selectores y estilos duplicados por todas partes. Por lo tanto, si utilizas @extend con la directiva @media o con otras directivas CSS, sólo debes extender los selectores que están encerrados por esas directivas.
 </p>
@@ -2298,9 +2298,9 @@ Pero el siguiente produciría un error:
 </div>
 </div>
 
-<div id="outline-container-orgdd2946a" class="outline-3">
-<h3 id="orgdd2946a">La regla @at-root</h3>
-<div class="outline-text-3" id="text-orgdd2946a">
+<div id="outline-container-org7bd00f3" class="outline-3">
+<h3 id="org7bd00f3">La regla @at-root</h3>
+<div class="outline-text-3" id="text-org7bd00f3">
 <p>
 Las directivas @at-root hacen que una o más reglas se generen en la raíz de la hoja de estilos en vez de anidarse en sus selectores. Se puede utilizar tanto con selectores individuales como con bloques de selectores. Ejemplo:
 </p>
@@ -2334,9 +2334,9 @@ El código anterior Sass se compila de la siguiente manera:
 </div>
 </div>
 
-<div id="outline-container-org6409995" class="outline-4">
-<h4 id="org6409995">Modificando la regla @at-root con with y without</h4>
-<div class="outline-text-4" id="text-org6409995">
+<div id="outline-container-orgfe14ccc" class="outline-4">
+<h4 id="orgfe14ccc">Modificando la regla @at-root con with y without</h4>
+<div class="outline-text-4" id="text-orgfe14ccc">
 <p>
 Por defecto la regla @at-root simplemente excluye todos los selectores. No obstante, también es posible modificar su comportamiento para que salga o no de cualquier directiva @media en la que se encuentre esa regla. Ejemplo:
 </p>
@@ -2385,9 +2385,9 @@ Si en vez de indicar las directivas o reglas CSS que se excluyen quieres indicar
 </div>
 </div>
 
-<div id="outline-container-org5771d55" class="outline-3">
-<h3 id="org5771d55">La regla @debug</h3>
-<div class="outline-text-3" id="text-org5771d55">
+<div id="outline-container-org2186e84" class="outline-3">
+<h3 id="org2186e84">La regla @debug</h3>
+<div class="outline-text-3" id="text-org2186e84">
 <p>
 La regla @debug muestra por la consola el valor de la expresión SassScript indicada. Se trata de una regla útil para depurar hojas de estilos muy complejas y que utilizan expresiones SassScript muy avanzadas. Ejemplo:
 </p>
@@ -2408,9 +2408,9 @@ El código anterior mostraría en la consola el siguiente mensaje:
 </div>
 </div>
 
-<div id="outline-container-org671e491" class="outline-3">
-<h3 id="org671e491">La regla @warn</h3>
-<div class="outline-text-3" id="text-org671e491">
+<div id="outline-container-org73409ba" class="outline-3">
+<h3 id="org73409ba">La regla @warn</h3>
+<div class="outline-text-3" id="text-org73409ba">
 <p>
 La regla @warn muestra el valor de una expresió SaasScript en forma de mensaje de error. Se trata de una regla muy útil para que los creadores de las librerías avisen a los diseñadores sobre el uso de características que se han declarado obsoletas. También sirve para mostrar errores en el uso de mixins que Sass ha podido corregir automáticamente. Existen dos diferencias principales entre @warn y @debug:
 </p>
@@ -2443,9 +2443,9 @@ Ejemplo:
 </div>
 
 
-<div id="outline-container-orgadcb461" class="outline-2">
-<h2 id="orgadcb461">Directivas de control y expresiones</h2>
-<div class="outline-text-2" id="text-orgadcb461">
+<div id="outline-container-org6cc6b51" class="outline-2">
+<h2 id="org6cc6b51">Directivas de control y expresiones</h2>
+<div class="outline-text-2" id="text-org6cc6b51">
 <p>
 SassScript define algunas directivas de control básicas y expresiones para incluir estilos solamente si se cumplen determinadas condiciones o para incluir el mismo estilo varias veces con ligeras variaciones.
 </p>
@@ -2455,18 +2455,18 @@ SassScript define algunas directivas de control básicas y expresiones para incl
 </p>
 </div>
 
-<div id="outline-container-org42e702f" class="outline-3">
-<h3 id="org42e702f">La función if()</h3>
-<div class="outline-text-3" id="text-org42e702f">
+<div id="outline-container-orgf26b33f" class="outline-3">
+<h3 id="orgf26b33f">La función if()</h3>
+<div class="outline-text-3" id="text-orgf26b33f">
 <p>
 La functión if() permite tomar decisiones para que una hoja de estilos incluya unos u otros estilos en función de unas determinadas condiciones. La función if() solamente evalúa el argumento que corresponde al valor que va a devolver, por lo que en el otro valor puedes hacer referencia a variables que no existen o realizar cálculos que en circunstancias normales causarían algún error (como por ejemplo dividir por cero).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org306c919" class="outline-3">
-<h3 id="org306c919">La directiva @if</h3>
-<div class="outline-text-3" id="text-org306c919">
+<div id="outline-container-org90ebc55" class="outline-3">
+<h3 id="org90ebc55">La directiva @if</h3>
+<div class="outline-text-3" id="text-org90ebc55">
 <p>
 La directiva @if evalúa una expresión SassScript y solamente incluye los estilos definidos en su interior si la expresión devuelve un valor distinto a false o null. Ejemplo:
 </p>
@@ -2524,9 +2524,9 @@ Esto va a compilar en:
 </div>
 </div>
 
-<div id="outline-container-org024e330" class="outline-3">
-<h3 id="org024e330">La directiva @for</h3>
-<div class="outline-text-3" id="text-org024e330">
+<div id="outline-container-org2937c19" class="outline-3">
+<h3 id="org2937c19">La directiva @for</h3>
+<div class="outline-text-3" id="text-org2937c19">
 <p>
 La directiva @for muestra repetidamente un conjunto de estilos. En cada repetición se utiliza el valor de una variable de tipo contador para ajustar el resultado mostrado. La directiva puede utilizar dos sintaxis: @for $var from &lt;inicio&gt; through &lt;final&gt; and @for $var from &lt;inicio&gt; to &lt;final&gt;.
 </p>
@@ -2565,9 +2565,9 @@ Esto compilará en:
 </div>
 </div>
 
-<div id="outline-container-org30e1ace" class="outline-3">
-<h3 id="org30e1ace">La directiva @each</h3>
-<div class="outline-text-3" id="text-org30e1ace">
+<div id="outline-container-org745d6a9" class="outline-3">
+<h3 id="org745d6a9">La directiva @each</h3>
+<div class="outline-text-3" id="text-org745d6a9">
 <p>
 La sintaxis habitual de la directiva @each es la siguiente @each $var in &lt;lista o mapa&gt;. El valor $var puede ser cualquier variable y &lt;lista o mapa&gt; es una expresión <b>SassScript*</b> que devuelve una lista o un mapa.
 </p>
@@ -2606,9 +2606,9 @@ Esto compila en:
 </div>
 </div>
 
-<div id="outline-container-org991a330" class="outline-4">
-<h4 id="org991a330">Asignación múltiple</h4>
-<div class="outline-text-4" id="text-org991a330">
+<div id="outline-container-org1f7c2ec" class="outline-4">
+<h4 id="org1f7c2ec">Asignación múltiple</h4>
+<div class="outline-text-4" id="text-org1f7c2ec">
 <p>
 La directiva @each también puede utilizar varias variables de forma simultánea, como por ejemplo: @each $var1, $var2, &#x2026; in &lt;lista&gt;. Si &lt;lista&gt; es una lista formada por listas, a cada variable se le asigna un elemento de cada sublista. Ejemplo:
 </p>
@@ -2683,9 +2683,9 @@ El código Sass compilará en:
 </div>
 </div>
 
-<div id="outline-container-org9c165f0" class="outline-3">
-<h3 id="org9c165f0">La directiva @while</h3>
-<div class="outline-text-3" id="text-org9c165f0">
+<div id="outline-container-org5a7d851" class="outline-3">
+<h3 id="org5a7d851">La directiva @while</h3>
+<div class="outline-text-3" id="text-org5a7d851">
 <p>
 La directiva @while toma una expresión SassScript y repite indefinidamente los estilos hasta que la expresión da como resultado false. Aunque esta directiva se usa muy poco, se puede utilizar para crear bucles más avanzados que los que se crean con la directiva @for. Ejemplo:
 </p>
@@ -2721,17 +2721,17 @@ Esto compilará en:
 </div>
 </div>
 
-<div id="outline-container-org01c0b88" class="outline-2">
-<h2 id="org01c0b88">Directivas mixin</h2>
-<div class="outline-text-2" id="text-org01c0b88">
+<div id="outline-container-orgf02136b" class="outline-2">
+<h2 id="orgf02136b">Directivas mixin</h2>
+<div class="outline-text-2" id="text-orgf02136b">
 <p>
 Los <i>mixins</i> permiten definir estilos reutilizables en toda la hoja de estilos sin tener que recurrir a clases CSS no semánticas tipo .float-left. Los <i>mixins</i> también pueden contener reglas CSS y cualquier otro elemento definido por Sass. Los mixins incluso admiten el uso de argumentos, como si fueran funciones, para poder modificar su comportamiento y ofrecer así una mayor flexibilidad.
 </p>
 </div>
 
-<div id="outline-container-org474107a" class="outline-3">
-<h3 id="org474107a">Definiendo mixins con la directiva @mixin</h3>
-<div class="outline-text-3" id="text-org474107a">
+<div id="outline-container-org1aa7412" class="outline-3">
+<h3 id="org1aa7412">Definiendo mixins con la directiva @mixin</h3>
+<div class="outline-text-3" id="text-org1aa7412">
 <p>
 Los mixins se definen con la directiva @mixin seguida del nombre del mixin (y opcionalmente una lista de argumentos) y seguida por el bloque de contenidos que definen los estilos del mixin. El siguiente ejemplo define un mixin sin argumentos llamado large-text:
 </p>
@@ -2769,9 +2769,9 @@ Además de estilos, los mixins también pueden contener selectores, incluso con 
 </div>
 </div>
 
-<div id="outline-container-org8d6901c" class="outline-3">
-<h3 id="org8d6901c">Incluyendo mixins con @include</h3>
-<div class="outline-text-3" id="text-org8d6901c">
+<div id="outline-container-org5866fc5" class="outline-3">
+<h3 id="org5866fc5">Incluyendo mixins con @include</h3>
+<div class="outline-text-3" id="text-org5866fc5">
 <p>
 Los mixins se incluyen en las hojas de estilos mediante la directiva @include seguida del nombre del mixin y opcionalmente por una lista de argumentos. El resultado es que todos los estilos definidos por el mixin se incluyen en el mismo punto en el que se llama al mixin. Ejemplo:
 </p>
@@ -2850,9 +2850,9 @@ Aunque no es muy habitual, los mixins también pueden incluirse a sí mismos de 
 </div>
 </div>
 
-<div id="outline-container-orga3dd9ed" class="outline-3">
-<h3 id="orga3dd9ed">Argumentos</h3>
-<div class="outline-text-3" id="text-orga3dd9ed">
+<div id="outline-container-orged9b394" class="outline-3">
+<h3 id="orged9b394">Argumentos</h3>
+<div class="outline-text-3" id="text-orged9b394">
 <p>
 Los argumentos de los mixins pueden estar formados por cualquier expresión SassScript. Estos argumentos están disponibles en el interior del mixin en forma de variables.
 </p>
@@ -2926,9 +2926,9 @@ Esto compila en:
 </div>
 </div>
 
-<div id="outline-container-org174e561" class="outline-3">
-<h3 id="org174e561">Argumentos con nombre</h3>
-<div class="outline-text-3" id="text-org174e561">
+<div id="outline-container-orgf3623bd" class="outline-3">
+<h3 id="orgf3623bd">Argumentos con nombre</h3>
+<div class="outline-text-3" id="text-orgf3623bd">
 <p>
 Cuando se utiliza un mixin también es posible indicar el nombre de sus argumentos:
 </p>
@@ -2949,9 +2949,9 @@ Los argumentos con nombre se pueden pasar en cualquier orden y puedes omitir los
 </div>
 </div>
 
-<div id="outline-container-org884c3f6" class="outline-3">
-<h3 id="org884c3f6">Argumentos variables</h3>
-<div class="outline-text-3" id="text-org884c3f6">
+<div id="outline-container-org701ab07" class="outline-3">
+<h3 id="org701ab07">Argumentos variables</h3>
+<div class="outline-text-3" id="text-org701ab07">
 <p>
 En ocasiones es necesario que un mixin acepte un número indeterminado de argumentos. Si por ejemplo tienes un mixin que añade sombras a los elementos HTML, es preciso que ese mixin acepte cualquier número de sombras como argumentos. Por eso Sass soporta la creación de mixins con un número variable de argumentos.
 </p>
@@ -3056,9 +3056,9 @@ Los argumentos variables pueden servir por ejemplo para crear un mixin que modif
 </div>
 </div>
 
-<div id="outline-container-orgbd1bd81" class="outline-3">
-<h3 id="orgbd1bd81">Pasando bloques de contenidos a los mixins</h3>
-<div class="outline-text-3" id="text-orgbd1bd81">
+<div id="outline-container-orgad64eb4" class="outline-3">
+<h3 id="orgad64eb4">Pasando bloques de contenidos a los mixins</h3>
+<div class="outline-text-3" id="text-orgad64eb4">
 <p>
 A los mixins también se les puede pasar un bloque entero de reglas CSS. Este contenido se incluirá en el lugar donde el mixin haya definido la directiva @content. Gracias a esta característica es posible abstraer ciertas partes de la definición de los selectores y directivas. Ejemplo:
 </p>
@@ -3106,9 +3106,9 @@ Estos mixins también se pueden definir mediante los siguientes atajos:
 <b>NOTA: Cuando se incluye la directiva @content más de una vez o se incluye dentro de un bucle, los contenidos se repiten para cada aparición de @content.</b>
 </p>
 </div>
-<div id="outline-container-orgf09ed45" class="outline-4">
-<h4 id="orgf09ed45">Contexto variables y bloques contenidos</h4>
-<div class="outline-text-4" id="text-orgf09ed45">
+<div id="outline-container-org067518a" class="outline-4">
+<h4 id="org067518a">Contexto variables y bloques contenidos</h4>
+<div class="outline-text-4" id="text-org067518a">
 <p>
 Los bloques de contenidos pasados a los mixins se evalúan en el contexto en el que están definidos, no en el contexto del mixin. Esto significa que los bloques de contenidos no pueden utilizar las variables locales definidas en el mixin. Ejemplo:
 </p>
@@ -3158,9 +3158,9 @@ De esta forma, las variables que se utilizan en los bloques que se pasan a los m
 </div>
 </div>
 
-<div id="outline-container-org9f30160" class="outline-2">
-<h2 id="org9f30160">Directivas de función</h2>
-<div class="outline-text-2" id="text-org9f30160">
+<div id="outline-container-org747b60b" class="outline-2">
+<h2 id="org747b60b">Directivas de función</h2>
+<div class="outline-text-2" id="text-org747b60b">
 <p>
 Al margen de las funciones propias definidas por Sass, también es posible definir funciones propias para que puedas utilizarlas en tus hojas de estilos. Ejemplo:
 </p>
@@ -3211,9 +3211,9 @@ Por último, las funciones propias también soportan el uso de un número variab
 </div>
 </div>
 
-<div id="outline-container-org1049e80" class="outline-2">
-<h2 id="org1049e80">Formato de salida</h2>
-<div class="outline-text-2" id="text-org1049e80">
+<div id="outline-container-orgef3f07a" class="outline-2">
+<h2 id="orgef3f07a">Formato de salida</h2>
+<div class="outline-text-2" id="text-orgef3f07a">
 <p>
 El formato utilizado por Sass para compilar los archivos CSS no sólo es adecuado sino que refleja bien la estructura del documento. No obstante, como los gustos (y las necesidades) de los diseñadores/as son muy particulares, Sass permite configurar cómo se generan los archivos.
 </p>
@@ -3223,9 +3223,9 @@ En concreto, Sass permite elegir entre cuatro formatos diferentes mediante la op
 </p>
 </div>
 
-<div id="outline-container-org1d61419" class="outline-3">
-<h3 id="org1d61419">Formato :nested</h3>
-<div class="outline-text-3" id="text-org1d61419">
+<div id="outline-container-orge12fe99" class="outline-3">
+<h3 id="orge12fe99">Formato :nested</h3>
+<div class="outline-text-3" id="text-orge12fe99">
 <p>
 Este es el estilo por defecto de Sass, que indenta y anida todos los selectores y estilos para reflejar fielmente la estructura del archivo Sass original. Cada propiedad se muestra en su propia línea y cada regla se indenta tanto como sea necesario en función de su anidamiento. Ejemplo:
 </p>
@@ -3250,9 +3250,9 @@ El estilo nested es muy útil cuando se generan hojas de estilos CSS muy complej
 </div>
 </div>
 
-<div id="outline-container-org13f9301" class="outline-3">
-<h3 id="org13f9301">El formato :expanded</h3>
-<div class="outline-text-3" id="text-org13f9301">
+<div id="outline-container-orga8cb415" class="outline-3">
+<h3 id="orga8cb415">El formato :expanded</h3>
+<div class="outline-text-3" id="text-orga8cb415">
 <p>
 Este estilo es más parecido al que utilizaría un diseñador/a al crear manualmente la hoja de estilos CSS. Cada propiedad y cada regla se muestran en una nueva línea, pero las reglas no se indentan de ninguna manera especial. Ejemplo:
 </p>
@@ -3276,9 +3276,9 @@ Este estilo es más parecido al que utilizaría un diseñador/a al crear manualm
 </div>
 </div>
 
-<div id="outline-container-org76696a7" class="outline-3">
-<h3 id="org76696a7">El formato :compact</h3>
-<div class="outline-text-3" id="text-org76696a7">
+<div id="outline-container-orge96aec0" class="outline-3">
+<h3 id="orge96aec0">El formato :compact</h3>
+<div class="outline-text-3" id="text-orge96aec0">
 <p>
 Este estilo ocupa menos líneas que los estilos nested o expanded y prioriza los selectores por encima de las propiedades. De hecho, cada regla CSS solamente ocupa una línea, donde se definen todas las propiedades. Las reglas anidadas se muestran seguidas unas de otras (sin ningún salto de línea) y solamente se añade una línea en blanco para separar los grupos de reglas CSS. Ejemplo:
 </p>
@@ -3293,9 +3293,9 @@ Este estilo ocupa menos líneas que los estilos nested o expanded y prioriza los
 </div>
 </div>
 
-<div id="outline-container-org37c8f9c" class="outline-3">
-<h3 id="org37c8f9c">El formato :compressed</h3>
-<div class="outline-text-3" id="text-org37c8f9c">
+<div id="outline-container-org8bb5531" class="outline-3">
+<h3 id="org8bb5531">El formato :compressed</h3>
+<div class="outline-text-3" id="text-org8bb5531">
 <p>
 Este estilo es el más conciso de todos porque no añade ningún espacio en blanco, salvo el que sea estrictamente necesario para separar los selectores. El único salto de línea que se añade es el del final del archivo. Este formato también realiza otras optimizaciones y compresiones en valores como los colores. Aunque no está pensado como formato para que lo lean los humanos, puede ser muy útil para comprimir al máximo las hojas de estilos CSS antes de servirlas a los usuarios. Ejemplo:
 </p>
@@ -3308,26 +3308,26 @@ Este estilo es el más conciso de todos porque no añade ningún espacio en blan
 </div>
 </div>
 
-<div id="outline-container-org5918c1d" class="outline-2">
-<h2 id="org5918c1d">Extendiendo Sass</h2>
-<div class="outline-text-2" id="text-org5918c1d">
+<div id="outline-container-org7829593" class="outline-2">
+<h2 id="org7829593">Extendiendo Sass</h2>
+<div class="outline-text-2" id="text-org7829593">
 <p>
 Sass proporciona una serie de características adicionales para usuarios que tengan requerimientos muy especiales y dispongan de conocimientos avanzados de Ruby.
 </p>
 </div>
 
-<div id="outline-container-org49628eb" class="outline-3">
-<h3 id="org49628eb">Definiendo funciones propias para Sass</h3>
-<div class="outline-text-3" id="text-org49628eb">
+<div id="outline-container-org90936d5" class="outline-3">
+<h3 id="org90936d5">Definiendo funciones propias para Sass</h3>
+<div class="outline-text-3" id="text-org90936d5">
 <p>
 Utilizando la API de Ruby es posible definir tus propias funciones. Consulta la documentación oficial para saber cómo hacerlo.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org49df0aa" class="outline-3">
-<h3 id="org49df0aa">Sistemas de caché</h3>
-<div class="outline-text-3" id="text-org49df0aa">
+<div id="outline-container-orgff50a6e" class="outline-3">
+<h3 id="orgff50a6e">Sistemas de caché</h3>
+<div class="outline-text-3" id="text-orgff50a6e">
 <p>
 Sass cachea la compilación de los archivos Sass o SCSS originales para poder reutilizarlos cuando no se han producido cambios. Por defecto estos archivos se cachean en el directorio indicado por la opción :cache<sub>location</sub>.
 </p>
@@ -3342,9 +3342,9 @@ Consulta la <a href="http://sass-lang.com/documentation/Sass/CacheStores/Base.ht
 </div>
 </div>
 
-<div id="outline-container-orgc9173f8" class="outline-3">
-<h3 id="orgc9173f8">Importadores propios</h3>
-<div class="outline-text-3" id="text-orgc9173f8">
+<div id="outline-container-org5cd7a65" class="outline-3">
+<h3 id="org5cd7a65">Importadores propios</h3>
+<div class="outline-text-3" id="text-org5cd7a65">
 <p>
 Los importadores de Sass se encargan de encontrar los archivos Sass adecuados a partir de los valores proporcionados en las directivas @import. Por defecto el código siempre se importa desde algún directorio del sistema de archivos, pero también se puede cargar desde una base de datos o incluso mediante servicios web.
 </p>
@@ -3362,7 +3362,7 @@ Cuando se resuelve el valor de una directiva @import, Sass recorre todos los imp
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Patricio Martínez Cano</p>
-<p class="date">Created: 2017-07-27 jue 12:02</p>
+<p class="date">Created: 2017-08-07 lun 17:31</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
