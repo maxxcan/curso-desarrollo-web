@@ -1,0 +1,13 @@
+* Introducción a JavaScript
+
+
+
+                          Cómo añadir JavaScript a nuestro
+documento HTML
+                                           ---
+
+Vamos a ver 3 maneras
+
+    
+****                                        —Patricio Martínez
+                                           @maxxcan
