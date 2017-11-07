@@ -1,6 +1,3 @@
-
- 
-
 #+TITLE: Introducción a Javascript
 #+AUTHOR: Patricio Martínez Cano
 #+EMAIL: maxxcan@gmail.com
@@ -721,8 +718,8 @@ Un ejemplo sería:
 <html>
 <body>
 
-  <h2><Declara></Declaraciones en JavaScript</h2>
-  <p>Un Código JavaScript <o></o> simplemente un programa JavaScript es una
+  <h2>Declaraciones en JavaScript</h2>
+  <p>Un Código JavaScript es simplemente un programa JavaScript es una
  secuencia de declaraciones javascript</p>
 
 <p id="demo"></p>
