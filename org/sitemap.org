@@ -4,4 +4,4 @@
    + [[file:bootstrap.org][Introducción a Bootstrap]]
    + [[file:jquery.org][Introducción a JQuery]]
    + [[file:javascript.org][Introducción a Javascript]]
-   + [[file:sass.org][sass]]
+   + [[file:sass.org][Introducción a Sass]]

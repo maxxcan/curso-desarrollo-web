@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2017-07-27 jue 12:02 -->
+<!-- 2017-08-07 lun 18:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Introducción a JQuery</title>
@@ -236,247 +236,247 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Introducción a JQuery</h1>
 <div id="table-of-contents">
-<h2>Table of Contents</h2>
+<h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7be34ce">Introducción</a>
+<li><a href="#org57842ac">Introducción</a>
 <ul>
-<li><a href="#org698374b">Qué es JQuery</a></li>
-<li><a href="#orga99cbe5">Ventajas de JQuery</a></li>
+<li><a href="#orgab9bf01">Qué es JQuery</a></li>
+<li><a href="#orgc2ea086">Ventajas de JQuery</a></li>
 </ul>
 </li>
-<li><a href="#org618debe">Empezando con JQuery</a>
+<li><a href="#orgd5589b0">Empezando con JQuery</a>
 <ul>
-<li><a href="#org924ef9f">Incluyendo JQuery desde CDN</a></li>
-<li><a href="#org50047d8">Nuestra primera página con JQuery</a></li>
+<li><a href="#org296bcce">Incluyendo JQuery desde CDN</a></li>
+<li><a href="#org186c970">Nuestra primera página con JQuery</a></li>
 </ul>
 </li>
-<li><a href="#org3c9a473">Sintaxis de JQuery</a>
+<li><a href="#org42b4951">Sintaxis de JQuery</a>
 <ul>
-<li><a href="#orgd99acc4">Explicación del código</a></li>
+<li><a href="#orgb533bb4">Explicación del código</a></li>
 </ul>
 </li>
-<li><a href="#orgf75ff2d">Seleccionando elementos con JQuery</a>
+<li><a href="#orge9df3e5">Seleccionando elementos con JQuery</a>
 <ul>
-<li><a href="#org40e2905">Seleccionando elementos por el ID</a></li>
-<li><a href="#orgb225b1b">Seleccionando elementos por la clase</a></li>
-<li><a href="#org5b6c779">Seleccionando por nombre</a></li>
-<li><a href="#org9b46a9f">Seleccionando por atributos</a></li>
-<li><a href="#org4afb64c">Seleccionando elementos usando selectores de CSS compuestos</a></li>
-<li><a href="#orgd46318c">Selectores propios de JQuery</a></li>
+<li><a href="#org8bb454f">Seleccionando elementos por el ID</a></li>
+<li><a href="#orgb198997">Seleccionando elementos por la clase</a></li>
+<li><a href="#org62cd931">Seleccionando por nombre</a></li>
+<li><a href="#orgf009157">Seleccionando por atributos</a></li>
+<li><a href="#org380f221">Seleccionando elementos usando selectores de CSS compuestos</a></li>
+<li><a href="#org7969083">Selectores propios de JQuery</a></li>
 </ul>
 </li>
-<li><a href="#orgb6af007">Eventos en JQuery</a>
+<li><a href="#org01f7f16">Eventos en JQuery</a>
 <ul>
-<li><a href="#org6168adb">Eventos de ratón</a>
+<li><a href="#orgc3e2736">Eventos de ratón</a>
 <ul>
-<li><a href="#org53db5e3">Método click()</a></li>
-<li><a href="#org136229d">El método dblclick()</a></li>
-<li><a href="#orgc837571">El método hover()</a></li>
-<li><a href="#org8bbbc98">El método mouseenter()</a></li>
-<li><a href="#org0fdc3a1">El método mouseleave()</a></li>
+<li><a href="#orgbbf3ed7">Método click()</a></li>
+<li><a href="#org47ee8a9">El método dblclick()</a></li>
+<li><a href="#org3536f85">El método hover()</a></li>
+<li><a href="#orge520809">El método mouseenter()</a></li>
+<li><a href="#org17d0e88">El método mouseleave()</a></li>
 </ul>
 </li>
-<li><a href="#org9234e2b">Eventos del teclado</a>
+<li><a href="#org4a07e26">Eventos del teclado</a>
 <ul>
-<li><a href="#orgcc31a15">El método keypress()</a></li>
-<li><a href="#orgf733361">El método keydown()</a></li>
-<li><a href="#org3af9254">El método keyup()</a></li>
+<li><a href="#org33ff676">El método keypress()</a></li>
+<li><a href="#orgedb7e7d">El método keydown()</a></li>
+<li><a href="#orgaf6ed2a">El método keyup()</a></li>
 </ul>
 </li>
-<li><a href="#org0dc62ee">Eventos de formulario</a>
+<li><a href="#org2e20caf">Eventos de formulario</a>
 <ul>
-<li><a href="#org67ff109">El método change()</a></li>
-<li><a href="#org2b8e5f7">El método focus()</a></li>
-<li><a href="#org8f5a24c">Método blur()</a></li>
-<li><a href="#org5b02652">Método submit()</a></li>
+<li><a href="#orgd0b2c5d">El método change()</a></li>
+<li><a href="#org9dc7f10">El método focus()</a></li>
+<li><a href="#orgc81b8ac">Método blur()</a></li>
+<li><a href="#org298accd">Método submit()</a></li>
 </ul>
 </li>
-<li><a href="#orgfb6b0a7">Eventos en el documento/ventana</a>
+<li><a href="#org5611b83">Eventos en el documento/ventana</a>
 <ul>
-<li><a href="#org8b851f3">El método ready()</a></li>
-<li><a href="#orgb23c61c">El método resize()</a></li>
-<li><a href="#org39a6b4c">Método scroll()</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgf4e09f8">Efectos en JQuery</a>
-<ul>
-<li><a href="#orga427cf6">Efecto de mostrar y ocultar</a>
-<ul>
-<li><a href="#org718af77">Efecto toggle()</a></li>
-</ul>
-</li>
-<li><a href="#org6e289af">Efecto fade</a>
-<ul>
-<li><a href="#orgd938669">Métodos fadeIn() y fadeOut()</a></li>
-<li><a href="#org8401706">Método fadeToggle()</a></li>
-<li><a href="#org625c44d">Método fadeTo()</a></li>
-</ul>
-</li>
-<li><a href="#orge2fa2af">Efecto Sliding (corredero)</a>
-<ul>
-<li><a href="#orgc6767ee">Método slideUp() y slideDown()</a></li>
-<li><a href="#org7b60f59">Método slideToggle()</a></li>
-</ul>
-</li>
-<li><a href="#org814aef2">Efectos de animación</a>
-<ul>
-<li><a href="#orged83f7e">Método animate()</a></li>
-<li><a href="#orgfeb2162">Sintaxis</a></li>
-<li><a href="#org4aead31">Animando múltiples propiedades a la vez</a></li>
-<li><a href="#org1c49df4">Animando múltiples propiedades una a una o en fila.</a></li>
-<li><a href="#orged8a500">Animando propiedades con valores relativos</a></li>
-<li><a href="#org030ef6d">Animando propiedades con valores Pre-definidos</a></li>
-</ul>
-</li>
-<li><a href="#orgbe29c58">Parada de las animaciones en JQuery</a>
-<ul>
-<li><a href="#org7c32e1a">El método stop()</a></li>
-</ul>
-</li>
-<li><a href="#orgb370498">Encadenamiento en JQuery</a>
-<ul>
-<li><a href="#orga4a53eb">El método Chaining (encadenamiento)</a></li>
+<li><a href="#org606f68b">El método ready()</a></li>
+<li><a href="#org8402967">El método resize()</a></li>
+<li><a href="#orgbcf1f42">Método scroll()</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgd8f6a4c">Manipulando elementos en JQuery</a>
+<li><a href="#org4d9c53a">Efectos en JQuery</a>
 <ul>
-<li><a href="#orgcc721a1">Getters y Setter en JQuery</a>
+<li><a href="#org2368cc4">Efecto de mostrar y ocultar</a>
 <ul>
-<li><a href="#orgdae042d">Obtener o establecer contenido y valores en JQuery</a></li>
-<li><a href="#orgfd69c62">Método text()</a></li>
-<li><a href="#orged3cb78">Método html()</a></li>
-<li><a href="#orga2375e8">Método attr()</a></li>
-<li><a href="#org05c15f3">El metodo val()</a></li>
+<li><a href="#org527b007">Efecto toggle()</a></li>
 </ul>
 </li>
-<li><a href="#org8206969">Insertar contenido con JQuery</a>
+<li><a href="#org8717a95">Efecto fade</a>
 <ul>
-<li><a href="#orgcf678de">Método append()</a></li>
-<li><a href="#orge9bd056">Método prepend()</a></li>
-<li><a href="#org2ca6a2b">Insertando múltiples elementos con los métodos append() y prepend()</a></li>
-<li><a href="#orgfda96ea">Método before() y after()</a></li>
-<li><a href="#orgff1a73f">Método wrap()</a></li>
+<li><a href="#orgd0a2380">Métodos fadeIn() y fadeOut()</a></li>
+<li><a href="#org501385e">Método fadeToggle()</a></li>
+<li><a href="#org0956194">Método fadeTo()</a></li>
 </ul>
 </li>
-<li><a href="#org514a4a2">Eliminar contenido con JQuery</a>
+<li><a href="#org355a29b">Efecto Sliding (corredero)</a>
 <ul>
-<li><a href="#orga909fa8">Método empty()</a></li>
-<li><a href="#org9bf55ca">El método remove()</a></li>
-<li><a href="#org8b67866">El método unwrap()</a></li>
-<li><a href="#org626c4b5">El método removeAttr()</a></li>
+<li><a href="#orgd1b061e">Método slideUp() y slideDown()</a></li>
+<li><a href="#orgce67e40">Método slideToggle()</a></li>
 </ul>
 </li>
-<li><a href="#org391c180">Clases CSS con JQuery</a>
+<li><a href="#org2a9383e">Efectos de animación</a>
 <ul>
-<li><a href="#orgea76e5f">Método addClass</a></li>
-<li><a href="#orgc1b225e">Método removeClass()</a></li>
-<li><a href="#orgb2435dc">Método toggleClass()</a></li>
+<li><a href="#orge9f6ca8">Método animate()</a></li>
+<li><a href="#orgf651022">Sintaxis</a></li>
+<li><a href="#org6215892">Animando múltiples propiedades a la vez</a></li>
+<li><a href="#orgb1911a6">Animando múltiples propiedades una a una o en fila.</a></li>
+<li><a href="#org0f465d7">Animando propiedades con valores relativos</a></li>
+<li><a href="#org96c0000">Animando propiedades con valores Pre-definidos</a></li>
 </ul>
 </li>
-<li><a href="#orgf037b18">Propiedades de estilo con JQuery</a>
+<li><a href="#org12758d4">Parada de las animaciones en JQuery</a>
 <ul>
-<li><a href="#orgeff5c5d">Método css()</a></li>
+<li><a href="#orgfdad5df">El método stop()</a></li>
 </ul>
 </li>
-<li><a href="#org0f4a203">Dimensiones en JQuery</a>
+<li><a href="#org3140ca3">Encadenamiento en JQuery</a>
 <ul>
-<li><a href="#org8491b99">Métodos width() y height()</a></li>
-<li><a href="#orgf547054">Métodos innerWidth() y innerHeight()</a></li>
-<li><a href="#org1d65ab5">Métodos outerWidth() y outerHeight()</a></li>
+<li><a href="#orgbff4e60">El método Chaining (encadenamiento)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org49d8543">JQuery avanzado</a>
+<li><a href="#org133776e">Manipulando elementos en JQuery</a>
 <ul>
-<li><a href="#org41a3fce">JQuery Traversing (recorrido)</a>
+<li><a href="#orga17bc69">Getters y Setter en JQuery</a>
 <ul>
-<li><a href="#orge47bbed">Qué es el traversing</a></li>
-<li><a href="#org714692b">Recorriendo el árbol DOM</a></li>
+<li><a href="#orgd7466ec">Obtener o establecer contenido y valores en JQuery</a></li>
+<li><a href="#orgd14577d">Método text()</a></li>
+<li><a href="#org23206f9">Método html()</a></li>
+<li><a href="#org4fbcb0f">Método attr()</a></li>
+<li><a href="#orgd4cc4c5">El metodo val()</a></li>
 </ul>
 </li>
-<li><a href="#org341c72b">Antepasados</a>
+<li><a href="#org5f0d557">Insertar contenido con JQuery</a>
 <ul>
-<li><a href="#org1b23d77">Recorriendo el árbol DOM hacia arriba</a></li>
-<li><a href="#orgfdfb5a6">Método parent()</a></li>
-<li><a href="#org1ecfad7">El método parents()</a></li>
-<li><a href="#orgfa1dc81">Método parentsUntil()</a></li>
+<li><a href="#orgb163f1c">Método append()</a></li>
+<li><a href="#org8f42827">Método prepend()</a></li>
+<li><a href="#org21b1876">Insertando múltiples elementos con los métodos append() y prepend()</a></li>
+<li><a href="#org0b750b4">Método before() y after()</a></li>
+<li><a href="#orgbf75f78">Método wrap()</a></li>
 </ul>
 </li>
-<li><a href="#org4aa719c">Descendientes</a>
+<li><a href="#orgd73c3a9">Eliminar contenido con JQuery</a>
 <ul>
-<li><a href="#org56acdd9">Recorriendo el árbol DOM hacia abajo</a></li>
-<li><a href="#orgeee66d4">Método children()</a></li>
-<li><a href="#org0caf35d">El método find()</a></li>
+<li><a href="#org7ea35d7">Método empty()</a></li>
+<li><a href="#org28b8975">El método remove()</a></li>
+<li><a href="#orgfdceb31">El método unwrap()</a></li>
+<li><a href="#org67f60c6">El método removeAttr()</a></li>
 </ul>
 </li>
-<li><a href="#org691e07b">Hermanos</a>
+<li><a href="#org93a01c5">Clases CSS con JQuery</a>
 <ul>
-<li><a href="#orgdf893cd">Recorriendo el árbol DOM lateralmente</a></li>
-<li><a href="#org1af4e5e">Método siblings()</a></li>
-<li><a href="#orgc558562">Método next()</a></li>
-<li><a href="#org4f58891">Método nextAll()</a></li>
-<li><a href="#org6042c79">El método nextUntil()</a></li>
-<li><a href="#orgd993327">El método prev()</a></li>
-<li><a href="#org32a6ed6">El método prevAll()</a></li>
-<li><a href="#orgde05099">Método prevUntil()</a></li>
+<li><a href="#orgd2640d4">Método addClass</a></li>
+<li><a href="#orgb536180">Método removeClass()</a></li>
+<li><a href="#orgfd90adc">Método toggleClass()</a></li>
 </ul>
 </li>
-<li><a href="#orgdc36e41">Filtrando elementos</a>
+<li><a href="#org03442f2">Propiedades de estilo con JQuery</a>
 <ul>
-<li><a href="#org527b054">Filtrando elementos en la selección</a></li>
-<li><a href="#org8f4082f">Método first()</a></li>
-<li><a href="#org953ed20">Método last()</a></li>
-<li><a href="#org1e92dca">Método eq()</a></li>
-<li><a href="#orgff5d099">Método filter()</a></li>
-<li><a href="#org16c3c9d">Método has()</a></li>
-<li><a href="#org0e17ce7">El método not()</a></li>
-<li><a href="#orge2abe2d">Método slice()</a></li>
+<li><a href="#org76a8bef">Método css()</a></li>
 </ul>
 </li>
-<li><a href="#orgd0cae89">Ajax en JQuery</a>
+<li><a href="#orgc7056ad">Dimensiones en JQuery</a>
 <ul>
-<li><a href="#org046a380">Qué es Ajax</a></li>
-<li><a href="#org84e265f">Ajax con JQuery</a></li>
-</ul>
-</li>
-<li><a href="#org463fd17">Load Ajax en JQuery</a>
-<ul>
-<li><a href="#org840d3a6">Método load()</a></li>
+<li><a href="#org019272e">Métodos width() y height()</a></li>
+<li><a href="#org6749e6b">Métodos innerWidth() y innerHeight()</a></li>
+<li><a href="#org6033e15">Métodos outerWidth() y outerHeight()</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf2b5ffb">Ejercicios</a></li>
+<li><a href="#orga5198b8">JQuery avanzado</a>
+<ul>
+<li><a href="#org2f17299">JQuery Traversing (recorrido)</a>
+<ul>
+<li><a href="#org21cc4fe">Qué es el traversing</a></li>
+<li><a href="#org978ff85">Recorriendo el árbol DOM</a></li>
+</ul>
+</li>
+<li><a href="#org2d22f91">Antepasados</a>
+<ul>
+<li><a href="#orge47ed9d">Recorriendo el árbol DOM hacia arriba</a></li>
+<li><a href="#org9d14ac3">Método parent()</a></li>
+<li><a href="#orgb878cb3">El método parents()</a></li>
+<li><a href="#orgb20fd38">Método parentsUntil()</a></li>
+</ul>
+</li>
+<li><a href="#org28895f4">Descendientes</a>
+<ul>
+<li><a href="#orgda3b9e9">Recorriendo el árbol DOM hacia abajo</a></li>
+<li><a href="#orge6962ac">Método children()</a></li>
+<li><a href="#org560fc8a">El método find()</a></li>
+</ul>
+</li>
+<li><a href="#org5c52f23">Hermanos</a>
+<ul>
+<li><a href="#org1d8845e">Recorriendo el árbol DOM lateralmente</a></li>
+<li><a href="#orgdffc702">Método siblings()</a></li>
+<li><a href="#org7bd638d">Método next()</a></li>
+<li><a href="#org0aa4370">Método nextAll()</a></li>
+<li><a href="#org69784a8">El método nextUntil()</a></li>
+<li><a href="#org288ff8f">El método prev()</a></li>
+<li><a href="#orgf7c19a5">El método prevAll()</a></li>
+<li><a href="#org70e023b">Método prevUntil()</a></li>
+</ul>
+</li>
+<li><a href="#org6f76fe0">Filtrando elementos</a>
+<ul>
+<li><a href="#org47722de">Filtrando elementos en la selección</a></li>
+<li><a href="#org76b9716">Método first()</a></li>
+<li><a href="#org04c4665">Método last()</a></li>
+<li><a href="#org4a1bbfa">Método eq()</a></li>
+<li><a href="#org41a98c3">Método filter()</a></li>
+<li><a href="#org9c55a89">Método has()</a></li>
+<li><a href="#org39a59ca">El método not()</a></li>
+<li><a href="#orgd321b44">Método slice()</a></li>
+</ul>
+</li>
+<li><a href="#org4dbe40c">Ajax en JQuery</a>
+<ul>
+<li><a href="#org4160ca0">Qué es Ajax</a></li>
+<li><a href="#orgaa41f1f">Ajax con JQuery</a></li>
+</ul>
+</li>
+<li><a href="#orgc7362a2">Load Ajax en JQuery</a>
+<ul>
+<li><a href="#org76ea30d">Método load()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgbed1bbc">Ejercicios</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7be34ce" class="outline-2">
-<h2 id="org7be34ce">Introducción</h2>
-<div class="outline-text-2" id="text-org7be34ce">
+<div id="outline-container-org57842ac" class="outline-2">
+<h2 id="org57842ac">Introducción</h2>
+<div class="outline-text-2" id="text-org57842ac">
 <p>
 Jquery es una librería que nos facilita muchas tareas comunes para nuestra web. Además nos ahorrará gran cantidad de tiempo y esfuerzo ya que nos permite crear muchos efectos y características con muy poco código.
 </p>
 </div>
 
-<div id="outline-container-org698374b" class="outline-3">
-<h3 id="org698374b">Qué es JQuery</h3>
-<div class="outline-text-3" id="text-org698374b">
+<div id="outline-container-orgab9bf01" class="outline-3">
+<h3 id="orgab9bf01">Qué es JQuery</h3>
+<div class="outline-text-3" id="text-orgab9bf01">
 <p>
 JQuery es una rápida, liviana y con muchas características librería de JavaScript que se basa en el principio de <i>escribir poco, y hacer mucho</i>. Permite hacer muchas tareas en nuestro documento sobre manipulación, manejar eventos, añadir animaciones y efectos de manera muy fácil
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga99cbe5" class="outline-3">
-<h3 id="orga99cbe5">Ventajas de JQuery</h3>
-<div class="outline-text-3" id="text-orga99cbe5">
+<div id="outline-container-orgc2ea086" class="outline-3">
+<h3 id="orgc2ea086">Ventajas de JQuery</h3>
+<div class="outline-text-3" id="text-orgc2ea086">
 <p>
 Aquí algunas ventajas que tiene el adoptar JQuery:
 </p>
@@ -492,9 +492,9 @@ Aquí algunas ventajas que tiene el adoptar JQuery:
 </div>
 </div>
 
-<div id="outline-container-org618debe" class="outline-2">
-<h2 id="org618debe">Empezando con JQuery</h2>
-<div class="outline-text-2" id="text-org618debe">
+<div id="outline-container-orgd5589b0" class="outline-2">
+<h2 id="orgd5589b0">Empezando con JQuery</h2>
+<div class="outline-text-2" id="text-orgd5589b0">
 <p>
 Para empezar con JQuery vamos a descararnos una copia e incluirla en nuestro documento. Podemos descararnos dos versiones, una comprimida y otra sin 
 descomprimir. 
@@ -505,9 +505,9 @@ Una vez descargada la añadimos a nuestro documento en la cabecera tal como ya h
 </p>
 </div>
 
-<div id="outline-container-org924ef9f" class="outline-3">
-<h3 id="org924ef9f">Incluyendo JQuery desde CDN</h3>
-<div class="outline-text-3" id="text-org924ef9f">
+<div id="outline-container-org296bcce" class="outline-3">
+<h3 id="org296bcce">Incluyendo JQuery desde CDN</h3>
+<div class="outline-text-3" id="text-org296bcce">
 <p>
 Alternativamente, podemos incluir JQuery en tu página a través de un enlace a CDN (Content Delivery Network), si no queremos descargarlo. CDN nos ofrece la ventaja de reducir los tiempos de carga, ya que ellos tienen hospedaje en multitud de servidores a través de la tierra. Para enlazar JQuery directamente desde CDN añadimos el siguiente código:
 </p>
@@ -519,9 +519,9 @@ Alternativamente, podemos incluir JQuery en tu página a través de un enlace a 
 </div>
 </div>
 
-<div id="outline-container-org50047d8" class="outline-3">
-<h3 id="org50047d8">Nuestra primera página con JQuery</h3>
-<div class="outline-text-3" id="text-org50047d8">
+<div id="outline-container-org186c970" class="outline-3">
+<h3 id="org186c970">Nuestra primera página con JQuery</h3>
+<div class="outline-text-3" id="text-org186c970">
 <p>
 En esta página vamos a crear un Hola Mundo y le vamos a cambiar el color de la cabecera:
 </p>
@@ -550,9 +550,9 @@ En esta página vamos a crear un Hola Mundo y le vamos a cambiar el color de la 
 </div>
 </div>
 
-<div id="outline-container-org3c9a473" class="outline-2">
-<h2 id="org3c9a473">Sintaxis de JQuery</h2>
-<div class="outline-text-2" id="text-org3c9a473">
+<div id="outline-container-org42b4951" class="outline-2">
+<h2 id="org42b4951">Sintaxis de JQuery</h2>
+<div class="outline-text-2" id="text-org42b4951">
 <p>
 La sintaxis típica en JQuery empieza con el signo de dolar y termina con el punto y coma. 
 </p>
@@ -577,9 +577,9 @@ alert(<span class="org-string">"Hola Mundo!"</span>);
 </div>
 </div>
 
-<div id="outline-container-orgd99acc4" class="outline-3">
-<h3 id="orgd99acc4">Explicación del código</h3>
-<div class="outline-text-3" id="text-orgd99acc4">
+<div id="outline-container-orgb533bb4" class="outline-3">
+<h3 id="orgb533bb4">Explicación del código</h3>
+<div class="outline-text-3" id="text-orgb533bb4">
 <p>
 Veamos las siguientes partes del código una por una:
 </p>
@@ -665,19 +665,18 @@ Ahora vemos como buscamos el elemento button y la acción se ejecuta con el puls
 </div>
 </div>
 
-
-<div id="outline-container-orgf75ff2d" class="outline-2">
-<h2 id="orgf75ff2d">Seleccionando elementos con JQuery</h2>
-<div class="outline-text-2" id="text-orgf75ff2d">
+<div id="outline-container-orge9df3e5" class="outline-2">
+<h2 id="orge9df3e5">Seleccionando elementos con JQuery</h2>
+<div class="outline-text-2" id="text-orge9df3e5">
 <p>
 JavaScript es comúnmente usado para obtener o modificar contenido o atributos de los elementos HTML o aplicarles algunos efectos, animaciones, etc. 
 Seleccionando elementos a través de JavaScript puede ser doloroso pero con JQuery todo resulta más fácil. La habilidad de hacer de forma simple selecciones de elementos del DOM es una de las características más potentes de JQuery. 
 </p>
 </div>
 
-<div id="outline-container-org40e2905" class="outline-3">
-<h3 id="org40e2905">Seleccionando elementos por el ID</h3>
-<div class="outline-text-3" id="text-org40e2905">
+<div id="outline-container-org8bb454f" class="outline-3">
+<h3 id="org8bb454f">Seleccionando elementos por el ID</h3>
+<div class="outline-text-3" id="text-org8bb454f">
 <p>
 Ejemplo:
 </p>
@@ -708,9 +707,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgb225b1b" class="outline-3">
-<h3 id="orgb225b1b">Seleccionando elementos por la clase</h3>
-<div class="outline-text-3" id="text-orgb225b1b">
+<div id="outline-container-orgb198997" class="outline-3">
+<h3 id="orgb198997">Seleccionando elementos por la clase</h3>
+<div class="outline-text-3" id="text-orgb198997">
 <div class="org-src-container">
 <pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
 &lt;<span class="org-function-name">html</span>&gt;
@@ -736,9 +735,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org5b6c779" class="outline-3">
-<h3 id="org5b6c779">Seleccionando por nombre</h3>
-<div class="outline-text-3" id="text-org5b6c779">
+<div id="outline-container-org62cd931" class="outline-3">
+<h3 id="org62cd931">Seleccionando por nombre</h3>
+<div class="outline-text-3" id="text-org62cd931">
 <div class="org-src-container">
 <pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
 &lt;<span class="org-function-name">html</span>&gt;
@@ -764,9 +763,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org9b46a9f" class="outline-3">
-<h3 id="org9b46a9f">Seleccionando por atributos</h3>
-<div class="outline-text-3" id="text-org9b46a9f">
+<div id="outline-container-orgf009157" class="outline-3">
+<h3 id="orgf009157">Seleccionando por atributos</h3>
+<div class="outline-text-3" id="text-orgf009157">
 <p>
 Con la palabra reservada <b>type</b> podemos elegir el tipo de atributo por el que queremos seleccionar el elemento.
 </p>
@@ -799,9 +798,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org4afb64c" class="outline-3">
-<h3 id="org4afb64c">Seleccionando elementos usando selectores de CSS compuestos</h3>
-<div class="outline-text-3" id="text-org4afb64c">
+<div id="outline-container-org380f221" class="outline-3">
+<h3 id="org380f221">Seleccionando elementos usando selectores de CSS compuestos</h3>
+<div class="outline-text-3" id="text-org380f221">
 <p>
 Podemos seleccionar selectores de CSS para hacer nuestra selección más precisa.
 </p>
@@ -862,9 +861,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgd46318c" class="outline-3">
-<h3 id="orgd46318c">Selectores propios de JQuery</h3>
-<div class="outline-text-3" id="text-orgd46318c">
+<div id="outline-container-org7969083" class="outline-3">
+<h3 id="org7969083">Selectores propios de JQuery</h3>
+<div class="outline-text-3" id="text-org7969083">
 <div class="org-src-container">
 <pre class="src src-html"><span class="org-string">&lt;!DOCTYPE html&gt;</span>
 &lt;<span class="org-function-name">html</span>&gt;
@@ -946,9 +945,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgb6af007" class="outline-2">
-<h2 id="orgb6af007">Eventos en JQuery</h2>
-<div class="outline-text-2" id="text-orgb6af007">
+<div id="outline-container-org01f7f16" class="outline-2">
+<h2 id="org01f7f16">Eventos en JQuery</h2>
+<div class="outline-text-2" id="text-org01f7f16">
 <p>
 Los eventos son interacciones del usuario con la página web. JQuery nos ofrece una gran cantidad de métodos para la mayoría de los eventos. Algunos de esos eventos son:
 </p>
@@ -988,12 +987,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org6168adb" class="outline-3">
-<h3 id="org6168adb">Eventos de ratón</h3>
-<div class="outline-text-3" id="text-org6168adb">
-</div><div id="outline-container-org53db5e3" class="outline-4">
-<h4 id="org53db5e3">Método click()</h4>
-<div class="outline-text-4" id="text-org53db5e3">
+<div id="outline-container-orgc3e2736" class="outline-3">
+<h3 id="orgc3e2736">Eventos de ratón</h3>
+<div class="outline-text-3" id="text-orgc3e2736">
+</div><div id="outline-container-orgbbf3ed7" class="outline-4">
+<h4 id="orgbbf3ed7">Método click()</h4>
+<div class="outline-text-4" id="text-orgbbf3ed7">
 <p>
 El método *click() de JQuery une una función manejadora de eventos al elemento seleccionado por un evento "click". La función es ejectuado cuando el usuario pulsa el elemento. En el siguiente ejemplo esconderemos un elemento &lt;p&gt; de una página cuando son pulsado.
 </p>
@@ -1031,9 +1030,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org136229d" class="outline-4">
-<h4 id="org136229d">El método dblclick()</h4>
-<div class="outline-text-4" id="text-org136229d">
+<div id="outline-container-org47ee8a9" class="outline-4">
+<h4 id="org47ee8a9">El método dblclick()</h4>
+<div class="outline-text-4" id="text-org47ee8a9">
 <p>
 Este método es igual que el anterior solo que necesita que el usuario haga una doble pulsación sobre el elemento. Veámoslo en el ejemplo:
 </p>
@@ -1072,9 +1071,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgc837571" class="outline-4">
-<h4 id="orgc837571">El método hover()</h4>
-<div class="outline-text-4" id="text-orgc837571">
+<div id="outline-container-org3536f85" class="outline-4">
+<h4 id="org3536f85">El método hover()</h4>
+<div class="outline-text-4" id="text-org3536f85">
 <p>
 El método hover() de JQuery une uno o dos funciones manejadoras de eventos a elementos seleccionados que se ejecutan cuando el puntero del ratón entra y deja los elementos. La primera función es ejecutada cuando el usuario pone el puntero en el elemento y la segunda es cuando el puntero deja el elemento. 
 </p>
@@ -1123,9 +1122,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org8bbbc98" class="outline-4">
-<h4 id="org8bbbc98">El método mouseenter()</h4>
-<div class="outline-text-4" id="text-org8bbbc98">
+<div id="outline-container-orge520809" class="outline-4">
+<h4 id="orge520809">El método mouseenter()</h4>
+<div class="outline-text-4" id="text-orge520809">
 <p>
 Cómo sutilmente dice su propio nombre este método ejecuta la función cuando el puntero entra en el elemento. En el siguiente ejemplo el elemento se iluminará cuando el puntero se pose sobre él. 
 </p>
@@ -1170,9 +1169,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org0fdc3a1" class="outline-4">
-<h4 id="org0fdc3a1">El método mouseleave()</h4>
-<div class="outline-text-4" id="text-org0fdc3a1">
+<div id="outline-container-org17d0e88" class="outline-4">
+<h4 id="org17d0e88">El método mouseleave()</h4>
+<div class="outline-text-4" id="text-org17d0e88">
 <p>
 Adivínalo tú solo que seguro que los sabes guapi.
 </p>
@@ -1181,12 +1180,12 @@ Adivínalo tú solo que seguro que los sabes guapi.
 </div>
 
 
-<div id="outline-container-org9234e2b" class="outline-3">
-<h3 id="org9234e2b">Eventos del teclado</h3>
-<div class="outline-text-3" id="text-org9234e2b">
-</div><div id="outline-container-orgcc31a15" class="outline-4">
-<h4 id="orgcc31a15">El método keypress()</h4>
-<div class="outline-text-4" id="text-orgcc31a15">
+<div id="outline-container-org4a07e26" class="outline-3">
+<h3 id="org4a07e26">Eventos del teclado</h3>
+<div class="outline-text-3" id="text-org4a07e26">
+</div><div id="outline-container-org33ff676" class="outline-4">
+<h4 id="org33ff676">El método keypress()</h4>
+<div class="outline-text-4" id="text-org33ff676">
 <p>
 Este método activa la une la función manejadora al elemento seleccionado (normalmente formularios) cuando el navegador recibe entrada del teclado por parte del usuario. El siguiente ejemplo se muestra un mensaje cuando el teclado es pulsado y además cuenta cuantas veces es pulsado el teclado:
 </p>
@@ -1231,18 +1230,18 @@ $(document).ready(function(){
 </div>
 
 
-<div id="outline-container-orgf733361" class="outline-4">
-<h4 id="orgf733361">El método keydown()</h4>
-<div class="outline-text-4" id="text-orgf733361">
+<div id="outline-container-orgedb7e7d" class="outline-4">
+<h4 id="orgedb7e7d">El método keydown()</h4>
+<div class="outline-text-4" id="text-orgedb7e7d">
 <p>
 Es muy parecida al anterior pero la anterior ejecuta la función cuando la tecla es presionada y en esta es cuando la tecla es hundida
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3af9254" class="outline-4">
-<h4 id="org3af9254">El método keyup()</h4>
-<div class="outline-text-4" id="text-org3af9254">
+<div id="outline-container-orgaf6ed2a" class="outline-4">
+<h4 id="orgaf6ed2a">El método keyup()</h4>
+<div class="outline-text-4" id="text-orgaf6ed2a">
 <p>
 Pues más de lo mismo sólo que ahora la ejecución de la función es cuando la tecla es "soltada"
 </p>
@@ -1251,17 +1250,17 @@ Pues más de lo mismo sólo que ahora la ejecución de la función es cuando la 
 </div>
 
 
-<div id="outline-container-org0dc62ee" class="outline-3">
-<h3 id="org0dc62ee">Eventos de formulario</h3>
-<div class="outline-text-3" id="text-org0dc62ee">
+<div id="outline-container-org2e20caf" class="outline-3">
+<h3 id="org2e20caf">Eventos de formulario</h3>
+<div class="outline-text-3" id="text-org2e20caf">
 <p>
 Los eventos de formularios se activan cuando cuando un control del formulario recibe o pierde el foco o cuando el usuario modifica un valor del formulario como cuando escribe en una caja de entrada, selecciona una selección de un caja de selección, etc. Vamos a ver algunos comunes.
 </p>
 </div>
 
-<div id="outline-container-org67ff109" class="outline-4">
-<h4 id="org67ff109">El método change()</h4>
-<div class="outline-text-4" id="text-org67ff109">
+<div id="outline-container-orgd0b2c5d" class="outline-4">
+<h4 id="orgd0b2c5d">El método change()</h4>
+<div class="outline-text-4" id="text-orgd0b2c5d">
 <p>
 El método change() une una función manejadora a un elemento &lt;input&gt;, &lt;textarea&gt; y &lt;select&gt; que es ejecutado cuando el valor es cambiado. En el siguiente ejemplo se mostrará un mensaje de alerta cuando una opción en la caja de selección
 </p>
@@ -1300,9 +1299,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org2b8e5f7" class="outline-4">
-<h4 id="org2b8e5f7">El método focus()</h4>
-<div class="outline-text-4" id="text-org2b8e5f7">
+<div id="outline-container-org9dc7f10" class="outline-4">
+<h4 id="org9dc7f10">El método focus()</h4>
+<div class="outline-text-4" id="text-org9dc7f10">
 <p>
 Este método activa una función cuando seleccionamos elementos y gana el foco. En el siguiente ejemplo veremos un mensaje cuando la caja de entrada tenga foco.
 </p>
@@ -1345,18 +1344,18 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org8f5a24c" class="outline-4">
-<h4 id="org8f5a24c">Método blur()</h4>
-<div class="outline-text-4" id="text-org8f5a24c">
+<div id="outline-container-orgc81b8ac" class="outline-4">
+<h4 id="orgc81b8ac">Método blur()</h4>
+<div class="outline-text-4" id="text-orgc81b8ac">
 <p>
 Ejecuta funciones cuando elementos tales como &lt;input&gt;, &lt;textarea&gt; o &lt;select&gt; pierden el foco.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5b02652" class="outline-4">
-<h4 id="org5b02652">Método submit()</h4>
-<div class="outline-text-4" id="text-org5b02652">
+<div id="outline-container-org298accd" class="outline-4">
+<h4 id="org298accd">Método submit()</h4>
+<div class="outline-text-4" id="text-org298accd">
 <p>
 Este es para formularios, elementos &lt;form&gt; que ejecutan una función cuando el usuario envía un formulario. En el siguiente ejemplo se mostrará un mensaje cuando se vaya a enviar el mensaje.
 </p>
@@ -1383,9 +1382,11 @@ $(document).ready(function(){
       var mob = /^[1-9]{1}[0-9]{9}$/;
         var currentValue = $(<span class="org-string">"#inputMobile"</span>).val();
         if(mob.test(currentValue) == false &amp;&amp; currentValue != 10){
-            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono inv&#225;lido number"</span>).addClass(<span class="org-string">"error"</span>).show().fadeOut(1000);
+            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono inv&#225;lido</span>
+<span class="org-string"> number"</span>).addClass(<span class="org-string">"error"</span>).show().fadeOut(1000);
         } else{
-            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono v&#225;lido number"</span>).addClass(<span class="org-string">"success"</span>).show().fadeOut(1000);
+            $(<span class="org-string">"p"</span>).html(<span class="org-string">"N&#250;mero de tel&#233;fono v&#225;lido</span>
+<span class="org-string"> number"</span>).addClass(<span class="org-string">"success"</span>).show().fadeOut(1000);
         }
         event.preventDefault();
     });
@@ -1394,7 +1395,8 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">form</span>&gt;
-        &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"text"</span> <span class="org-variable-name">id</span>=<span class="org-string">"inputMobile"</span> <span class="org-variable-name">maxlength</span>=<span class="org-string">"10"</span> <span class="org-variable-name">placeholder</span>=<span class="org-string">"Introduce un n&#250;memro de tel&#233;fono"</span>&gt;
+        &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"text"</span> <span class="org-variable-name">id</span>=<span class="org-string">"inputMobile"</span> <span class="org-variable-name">maxlength</span>=<span class="org-string">"10"</span>
+ <span class="org-variable-name">placeholder</span>=<span class="org-string">"Introduce un n&#250;memro de tel&#233;fono"</span>&gt;
         &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"submit"</span> <span class="org-variable-name">value</span>=<span class="org-string">"Submit"</span>&gt;
         &lt;<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
     &lt;/<span class="org-function-name">form</span>&gt;
@@ -1406,17 +1408,17 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgfb6b0a7" class="outline-3">
-<h3 id="orgfb6b0a7">Eventos en el documento/ventana</h3>
-<div class="outline-text-3" id="text-orgfb6b0a7">
+<div id="outline-container-org5611b83" class="outline-3">
+<h3 id="org5611b83">Eventos en el documento/ventana</h3>
+<div class="outline-text-3" id="text-org5611b83">
 <p>
 Aquí los eventos son lanzados cuando un DOM está preparado o cuando la ventana se redimensiona o hay un scrol. Vamos a ver los más usados
 </p>
 </div>
 
-<div id="outline-container-org8b851f3" class="outline-4">
-<h4 id="org8b851f3">El método ready()</h4>
-<div class="outline-text-4" id="text-org8b851f3">
+<div id="outline-container-org606f68b" class="outline-4">
+<h4 id="org606f68b">El método ready()</h4>
+<div class="outline-text-4" id="text-org606f68b">
 <p>
 Éste ejecuta una función cuando el DOM está completamente cargado. En el siguiente ejemplo se reemplazará un texto cuando el DOM esté cargado.
 </p>
@@ -1443,9 +1445,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgb23c61c" class="outline-4">
-<h4 id="orgb23c61c">El método resize()</h4>
-<div class="outline-text-4" id="text-orgb23c61c">
+<div id="outline-container-org8402967" class="outline-4">
+<h4 id="org8402967">El método resize()</h4>
+<div class="outline-text-4" id="text-org8402967">
 <p>
 Este método activa una función cuando la ventana del navegador cambia de tamaño.
 </p>
@@ -1468,7 +1470,8 @@ Este método activa una función cuando la ventana del navegador cambia de tama�
 $(document).ready(function(){
     $(window).resize(function() {
         $(window).bind(<span class="org-string">"redimensiona"</span>, function(){ 
-            $(<span class="org-string">"p"</span>).text(<span class="org-string">"Altura de la ventana: "</span> + $(window).width() + <span class="org-string">", "</span> + <span class="org-string">"Altura de la ventana: "</span> + $(window).height());
+            $(<span class="org-string">"p"</span>).text(<span class="org-string">"Altura de la ventana: "</span> + $(window).width() + <span class="org-string">", "</span> +
+ <span class="org-string">"Altura de la ventana: "</span> + $(window).height());
         });
     });
 });
@@ -1483,9 +1486,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org39a6b4c" class="outline-4">
-<h4 id="org39a6b4c">Método scroll()</h4>
-<div class="outline-text-4" id="text-org39a6b4c">
+<div id="outline-container-orgbcf1f42" class="outline-4">
+<h4 id="orgbcf1f42">Método scroll()</h4>
+<div class="outline-text-4" id="text-orgbcf1f42">
 <p>
 Esto activa la función cuadno detecta que el scroll de un iframe o de la ventana cambia. En este ejemplo se mostrará un mensaje cuadno el scroll del navegador cambia.
 </p>
@@ -1538,12 +1541,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgf4e09f8" class="outline-2">
-<h2 id="orgf4e09f8">Efectos en JQuery</h2>
-<div class="outline-text-2" id="text-orgf4e09f8">
-</div><div id="outline-container-orga427cf6" class="outline-3">
-<h3 id="orga427cf6">Efecto de mostrar y ocultar</h3>
-<div class="outline-text-3" id="text-orga427cf6">
+<div id="outline-container-org4d9c53a" class="outline-2">
+<h2 id="org4d9c53a">Efectos en JQuery</h2>
+<div class="outline-text-2" id="text-org4d9c53a">
+</div><div id="outline-container-org2368cc4" class="outline-3">
+<h3 id="org2368cc4">Efecto de mostrar y ocultar</h3>
+<div class="outline-text-3" id="text-org2368cc4">
 <p>
 Usando los métodos de JQuery <b>show()</b> y <b>hide()</b> podemos ocultar y mostrar elementos HTML.
 </p>
@@ -1690,9 +1693,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org718af77" class="outline-4">
-<h4 id="org718af77">Efecto toggle()</h4>
-<div class="outline-text-4" id="text-org718af77">
+<div id="outline-container-org527b007" class="outline-4">
+<h4 id="org527b007">Efecto toggle()</h4>
+<div class="outline-text-4" id="text-org527b007">
 <p>
 Funciona exactamente igual que los métodos show() y hide(), solo que cambia el estado de oculto a mostrado y de mostrado a oculto.
 </p>
@@ -1700,12 +1703,12 @@ Funciona exactamente igual que los métodos show() y hide(), solo que cambia el 
 </div>
 </div>
 
-<div id="outline-container-org6e289af" class="outline-3">
-<h3 id="org6e289af">Efecto fade</h3>
-<div class="outline-text-3" id="text-org6e289af">
-</div><div id="outline-container-orgd938669" class="outline-4">
-<h4 id="orgd938669">Métodos fadeIn() y fadeOut()</h4>
-<div class="outline-text-4" id="text-orgd938669">
+<div id="outline-container-org8717a95" class="outline-3">
+<h3 id="org8717a95">Efecto fade</h3>
+<div class="outline-text-3" id="text-org8717a95">
+</div><div id="outline-container-orgd0a2380" class="outline-4">
+<h4 id="orgd0a2380">Métodos fadeIn() y fadeOut()</h4>
+<div class="outline-text-4" id="text-orgd0a2380">
 <p>
 En JQuery tenemos los métodos <b>fadeIn()</b> y <b>fadeOut()</b> para mostrar o esconder elementos pero de una incrementando o decrementando su opacidad.
 </p>
@@ -1757,18 +1760,18 @@ Al igual que con el método anterior también podemos <b>controlar la velocidad<
 </div>
 </div>
 
-<div id="outline-container-org8401706" class="outline-4">
-<h4 id="org8401706">Método fadeToggle()</h4>
-<div class="outline-text-4" id="text-org8401706">
+<div id="outline-container-org501385e" class="outline-4">
+<h4 id="org501385e">Método fadeToggle()</h4>
+<div class="outline-text-4" id="text-org501385e">
 <p>
 Exactamente igual que el anterior pero solo que si el elemento está presente lo oculta y si está oculto lo muestra.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org625c44d" class="outline-4">
-<h4 id="org625c44d">Método fadeTo()</h4>
-<div class="outline-text-4" id="text-org625c44d">
+<div id="outline-container-org0956194" class="outline-4">
+<h4 id="org0956194">Método fadeTo()</h4>
+<div class="outline-text-4" id="text-org0956194">
 <p>
 Este método es similar a fadeIn(), pero a diferencia de él fadeTo() nos permite controlar el nivel de opacidad. 
 </p>
@@ -1824,12 +1827,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orge2fa2af" class="outline-3">
-<h3 id="orge2fa2af">Efecto Sliding (corredero)</h3>
-<div class="outline-text-3" id="text-orge2fa2af">
-</div><div id="outline-container-orgc6767ee" class="outline-4">
-<h4 id="orgc6767ee">Método slideUp() y slideDown()</h4>
-<div class="outline-text-4" id="text-orgc6767ee">
+<div id="outline-container-org355a29b" class="outline-3">
+<h3 id="org355a29b">Efecto Sliding (corredero)</h3>
+<div class="outline-text-3" id="text-org355a29b">
+</div><div id="outline-container-orgd1b061e" class="outline-4">
+<h4 id="orgd1b061e">Método slideUp() y slideDown()</h4>
+<div class="outline-text-4" id="text-orgd1b061e">
 <p>
 Los métodos slideUp() y slideDown() sirve para mostrar o esconder un elemento por incremento o decremento de su altura. 
 </p>
@@ -1881,9 +1884,9 @@ Al igual que los otros métodos vistos hasta ahora podemos controlar la velocida
 </div>
 </div>
 
-<div id="outline-container-org7b60f59" class="outline-4">
-<h4 id="org7b60f59">Método slideToggle()</h4>
-<div class="outline-text-4" id="text-org7b60f59">
+<div id="outline-container-orgce67e40" class="outline-4">
+<h4 id="orgce67e40">Método slideToggle()</h4>
+<div class="outline-text-4" id="text-orgce67e40">
 <p>
 Muestra o oculta un elemento seleccionado con una animación que cambia su altura. En este método también podemos  controlar la velocidad y hacer llamadas a otras funciones.
 </p>
@@ -1891,21 +1894,21 @@ Muestra o oculta un elemento seleccionado con una animación que cambia su altur
 </div>
 </div>
 
-<div id="outline-container-org814aef2" class="outline-3">
-<h3 id="org814aef2">Efectos de animación</h3>
-<div class="outline-text-3" id="text-org814aef2">
-</div><div id="outline-container-orged83f7e" class="outline-4">
-<h4 id="orged83f7e">Método animate()</h4>
-<div class="outline-text-4" id="text-orged83f7e">
+<div id="outline-container-org2a9383e" class="outline-3">
+<h3 id="org2a9383e">Efectos de animación</h3>
+<div class="outline-text-3" id="text-org2a9383e">
+</div><div id="outline-container-orge9f6ca8" class="outline-4">
+<h4 id="orge9f6ca8">Método animate()</h4>
+<div class="outline-text-4" id="text-orge9f6ca8">
 <p>
 En JQuery el método animate() es usado para crear animaciones. Es usado con propiedades numéricas de CSS como son la altura, anchura, margen, relleno, opacidad, etc. Propiedades no numéricas como pueden ser el color no pueden ser animadas. Para animar color usamos un plugin especial llamado <a href="https://github.com/jquery/jquery-color">jquery-color</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfeb2162" class="outline-4">
-<h4 id="orgfeb2162">Sintaxis</h4>
-<div class="outline-text-4" id="text-orgfeb2162">
+<div id="outline-container-orgf651022" class="outline-4">
+<h4 id="orgf651022">Sintaxis</h4>
+<div class="outline-text-4" id="text-orgf651022">
 <p>
 La sintaxis básica de animate() es:
 </p>
@@ -1963,9 +1966,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org4aead31" class="outline-4">
-<h4 id="org4aead31">Animando múltiples propiedades a la vez</h4>
-<div class="outline-text-4" id="text-org4aead31">
+<div id="outline-container-org6215892" class="outline-4">
+<h4 id="org6215892">Animando múltiples propiedades a la vez</h4>
+<div class="outline-text-4" id="text-org6215892">
 <p>
 Con el método animate() podemos animar varias propiedades a la vez.
 </p>
@@ -2015,18 +2018,18 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org1c49df4" class="outline-4">
-<h4 id="org1c49df4">Animando múltiples propiedades una a una o en fila.</h4>
-<div class="outline-text-4" id="text-org1c49df4">
+<div id="outline-container-orgb1911a6" class="outline-4">
+<h4 id="orgb1911a6">Animando múltiples propiedades una a una o en fila.</h4>
+<div class="outline-text-4" id="text-orgb1911a6">
 <p>
 Podemos animar múltiples propiedades una a una de forma individual usando una característica de encadenamiento de JQuery. Lo veremos en el siguiente capítulo
 </p>
 </div>
 </div>
 
-<div id="outline-container-orged8a500" class="outline-4">
-<h4 id="orged8a500">Animando propiedades con valores relativos</h4>
-<div class="outline-text-4" id="text-orged8a500">
+<div id="outline-container-org0f465d7" class="outline-4">
+<h4 id="org0f465d7">Animando propiedades con valores relativos</h4>
+<div class="outline-text-4" id="text-org0f465d7">
 <p>
 En ocasiones podemos usar valores relativos para animar propiedades. Si un valor es especificado con el prefijo <b>+=</b> o <b>-=</b> entonces se calcula el valor añadiendo o restando el valor dado al valor actual de la propiedad.
 </p>
@@ -2075,9 +2078,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org030ef6d" class="outline-4">
-<h4 id="org030ef6d">Animando propiedades con valores Pre-definidos</h4>
-<div class="outline-text-4" id="text-org030ef6d">
+<div id="outline-container-org96c0000" class="outline-4">
+<h4 id="org96c0000">Animando propiedades con valores Pre-definidos</h4>
+<div class="outline-text-4" id="text-org96c0000">
 <p>
 Además de los valores numéricos, cada propiedad puede tomar valores con las palabras <b>'show'</b>, <b>'hide'</b> y <b>'toggle'</b> 
 </p>
@@ -2122,12 +2125,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgbe29c58" class="outline-3">
-<h3 id="orgbe29c58">Parada de las animaciones en JQuery</h3>
-<div class="outline-text-3" id="text-orgbe29c58">
-</div><div id="outline-container-org7c32e1a" class="outline-4">
-<h4 id="org7c32e1a">El método stop()</h4>
-<div class="outline-text-4" id="text-org7c32e1a">
+<div id="outline-container-org12758d4" class="outline-3">
+<h3 id="org12758d4">Parada de las animaciones en JQuery</h3>
+<div class="outline-text-3" id="text-org12758d4">
+</div><div id="outline-container-orgfdad5df" class="outline-4">
+<h4 id="orgfdad5df">El método stop()</h4>
+<div class="outline-text-4" id="text-orgfdad5df">
 <p>
 El método stop() es usado para parar las animaciones o efectos que estén funcionando. La sintaxis básica es:
 </p>
@@ -2202,12 +2205,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgb370498" class="outline-3">
-<h3 id="orgb370498">Encadenamiento en JQuery</h3>
-<div class="outline-text-3" id="text-orgb370498">
-</div><div id="outline-container-orga4a53eb" class="outline-4">
-<h4 id="orga4a53eb">El método Chaining (encadenamiento)</h4>
-<div class="outline-text-4" id="text-orga4a53eb">
+<div id="outline-container-org3140ca3" class="outline-3">
+<h3 id="org3140ca3">Encadenamiento en JQuery</h3>
+<div class="outline-text-3" id="text-org3140ca3">
+</div><div id="outline-container-orgbff4e60" class="outline-4">
+<h4 id="orgbff4e60">El método Chaining (encadenamiento)</h4>
+<div class="outline-text-4" id="text-orgbff4e60">
 <p>
 JQuery ofrece una característica robusta que nos permite unir múltiples acciones para el mismo grupo de elementos, todo en una sola línea de código.
 </p>
@@ -2280,15 +2283,15 @@ Pero si esto es muy embarullado podemos hacerlo en varias líneas
 </div>
 </div>
 
-<div id="outline-container-orgd8f6a4c" class="outline-2">
-<h2 id="orgd8f6a4c">Manipulando elementos en JQuery</h2>
-<div class="outline-text-2" id="text-orgd8f6a4c">
-</div><div id="outline-container-orgcc721a1" class="outline-3">
-<h3 id="orgcc721a1">Getters y Setter en JQuery</h3>
-<div class="outline-text-3" id="text-orgcc721a1">
-</div><div id="outline-container-orgdae042d" class="outline-4">
-<h4 id="orgdae042d">Obtener o establecer contenido y valores en JQuery</h4>
-<div class="outline-text-4" id="text-orgdae042d">
+<div id="outline-container-org133776e" class="outline-2">
+<h2 id="org133776e">Manipulando elementos en JQuery</h2>
+<div class="outline-text-2" id="text-org133776e">
+</div><div id="outline-container-orga17bc69" class="outline-3">
+<h3 id="orga17bc69">Getters y Setter en JQuery</h3>
+<div class="outline-text-3" id="text-orga17bc69">
+</div><div id="outline-container-orgd7466ec" class="outline-4">
+<h4 id="orgd7466ec">Obtener o establecer contenido y valores en JQuery</h4>
+<div class="outline-text-4" id="text-orgd7466ec">
 <p>
 Algunos métodos en JQuery pueden ser usados para asignar o leer algunos valores een una selección. Unos pocos de esos métodos son <b>text(), html(), attr()</b> y <b>val()</b> 
 </p>
@@ -2299,15 +2302,15 @@ Cuando esos métodos son llamados sin argumentos, son referidos como <i>getters<
 </div>
 </div>
 
-<div id="outline-container-orgfd69c62" class="outline-4">
-<h4 id="orgfd69c62">Método text()</h4>
-<div class="outline-text-4" id="text-orgfd69c62">
+<div id="outline-container-orgd14577d" class="outline-4">
+<h4 id="orgd14577d">Método text()</h4>
+<div class="outline-text-4" id="text-orgd14577d">
 <p>
 El método text() es usado para obtener la combinación de texto de los contenidos seleccionados y sus descendientes, o establecer contenido de texto a los elementos seleccionados.
 </p>
 </div>
 
-<ul class="org-ul"><li><a id="orge4094f4"></a>Obteniendo contenido de texto con el método text()<br /><div class="outline-text-5" id="text-orge4094f4">
+<ul class="org-ul"><li><a id="org9e7cb56"></a>Obteniendo contenido de texto con el método text()<br /><div class="outline-text-5" id="text-org9e7cb56">
 <p>
 Vamos a ver como obtenemos el contenido de texto de los párrafos y los mostramos en una carteles de alerta:
 </p>
@@ -2349,7 +2352,7 @@ $(document).ready(function(){
 </div>
 </div></li>
 
-<li><a id="org3fa91f4"></a>Estableciendo contenido de texto con el método text()<br /><div class="outline-text-5" id="text-org3fa91f4">
+<li><a id="orgd7d94ff"></a>Estableciendo contenido de texto con el método text()<br /><div class="outline-text-5" id="text-orgd7d94ff">
 <p>
 En el siguiente ejemplo veremos como el método text() establece contenido en un párrafo:
 </p>
@@ -2389,15 +2392,15 @@ $(document).ready(function(){
 </div></li></ul>
 </div>
 
-<div id="outline-container-orged3cb78" class="outline-4">
-<h4 id="orged3cb78">Método html()</h4>
-<div class="outline-text-4" id="text-orged3cb78">
+<div id="outline-container-org23206f9" class="outline-4">
+<h4 id="org23206f9">Método html()</h4>
+<div class="outline-text-4" id="text-org23206f9">
 <p>
 El método html() es usado para obtener o establecer congtenido HTML de los elementos.
 </p>
 </div>
 
-<ul class="org-ul"><li><a id="org820b960"></a>Obtener contenido HTML con el método html()<br /><div class="outline-text-5" id="text-org820b960">
+<ul class="org-ul"><li><a id="orgee0525a"></a>Obtener contenido HTML con el método html()<br /><div class="outline-text-5" id="text-orgee0525a">
 <p>
 En el siguiente ejemplo se verá como obtener el contenido HTML de los párrafos así como el contenido de un elemento &lt;div&gt;
 </p>
@@ -2435,7 +2438,7 @@ $(document).ready(function(){
 </div>
 </div></li>
 
-<li><a id="orgb956084"></a>Estableciendo contenido HTML con el método html()<br /><div class="outline-text-5" id="text-orgb956084">
+<li><a id="org4d1428f"></a>Estableciendo contenido HTML con el método html()<br /><div class="outline-text-5" id="text-org4d1428f">
 <p>
 Veremos en el siguiente ejemplo como establecemos contenido en el elemento &lt;body&gt;
 </p>
@@ -2464,15 +2467,15 @@ $(document).ready(function(){
 </div></li></ul>
 </div>
 
-<div id="outline-container-orga2375e8" class="outline-4">
-<h4 id="orga2375e8">Método attr()</h4>
-<div class="outline-text-4" id="text-orga2375e8">
+<div id="outline-container-org4fbcb0f" class="outline-4">
+<h4 id="org4fbcb0f">Método attr()</h4>
+<div class="outline-text-4" id="text-org4fbcb0f">
 <p>
 Podemos usar el método attr() para obtener el valor de un atributo o establecerlo
 </p>
 </div>
 
-<ul class="org-ul"><li><a id="org79d3866"></a>Obtener el valor de un atributo con el método attr()<br /><div class="outline-text-5" id="text-org79d3866">
+<ul class="org-ul"><li><a id="orgc92587e"></a>Obtener el valor de un atributo con el método attr()<br /><div class="outline-text-5" id="text-orgc92587e">
 <p>
 En el siguiente ejemplo veremos como obtener el atributo &lt;href&gt; del hiper enlace (elemento &lt;a&gt;) así como el atributo &lt;alt&gt; de un elemento imagen (&lt;img&gt;)
 </p>
@@ -2508,7 +2511,7 @@ $(document).ready(function(){
 </div>
 </div></li>
 
-<li><a id="orgdb940d1"></a>Establecer el valor de un atributo con el método attr()<br /><div class="outline-text-5" id="text-orgdb940d1">
+<li><a id="orge9094f2"></a>Establecer el valor de un atributo con el método attr()<br /><div class="outline-text-5" id="text-orge9094f2">
 <p>
 En el siguiente ejemplo veremos como establecer el atributo <b>checked</b> en una caja de comprobación.
 </p>
@@ -2529,7 +2532,7 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">label</span>&gt;&lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"checkbox"</span>&gt;&lt;/<span class="org-function-name">label</span>&gt;Acepto los t&#233;rminos y condiciones y dejo que me des por donde amargan los pepinos.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">label</span>&gt;&lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"checkbox"</span>&gt;&lt;/<span class="org-function-name">label</span>&gt;Acepto los t&#233;rminos y condiciones&lt;/<span class="org-function-name">p</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Comprueba&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -2538,15 +2541,15 @@ $(document).ready(function(){
 </div></li></ul>
 </div>
 
-<div id="outline-container-org05c15f3" class="outline-4">
-<h4 id="org05c15f3">El metodo val()</h4>
-<div class="outline-text-4" id="text-org05c15f3">
+<div id="outline-container-orgd4cc4c5" class="outline-4">
+<h4 id="orgd4cc4c5">El metodo val()</h4>
+<div class="outline-text-4" id="text-orgd4cc4c5">
 <p>
 Se utiliza el método val() para obtener o establecer los valores actuales de elementos de formularios HTML tales como &lt;input&gt;&lt;select&gt; y &lt;textarea&gt;
 </p>
 </div>
 
-<ul class="org-ul"><li><a id="orga8e51fb"></a>Obteniendo los valores de los campos de un formulario con el método val()<br /><div class="outline-text-5" id="text-orga8e51fb">
+<ul class="org-ul"><li><a id="org2c218ab"></a>Obteniendo los valores de los campos de un formulario con el método val()<br /><div class="outline-text-5" id="text-org2c218ab">
 <p>
 Veamos el siguiente ejemplo:
 </p>
@@ -2612,7 +2615,7 @@ $(document).ready(function(){
 </div>
 </div></li>
 
-<li><a id="org0799a34"></a>Estableciendo los valores de los campos de un formulario con el método val()<br /><div class="outline-text-5" id="text-org0799a34">
+<li><a id="orgb0f1f24"></a>Estableciendo los valores de los campos de un formulario con el método val()<br /><div class="outline-text-5" id="text-orgb0f1f24">
 <p>
 Veamos el siguiente ejemplo:
 </p>
@@ -2650,9 +2653,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org8206969" class="outline-3">
-<h3 id="org8206969">Insertar contenido con JQuery</h3>
-<div class="outline-text-3" id="text-org8206969">
+<div id="outline-container-org5f0d557" class="outline-3">
+<h3 id="org5f0d557">Insertar contenido con JQuery</h3>
+<div class="outline-text-3" id="text-org5f0d557">
 <p>
 JQuery dispone de varios métodos como append(), prepend(), html(), text(), before(), after(), wrap(), etc, que permite insertar nuevo contenido en un elemento existente.
 </p>
@@ -2662,9 +2665,9 @@ Como ya hemos visto los métodos html() y text(), discutiremos los restantes.
 </p>
 </div>
 
-<div id="outline-container-orgcf678de" class="outline-4">
-<h4 id="orgcf678de">Método append()</h4>
-<div class="outline-text-4" id="text-orgcf678de">
+<div id="outline-container-orgb163f1c" class="outline-4">
+<h4 id="orgb163f1c">Método append()</h4>
+<div class="outline-text-4" id="text-orgb163f1c">
 <p>
 Este método se usa para insertar contenido al final de los elementos seleccionados. En el siguiente ejemplo veremos como se agrega algo de HTML a todos los párrafos y además añadimos contenido al pulsar un botón
 </p>
@@ -2691,8 +2694,12 @@ $(document).ready(function(){
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Inserta Texto&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"container"</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
+ suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
+ at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -2701,9 +2708,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orge9bd056" class="outline-4">
-<h4 id="orge9bd056">Método prepend()</h4>
-<div class="outline-text-4" id="text-orge9bd056">
+<div id="outline-container-org8f42827" class="outline-4">
+<h4 id="org8f42827">Método prepend()</h4>
+<div class="outline-text-4" id="text-org8f42827">
 <p>
 El método <b>prepend()</b> es usado para insertar contenido al principio de los elementos seleccionados.
 </p>
@@ -2734,8 +2741,12 @@ $(document).ready(function(){
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Inserta Texto&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"container"</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
+ suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
+ at mattis. Suspendisse potenti.&lt;/<span class="org-function-name">p</span>&gt;
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -2744,9 +2755,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org2ca6a2b" class="outline-4">
-<h4 id="org2ca6a2b">Insertando múltiples elementos con los métodos append() y prepend()</h4>
-<div class="outline-text-4" id="text-org2ca6a2b">
+<div id="outline-container-org21b1876" class="outline-4">
+<h4 id="org21b1876">Insertando múltiples elementos con los métodos append() y prepend()</h4>
+<div class="outline-text-4" id="text-org21b1876">
 <p>
 Tanto append() como prepend() soportan múltiples argumentos como entrada. 
 </p>
@@ -2776,7 +2787,9 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Inserta Contenido&lt;/<span class="org-function-name">button</span>&gt;
-    &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante, metus ac nisl bibendum.&lt;/<span class="org-function-name">p</span>&gt;
+    &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante, metus ac nisl bibendum.&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
 </pre>
@@ -2784,9 +2797,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgfda96ea" class="outline-4">
-<h4 id="orgfda96ea">Método before() y after()</h4>
-<div class="outline-text-4" id="text-orgfda96ea">
+<div id="outline-container-org0b750b4" class="outline-4">
+<h4 id="org0b750b4">Método before() y after()</h4>
+<div class="outline-text-4" id="text-org0b750b4">
 <p>
 Con estos métodos introducimos contenido antes y después de los elementos seleccionados.
 </p>
@@ -2837,7 +2850,14 @@ $(document).ready(function(){
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">class</span>=<span class="org-string">"insert-after"</span>&gt;Inserta Despu&#233;s&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">hr</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"container"</span>&gt;
-        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+ tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
+ vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque
+ non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci
+ sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque
+ aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu,
+ tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque
+ porttitor. Integer faucibus ligula.&lt;/<span class="org-function-name">p</span>&gt;
 
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
@@ -2847,9 +2867,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgff1a73f" class="outline-4">
-<h4 id="orgff1a73f">Método wrap()</h4>
-<div class="outline-text-4" id="text-orgff1a73f">
+<div id="outline-container-orgbf75f78" class="outline-4">
+<h4 id="orgbf75f78">Método wrap()</h4>
+<div class="outline-text-4" id="text-orgbf75f78">
 <p>
 El método wrap() es usado para envolver una estructura HTML alrededor de los elementos asociados. 
 </p>
@@ -2902,17 +2922,17 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org514a4a2" class="outline-3">
-<h3 id="org514a4a2">Eliminar contenido con JQuery</h3>
-<div class="outline-text-3" id="text-org514a4a2">
+<div id="outline-container-orgd73c3a9" class="outline-3">
+<h3 id="orgd73c3a9">Eliminar contenido con JQuery</h3>
+<div class="outline-text-3" id="text-orgd73c3a9">
 <p>
 JQuery tiene métodos muy útiles tales como empty(), remove(), unwrap(), etc para eliminar elementos o contenido HTML existentes del documento
 </p>
 </div>
 
-<div id="outline-container-orga909fa8" class="outline-4">
-<h4 id="orga909fa8">Método empty()</h4>
-<div class="outline-text-4" id="text-orga909fa8">
+<div id="outline-container-org7ea35d7" class="outline-4">
+<h4 id="org7ea35d7">Método empty()</h4>
+<div class="outline-text-4" id="text-org7ea35d7">
 <p>
 Este método elimina todos los elementos hijo así como otros descendientes  el contenido de texto de un elemento seleccionado desde el DOM. 
 </p>
@@ -2947,7 +2967,8 @@ $(document).ready(function(){
 &lt;<span class="org-function-name">body</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"container"</span>&gt;
         &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Buenos d&#237;as por la ma&#241;ana!</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
-        &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"hint"</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Si pulsas el bot&#243;n lo borrar&#225;s todo inclu&#237;do el bot&#243;n&lt;/<span class="org-function-name">p</span>&gt;
+        &lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"hint"</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Si pulsas el bot&#243;n lo borrar&#225;s
+ todo inclu&#237;do el bot&#243;n&lt;/<span class="org-function-name">p</span>&gt;
         &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Vaciar contenedor&lt;/<span class="org-function-name">button</span>&gt;
     &lt;/<span class="org-function-name">div</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
@@ -2958,9 +2979,9 @@ $(document).ready(function(){
 </div>
 
 
-<div id="outline-container-org9bf55ca" class="outline-4">
-<h4 id="org9bf55ca">El método remove()</h4>
-<div class="outline-text-4" id="text-org9bf55ca">
+<div id="outline-container-org28b8975" class="outline-4">
+<h4 id="org28b8975">El método remove()</h4>
+<div class="outline-text-4" id="text-org28b8975">
 <p>
 Este método elimina los elementos seleccionados y todo lo que hay dentro de él.
 </p>
@@ -3005,18 +3026,18 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org8b67866" class="outline-4">
-<h4 id="org8b67866">El método unwrap()</h4>
-<div class="outline-text-4" id="text-org8b67866">
+<div id="outline-container-orgfdceb31" class="outline-4">
+<h4 id="orgfdceb31">El método unwrap()</h4>
+<div class="outline-text-4" id="text-orgfdceb31">
 <p>
 Elimina todo lo que hay alrededor de un elmento. Hace lo contrario que el método wrap()
 </p>
 </div>
 </div>
 
-<div id="outline-container-org626c4b5" class="outline-4">
-<h4 id="org626c4b5">El método removeAttr()</h4>
-<div class="outline-text-4" id="text-org626c4b5">
+<div id="outline-container-org67f60c6" class="outline-4">
+<h4 id="org67f60c6">El método removeAttr()</h4>
+<div class="outline-text-4" id="text-org67f60c6">
 <p>
 Elimina los atributos de un elemento selecciondo.
 </p>
@@ -3064,17 +3085,17 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org391c180" class="outline-3">
-<h3 id="org391c180">Clases CSS con JQuery</h3>
-<div class="outline-text-3" id="text-org391c180">
+<div id="outline-container-org93a01c5" class="outline-3">
+<h3 id="org93a01c5">Clases CSS con JQuery</h3>
+<div class="outline-text-3" id="text-org93a01c5">
 <p>
 JQuery ofrece métodos para la manipulación de clases tales como addClass(), removeClass(), toggleClass, etc. 
 </p>
 </div>
 
-<div id="outline-container-orgea76e5f" class="outline-4">
-<h4 id="orgea76e5f">Método addClass</h4>
-<div class="outline-text-4" id="text-orgea76e5f">
+<div id="outline-container-orgd2640d4" class="outline-4">
+<h4 id="orgd2640d4">Método addClass</h4>
+<div class="outline-text-4" id="text-orgd2640d4">
 <p>
 Este método añade una o más clases al elemento seleccionado 
 </p>
@@ -3118,9 +3139,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgc1b225e" class="outline-4">
-<h4 id="orgc1b225e">Método removeClass()</h4>
-<div class="outline-text-4" id="text-orgc1b225e">
+<div id="outline-container-orgb536180" class="outline-4">
+<h4 id="orgb536180">Método removeClass()</h4>
+<div class="outline-text-4" id="text-orgb536180">
 <p>
 Elimina clases de los elementos seleccionados
 </p>
@@ -3166,9 +3187,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgb2435dc" class="outline-4">
-<h4 id="orgb2435dc">Método toggleClass()</h4>
-<div class="outline-text-4" id="text-orgb2435dc">
+<div id="outline-container-orgfd90adc" class="outline-4">
+<h4 id="orgfd90adc">Método toggleClass()</h4>
+<div class="outline-text-4" id="text-orgfd90adc">
 <p>
 Este método añade o borra según sea la selección clases de los elementos seleccionados
 </p>
@@ -3214,23 +3235,23 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgf037b18" class="outline-3">
-<h3 id="orgf037b18">Propiedades de estilo con JQuery</h3>
-<div class="outline-text-3" id="text-orgf037b18">
+<div id="outline-container-org03442f2" class="outline-3">
+<h3 id="org03442f2">Propiedades de estilo con JQuery</h3>
+<div class="outline-text-3" id="text-org03442f2">
 <p>
 JQuery también nos ofrece los métodos para obtener y establecer propiedadades CSS 
 </p>
 </div>
 
-<div id="outline-container-orgeff5c5d" class="outline-4">
-<h4 id="orgeff5c5d">Método css()</h4>
-<div class="outline-text-4" id="text-orgeff5c5d">
+<div id="outline-container-org76a8bef" class="outline-4">
+<h4 id="org76a8bef">Método css()</h4>
+<div class="outline-text-4" id="text-org76a8bef">
 <p>
 Este es un método rápido para acceder a los estilos de los elementos HTML
 </p>
 </div>
 
-<ul class="org-ul"><li><a id="org08281da"></a>Obtener el valor actual CSS<br /><div class="outline-text-5" id="text-org08281da">
+<ul class="org-ul"><li><a id="orgc461ebe"></a>Obtener el valor actual CSS<br /><div class="outline-text-5" id="text-orgc461ebe">
 <p>
 Podemos obtener el valor de la propiedad CSS de un elemento simplemente pasando el nombre de la propiedad como un parámetro al método css(). Aquí vemos la sintaxis básica:
 </p>
@@ -3281,7 +3302,7 @@ $(document).ready(function(){
 </div>
 </div></li>
 
-<li><a id="orgf0c2acd"></a>Establecer una propiedad CSS y su valores<br /><div class="outline-text-5" id="text-orgf0c2acd">
+<li><a id="org5d5473e"></a>Establecer una propiedad CSS y su valores<br /><div class="outline-text-5" id="text-org5d5473e">
 <p>
 El método css() pueden tomar el nombre de una propiedad y un valor como parámetros separados para establecerlos en una propiedad CSS para el elemento. Veamos el siguiente ejemplo:
 </p>
@@ -3316,14 +3337,15 @@ $(document).ready(function(){
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"box"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"box"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"box"</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
-  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Pulsa dentro de la caja vac&#237;a para llenarla con el color de fondo.&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt; Pulsa dentro de la caja vac&#237;a para llenarla con el
+ color de fondo.&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;
 </pre>
 </div>
 </div></li>
 
-<li><a id="org16741e4"></a>Establecer múltiples propiedades CSS<br /><div class="outline-text-5" id="text-org16741e4">
+<li><a id="orgf6e7da6"></a>Establecer múltiples propiedades CSS<br /><div class="outline-text-5" id="text-orgf6e7da6">
 <p>
 También podemos establecer múltiples valores CSS con el método css(). La sintaxis básica es:
 </p>
@@ -3377,9 +3399,9 @@ $(document).ready(function(){
 
 
 
-<div id="outline-container-org0f4a203" class="outline-3">
-<h3 id="org0f4a203">Dimensiones en JQuery</h3>
-<div class="outline-text-3" id="text-org0f4a203">
+<div id="outline-container-orgc7056ad" class="outline-3">
+<h3 id="orgc7056ad">Dimensiones en JQuery</h3>
+<div class="outline-text-3" id="text-orgc7056ad">
 <p>
 Vamos a aprender como obtener y establecer dimensiones en una caja tal como altura o anchura.
 </p>
@@ -3397,9 +3419,9 @@ JQuery ofrece varios métodos, tales como height(), innerHeight(), outerHeight()
 
 
 
-<div id="outline-container-org8491b99" class="outline-4">
-<h4 id="org8491b99">Métodos width() y height()</h4>
-<div class="outline-text-4" id="text-org8491b99">
+<div id="outline-container-org019272e" class="outline-4">
+<h4 id="org019272e">Métodos width() y height()</h4>
+<div class="outline-text-4" id="text-org019272e">
 <p>
 Los métodos width() y height() obtienen o establecer la <span class="underline">altura</span> y la <span class="underline">anchura</span> de los elementos. La altura y anchura no incluye relleno (padding), bode (border) y margen (margin) de el elemento. El siguiente ejemplo nos devolverá la altura y anchura de un elemento div
 </p>
@@ -3433,7 +3455,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obt&#233;n la altura y anchura&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
@@ -3472,7 +3500,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Establece al altura y la anchura&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -3481,9 +3515,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgf547054" class="outline-4">
-<h4 id="orgf547054">Métodos innerWidth() y innerHeight()</h4>
-<div class="outline-text-4" id="text-orgf547054">
+<div id="outline-container-org6749e6b" class="outline-4">
+<h4 id="org6749e6b">Métodos innerWidth() y innerHeight()</h4>
+<div class="outline-text-4" id="text-org6749e6b">
 <p>
 Los métodos de JQuery innerWidth() e innerHeight() obtienen o establecen el interior de la altura y la anchura de los elementos respectivamente. El interior incluye el relleno pero excluye el borde y el margen de los elementos. En el siguiente ejemplo obtendremos el valor de altura y anchura de un elemento &lt;div&gt;
 </p>
@@ -3517,11 +3551,20 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obten la altura y anchura interior&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
   &lt;<span class="org-function-name">hr</span>&gt;
-  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerWidth()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye las propiedades (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt;), e &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerHeight()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Aviso:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerWidth()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye las propiedades
+ (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt;), e
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">innerHeight()</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
 </pre>
@@ -3562,7 +3605,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Establecer altura y anchura interiores&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -3572,9 +3621,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org1d65ab5" class="outline-4">
-<h4 id="org1d65ab5">Métodos outerWidth() y outerHeight()</h4>
-<div class="outline-text-4" id="text-org1d65ab5">
+<div id="outline-container-org6033e15" class="outline-4">
+<h4 id="org6033e15">Métodos outerWidth() y outerHeight()</h4>
+<div class="outline-text-4" id="text-org6033e15">
 <p>
 Los métodos outerWidth() y outerHeight() sirven para establecer u obtener la altura y anchura exterior. Esto incluye el relleno y el borde pero excluye el margen del elemento. En el siguiente ejemplo devolverá la altura y anchura exteriores de un elemento &lt;div&gt;Y
 </p>
@@ -3608,7 +3657,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obt&#233;n la altura y anchura exteriores&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
   &lt;<span class="org-function-name">hr</span>&gt;
@@ -3655,11 +3710,22 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Obten la altura y anchura exteriores con el margen&lt;/<span class="org-function-name">button</span>&gt;
     &lt;<span class="org-function-name">p</span> <span class="org-variable-name">id</span>=<span class="org-string">"result"</span>&gt;&lt;/<span class="org-function-name">p</span>&gt;
   &lt;<span class="org-function-name">hr</span>&gt;
-  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Note:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerWidth(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-right</span>&lt;/<span class="org-function-name">b</span>&gt;), y &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerHeight(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
+  &lt;<span class="org-function-name">p</span>&gt;&lt;<span class="org-function-name">strong</span>&gt;<span class="org-bold">Note:</span>&lt;/<span class="org-function-name">strong</span>&gt;&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerWidth(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">width</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-left</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-right</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-left</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-right</span>&lt;/<span class="org-function-name">b</span>&gt;), y
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">outerHeight(true)</span>&lt;/<span class="org-function-name">b</span>&gt; incluye (&lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">height</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-top</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">padding-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">border-bottom</span>&lt;/<span class="org-function-name">b</span>&gt; +
+ &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-top</span>&lt;/<span class="org-function-name">b</span>&gt; + &lt;<span class="org-function-name">b</span>&gt;<span class="org-bold">margin-bottom</span>&lt;/<span class="org-function-name">b</span>&gt;).&lt;/<span class="org-function-name">p</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
 </pre>
@@ -3704,7 +3770,13 @@ $(document).ready(function(){
 &lt;/<span class="org-function-name">script</span>&gt;
 &lt;/<span class="org-function-name">head</span>&gt;
 &lt;<span class="org-function-name">body</span>&gt;
-    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
+    &lt;<span class="org-function-name">div</span> <span class="org-variable-name">id</span>=<span class="org-string">"box"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
+ turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+ scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
+ tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+ aliquam. Quisque aliquam porta odio in fringilla non purus nisld Dapibus nec
+ turpis vel, semper malesuada ant.&lt;/<span class="org-function-name">div</span>&gt;
     &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span>&gt;Establece la altura y anchura exteriores&lt;/<span class="org-function-name">button</span>&gt;
 &lt;/<span class="org-function-name">body</span>&gt;
 &lt;/<span class="org-function-name">html</span>&gt;                                   
@@ -3714,16 +3786,15 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
-
-<div id="outline-container-org49d8543" class="outline-2">
-<h2 id="org49d8543">JQuery avanzado</h2>
-<div class="outline-text-2" id="text-org49d8543">
-</div><div id="outline-container-org41a3fce" class="outline-3">
-<h3 id="org41a3fce">JQuery Traversing (recorrido)</h3>
-<div class="outline-text-3" id="text-org41a3fce">
-</div><div id="outline-container-orge47bbed" class="outline-4">
-<h4 id="orge47bbed">Qué es el traversing</h4>
-<div class="outline-text-4" id="text-orge47bbed">
+<div id="outline-container-orga5198b8" class="outline-2">
+<h2 id="orga5198b8">JQuery avanzado</h2>
+<div class="outline-text-2" id="text-orga5198b8">
+</div><div id="outline-container-org2f17299" class="outline-3">
+<h3 id="org2f17299">JQuery Traversing (recorrido)</h3>
+<div class="outline-text-3" id="text-org2f17299">
+</div><div id="outline-container-org21cc4fe" class="outline-4">
+<h4 id="org21cc4fe">Qué es el traversing</h4>
+<div class="outline-text-4" id="text-org21cc4fe">
 <p>
 Los selectores de JQuery nos permiten seleccionar los elementos recorriendo el árbol DOM. Pero en muchas ocasiones necesitamos seleccionar un elemento padre y uno antepasado. Ahí es donde entra en juego el método de recorrido por el DOM. Con esos método por demos ir hacia arriba, abajo y alrededor del árbol DOM muy fácilmente. 
 </p>
@@ -3784,10 +3855,9 @@ El diagrama anterior muestra las relaciones padre/hijo entre los elementos:
 </div>
 </div>
 
-
-<div id="outline-container-org714692b" class="outline-4">
-<h4 id="org714692b">Recorriendo el árbol DOM</h4>
-<div class="outline-text-4" id="text-org714692b">
+<div id="outline-container-org978ff85" class="outline-4">
+<h4 id="org978ff85">Recorriendo el árbol DOM</h4>
+<div class="outline-text-4" id="text-org978ff85">
 <p>
 Ahora que hemos entendido las relaciones lógicas entre los elementos en un árbol DOM. En los siguiente capítulos aprenderemos como hacer operaciones para recorrer el árbol hacia arriba y hacia abajo usando JQuery
 </p>
@@ -3795,12 +3865,12 @@ Ahora que hemos entendido las relaciones lógicas entre los elementos en un árb
 </div>
 </div>
 
-<div id="outline-container-org341c72b" class="outline-3">
-<h3 id="org341c72b">Antepasados</h3>
-<div class="outline-text-3" id="text-org341c72b">
-</div><div id="outline-container-org1b23d77" class="outline-4">
-<h4 id="org1b23d77">Recorriendo el árbol DOM hacia arriba</h4>
-<div class="outline-text-4" id="text-org1b23d77">
+<div id="outline-container-org2d22f91" class="outline-3">
+<h3 id="org2d22f91">Antepasados</h3>
+<div class="outline-text-3" id="text-org2d22f91">
+</div><div id="outline-container-orge47ed9d" class="outline-4">
+<h4 id="orge47ed9d">Recorriendo el árbol DOM hacia arriba</h4>
+<div class="outline-text-4" id="text-orge47ed9d">
 <p>
 En las relaciones lógicas un antepasado es un padre, abuelo, bisabuelo y así.
 </p>
@@ -3811,9 +3881,9 @@ JQuery dispone de métodos muy útiles tales como <b>parent(), parents() y paren
 </div>
 </div>
 
-<div id="outline-container-orgfdfb5a6" class="outline-4">
-<h4 id="orgfdfb5a6">Método parent()</h4>
-<div class="outline-text-4" id="text-orgfdfb5a6">
+<div id="outline-container-org9d14ac3" class="outline-4">
+<h4 id="org9d14ac3">Método parent()</h4>
+<div class="outline-text-4" id="text-org9d14ac3">
 <p>
 El método <b>parent()</b> es usado para obtener directamente el padre del elemento seleccionado.
 </p>
@@ -3851,9 +3921,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org1ecfad7" class="outline-4">
-<h4 id="org1ecfad7">El método parents()</h4>
-<div class="outline-text-4" id="text-org1ecfad7">
+<div id="outline-container-orgb878cb3" class="outline-4">
+<h4 id="orgb878cb3">El método parents()</h4>
+<div class="outline-text-4" id="text-orgb878cb3">
 <p>
 El método <b>parents()</b> es usado para obtener los antepasados de un elemento seleccionado. En el siguiente ejemplo añadiremos un borde alrededor de todos los elementos antepasados del elemento &lt;li&gt;, los cuales son &lt;ul&gt;, &lt;div&gt;, &lt;body&gt; y &lt;html&gt;
 </p>
@@ -3938,9 +4008,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgfa1dc81" class="outline-4">
-<h4 id="orgfa1dc81">Método parentsUntil()</h4>
-<div class="outline-text-4" id="text-orgfa1dc81">
+<div id="outline-container-orgb20fd38" class="outline-4">
+<h4 id="orgb20fd38">Método parentsUntil()</h4>
+<div class="outline-text-4" id="text-orgb20fd38">
 <p>
 Este método se usa para obtener todos los antepasados sin incluir el elemento que coincida con el selector. En palabras simples podemos pedir que nos devuelva todos los elementos antepasados entre dos elementos dados.
 </p>
@@ -3987,12 +4057,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org4aa719c" class="outline-3">
-<h3 id="org4aa719c">Descendientes</h3>
-<div class="outline-text-3" id="text-org4aa719c">
-</div><div id="outline-container-org56acdd9" class="outline-4">
-<h4 id="org56acdd9">Recorriendo el árbol DOM hacia abajo</h4>
-<div class="outline-text-4" id="text-org56acdd9">
+<div id="outline-container-org28895f4" class="outline-3">
+<h3 id="org28895f4">Descendientes</h3>
+<div class="outline-text-3" id="text-org28895f4">
+</div><div id="outline-container-orgda3b9e9" class="outline-4">
+<h4 id="orgda3b9e9">Recorriendo el árbol DOM hacia abajo</h4>
+<div class="outline-text-4" id="text-orgda3b9e9">
 <p>
 En las relaciones lógicas un descendiente es un hijo, nieto, gran nieto, y así.
 </p>
@@ -4003,9 +4073,9 @@ JQuery provee de métodos muy útiles tales como <b>children()</b> y <b>find()</
 </div>
 </div>
 
-<div id="outline-container-orgeee66d4" class="outline-4">
-<h4 id="orgeee66d4">Método children()</h4>
-<div class="outline-text-4" id="text-orgeee66d4">
+<div id="outline-container-orge6962ac" class="outline-4">
+<h4 id="orge6962ac">Método children()</h4>
+<div class="outline-text-4" id="text-orge6962ac">
 <p>
 El método children() es usado para obtener directamente el hijo de un elemento. En el siguiente ejemplo resaltaremos el hijo directo del elemento &lt;ul&gt; el cual es &lt;li&gt; añadiendo la clase .highlight. 
 </p>
@@ -4044,9 +4114,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org0caf35d" class="outline-4">
-<h4 id="org0caf35d">El método find()</h4>
-<div class="outline-text-4" id="text-org0caf35d">
+<div id="outline-container-org560fc8a" class="outline-4">
+<h4 id="org560fc8a">El método find()</h4>
+<div class="outline-text-4" id="text-org560fc8a">
 <p>
 El método find() es usado para obtener los descendientes de un elemento seleccionado. 
 </p>
@@ -4127,12 +4197,12 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org691e07b" class="outline-3">
-<h3 id="org691e07b">Hermanos</h3>
-<div class="outline-text-3" id="text-org691e07b">
-</div><div id="outline-container-orgdf893cd" class="outline-4">
-<h4 id="orgdf893cd">Recorriendo el árbol DOM lateralmente</h4>
-<div class="outline-text-4" id="text-orgdf893cd">
+<div id="outline-container-org5c52f23" class="outline-3">
+<h3 id="org5c52f23">Hermanos</h3>
+<div class="outline-text-3" id="text-org5c52f23">
+</div><div id="outline-container-org1d8845e" class="outline-4">
+<h4 id="org1d8845e">Recorriendo el árbol DOM lateralmente</h4>
+<div class="outline-text-4" id="text-org1d8845e">
 <p>
 En las relaciones lógicas los hermanos son los elementos que tienen el mismo padre.
 </p>
@@ -4143,9 +4213,9 @@ JQuery provee de varios métodos tales como <b>siblings(), nest(), nestAll(), ne
 </div>
 </div>
 
-<div id="outline-container-org1af4e5e" class="outline-4">
-<h4 id="org1af4e5e">Método siblings()</h4>
-<div class="outline-text-4" id="text-org1af4e5e">
+<div id="outline-container-orgdffc702" class="outline-4">
+<h4 id="orgdffc702">Método siblings()</h4>
+<div class="outline-text-4" id="text-orgdffc702">
 <p>
 El método es usado para obtener el elemento hermano de un elemento seleccionado. En el siguiente ejemplo resaltaremos el hermano de &lt;p&gt; que son &lt;h1&gt; y &lt;ul&gt;.
 </p>
@@ -4221,9 +4291,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgc558562" class="outline-4">
-<h4 id="orgc558562">Método next()</h4>
-<div class="outline-text-4" id="text-orgc558562">
+<div id="outline-container-org7bd638d" class="outline-4">
+<h4 id="org7bd638d">Método next()</h4>
+<div class="outline-text-4" id="text-org7bd638d">
 <p>
 El método next() es usado para para obtener el siguiente hermano del elemento seleccionado. En el siguiente ejemplo vamos a resaltar el próximo hermano de &lt;p&gt; que es &lt;ul&gt;.
 </p>
@@ -4262,9 +4332,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org4f58891" class="outline-4">
-<h4 id="org4f58891">Método nextAll()</h4>
-<div class="outline-text-4" id="text-org4f58891">
+<div id="outline-container-org0aa4370" class="outline-4">
+<h4 id="org0aa4370">Método nextAll()</h4>
+<div class="outline-text-4" id="text-org0aa4370">
 <p>
 Este método es usado para obtener todos los hermanos que siguen del elemento seleccionado. En el siguiente ejemplo resaltaremos todos los hermanos de &lt;p&gt;
 </p>
@@ -4303,9 +4373,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org6042c79" class="outline-4">
-<h4 id="org6042c79">El método nextUntil()</h4>
-<div class="outline-text-4" id="text-org6042c79">
+<div id="outline-container-org69784a8" class="outline-4">
+<h4 id="org69784a8">El método nextUntil()</h4>
+<div class="outline-text-4" id="text-org69784a8">
 <p>
 Este método es usado para obtener todos los hermanos que sigan sin incluir el elemento que coincide con el selector. 
 </p>
@@ -4348,9 +4418,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgd993327" class="outline-4">
-<h4 id="orgd993327">El método prev()</h4>
-<div class="outline-text-4" id="text-orgd993327">
+<div id="outline-container-org288ff8f" class="outline-4">
+<h4 id="org288ff8f">El método prev()</h4>
+<div class="outline-text-4" id="text-org288ff8f">
 <p>
 Este método es usado para obtener el elemento hermano que inmediatamente precede. En el siguiente ejemplo resaltaremos  el hermano previo de &lt;ul&gt; el cual es el elemento &lt;p&gt;.
 </p>
@@ -4389,9 +4459,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org32a6ed6" class="outline-4">
-<h4 id="org32a6ed6">El método prevAll()</h4>
-<div class="outline-text-4" id="text-org32a6ed6">
+<div id="outline-container-orgf7c19a5" class="outline-4">
+<h4 id="orgf7c19a5">El método prevAll()</h4>
+<div class="outline-text-4" id="text-orgf7c19a5">
 <p>
 Con el obtenemos todos los hermanos que preceden al elemento seleccionado. 
 </p>
@@ -4434,9 +4504,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgde05099" class="outline-4">
-<h4 id="orgde05099">Método prevUntil()</h4>
-<div class="outline-text-4" id="text-orgde05099">
+<div id="outline-container-org70e023b" class="outline-4">
+<h4 id="org70e023b">Método prevUntil()</h4>
+<div class="outline-text-4" id="text-org70e023b">
 <p>
 Este método es usado para seleccionar a todos los hermanos previos hasta el que coincida con el selector. 
 </p>
@@ -4480,21 +4550,21 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgdc36e41" class="outline-3">
-<h3 id="orgdc36e41">Filtrando elementos</h3>
-<div class="outline-text-3" id="text-orgdc36e41">
-</div><div id="outline-container-org527b054" class="outline-4">
-<h4 id="org527b054">Filtrando elementos en la selección</h4>
-<div class="outline-text-4" id="text-org527b054">
+<div id="outline-container-org6f76fe0" class="outline-3">
+<h3 id="org6f76fe0">Filtrando elementos</h3>
+<div class="outline-text-3" id="text-org6f76fe0">
+</div><div id="outline-container-org47722de" class="outline-4">
+<h4 id="org47722de">Filtrando elementos en la selección</h4>
+<div class="outline-text-4" id="text-org47722de">
 <p>
 JQuery proporciona varios métodos tales como <b>filter(), first(), last(), eq(), slice(), has(), not()</b>, etc, que permiten restringir la búsqueda de elementos en el árbol DOM. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8f4082f" class="outline-4">
-<h4 id="org8f4082f">Método first()</h4>
-<div class="outline-text-4" id="text-org8f4082f">
+<div id="outline-container-org76b9716" class="outline-4">
+<h4 id="org76b9716">Método first()</h4>
+<div class="outline-text-4" id="text-org76b9716">
 <p>
 Este método filtra los elementos coincidentes y devuelve el primero de ellos. En el siguiente ejemplo vamos a resaltar el primer elemento &lt;li&gt; dentro del elemento &lt;ul&gt;
 </p>
@@ -4540,9 +4610,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org953ed20" class="outline-4">
-<h4 id="org953ed20">Método last()</h4>
-<div class="outline-text-4" id="text-org953ed20">
+<div id="outline-container-org04c4665" class="outline-4">
+<h4 id="org04c4665">Método last()</h4>
+<div class="outline-text-4" id="text-org04c4665">
 <p>
 Este método devuelve el último de los elementos coincidentes. Ahora vamos a hacer lo mismo que en el ejemplo anterior solo que obteniendo el último elemento que va a ser el que vamos a resaltar.
 </p>
@@ -4588,9 +4658,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-org1e92dca" class="outline-4">
-<h4 id="org1e92dca">Método eq()</h4>
-<div class="outline-text-4" id="text-org1e92dca">
+<div id="outline-container-org4a1bbfa" class="outline-4">
+<h4 id="org4a1bbfa">Método eq()</h4>
+<div class="outline-text-4" id="text-org4a1bbfa">
 <p>
 El método eq() devuelve un único elemento especificado con un número de una serie de elementos que coinciden con la búsqueda. 
 </p>
@@ -4646,9 +4716,9 @@ También se puede especificar un <b>número negativo</b> lo que indica que empie
 </div>
 </div>
 
-<div id="outline-container-orgff5d099" class="outline-4">
-<h4 id="orgff5d099">Método filter()</h4>
-<div class="outline-text-4" id="text-orgff5d099">
+<div id="outline-container-org41a98c3" class="outline-4">
+<h4 id="org41a98c3">Método filter()</h4>
+<div class="outline-text-4" id="text-org41a98c3">
 <p>
 Este método puede tomar el selector o una función como argumentos para filtrar un conjunto de elementos siguiendo un criterio especifico.
 </p>
@@ -4743,10 +4813,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-
-<div id="outline-container-org16c3c9d" class="outline-4">
-<h4 id="org16c3c9d">Método has()</h4>
-<div class="outline-text-4" id="text-org16c3c9d">
+<div id="outline-container-org9c55a89" class="outline-4">
+<h4 id="org9c55a89">Método has()</h4>
+<div class="outline-text-4" id="text-org9c55a89">
 <p>
 El método has() filtra el conjunto de elementos coincidentes y devuelve solo esos elementos que tienen un específico elemento descendiente. En el siguiente ejemplo vamos a resaltar todos los elementos &lt;li&gt; que tengan elementos &lt;ul&gt; como descendientes.
 </p>
@@ -4790,10 +4859,9 @@ $(document).ready(function(){
 </div>
 
 
-
-<div id="outline-container-org0e17ce7" class="outline-4">
-<h4 id="org0e17ce7">El método not()</h4>
-<div class="outline-text-4" id="text-org0e17ce7">
+<div id="outline-container-org39a59ca" class="outline-4">
+<h4 id="org39a59ca">El método not()</h4>
+<div class="outline-text-4" id="text-org39a59ca">
 <p>
 Este método  filtra un conjunto de elementos coincidentes y devuelve todos los elementos que están en las codiciones especificadas. Puede ser un selector o una función.
 </p>
@@ -4847,9 +4915,9 @@ El método not() también puede tomar funciones como argumentos al igual que fil
 </div>
 </div>
 
-<div id="outline-container-orge2abe2d" class="outline-4">
-<h4 id="orge2abe2d">Método slice()</h4>
-<div class="outline-text-4" id="text-orge2abe2d">
+<div id="outline-container-orgd321b44" class="outline-4">
+<h4 id="orgd321b44">Método slice()</h4>
+<div class="outline-text-4" id="text-orgd321b44">
 <p>
 El método slice() filtra un conjunto de elementos coincidentes y devulve un rango de índices. El método acepta número de comienzo y final (opcional) como argumentos. 
 </p>
@@ -4906,12 +4974,12 @@ El método slice() también puede recibir números negativos, que indica que emp
 </div>
 </div>
 
-<div id="outline-container-orgd0cae89" class="outline-3">
-<h3 id="orgd0cae89">Ajax en JQuery</h3>
-<div class="outline-text-3" id="text-orgd0cae89">
-</div><div id="outline-container-org046a380" class="outline-4">
-<h4 id="org046a380">Qué es Ajax</h4>
-<div class="outline-text-4" id="text-org046a380">
+<div id="outline-container-org4dbe40c" class="outline-3">
+<h3 id="org4dbe40c">Ajax en JQuery</h3>
+<div class="outline-text-3" id="text-org4dbe40c">
+</div><div id="outline-container-org4160ca0" class="outline-4">
+<h4 id="org4160ca0">Qué es Ajax</h4>
+<div class="outline-text-4" id="text-org4160ca0">
 <p>
 Ajax son las siglas de Asynchronous Javascript and XML. Ajax solo significa que se cargan datos desde el servidor hacia el navegador web sin necesidad de recargar la página completamente.
 </p>
@@ -4922,9 +4990,9 @@ Básicamente, con Ajax se hace uso de un objeto basado en JavaScript llamado XmL
 </div>
 </div>
 
-<div id="outline-container-org84e265f" class="outline-4">
-<h4 id="org84e265f">Ajax con JQuery</h4>
-<div class="outline-text-4" id="text-org84e265f">
+<div id="outline-container-orgaa41f1f" class="outline-4">
+<h4 id="orgaa41f1f">Ajax con JQuery</h4>
+<div class="outline-text-4" id="text-orgaa41f1f">
 <p>
 Diferentes navegadores implementan Ajax de manera diferente lo que significa que si adoptamos el camino de JavaScript para implementar Ajax habrá que escribir diferente código para los diferentes navegadores para asegurarse de que funciona en todos. 
 </p>
@@ -4940,12 +5008,12 @@ En los próximos capítulos veremos los métodos para enviar y recibir datos usa
 </div>
 </div>
 
-<div id="outline-container-org463fd17" class="outline-3">
-<h3 id="org463fd17">Load Ajax en JQuery</h3>
-<div class="outline-text-3" id="text-org463fd17">
-</div><div id="outline-container-org840d3a6" class="outline-4">
-<h4 id="org840d3a6">Método load()</h4>
-<div class="outline-text-4" id="text-org840d3a6">
+<div id="outline-container-orgc7362a2" class="outline-3">
+<h3 id="orgc7362a2">Load Ajax en JQuery</h3>
+<div class="outline-text-3" id="text-orgc7362a2">
+</div><div id="outline-container-org76ea30d" class="outline-4">
+<h4 id="org76ea30d">Método load()</h4>
+<div class="outline-text-4" id="text-org76ea30d">
 <p>
 El método load() carga datos de un servidor y devuelve el código HTML devuelto en un elemento seleccionado. Este método nos ofrece una forma muy simple de cargar datos de manera asíncrona desde un servidor web. 
 </p>
@@ -5024,7 +5092,8 @@ Ejemplo:
 &lt;<span class="org-function-name">script</span> <span class="org-variable-name">type</span>=<span class="org-string">"text/javascript"</span>&gt;
 $(document).ready(function(){
     $(<span class="org-string">"button"</span>).click(function(){
-        $(<span class="org-string">"#box"</span>).load(<span class="org-string">"/examples/html/test-content.html"</span>, function(responseTxt, statusTxt, jqXHR){
+        $(<span class="org-string">"#box"</span>).load(<span class="org-string">"/examples/html/test-content.html"</span>,
+ function(responseTxt, statusTxt, jqXHR){
             if(statusTxt == <span class="org-string">"success"</span>){
                 alert(<span class="org-string">"El nuevo contenido es cargado correctamente!"</span>);
             }
@@ -5050,9 +5119,9 @@ $(document).ready(function(){
 </div>
 </div>
 
-<div id="outline-container-orgf2b5ffb" class="outline-2">
-<h2 id="orgf2b5ffb">Ejercicios</h2>
-<div class="outline-text-2" id="text-orgf2b5ffb">
+<div id="outline-container-orgbed1bbc" class="outline-2">
+<h2 id="orgbed1bbc">Ejercicios</h2>
+<div class="outline-text-2" id="text-orgbed1bbc">
 <p>
 _Vamos a empezar con algo sencillo: _
 </p>
@@ -5170,8 +5239,9 @@ _Vamos a empezar con algo sencillo: _
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Patricio Martínez</p>
-<p class="date">Created: 2017-07-27 jue 12:02</p>
+<p class="date">Fecha: \today</p>
+<p class="author">Autor: Patricio Martínez</p>
+<p class="date">Created: 2017-08-07 lun 18:00</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
