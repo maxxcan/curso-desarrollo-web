@@ -1,0 +1,40 @@
+#+TITLE: presentacion-introduccion-javascript
+#+AUTHOR: Patricio Martínez
+#+DATE: <2017-11-07 mar>
+#+EMAIL: maxxcan@gmail.com
+#+OPTIONS: toc:nil num:nil d:t
+#+STARTUP: beamer
+#+BEAMER_THEME: Madrid
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \usepackage{stmaryrd}
+#+LaTeX_HEADER: \DeclareMathOperator*{\argmin}{arg\,min}
+#+LaTeX_HEADER: \DeclareMathOperator*{\argmax}{arg\,max}
+
+
+* Introducción a JavaScript
+** Por qué JavaScript
+
+Junto con HTML y CSS es lenguaje más importante para desarrollo web
+
+[[./img/html-css-js-logos.png]]
+** Características
+
+1. Se ejecuta en el lado del cliente. Aunque también se puede ejecutar en el lado del servidor pero no es lo habitual.
+2. Lenguaje interpretado. El navegador interpreta el lenguaje si necesidad de compilador 
+3. Lenguaje basado en objetos.
+4. Lenguaje Imperativo y estructurado. Usa las estructuras básicas
+5. Lenguaje Objetual, con tipificación débil y dinámica.
+* El curso
+
++ Para principiantes
++ Con ejemplos prácticos
++ Podréis bajaros el código desde mi github
++ Está basado en el tutorial de JavaScript de W3CSchools
+** Contacto
+
+*Os podréis poner en contacto conmigo a través de mi correo o a través de twitter*
+
++ Correo: maxxcan@gmail.com
++ twitter: @maxxcan
