@@ -19,7 +19,7 @@
 Junto con HTML y CSS es lenguaje más importante para desarrollo web
 
 [[./img/html-css-js-logos.png]]
-** Características
+* Características
 
 1. Se ejecuta en el lado del cliente. Aunque también se puede ejecutar en el lado del servidor pero no es lo habitual.
 2. Lenguaje interpretado. El navegador interpreta el lenguaje si necesidad de compilador 
@@ -32,9 +32,10 @@ Junto con HTML y CSS es lenguaje más importante para desarrollo web
 + Con ejemplos prácticos
 + Podréis bajaros el código desde mi github
 + Está basado en el tutorial de JavaScript de W3CSchools
-** Contacto
+* Contacto
 
 *Os podréis poner en contacto conmigo a través de mi correo o a través de twitter*
 
 + Correo: maxxcan@gmail.com
 + twitter: @maxxcan
+* 
