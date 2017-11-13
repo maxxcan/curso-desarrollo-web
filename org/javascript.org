@@ -1952,7 +1952,7 @@ Ejemplos
 <html>
 <body>
 
-<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+<button onclick="document.getElementById('demo').innerHTML=Date()">¿Qué hora es?</button>
 
 <p id="demo"></p>
 
@@ -1968,7 +1968,7 @@ Ahora vamos a hacer que cambie directamente el propio elemento:
 <html>
 <body>
 
-<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+<button onclick="document.getElementById('demo').innerHTML=Date()">¿Qué hora es?</button>
 
 <p id="demo"></p>
 
