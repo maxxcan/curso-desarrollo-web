@@ -2330,7 +2330,7 @@ Para ello tenemos el método *concat()*
 #+begin_src js
 var texto1 = "Hola";
 var texto2 = "Mundo";
-var text3 = texto1.concat(" ", texto2);
+var texto3 = texto1.concat(" ", texto2);
 #+end_src
 
 Podemos usarlo en vez del operador +. 
