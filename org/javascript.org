@@ -2844,7 +2844,7 @@ hoy = new Date();
 algunDia = new Date();
 algunDia.setFullYear(2017, 09, 01);
 
-if (algunDia > hoy) {
+if (algunDia < hoy) {
     texto = "Hoy es antes del apocalipsis zombie total";
 } else {
     texto = "Hoy es después del fallido apocalipsis zombie total, más suerte la próxima vez";
