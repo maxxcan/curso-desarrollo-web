@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "variables.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
