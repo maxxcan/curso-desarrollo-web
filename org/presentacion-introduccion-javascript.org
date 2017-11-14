@@ -1,0 +1,10 @@
+#+TITLE: presentacion-introduccion-javascript
+#+AUTHOR: Patricio Martínez Cano
+#+EMAIL: maxxcan@gmail.com
+#+DATE: <2017-11-07 mar>
+* Introducción a JavaScript
+** Por qué JavaScript
+
+Junto con HTML y CSS es lenguaje más importante para desarrollo web
+
+

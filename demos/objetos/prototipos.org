@@ -1,0 +1,49 @@
+#+begin_src js
+/*Sintaxis de creación de un prototipo de un objeto usando la función constructor */
+
+function Persona (nom, ape, edad){
+    this.nombre = nom;
+    this.apellido = ape;
+    this.edad = edad;
+
+    this.nombreCompleto = function (){
+        return this.nombre + " " + this.apellido;
+    };
+}
+
+var ada = new Persona ("Ada", "Lovelace", 18);
+var char = new Persona ("Charle", "Babbage", 21);
+
+/*añadir una propiedad para un objeto */
+ada.nacionalidad = "Inglesa"; //solo se añade a ada
+alert(ada.nacionalidad);
+
+/*añadir un método a un objeto */
+
+ada.nacimiento = function(){
+    return "Su edad es de "+this.edad + " años";
+};
+alert (ada.nacimiento());
+
+/*Añadir una propiedad a un prototipo*/
+//Añadiendo directamente sobre el constructor//
+// Mediante la sintaxis: <Nombre_objeto>.prototype.<propiedad>//
+
+Persona.prototype.muerte = "2000";
+
+alert (char.muerte);
+
+/* Añadir un método a un prototipo
+   Directamente sobre el constructor
+
+   O con la sintaxis: <Nombre_objeto>.prototype.<metodo>*/
+
+Persona.prototype.defuncion = function(){
+    return "Defunción en el año "+this.muerte;
+};
+
+var alan = new Persona("Alan", "Turing", 33);
+alert(alan.nombre);
+alert(alan.muerte);
+alert(alan.defuncion());
+#+end_src
