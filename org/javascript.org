@@ -3587,7 +3587,7 @@ for (; i < len; i++) {
     texto += coches[i] + "<br>";
 }
 
-document.getElementById("demo").innerHTML = text;
+document.getElementById("demo").innerHTML = texto;
 </script>
 
 </body>
