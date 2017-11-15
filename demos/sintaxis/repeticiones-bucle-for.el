@@ -84,7 +84,7 @@ la presentación al mismo tiempo"
 	//4. Podemos trabajar con dos o más valores dentro del bucle for
 				var m, n;
 				for (m=1, n=10; m<=10, n>=1; m++, n--){
-					alert (\"m = \"+m+\", n = \"+n);	
+					alert (\"m = \"+m+\", n = \"+n);
 				}
 
 		</script>
