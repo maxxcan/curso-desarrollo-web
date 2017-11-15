@@ -3829,6 +3829,451 @@ document.getElementById("demo").innerHTML = text;
 </body>
 </html>
 #+end_src
+* Funciones en JavaScript
+
+Para crear una función en JavaScript usamos la palabra clave *function* 
+
+** Declarando funciones
+
+Las funciones son declaradas con la siguiente sintaxis:
+
+#+begin_src js
+function nombreFuncion(parámetros){
+    código que va a ser ejecutado
+}
+#+end_src
+
+Al declarar una función no será ejecutada inmediatamente sino que será guardada para ser ejecutada posteriormente.
+
+Ejemplo:
+
+#+begin_src js
+function multiplicar(a, b){
+    return a * b;
+}
+#+end_src
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Funciones en JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+function multiplicar(a, b) {
+    return a * b;
+}
+document.getElementById("demo").innerHTML = multiplicar(4, 3);
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+** Expresiones 
+
+En JavaScript una función también puede ser definida usando una expresión y además ser guardada en una variable.
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x(4, 3);
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+Estas son también llamadas *funciones anónimas* (sin nombre). Para ser invocadas usaremos el nombre de la variable. 
+
+** El constructor function()
+
+Hemos visto como cómo definir funciones con la palabra *function*.
+
+Otra forma de hacerlo es con el constructor *function()* 
+
+Ejemplo:
+
+#+begin_src js
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var myFunction = new Function("a", "b", "return a * b");
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+</body>
+</html>
+#+end_src
+
+** Las funciones pueden ser llamadas antes de declaradas
+
+#+begin_src js
+myFunction(5);
+
+function myFunction(y) {
+    return y * y;
+}
+#+end_src
+* Objetos en JavaScript
+
+En JavaScript todo es un objeto:
+
++ Booleans pueden ser objetos si se definen con la palabra clave new
++ Los números pueden ser objetos si se definen con la palabra clave new
++ Las cadenas de texto pueden ser objetos si se definen con la palabra clave new
++ Las fechas son objetos
++ Las expresiones regulares son objetos
++ Las funciones son objetos
++ Y los objetos también son objetos
+
+
+** Primitivos en JavaScript
+
+Un *valor primitivo* es un valor que no tiene propiedades o métodos. Un tipo de dato primitivo es aquel que tiene un valor primitivo. 
+JavaScript define 5 tipos de datos primitivos.
+
++ Cadenas de texto
++ Números
++ booleanos
++ null
++ indefinidos
+
+** Los objetos son variables conteniendo variables
+
+Las variables en JavaScript pueden contener valores simples 
+
+#+begin_src js
+var persona = "Paquito Chocolatero";
+#+end_src
+
+Los objetos son variables también. Pero los objetos pueden contener muchos valores 
+
+#+begin_src js
+var persona = {nombre:"Paquito", apellido:"Chocolatero", edad:100}
+#+end_src
+
+** Propiedades del objeto
+
+Los nombres de los valores, en los objetos de JavaScript son llamados *propiedades*. 
+
+| Propiedades | Valor       |
+|-------------+-------------|
+| nombre      | Paquito     |
+| apellidos   | Chocolatero |
+| edad        | 100         |
+
+Las propiedades de un objeto pueden ser valores primitivos, otros objetos o funciones.
+
+** Métodos del objeto
+
+Los métodos son *acciones* que pueden ser desarrolladas en los objetos. Un *método* es una propiedad del objeto que contiene una definción de función.
+
+| Propiedades    | Valor                                                 |
+|----------------+-------------------------------------------------------|
+| nombre         | Paquito                                               |
+| apellido       | Chocolatero                                           |
+| edad           | 100                                                   |
+| nombreCompleto | function(){return this.nombre + " " + this.apellido;} |
+
+** Creando un objeto en JavaScript
+
+Con JavaScript, podemos definir y crear nuestros propios objetos.
+
+Hay diferentes formas de crear un nuevo objeto:
+
++ Definir y crear un simple objeto, usando un objeto literal
++ Definir y crear un simple objeto, con la palabra clave new
++ Definir un objeto constructor y entonces crear objetos del tipo del constructor
+
+
+
+
+*** Usando un Objeto Literal
+
+Es la forma más fácil de crear un objeto en JavaScript. Usando un objeto literal, en una única declaración creamos y definimos un objeto. 
+
+Un objeto literarl es una lista de pares nombre:valor entre llaves. 
+
+Ejemplo:
+
+#+begin_src js
+var persona = {nombre:"Paquito", apellidos:"Chocolatero", edad:100};
+#+end_src
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creando un objeto en Java.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {nombre:"Paquito", apellido:"Chocolatero", edad:100};
+
+document.getElementById("demo").innerHTML =
+person.nombre + " tiene " + persona.edad + " años.";
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+*** Usando la palabra new
+
+En el siguiente ejemplo también creamos un nuevo objeto con cuatro propiedades:
+
+#+begin_src js
+var persona = new Objetct();
+persona.nombre = "Paquito";
+persona.apellido = "Chocolatero";
+persona.edad = 100;
+#+end_src
+
+*** Usando un Objeto Constructor
+
+Lo que hemos visto es muy limitado porque creamos un único objeto. A veces nosotros queremos tener un "objeto tipo" que pueda ser usado para crear muchos objetos de ese tipo. Para ello vamos a usar una función constructora de objetos.
+
+Ejemplo:
+
+#+begin_src js
+function persona(nombre, apellido, edad){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+}
+
+var miPadre = new persona("Eusebio", "Martínez", 55);
+var miMadre = new persona("Maria", "García", 50);
+#+end_src
+
+Hagamos la prueba:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function persona(nombre, apellido, edad){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+}
+
+var miPadre = new persona("Eusebio", "Martínez", 55);
+var miMadre = new persona("Maria", "García", 50);
+
+document.getElementById("demo").innerHTML =
+"Mi padre tiene " + miPadre.edad "años de edad" + ". Mi Madre tiene " +
+ miMadre.edad "años de edad"; 
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+** Propiedades en Objetos JavaScript
+
+Las propiedades es lo más importante de un objeto. Son valores asociados al objeto. 
+
+Las propiedades pueden ser cambiadas, añadidas y borradas, pero algunos son de solo lectura.
+
+*** Accediendo a las propiedades
+
+Hay varias formas de acceder a una propiedad
+
+#+begin_src js 
+nombreObjeto.propiedad //persona.edad
+#+end_src
+
+ó 
+
+#+begin_src js
+nombreObjeto["propiedad"]  //persona["edad"]
+#+end_src
+
+ó
+
+#+begin_src js
+nombreObjeto[expresión] // x = "edad"; persona[x]
+#+end_src
+
+Ejemplo:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Veamos la forma de acceder a las propiedades de un objeto</p>
+
+
+<p id="demo"></p>
+
+<script>
+var persona = {
+    nombre:"Paquito",
+    apellido:"Chocolatero",
+    edad:100,
+};
+document.getElementById("demo").innerHTML =
+persona.nombre + " tiene " + persona.edad + " años de edad.";
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+*** Añadiendo nuevas propiedades
+
+Podemos añadir una nueva propiedad a un objeto que ya exista simplemente dándole un valor. 
+
+Ejemplo:
+
+#+begin_src js
+persona.nacionalidad = "Española";
+#+end_src
+
+Veamos:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Veamos la forma de acceder a las propiedades de un objeto</p>
+
+
+<p id="demo"></p>
+
+<script>
+var persona = {
+    nombre:"Paquito",
+    apellido:"Chocolatero",
+    edad:100,
+};
+persona.nacionalidad = "Española";
+document.getElementById("demo").innerHTML =
+persona.nombre + " tiene " + persona.edad + " años de edad." + "y tiene nacionalidad " + persona.nacionalidad;
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+*** Borrando una propiedad
+
+Para ello usaremos la palabra clave *delete* 
+
+#+begin_src js
+delete persona.edad;
+#+end_src
+
+Veamos como funciona:
+
+#+begin_src html
+<html>
+<body>
+
+<p>Veamos la forma de acceder a las propiedades de un objeto</p>
+
+
+<p id="demo"></p>
+
+<script>
+var persona = {
+    nombre:"Paquito",
+    apellido:"Chocolatero",
+    edad:100,
+};
+delete persona.edad;
+document.getElementById("demo").innerHTML =
+persona.nombre + " tiene " + persona.edad + " años de edad.";
+</script>
+
+</body>
+</html>
+
+#+end_src
+
+Delete borrará tanto el valor como la propiedad.
+
+** Métodos en JavaScript
+
+
+Los métodos son las acciones que pueden ejecutarse en los objetos.
+
+*** Accediendo a los métodos
+
+Creamos un método de objeto con la siguiente sintaxis:
+
+#+begin_src js
+nombreMetodo : function(){ líneas de código }
+#+end_src
+
+Y accedemos a ese método
+
+#+begin_src js
+nombreObjeto.nombreMetodo()
+#+end_src
+
+*** Añadiendo nuevos métodos
+
+Para añadir nuevos métodos lo tenemos que hacer en el constructor.
+
+Ejemplo:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function persona(nombre,apellido,edad) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.cambiarNombre = function (nombre) {
+        this.apellido = name;
+    }
+}
+var miMadre = new persona("María","García",50);
+miMadre.cambiarNombre("Cano");
+document.getElementById("demo").innerHTML =
+"El apellido de mi madre es " + miMadre.apellido;
+</script>
+
+</body>
+</html>
+
+#+end_src
 
 * Formularios en JavaScript
 ** Validación de formularios en JavaScript
@@ -3965,7 +4410,6 @@ quired>
 
 
 El *problema* es que aún *no funciona* en todos los navegadores 
-
 * El HTML DOM y JavaScript
 
 El DOM JavaScript puede acceder y cambiar todos los elementos de un documento HTML
@@ -4955,453 +5399,6 @@ var myCollection = document.getElementsByTagName("p");
 document.getElementById("demo").innerHTML =
 "El segundo objeto de la colección es: " +
 myCollection[1].innerHTML;
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-* Funciones en JavaScript
-
-Para crear una función en JavaScript usamos la palabra clave *function* 
-
-** Declarando funciones
-
-Las funciones son declaradas con la siguiente sintaxis:
-
-#+begin_src js
-function nombreFuncion(parámetros){
-    código que va a ser ejecutado
-}
-#+end_src
-
-Al declarar una función no será ejecutada inmediatamente sino que será guardada para ser ejecutada posteriormente.
-
-Ejemplo:
-
-#+begin_src js
-function multiplicar(a, b){
-    return a * b;
-}
-#+end_src
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-
-<h2>Funciones en JavaScript</h2>
-
-<p id="demo"></p>
-
-<script>
-function multiplicar(a, b) {
-    return a * b;
-}
-document.getElementById("demo").innerHTML = multiplicar(4, 3);
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-** Expresiones 
-
-En JavaScript una función también puede ser definida usando una expresión y además ser guardada en una variable.
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p id="demo"></p>
-
-<script>
-var x = function (a, b) {return a * b};
-document.getElementById("demo").innerHTML = x(4, 3);
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-Estas son también llamadas *funciones anónimas* (sin nombre). Para ser invocadas usaremos el nombre de la variable. 
-
-** El constructor function()
-
-Hemos visto como cómo definir funciones con la palabra *function*.
-
-Otra forma de hacerlo es con el constructor *function()* 
-
-Ejemplo:
-
-#+begin_src js
-<!DOCTYPE html>
-<html>
-<body>
-
-<p id="demo"></p>
-
-<script>
-var myFunction = new Function("a", "b", "return a * b");
-document.getElementById("demo").innerHTML = myFunction(4, 3);
-</script>
-
-</body>
-</html>
-#+end_src
-
-** Las funciones pueden ser llamadas antes de declaradas
-
-#+begin_src js
-myFunction(5);
-
-function myFunction(y) {
-    return y * y;
-}
-#+end_src
-
-* Objetos en JavaScript
-
-En JavaScript todo es un objeto:
-
-+ Booleans pueden ser objetos si se definen con la palabra clave new
-+ Los números pueden ser objetos si se definen con la palabra clave new
-+ Las cadenas de texto pueden ser objetos si se definen con la palabra clave new
-+ Las fechas son objetos
-+ Las expresiones regulares son objetos
-+ Las funciones son objetos
-+ Y los objetos también son objetos
-
-
-** Primitivos en JavaScript
-
-Un *valor primitivo* es un valor que no tiene propiedades o métodos. Un tipo de dato primitivo es aquel que tiene un valor primitivo. 
-JavaScript define 5 tipos de datos primitivos.
-
-+ Cadenas de texto
-+ Números
-+ booleanos
-+ null
-+ indefinidos
-
-** Los objetos son variables conteniendo variables
-
-Las variables en JavaScript pueden contener valores simples 
-
-#+begin_src js
-var persona = "Paquito Chocolatero";
-#+end_src
-
-Los objetos son variables también. Pero los objetos pueden contener muchos valores 
-
-#+begin_src js
-var persona = {nombre:"Paquito", apellido:"Chocolatero", edad:100}
-#+end_src
-
-** Propiedades del objeto
-
-Los nombres de los valores, en los objetos de JavaScript son llamados *propiedades*. 
-
-| Propiedades | Valor       |
-|-------------+-------------|
-| nombre      | Paquito     |
-| apellidos   | Chocolatero |
-| edad        | 100         |
-
-Las propiedades de un objeto pueden ser valores primitivos, otros objetos o funciones.
-
-** Métodos del objeto
-
-Los métodos son *acciones* que pueden ser desarrolladas en los objetos. Un *método* es una propiedad del objeto que contiene una definción de función.
-
-| Propiedades    | Valor                                                 |
-|----------------+-------------------------------------------------------|
-| nombre         | Paquito                                               |
-| apellido       | Chocolatero                                           |
-| edad           | 100                                                   |
-| nombreCompleto | function(){return this.nombre + " " + this.apellido;} |
-
-** Creando un objeto en JavaScript
-
-Con JavaScript, podemos definir y crear nuestros propios objetos.
-
-Hay diferentes formas de crear un nuevo objeto:
-
-+ Definir y crear un simple objeto, usando un objeto literal
-+ Definir y crear un simple objeto, con la palabra clave new
-+ Definir un objeto constructor y entonces crear objetos del tipo del constructor
-
-
-
-
-*** Usando un Objeto Literal
-
-Es la forma más fácil de crear un objeto en JavaScript. Usando un objeto literal, en una única declaración creamos y definimos un objeto. 
-
-Un objeto literarl es una lista de pares nombre:valor entre llaves. 
-
-Ejemplo:
-
-#+begin_src js
-var persona = {nombre:"Paquito", apellidos:"Chocolatero", edad:100};
-#+end_src
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>Creando un objeto en Java.</p>
-
-<p id="demo"></p>
-
-<script>
-var person = {nombre:"Paquito", apellido:"Chocolatero", edad:100};
-
-document.getElementById("demo").innerHTML =
-person.nombre + " tiene " + persona.edad + " años.";
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-*** Usando la palabra new
-
-En el siguiente ejemplo también creamos un nuevo objeto con cuatro propiedades:
-
-#+begin_src js
-var persona = new Objetct();
-persona.nombre = "Paquito";
-persona.apellido = "Chocolatero";
-persona.edad = 100;
-#+end_src
-
-*** Usando un Objeto Constructor
-
-Lo que hemos visto es muy limitado porque creamos un único objeto. A veces nosotros queremos tener un "objeto tipo" que pueda ser usado para crear muchos objetos de ese tipo. Para ello vamos a usar una función constructora de objetos.
-
-Ejemplo:
-
-#+begin_src js
-function persona(nombre, apellido, edad){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.edad = edad;
-}
-
-var miPadre = new persona("Eusebio", "Martínez", 55);
-var miMadre = new persona("Maria", "García", 50);
-#+end_src
-
-Hagamos la prueba:
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p id="demo"></p>
-
-<script>
-function persona(nombre, apellido, edad){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.edad = edad;
-}
-
-var miPadre = new persona("Eusebio", "Martínez", 55);
-var miMadre = new persona("Maria", "García", 50);
-
-document.getElementById("demo").innerHTML =
-"Mi padre tiene " + miPadre.edad "años de edad" + ". Mi Madre tiene " +
- miMadre.edad "años de edad"; 
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-** Propiedades en Objetos JavaScript
-
-Las propiedades es lo más importante de un objeto. Son valores asociados al objeto. 
-
-Las propiedades pueden ser cambiadas, añadidas y borradas, pero algunos son de solo lectura.
-
-*** Accediendo a las propiedades
-
-Hay varias formas de acceder a una propiedad
-
-#+begin_src js 
-nombreObjeto.propiedad //persona.edad
-#+end_src
-
-ó 
-
-#+begin_src js
-nombreObjeto["propiedad"]  //persona["edad"]
-#+end_src
-
-ó
-
-#+begin_src js
-nombreObjeto[expresión] // x = "edad"; persona[x]
-#+end_src
-
-Ejemplo:
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>Veamos la forma de acceder a las propiedades de un objeto</p>
-
-
-<p id="demo"></p>
-
-<script>
-var persona = {
-    nombre:"Paquito",
-    apellido:"Chocolatero",
-    edad:100,
-};
-document.getElementById("demo").innerHTML =
-persona.nombre + " tiene " + persona.edad + " años de edad.";
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-*** Añadiendo nuevas propiedades
-
-Podemos añadir una nueva propiedad a un objeto que ya exista simplemente dándole un valor. 
-
-Ejemplo:
-
-#+begin_src js
-persona.nacionalidad = "Española";
-#+end_src
-
-Veamos:
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>Veamos la forma de acceder a las propiedades de un objeto</p>
-
-
-<p id="demo"></p>
-
-<script>
-var persona = {
-    nombre:"Paquito",
-    apellido:"Chocolatero",
-    edad:100,
-};
-persona.nacionalidad = "Española";
-document.getElementById("demo").innerHTML =
-persona.nombre + " tiene " + persona.edad + " años de edad." + "y tiene nacionalidad " + persona.nacionalidad;
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-*** Borrando una propiedad
-
-Para ello usaremos la palabra clave *delete* 
-
-#+begin_src js
-delete persona.edad;
-#+end_src
-
-Veamos como funciona:
-
-#+begin_src html
-<html>
-<body>
-
-<p>Veamos la forma de acceder a las propiedades de un objeto</p>
-
-
-<p id="demo"></p>
-
-<script>
-var persona = {
-    nombre:"Paquito",
-    apellido:"Chocolatero",
-    edad:100,
-};
-delete persona.edad;
-document.getElementById("demo").innerHTML =
-persona.nombre + " tiene " + persona.edad + " años de edad.";
-</script>
-
-</body>
-</html>
-
-#+end_src
-
-Delete borrará tanto el valor como la propiedad.
-
-** Métodos en JavaScript
-
-
-Los métodos son las acciones que pueden ejecutarse en los objetos.
-
-*** Accediendo a los métodos
-
-Creamos un método de objeto con la siguiente sintaxis:
-
-#+begin_src js
-nombreMetodo : function(){ líneas de código }
-#+end_src
-
-Y accedemos a ese método
-
-#+begin_src js
-nombreObjeto.nombreMetodo()
-#+end_src
-
-*** Añadiendo nuevos métodos
-
-Para añadir nuevos métodos lo tenemos que hacer en el constructor.
-
-Ejemplo:
-
-#+begin_src html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p id="demo"></p>
-
-<script>
-function persona(nombre,apellido,edad) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.edad = edad;
-    this.cambiarNombre = function (nombre) {
-        this.apellido = name;
-    }
-}
-var miMadre = new persona("María","García",50);
-miMadre.cambiarNombre("Cano");
-document.getElementById("demo").innerHTML =
-"El apellido de mi madre es " + miMadre.apellido;
 </script>
 
 </body>
