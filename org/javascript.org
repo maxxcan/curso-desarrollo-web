@@ -5212,9 +5212,9 @@ El onload y onunload son usado para saber si el usuario entra o deja la página.
 function checkCookies() {
     var text = "";
     if (navigator.cookieEnabled == true) {
-        text = "Las coockies están habilitadas.";
+        text = "Las cuquis están habilitadas.";
     } else {
-        text = "Las coockies no están habilitadas.";
+        text = "Las cuquis no están habilitadas.";
     }
     document.getElementById("demo").innerHTML = text;
 }
