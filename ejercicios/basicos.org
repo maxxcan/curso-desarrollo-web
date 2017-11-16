@@ -1,0 +1,45 @@
+#+TITLE: Ejercicios básicos de Javascript
+#+AUTHOR: Patricio Martínez
+
+* Introducción 
+
+1. Hacer un documento html que muestre un mensaje "hola mundo"
+2. Hacer lo mismo pero con una función dentro de <head></head>
+3. Hacer lo mismo pero con el código javascript fuera del documento html
+4. Mostrar un mensaje "hola mundo" en una ventana emergente
+5. Mostrar un mensaje "hola mundo" en la consola del navegador
+
+* Variables 
+
+1. Realizar un programa con dos variables "nombre" y "apellidos" y los muestre juntos.
+2. Crear un documento html con un comentario en una línea y otro que sea de varias líneas
+3. Realizar un programa que nos muestre la suma de tres variables
+
+* Funciones 
+
+1. Crear una función que nos muestre la potencia de dos números
+2. Crear una función que transforme grados Fahrenheit a Celsius y nos lo muestre
+
+* Cadenas de texto
+1. Hacer un programa que sustituya una cadena "Yo amo a mi perro" por "Yo amo a mi gato"
+2. Hacer un programa que ponga en mayúsculas la frase "Emacs es el mejor programa del mundo"
+
+* Fechas
+
+1. Hacer un programa que nos muestre el día de la semana en el que estamos.
+
+* Arrays 
+
+1. Hacer un programa que nos muestre los meses enero, agosto y noviembre  de todos los meses del año.
+2. Crear un array con tres días de la semana y añadirle posteriormente los días faltantes y que los muestre todos
+3. Crear un array de frutas y ordenarlas por orden alfabético
+
+* Condicionales 
+
+1. Crear un programa donde podamos introducir una hora y comprobandola con las 12 del mediodía nos indique si son buenos días o buenas tardes.
+2. Hacer un programa que nos diga el día de la semana en el que nos encontramos
+3. Hacer un programa en el que podamos introducir una nota y según ésta nos diga si está aprobado o no.
+4. Hacer un programa similar al anterior pero que además nos diga si está suspendo, aprobado, notable, sobresaliente o matrícula de honor.
+5. Hacer un programa que nos muestre todos los días de la semana.
+6. Hacer un programa que nos muestre los 100 primeros números.
+
