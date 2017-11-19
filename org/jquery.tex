@@ -1,58 +1,90 @@
-#+TITLE: Introducción a JQuery
-#+AUTHOR: Patricio Martínez
-#+EMAIL: maxxcan@gmail.com
-#+DATE: \today
-#+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [a4paper, oneside]
-#+LANGUAGE: es
+% Created 2017-11-19 dom 18:08
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\textwidth=17cm
+\oddsidemargin=0.5cm
+\author{Patricio Martínez}
+\date{\today}
+\title{Introducción a JQuery}
+\hypersetup{
+ pdfauthor={Patricio Martínez},
+ pdftitle={Introducción a JQuery},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.2)}, 
+ pdflang={Spanish}}
+\begin{document}
 
-#+latex_header:\textwidth=17cm
-#+latex_header:\oddsidemargin=0.5cm
+\maketitle
+\tableofcontents
 
-* Introducción
+
+\section{Introducción}
+\label{sec:orgb6fa154}
 
 Jquery es una librería que nos facilita muchas tareas comunes para nuestra web. Además nos ahorrará gran cantidad de tiempo y esfuerzo ya que nos permite crear muchos efectos y características con muy poco código.
 
-** Qué es JQuery
+\subsection{Qué es JQuery}
+\label{sec:org788a71f}
 
-JQuery es una rápida, liviana y con muchas características librería de JavaScript que se basa en el principio de /escribir poco, y hacer mucho/. Permite hacer muchas tareas en nuestro documento sobre manipulación, manejar eventos, añadir animaciones y efectos de manera muy fácil
+JQuery es una rápida, liviana y con muchas características librería de JavaScript que se basa en el principio de \emph{escribir poco, y hacer mucho}. Permite hacer muchas tareas en nuestro documento sobre manipulación, manejar eventos, añadir animaciones y efectos de manera muy fácil
 
-** Ventajas de JQuery
+\subsection{Ventajas de JQuery}
+\label{sec:orgc1cfe69}
 
 Aquí algunas ventajas que tiene el adoptar JQuery:
 
-+ *Salva mucho tiempo* -- Te permite salvar mucho tiempo y esfuerzo al usar los selectores y animaciones de JQuery y así te puedes concentrar en el desarrollo.
-+ Simplifica tareas comunes de JavaScript -- JQuery simplifica considerablemente las tareas más comunes de JavaScript. Podemos crear páginas ricas e interactivas con muy pocas líneas de código.
-+ Fácil de usar - JQuery es muy fácil de usar. Cualquier persona con unos pocos conocimientos de HTML, CSS y JavaScript puede empezar a desarrollar con JQuery
-+ Compatible con los navegadores -- JQuery es compatible con la mayoría de los navegadores modernos
-+ Absolutamente gratis -- Es completamente libre para descargarlo y usarlo
+\begin{itemize}
+\item \textbf{Salva mucho tiempo} -- Te permite salvar mucho tiempo y esfuerzo al usar los selectores y animaciones de JQuery y así te puedes concentrar en el desarrollo.
+\item Simplifica tareas comunes de JavaScript -- JQuery simplifica considerablemente las tareas más comunes de JavaScript. Podemos crear páginas ricas e interactivas con muy pocas líneas de código.
+\item Fácil de usar - JQuery es muy fácil de usar. Cualquier persona con unos pocos conocimientos de HTML, CSS y JavaScript puede empezar a desarrollar con JQuery
+\item Compatible con los navegadores -- JQuery es compatible con la mayoría de los navegadores modernos
+\item Absolutamente gratis -- Es completamente libre para descargarlo y usarlo
+\end{itemize}
 
-* Empezando con JQuery
+\section{Empezando con JQuery}
+\label{sec:org749892a}
 
 Para empezar con JQuery vamos a descararnos una copia e incluirla en nuestro documento. Podemos descararnos dos versiones, una comprimida y otra sin 
 descomprimir. 
 
 Una vez descargada la añadimos a nuestro documento en la cabecera tal como ya hemos visto. 
 
-** Incluyendo JQuery desde CDN
+\subsection{Incluyendo JQuery desde CDN}
+\label{sec:org62fe1ca}
 
 Alternativamente, podemos incluir JQuery en tu página a través de un enlace a CDN (Content Delivery Network), si no queremos descargarlo. CDN nos ofrece la ventaja de reducir los tiempos de carga, ya que ellos tienen hospedaje en multitud de servidores a través de la tierra. Para enlazar JQuery directamente desde CDN añadimos el siguiente código:
 
-#+begin_src html
+\begin{verbatim}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-#+end_src
+\end{verbatim}
 
-** Nuestra primera página con JQuery
+\subsection{Nuestra primera página con JQuery}
+\label{sec:orgb2c19ff}
 
 En esta página vamos a crear un Hola Mundo y le vamos a cambiar el color de la cabecera:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Nuestra primer página con JQuery</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("h1").css("color", "#0088ff");
@@ -63,15 +95,16 @@ En esta página vamos a crear un Hola Mundo y le vamos a cambiar el color de la 
     <h1>Hola, Mundo!</h1>
 </body>
 </html>
-#+end_src
+\end{verbatim}
 
-* Sintaxis de JQuery
+\section{Sintaxis de JQuery}
+\label{sec:org2cb14e1}
 
 La sintaxis típica en JQuery empieza con el signo de dolar y termina con el punto y coma. 
 
 Veamos el siguiente código:
 
-#+begin_src html
+\begin{verbatim}
 <script type="text/javascript">
 $(document).ready(function(){
 // algun código que ejecutar...
@@ -83,30 +116,34 @@ alert("Hola Mundo!");
 <--! El contenido va aquí -->
 </body>
 </html>
-#+end_src
+\end{verbatim}
 
-** Explicación del código
+\subsection{Explicación del código}
+\label{sec:org37e65d0}
 
 Veamos las siguientes partes del código una por una:
 
-+ El elemento <script> -- Como JQuery es una librería, la llamamos desde un archivo externo
-+ El $(document)ready(manejador); -- Esto es típicamente conocido como un evento preparado. Básicamente es una función que le pasa al método ready() para ser ejecutado tan pronto como el documento empieza a ser manipulado.
+\begin{itemize}
+\item El elemento <script> -- Como JQuery es una librería, la llamamos desde un archivo externo
+\item El \$(document)ready(manejador); -- Esto es típicamente conocido como un evento preparado. Básicamente es una función que le pasa al método ready() para ser ejecutado tan pronto como el documento empieza a ser manipulado
+\end{itemize}
 
 El método ready() es típicamente usado como una función anónima. 
 
-Además dentro de la función nosotros escribimos la declaración JQuery que será la que hará la acción con la siguiente sintaxis: $(selector).acción().
+Además dentro de la función nosotros escribimos la declaración JQuery que será la que hará la acción con la siguiente sintaxis: \$(selector).acción().
 
-Donde, $(selección) básicamente selecciona los elementos en el árbol de nodos DOM que puede ser manipulado y acción() aplica algunas acciones a los elementos seleccionados como cambiarle las propiedades CSS, cambiar el contenido, etc. 
+Donde, \$(selección) básicamente selecciona los elementos en el árbol de nodos DOM que puede ser manipulado y acción() aplica algunas acciones a los elementos seleccionados como cambiarle las propiedades CSS, cambiar el contenido, etc. 
 
 Veamos el siguiente ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Documento JQuery</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("p").text("Hola Mundo!");
@@ -117,13 +154,13 @@ Veamos el siguiente ejemplo:
     <p>No cargado todavía.</p>
 </body>
 </html>
-#+end_src
+\end{verbatim}
 
-Aquí lo que vemos que hemos seleccionado el elemento <p> y con la acción *text* añadimos ese texto. 
+Aquí lo que vemos que hemos seleccionado el elemento <p> y con la acción \textbf{text} añadimos ese texto. 
 
 Como vemos text reemplaza el texto. Veamos ahora el siguiente ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -144,20 +181,22 @@ Como vemos text reemplaza el texto. Veamos ahora el siguiente ejemplo:
     <button type="button">Botón que reemplaza</button>
 </body>
 </html>  
-#+end_src
+\end{verbatim}
 
 Ahora vemos como buscamos el elemento button y la acción se ejecuta con el pulsado del botón y lo que hace es a su vez buscar el elemento <p> y sustituir el texto. 
 
-* Seleccionando elementos con JQuery
+\section{Seleccionando elementos con JQuery}
+\label{sec:org265522e}
 
 JavaScript es comúnmente usado para obtener o modificar contenido o atributos de los elementos HTML o aplicarles algunos efectos, animaciones, etc. 
 Seleccionando elementos a través de JavaScript puede ser doloroso pero con JQuery todo resulta más fácil. La habilidad de hacer de forma simple selecciones de elementos del DOM es una de las características más potentes de JQuery. 
 
-** Seleccionando elementos por el ID
+\subsection{Seleccionando elementos por el ID}
+\label{sec:org354084a}
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -178,11 +217,12 @@ $(document).ready(function(){
     <p><strong>Nota:</strong> El valor del id debe ser único.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Seleccionando elementos por la clase
+\subsection{Seleccionando elementos por la clase}
+\label{sec:org114013d}
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -202,11 +242,12 @@ $(document).ready(function(){
     <p>Y otro más.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Seleccionando por nombre
+\subsection{Seleccionando por nombre}
+\label{sec:org4c5541e}
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -226,14 +267,15 @@ $(document).ready(function(){
     <div>Y otro más.</div>
  </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Seleccionando por atributos
+\subsection{Seleccionando por atributos}
+\label{sec:org0a4edf0}
 
-Con la palabra reservada *type* podemos elegir el tipo de atributo por el que queremos seleccionar el elemento.
+Con la palabra reservada \textbf{type} podemos elegir el tipo de atributo por el que queremos seleccionar el elemento.
 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -242,7 +284,7 @@ Con la palabra reservada *type* podemos elegir el tipo de atributo por el que qu
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    
+
     $('input[type="text"]').css("background", "yellow");
 });
 </script>
@@ -255,13 +297,14 @@ $(document).ready(function(){
     </form>
 </body>
 </html>       
-#+end_src
+\end{verbatim}
 
-** Seleccionando elementos usando selectores de CSS compuestos
+\subsection{Seleccionando elementos usando selectores de CSS compuestos}
+\label{sec:org8d83dc2}
 
 Podemos seleccionar selectores de CSS para hacer nuestra selección más precisa.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -272,19 +315,19 @@ Podemos seleccionar selectores de CSS para hacer nuestra selección más precisa
 $(document).ready(function(){
     // Combinadmos el elemento párrafo con la clase marca
     $("p.mark").css("background", "yellow");
-  
+
     // Combinamos span con el id marca
     $("#mark span").css("background", "yellow");
-  
+
     // Combinamos dos elementos ul e il
     $("ul li").css("background", "yellow");
-  
+
     // Combinamos dos elementos y el id marca
     $("ul#mark li").css("background", "red");
-  
+
     // Combinamos dos marcas y la clase marca
     $("ul.mark li").css("background", "green");
-  
+
     // Highlight all anchor elements with target blank
     $('a[target="_blank"]').css("background", "yellow");
 });
@@ -312,11 +355,12 @@ $(document).ready(function(){
     <p>Go to <a href="#">Inicio</a></p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Selectores propios de JQuery
+\subsection{Selectores propios de JQuery}
+\label{sec:orgd13f46b}
 
-#+begin_src html
+\begin{verbatim}
 
 <!DOCTYPE html>
 <html>
@@ -334,22 +378,22 @@ $(document).ready(function(){
 $(document).ready(function(){
     // Selecciona las filas pares
     $("tr:odd").css("background", "yellow");
-  
+
     // Selecciona las filas impares
     $("tr:even").css("background", "orange");
-  
+
     // Selecciona el primer párrafo de un elemento
     $("p:first").css("background", "red");
-  
+
     // Selecciona el último párrafo de un elemento
     $("p:last").css("background", "green");
-  
+
     // Selecciona todo lo tipo text dentro de un formulario
     $("form :text").css("background", "purple");
-  
+
     // Selecciona todo lo tipo password de un formulario
     $("form :password").css("background", "blue");
-  
+
     // Selecciona todo los input de un formulario
     $("form :submit").css("background", "violet");
 });
@@ -392,23 +436,26 @@ $(document).ready(function(){
     </form>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-* Eventos en JQuery
+\section{Eventos en JQuery}
+\label{sec:orgc4eccfa}
 
 Los eventos son interacciones del usuario con la página web. JQuery nos ofrece una gran cantidad de métodos para la mayoría de los eventos. Algunos de esos eventos son:
 
-+ ready()
-+ click()
-+ keypress()
-+ focus()
-+ blur()
-+ change()
-+ etc
+\begin{itemize}
+\item ready()
+\item click()
+\item keypress()
+\item focus()
+\item blur()
+\item change()
+\item etc
+\end{itemize}
 
 Por ejemplo, el método ready() ejecuta algún código cuando el DOM está preparado.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -425,15 +472,17 @@ $(document).ready(function(){
     El contenido vendrá aquí
 </body>
 </html>         
-#+end_src
+\end{verbatim}
 
-** Eventos de ratón
+\subsection{Eventos de ratón}
+\label{sec:org818d3bf}
 
-*** Método click()
+\subsubsection{Método click()}
+\label{sec:orgae5816b}
 
 El método *click() de JQuery une una función manejadora de eventos al elemento seleccionado por un evento "click". La función es ejectuado cuando el usuario pulsa el elemento. En el siguiente ejemplo esconderemos un elemento <p> de una página cuando son pulsado.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -461,14 +510,15 @@ $(document).ready(function(){
     <p>Pínchame y desapareceré.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método dblclick()
+\subsubsection{El método dblclick()}
+\label{sec:org176db2b}
 
 Este método es igual que el anterior solo que necesita que el usuario haga una doble pulsación sobre el elemento. Veámoslo en el ejemplo:
 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -496,15 +546,16 @@ $(document).ready(function(){
     <p>Pínchame y desapareceré.</p>
 </body>
 </html>
-#+end_src
+\end{verbatim}
 
-*** El método hover()
+\subsubsection{El método hover()}
+\label{sec:orgac9f6ce}
 
 El método hover() de JQuery une uno o dos funciones manejadoras de eventos a elementos seleccionados que se ejecutan cuando el puntero del ratón entra y deja los elementos. La primera función es ejecutada cuando el usuario pone el puntero en el elemento y la segunda es cuando el puntero deja el elemento. 
 
 En este ejemplo se iluminará el elemento <p> cuando pongas el cursor sobre él y dejará de hacerlo cuando quites el puntero de él.
 
-#+begin_src html
+\begin{verbatim}
 
 <!DOCTYPE html>
 <html>
@@ -540,13 +591,14 @@ $(document).ready(function(){
 
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método mouseenter()
+\subsubsection{El método mouseenter()}
+\label{sec:orgf7cfb84}
 
 Cómo sutilmente dice su propio nombre este método ejecuta la función cuando el puntero entra en el elemento. En el siguiente ejemplo el elemento se iluminará cuando el puntero se pose sobre él. 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -581,20 +633,23 @@ $(document).ready(function(){
     <p>Tócame papi.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método mouseleave()
+\subsubsection{El método mouseleave()}
+\label{sec:orgd3bb0cb}
 
 Adivínalo tú solo que seguro que los sabes guapi.
 
 
-** Eventos del teclado
+\subsection{Eventos del teclado}
+\label{sec:org52d7e0f}
 
-*** El método keypress()
+\subsubsection{El método keypress()}
+\label{sec:orgdb20b11}
 
 Este método activa la une la función manejadora al elemento seleccionado (normalmente formularios) cuando el navegador recibe entrada del teclado por parte del usuario. El siguiente ejemplo se muestra un mensaje cuando el teclado es pulsado y además cuenta cuantas veces es pulsado el teclado:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -624,31 +679,35 @@ $(document).ready(function(){
 <body>
     <input type="text">
     <div>Teclas Pulsadas: <span>0</span></div>
-	<div><strong>Aviso:</strong> Escribe algo dentro de la caja, anda que te va a gustar....</div>
+  <div><strong>Aviso:</strong> Escribe algo dentro de la caja, anda que te va a gustar....</div>
     <p>DAISYYYYY DAISYYYYY.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
-*** El método keydown()
-    
+\subsubsection{El método keydown()}
+\label{sec:org28a59d6}
+
 Es muy parecida al anterior pero la anterior ejecuta la función cuando la tecla es presionada y en esta es cuando la tecla es hundida
 
-*** El método keyup()
+\subsubsection{El método keyup()}
+\label{sec:orgf1a5967}
 
 Pues más de lo mismo sólo que ahora la ejecución de la función es cuando la tecla es "soltada"
 
 
-** Eventos de formulario
+\subsection{Eventos de formulario}
+\label{sec:orgcfe9344}
 
 Los eventos de formularios se activan cuando cuando un control del formulario recibe o pierde el foco o cuando el usuario modifica un valor del formulario como cuando escribe en una caja de entrada, selecciona una selección de un caja de selección, etc. Vamos a ver algunos comunes.
 
-*** El método change()
+\subsubsection{El método change()}
+\label{sec:org6f3d1ef}
 
 El método change() une una función manejadora a un elemento <input>, <textarea> y <select> que es ejecutado cuando el valor es cambiado. En el siguiente ejemplo se mostrará un mensaje de alerta cuando una opción en la caja de selección
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -674,16 +733,17 @@ $(document).ready(function(){
             <option>New York</option>
         </select>
     </form>
-	<p><strong>Aviso:</strong> Selecciona un valor del menú desplegable.</p>
+  <p><strong>Aviso:</strong> Selecciona un valor del menú desplegable.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método focus()
+\subsubsection{El método focus()}
+\label{sec:org787d464}
 
 Este método activa una función cuando seleccionamos elementos y gana el foco. En el siguiente ejemplo veremos un mensaje cuando la caja de entrada tenga foco.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -716,17 +776,19 @@ $(document).ready(function(){
     <p><strong>Aviso:</strong> Con el ratón o con la tecla "TAB" tendrás foco.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método blur()
+\subsubsection{Método blur()}
+\label{sec:org3c33cd9}
 
 Ejecuta funciones cuando elementos tales como <input>, <textarea> o <select> pierden el foco.
 
-*** Método submit()
+\subsubsection{Método submit()}
+\label{sec:orgc88c48d}
 Este es para formularios, elementos <form> que ejecutan una función cuando el usuario envía un formulario. En el siguiente ejemplo se mostrará un mensaje cuando se vaya a enviar el mensaje.
 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -744,7 +806,7 @@ Este es para formularios, elementos <form> que ejecutan una función cuando el u
 <script type="text/javascript">
 $(document).ready(function(){
     $("form").submit(function(event){
-    	var mob = /^[1-9]{1}[0-9]{9}$/;
+      var mob = /^[1-9]{1}[0-9]{9}$/;
         var currentValue = $("#inputMobile").val();
         if(mob.test(currentValue) == false && currentValue != 10){
             $("p").html("Número de teléfono inválido
@@ -767,17 +829,19 @@ $(document).ready(function(){
     </form>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Eventos en el documento/ventana
+\subsection{Eventos en el documento/ventana}
+\label{sec:org8309814}
 
 Aquí los eventos son lanzados cuando un DOM está preparado o cuando la ventana se redimensiona o hay un scrol. Vamos a ver los más usados
 
-*** El método ready()
+\subsubsection{El método ready()}
+\label{sec:org009af15}
 
 Éste ejecuta una función cuando el DOM está completamente cargado. En el siguiente ejemplo se reemplazará un texto cuando el DOM esté cargado.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -794,13 +858,14 @@ $(document).ready(function(){
     <p>Espera un poquito.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método resize()
+\subsubsection{El método resize()}
+\label{sec:org64a094e}
 
 Este método activa una función cuando la ventana del navegador cambia de tamaño.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -829,13 +894,14 @@ $(document).ready(function(){
     <p>Cambia el tamaño de la ventana</p>
 </body>
 </html>     
-#+end_src
+\end{verbatim}
 
-*** Método scroll()
+\subsubsection{Método scroll()}
+\label{sec:org4cc6332}
 
 Esto activa la función cuadno detecta que el scroll de un iframe o de la ventana cambia. En este ejemplo se mostrará un mensaje cuadno el scroll del navegador cambia.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -876,19 +942,21 @@ $(document).ready(function(){
     <div class="dummy-content">salalaaaaa.</div>
 </body>
 </html>                                		
-#+end_src
-     
-* Efectos en JQuery
+\end{verbatim}
 
-** Efecto de mostrar y ocultar
+\section{Efectos en JQuery}
+\label{sec:orgdd21551}
 
-Usando los métodos de JQuery *show()* y *hide()* podemos ocultar y mostrar elementos HTML.
+\subsection{Efecto de mostrar y ocultar}
+\label{sec:org9daee83}
 
-El método hide() lo que hace simplemente es añadir en el estilo la propiedad *display:none* para ocultar el elemento. Por el contrario, el método show() lo que hace es restaurar la propiedad display a como estaba.
+Usando los métodos de JQuery \textbf{show()} y \textbf{hide()} podemos ocultar y mostrar elementos HTML.
+
+El método hide() lo que hace simplemente es añadir en el estilo la propiedad \textbf{display:none} para ocultar el elemento. Por el contrario, el método show() lo que hace es restaurar la propiedad display a como estaba.
 
 En este ejemplo podemos ver como funciona:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -907,7 +975,7 @@ $(document).ready(function(){
     $(".hide-btn").click(function(){
         $("p").hide();
     });
-    
+
     // Mostramos el párrafo
     $(".show-btn").click(function(){
         $("p").show();
@@ -922,11 +990,11 @@ $(document).ready(function(){
     <p>Ocultameeeee.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-También podemos especificar la velocidad a la que queremos que se produzca este efecto. Para ello usaremos o bien las palabras predefinidas *'slow'* y *'fast'* o también podemos indicarlo con exactitud indicando los milisegundos. En el siguiente ejemplo vemos esto:
+También podemos especificar la velocidad a la que queremos que se produzca este efecto. Para ello usaremos o bien las palabras predefinidas \textbf{'slow'} y \textbf{'fast'} o también podemos indicarlo con exactitud indicando los milisegundos. En el siguiente ejemplo vemos esto:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -969,12 +1037,12 @@ $(document).ready(function(){
     <p class="very-slow">Este párrafo se mostrará/ocultará de forma muy lenta.</p>
 </body>
 </html>                                		
-    
-#+end_src
+
+\end{verbatim}
 
 Al mismo tiempo que ocultamos/mostramos un elemento podemos hacer una llamada a otra función. Veamos este ejemplo que muestra una alerta cuando ocultamos o mostramos un párrafo.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -992,11 +1060,11 @@ $(document).ready(function(){
     // Muestra un mensaje de alerta depués de esconder un párrafo
     $(".hide-btn").click(function(){
         $("p").hide("slow", function(){
-            
+
             alert("El efecto de ocultación ha terminado.");
         });
     });
-    
+
     // Muestra un mensaje de alerta depués de mostrar un párrafo
     $(".show-btn").click(function(){
         $("p").show("slow", function(){
@@ -1012,75 +1080,80 @@ $(document).ready(function(){
     <p>Esto es un párrafo.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Efecto toggle()
+\subsubsection{Efecto toggle()}
+\label{sec:orgd000a41}
 
 Funciona exactamente igual que los métodos show() y hide(), solo que cambia el estado de oculto a mostrado y de mostrado a oculto.
 
-** Efecto fade
+\subsection{Efecto fade}
+\label{sec:orgb81acaf}
 
-*** Métodos fadeIn() y fadeOut()
+\subsubsection{Métodos fadeIn() y fadeOut()}
+\label{sec:org2a1155e}
 
- En JQuery tenemos los métodos *fadeIn()* y *fadeOut()* para mostrar o esconder elementos pero de una incrementando o decrementando su opacidad.
+En JQuery tenemos los métodos \textbf{fadeIn()} y \textbf{fadeOut()} para mostrar o esconder elementos pero de una incrementando o decrementando su opacidad.
 
- Ejemplo:
+Ejemplo:
 
- #+begin_src html
- <!DOCTYPE html>
- <html>
- <head>
- <meta charset="UTF-8">
- <title>Ejemplos del efecto Fade-In y Fade-Out</title>
- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
- <style type="text/css">
-     p{
-         padding: 15px;
-         background: #DDA0DD;
-     }
- </style>
- <script type="text/javascript">
- $(document).ready(function(){
-     // Mostrando el párrafo
-     $(".out-btn").click(function(){
-         $("p").fadeOut();
-     });
-    
-     // Ocultando el párrafo
-     $(".in-btn").click(function(){
-         $("p").fadeIn();
-     });
- });
- </script>
- </head>
- <body>
-     <button type="button" class="out-btn">largando párrafo</button>
-     <button type="button" class="in-btn">trayendo párrafo</button>
-     <p>Esto amigos es una cosa rosa.</p>
-     <p>Yo soy otra cosa rosa.</p>
- </body>
- </html>                                		                                		
- #+end_src
+\begin{verbatim}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplos del efecto Fade-In y Fade-Out</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 15px;
+        background: #DDA0DD;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Mostrando el párrafo
+    $(".out-btn").click(function(){
+        $("p").fadeOut();
+    });
 
- Al igual que con el método anterior también podemos *controlar la velocidad* de igual manera y también podemos *hacer llamadas* a otras funciones
+    // Ocultando el párrafo
+    $(".in-btn").click(function(){
+        $("p").fadeIn();
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="out-btn">largando párrafo</button>
+    <button type="button" class="in-btn">trayendo párrafo</button>
+    <p>Esto amigos es una cosa rosa.</p>
+    <p>Yo soy otra cosa rosa.</p>
+</body>
+</html>                                		                                		
+\end{verbatim}
 
-*** Método fadeToggle()
+Al igual que con el método anterior también podemos \textbf{controlar la velocidad} de igual manera y también podemos \textbf{hacer llamadas} a otras funciones
+
+\subsubsection{Método fadeToggle()}
+\label{sec:org5377581}
 
 Exactamente igual que el anterior pero solo que si el elemento está presente lo oculta y si está oculto lo muestra.
 
-*** Método fadeTo()
+\subsubsection{Método fadeTo()}
+\label{sec:orgb1a69ef}
 
 Este método es similar a fadeIn(), pero a diferencia de él fadeTo() nos permite controlar el nivel de opacidad. 
 
-#+begin_src js
+\begin{verbatim}
 $(selector).fadeTo(<velocidad>, <opacidad>, <llamada a otra función>);
-#+end_src
+\end{verbatim}
 
 El parámetro de la opacidad es necesario y va entre 0  y 1 y también es requerida la velocidad de la animación.
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1112,17 +1185,19 @@ $(document).ready(function(){
     <p class="complete">Y párrafo.</p>
 </body>
 </html>                                		                                		
-#+end_src
+\end{verbatim}
 
-** Efecto Sliding (corredero)
+\subsection{Efecto Sliding (corredero)}
+\label{sec:org860e12d}
 
-*** Método slideUp() y slideDown()
+\subsubsection{Método slideUp() y slideDown()}
+\label{sec:orgd4e1fa8}
 
 Los métodos slideUp() y slideDown() sirve para mostrar o esconder un elemento por incremento o decremento de su altura. 
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1141,7 +1216,7 @@ $(document).ready(function(){
     $(".up-btn").click(function(){
         $("p").slideUp();
     });
-    
+
     // Efecto de hacia abajo
     $(".down-btn").click(function(){
         $("p").slideDown();
@@ -1156,37 +1231,43 @@ $(document).ready(function(){
     <p>Esto es otro párrafo.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 Al igual que los otros métodos vistos hasta ahora podemos controlar la velocidad y hacer llamadas a otras funciones en el proceso.
 
-*** Método slideToggle()
+\subsubsection{Método slideToggle()}
+\label{sec:org58127cb}
 
 Muestra o oculta un elemento seleccionado con una animación que cambia su altura. En este método también podemos  controlar la velocidad y hacer llamadas a otras funciones.
 
-** Efectos de animación   
+\subsection{Efectos de animación}
+\label{sec:org0bb607b}
 
-*** Método animate()
+\subsubsection{Método animate()}
+\label{sec:orgc775be2}
 
-En JQuery el método animate() es usado para crear animaciones. Es usado con propiedades numéricas de CSS como son la altura, anchura, margen, relleno, opacidad, etc. Propiedades no numéricas como pueden ser el color no pueden ser animadas. Para animar color usamos un plugin especial llamado [[https://github.com/jquery/jquery-color][jquery-color]].
+En JQuery el método animate() es usado para crear animaciones. Es usado con propiedades numéricas de CSS como son la altura, anchura, margen, relleno, opacidad, etc. Propiedades no numéricas como pueden ser el color no pueden ser animadas. Para animar color usamos un plugin especial llamado \href{https://github.com/jquery/jquery-color}{jquery-color}.
 
-*** Sintaxis
+\subsubsection{Sintaxis}
+\label{sec:orgdf3e5bf}
 
 La sintaxis básica de animate() es:
 
-#+begin_src js
+\begin{verbatim}
 $(selector).animate({propiedades}, duración, llamada);
-#+end_src
+\end{verbatim}
 
 Los parámetros de animate() tiene el siguiente significado:
 
-+ El parámetro propiedad es requerido y define la propiedad CSS que queremos animar.
-+ La duración es opcional y la podemos especificar con las palabras *'slow'* y *'fast'* o poniendo un número que son los milisegundos.
-+ La llamada a otra función es opcional
+\begin{itemize}
+\item El parámetro propiedad es requerido y define la propiedad CSS que queremos animar.
+\item La duración es opcional y la podemos especificar con las palabras \textbf{'slow'} y \textbf{'fast'} o poniendo un número que son los milisegundos.
+\item La llamada a otra función es opcional
+\end{itemize}
 
 Veamos un ejemplo donde una imagen es animada y va desde una posición inicial hacia la derecha 300 píxeles.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1211,19 +1292,20 @@ $(document).ready(function(){
 <body>
     <button type="button">Empieza la animación</button>
     <p>
-    	<img src="/img/champi.jpg" alt="Toad">
+      <img src="/img/champi.jpg" alt="Toad">
     </p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Animando múltiples propiedades a la vez
+\subsubsection{Animando múltiples propiedades a la vez}
+\label{sec:orgb788188}
 
 Con el método animate() podemos animar varias propiedades a la vez.
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1259,19 +1341,21 @@ $(document).ready(function(){
     <div class="box"></div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Animando múltiples propiedades una a una o en fila.
+\subsubsection{Animando múltiples propiedades una a una o en fila.}
+\label{sec:orgd1e41da}
 
 Podemos animar múltiples propiedades una a una de forma individual usando una característica de encadenamiento de JQuery. Lo veremos en el siguiente capítulo
 
-*** Animando propiedades con valores relativos
+\subsubsection{Animando propiedades con valores relativos}
+\label{sec:org5844f4d}
 
-En ocasiones podemos usar valores relativos para animar propiedades. Si un valor es especificado con el prefijo *+=* o *-=* entonces se calcula el valor añadiendo o restando el valor dado al valor actual de la propiedad.
+En ocasiones podemos usar valores relativos para animar propiedades. Si un valor es especificado con el prefijo \textbf{+=} o \textbf{-=} entonces se calcula el valor añadiendo o restando el valor dado al valor actual de la propiedad.
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 
 <!DOCTYPE html>
 <html>
@@ -1307,15 +1391,16 @@ $(document).ready(function(){
 </body>
 </html>                                		
 
-#+end_src
+\end{verbatim}
 
-*** Animando propiedades con valores Pre-definidos
+\subsubsection{Animando propiedades con valores Pre-definidos}
+\label{sec:orgdab06e0}
 
-Además de los valores numéricos, cada propiedad puede tomar valores con las palabras *'show'*, *'hide'* y *'toggle'* 
+Además de los valores numéricos, cada propiedad puede tomar valores con las palabras \textbf{'show'}, \textbf{'hide'} y \textbf{'toggle'} 
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1345,26 +1430,30 @@ $(document).ready(function(){
     <div class="box"></div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Parada de las animaciones en JQuery
+\subsection{Parada de las animaciones en JQuery}
+\label{sec:org4130031}
 
-*** El método stop()
+\subsubsection{El método stop()}
+\label{sec:orgf1a0af4}
 
 El método stop() es usado para parar las animaciones o efectos que estén funcionando. La sintaxis básica es:
 
-#+begin_src js
+\begin{verbatim}
 $(selector).stop(stopAll, goToEnd);
-#+end_src
+\end{verbatim}
 
 Vamos a explicar los parámetros:
 
-+ El booleano /stopAll/ es opcional y detiene todas las animaciones. Su valor por defecto es *false* lo que significa que parará la animación que estemos citando en concreto y dejará a las demás.
-+ El booleano /goToEnd/ si especifica si queremos completar la animación de forma inmediata. El valor por defecto es *false*
+\begin{itemize}
+\item El booleano \emph{stopAll} es opcional y detiene todas las animaciones. Su valor por defecto es \textbf{false} lo que significa que parará la animación que estemos citando en concreto y dejará a las demás.
+\item El booleano \emph{goToEnd} si especifica si queremos completar la animación de forma inmediata. El valor por defecto es \textbf{false}
+\end{itemize}
 
 Veamos un ejemplo que demuestra como funciona el método stop() 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1387,7 +1476,7 @@ $(document).ready(function(){
     $(".stop-btn").click(function(){
       $("img").stop();
     });
-    
+
     // Start animation in the opposite direction
     $(".back-btn").click(function(){
       $("img").animate({left: "-=150px"}, 2000);
@@ -1406,21 +1495,23 @@ $(document).ready(function(){
     <button type="button" class="back-btn">Atrás</button>
     <button type="button" class="reset-btn">Reset</button>
     <p>
-    	<img src="/examples/images/mushroom.jpg" alt="Mushroom">
+      <img src="/examples/images/mushroom.jpg" alt="Mushroom">
     </p>
 </body>
 </html>                                		                                		
-#+end_src
+\end{verbatim}
 
-** Encadenamiento en JQuery
+\subsection{Encadenamiento en JQuery}
+\label{sec:org54e28b4}
 
-*** El método Chaining (encadenamiento)
+\subsubsection{El método Chaining (encadenamiento)}
+\label{sec:org786dc02}
 
 JQuery ofrece una característica robusta que nos permite unir múltiples acciones para el mismo grupo de elementos, todo en una sola línea de código.
 
 Esto es posible porque los métodos en JQuery devuelven los objetos que pueden ser usados para llamar a otros métodos. Veamos un ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1431,9 +1522,9 @@ Esto es posible porque los métodos en JQuery devuelven los objetos que pueden s
 /* Algunos estilos bonitos */
 p {
     width: 200px;
-	padding: 40px 0;
-	font: bold 24px sans-serif;
-	text-align: center;
+  padding: 40px 0;
+  font: bold 24px sans-serif;
+  text-align: center;
     background: #aaccaa;
     border: 1px solid #63a063;
     box-sizing: border-box;
@@ -1456,42 +1547,48 @@ $(document).ready(function(){
     <button type="button" class="reset">Reset</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 Hemos escrito todo el encadenamiento en una sola línea:
 
-#+begin_src js
- $("p").animate({width: "100%"}).animate({fontSize: "46px"}).animate({borderWidth: 30});
-#+end_src
+\begin{verbatim}
+$("p").animate({width: "100%"}).animate({fontSize: "46px"}).animate({borderWidth: 30});
+\end{verbatim}
 
 Pero si esto es muy embarullado podemos hacerlo en varias líneas
 
-#+begin_src js
- $("p")
-            .animate({width: "100%"})
-            .animate({fontSize: "46px"})
-            .animate({borderWidth: 30});
-#+end_src
+\begin{verbatim}
+$("p")
+           .animate({width: "100%"})
+           .animate({fontSize: "46px"})
+           .animate({borderWidth: 30});
+\end{verbatim}
 
-* Manipulando elementos en JQuery
+\section{Manipulando elementos en JQuery}
+\label{sec:orgecc4af7}
 
-** Getters y Setter en JQuery
+\subsection{Getters y Setter en JQuery}
+\label{sec:org950a9f4}
 
-*** Obtener o establecer contenido y valores en JQuery
+\subsubsection{Obtener o establecer contenido y valores en JQuery}
+\label{sec:org90fdd2b}
 
-Algunos métodos en JQuery pueden ser usados para asignar o leer algunos valores een una selección. Unos pocos de esos métodos son *text(), html(), attr()* y *val()* 
+Algunos métodos en JQuery pueden ser usados para asignar o leer algunos valores een una selección. Unos pocos de esos métodos son \textbf{text(), html(), attr()} y \textbf{val()} 
 
-Cuando esos métodos son llamados sin argumentos, son referidos como /getters/, porque ellos obtienen (get) o leen los valores de los elementos. Cuando esos métodos son llamados con valores como argumentos, se refiere a ellos como  setters porque establecer o asignan (set) ese valor.
+Cuando esos métodos son llamados sin argumentos, son referidos como \emph{getters}, porque ellos obtienen (get) o leen los valores de los elementos. Cuando esos métodos son llamados con valores como argumentos, se refiere a ellos como  setters porque establecer o asignan (set) ese valor.
 
-*** Método text()
-    
+\subsubsection{Método text()}
+\label{sec:orgd86c5fe}
+
 El método text() es usado para obtener la combinación de texto de los contenidos seleccionados y sus descendientes, o establecer contenido de texto a los elementos seleccionados.
 
-**** Obteniendo contenido de texto con el método text()
+\begin{enumerate}
+\item Obteniendo contenido de texto con el método text()
+\label{sec:org0c0ec44}
 
 Vamos a ver como obtenemos el contenido de texto de los párrafos y los mostramos en una carteles de alerta:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1518,19 +1615,20 @@ $(document).ready(function(){
 <body>
     <button type="button" class="btn-one">Obteniendo el texto de todos los párrafos</button>
     <button type="button" class="btn-two">Obteniendo el texto del primer párrafo</button>
-	<button type="button" class="btn-three">Obteniendo el texto del último párrafo</button>
+  <button type="button" class="btn-three">Obteniendo el texto del último párrafo</button>
     <p>Esto es un párrafo.</p>
     <p>Esto es otro párrafo.</p>
-	<p class="extra">Y uno más.</p>
+  <p class="extra">Y uno más.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-**** Estableciendo contenido de texto con el método text()
+\item Estableciendo contenido de texto con el método text()
+\label{sec:org714e84a}
 
 En el siguiente ejemplo veremos como el método text() establece contenido en un párrafo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1560,17 +1658,21 @@ $(document).ready(function(){
     <p class="empty"></p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
+\end{enumerate}
 
-*** Método html()
+\subsubsection{Método html()}
+\label{sec:org036052c}
 
 El método html() es usado para obtener o establecer congtenido HTML de los elementos.
 
-**** Obtener contenido HTML con el método html()
+\begin{enumerate}
+\item Obtener contenido HTML con el método html()
+\label{sec:orgcfde57f}
 
 En el siguiente ejemplo se verá como obtener el contenido HTML de los párrafos así como el contenido de un elemento <div>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1599,13 +1701,14 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-**** Estableciendo contenido HTML con el método html()
+\item Estableciendo contenido HTML con el método html()
+\label{sec:orgfea8117}
 
 Veremos en el siguiente ejemplo como establecemos contenido en el elemento <body>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1624,17 +1727,21 @@ $(document).ready(function(){
     <button type="button">Escribe un saludo</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
+\end{enumerate}
 
-*** Método attr()
+\subsubsection{Método attr()}
+\label{sec:orgf71f971}
 
 Podemos usar el método attr() para obtener el valor de un atributo o establecerlo
 
-**** Obtener el valor de un atributo con el método attr()
+\begin{enumerate}
+\item Obtener el valor de un atributo con el método attr()
+\label{sec:orgedb82ba}
 
 En el siguiente ejemplo veremos como obtener el atributo <href> del hiper enlace (elemento <a>) así como el atributo <alt> de un elemento imagen (<img>)
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1661,13 +1768,14 @@ $(document).ready(function(){
     <img id="sky" src="/examples/images/sky.jpg" alt="Cielo nuboso">
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-**** Establecer el valor de un atributo con el método attr()
+\item Establecer el valor de un atributo con el método attr()
+\label{sec:orgdd7b844}
 
-En el siguiente ejemplo veremos como establecer el atributo *checked* en una caja de comprobación.
+En el siguiente ejemplo veremos como establecer el atributo \textbf{checked} en una caja de comprobación.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1687,17 +1795,21 @@ $(document).ready(function(){
     <button type="button">Comprueba</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
+\end{enumerate}
 
-*** El metodo val()
+\subsubsection{El metodo val()}
+\label{sec:orgbca2319}
 
 Se utiliza el método val() para obtener o establecer los valores actuales de elementos de formularios HTML tales como <input><select> y <textarea>
 
-**** Obteniendo los valores de los campos de un formulario con el método val()
+\begin{enumerate}
+\item Obteniendo los valores de los campos de un formulario con el método val()
+\label{sec:orgebd8a3a}
 
 Veamos el siguiente ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1754,13 +1866,14 @@ $(document).ready(function(){
     <button type="button" class="get-city">Obtén ciudad</button>
 </body>
 </html>                        
-#+end_src
+\end{verbatim}
 
-**** Estableciendo los valores de los campos de un formulario con el método val()
+\item Estableciendo los valores de los campos de un formulario con el método val()
+\label{sec:org62bf7b0}
 
 Veamos el siguiente ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1787,19 +1900,22 @@ $(document).ready(function(){
     </p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
+\end{enumerate}
 
-** Insertar contenido con JQuery
+\subsection{Insertar contenido con JQuery}
+\label{sec:org2f7c0ac}
 
 JQuery dispone de varios métodos como append(), prepend(), html(), text(), before(), after(), wrap(), etc, que permite insertar nuevo contenido en un elemento existente.
 
 Como ya hemos visto los métodos html() y text(), discutiremos los restantes.
 
-*** Método append()
+\subsubsection{Método append()}
+\label{sec:org2145d37}
 
 Este método se usa para insertar contenido al final de los elementos seleccionados. En el siguiente ejemplo veremos como se agrega algo de HTML a todos los párrafos y además añadimos contenido al pulsar un botón
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1810,7 +1926,7 @@ Este método se usa para insertar contenido al final de los elementos selecciona
 $(document).ready(function(){
     // Append all paragraphs on document ready
     $("p").append(' <a href="#">quiere saber más?</a>');
-    
+
     // Append a div container on button click
     $("button").click(function(){
        $("#container").append("Esto es un texto de prueba.");
@@ -1830,15 +1946,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método prepend()
+\subsubsection{Método prepend()}
+\label{sec:org84c72be}
 
-El método *prepend()* es usado para insertar contenido al principio de los elementos seleccionados.
+El método \textbf{prepend()} es usado para insertar contenido al principio de los elementos seleccionados.
 
 En el siguiente ejemplo añadiremos contenido al final de los párrafos y cuando pulsemos un botón.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1849,7 +1966,7 @@ En el siguiente ejemplo añadiremos contenido al final de los párrafos y cuando
 $(document).ready(function(){
     // Prepend all paragraphs on document ready
     $("p").prepend("<strong>AVISO:</strong> ");
-    
+
     // Prepend a div container on button click
     $("button").click(function(){
        $("#container").prepend("Esto es un texto de prueba.");
@@ -1869,15 +1986,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Insertando múltiples elementos con los métodos append() y prepend()
+\subsubsection{Insertando múltiples elementos con los métodos append() y prepend()}
+\label{sec:org8365e57}
 
 Tanto append() como prepend() soportan múltiples argumentos como entrada. 
 
 En el siguiente ejemplo insertaremos <h1>,<p> y <img> dentro de <body>.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1889,7 +2007,7 @@ $(document).ready(function(){
     $("button").click(function(){
         var newHeading = "<h1>Nota importante:</h1>";
         var newParagraph = document.createElement("p");
-		newParagraph.innerHTML = "<em>Lorem Ipsum is dummy text...</em>";
+    newParagraph.innerHTML = "<em>Lorem Ipsum is dummy text...</em>";
         var newImage = $('<img src="/images/smiley.png" alt="Symbol">');
         $("body").append(newHeading, newParagraph, newImage);
     });
@@ -1903,15 +2021,16 @@ $(document).ready(function(){
  vel, semper malesuada ante, metus ac nisl bibendum.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método before() y after()
+\subsubsection{Método before() y after()}
+\label{sec:org89d5eba}
 
 Con estos métodos introducimos contenido antes y después de los elementos seleccionados.
 
 Veamos un ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1922,15 +2041,15 @@ Veamos un ejemplo:
 $(document).ready(function(){
     // Add content after a div container on document ready
     $("#container").after("<p>— The End —</p>");
-    
+
     // Add content before a div container on document ready
     $("#container").before("<p>— Demo Text —</p>");
-    
+
     // Add content after heading on button click
     $("button.insert-after").click(function(){
         $("h1").after('<img src="/examples/images/marker-right.gif" alt="Symbol">');
     });
-    
+
     // Add content before heading on button click
     $("button.insert-before").click(function(){
         $("h1").before('<img src="/examples/images/marker-left.gif" alt="Symbol">');
@@ -1961,19 +2080,20 @@ $(document).ready(function(){
  aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu,
  tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque
  porttitor. Integer faucibus ligula.</p>
-       
+
     </div>
 </body>
 </html>   
-#+end_src
+\end{verbatim}
 
-*** Método wrap()
+\subsubsection{Método wrap()}
+\label{sec:org1b43637}
 
 El método wrap() es usado para envolver una estructura HTML alrededor de los elementos asociados. 
 
 En el siguiente ejemplo envolveremos un div con una clase wrapper y un párrafo con un <em> y un <b>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -1984,7 +2104,7 @@ En el siguiente ejemplo envolveremos un div con una clase wrapper y un párrafo 
 $(document).ready(function(){
     // Envolviendo un div con otro div
     $(".container").wrap('<div class="wrapper"></div>');
-    
+
     // Envolviendo un párrafo al pulsar un botón
     $("button").click(function(){
         $("p").contents().wrap("<em><b></b></em>");
@@ -2011,19 +2131,21 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Eliminar contenido con JQuery
+\subsection{Eliminar contenido con JQuery}
+\label{sec:orgba3bd98}
 
 JQuery tiene métodos muy útiles tales como empty(), remove(), unwrap(), etc para eliminar elementos o contenido HTML existentes del documento
 
-*** Método empty()
+\subsubsection{Método empty()}
+\label{sec:orgd4a4ce6}
 
 Este método elimina todos los elementos hijo así como otros descendientes  el contenido de texto de un elemento seleccionado desde el DOM. 
 
 En el siguiente ejemplo se elimina todo el contenido dentro de los elementos con la clase .container al pulsar un botón.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2039,7 +2161,7 @@ En el siguiente ejemplo se elimina todo el contenido dentro de los elementos con
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    
+
     $("button").click(function(){
        $(".container").empty();
     });
@@ -2055,16 +2177,17 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
-*** El método remove()
+\subsubsection{El método remove()}
+\label{sec:orgfbfa50e}
 
 Este método elimina los elementos seleccionados y todo lo que hay dentro de él.
 
 En el siguiente ejemplo borraremos todos los elementos <p> con la clase .hint. Los elementos dentro de ese elemento también serán borrados
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2095,29 +2218,31 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método unwrap()
-    
+\subsubsection{El método unwrap()}
+\label{sec:org9f381f1}
+
 Elimina todo lo que hay alrededor de un elmento. Hace lo contrario que el método wrap()
 
-*** El método removeAttr()
+\subsubsection{El método removeAttr()}
+\label{sec:org8f2080d}
 
 Elimina los atributos de un elemento selecciondo.
 
 En el siguiente ejemplo borraremos el atributo href de un elemento <a> al pulsar un botón
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Eliminando un atributo</title>
 <style type="text/css">
-	a{
+  a{
         font-size: 18px;
-		margin-right: 20px;
-	}
+    margin-right: 20px;
+  }
 </style>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
@@ -2132,27 +2257,29 @@ $(document).ready(function(){
 <body>
     <div class="container">
         <p>
-			<a href="">Inicio</a>
-			<a href="">Sobre</a>
-			<a href="">Contacto</a>
-		</p>
+      <a href="">Inicio</a>
+      <a href="">Sobre</a>
+      <a href="">Contacto</a>
+    </p>
         <button type="button">Borra atributos</button>
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Clases CSS con JQuery
+\subsection{Clases CSS con JQuery}
+\label{sec:orgc174790}
 
 JQuery ofrece métodos para la manipulación de clases tales como addClass(), removeClass(), toggleClass, etc. 
 
-*** Método addClass
+\subsubsection{Método addClass}
+\label{sec:org2e8523e}
 
 Este método añade una o más clases al elemento seleccionado 
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2182,15 +2309,16 @@ $(document).ready(function(){
     <button type="button">Añade clases</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método removeClass()
+\subsubsection{Método removeClass()}
+\label{sec:org7a6b184}
 
 Elimina clases de los elementos seleccionados
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2222,15 +2350,16 @@ $(document).ready(function(){
     <button type="button">Eliminando clases</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método toggleClass()
+\subsubsection{Método toggleClass()}
+\label{sec:org044d77f}
 
 Este método añade o borra según sea la selección clases de los elementos seleccionados
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2261,27 +2390,31 @@ $(document).ready(function(){
     <p>Pinchame y me pondré rojo o no.</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Propiedades de estilo con JQuery
+\subsection{Propiedades de estilo con JQuery}
+\label{sec:org81fed23}
 
 JQuery también nos ofrece los métodos para obtener y establecer propiedadades CSS 
 
-*** Método css()
+\subsubsection{Método css()}
+\label{sec:orgf407101}
 
 Este es un método rápido para acceder a los estilos de los elementos HTML
 
-**** Obtener el valor actual CSS
+\begin{enumerate}
+\item Obtener el valor actual CSS
+\label{sec:org5a94621}
 
 Podemos obtener el valor de la propiedad CSS de un elemento simplemente pasando el nombre de la propiedad como un parámetro al método css(). Aquí vemos la sintaxis básica:
 
-#+begin_src js
+\begin{verbatim}
 $(selector).css("nombrePropiedad");
-#+end_src
+\end{verbatim}
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2314,13 +2447,14 @@ $(document).ready(function(){
     <p>El valor del color de fondo es: <b id="result"></b></p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-**** Establecer una propiedad CSS y su valores
+\item Establecer una propiedad CSS y su valores
+\label{sec:orgf7e1194}
 
 El método css() pueden tomar el nombre de una propiedad y un valor como parámetros separados para establecerlos en una propiedad CSS para el elemento. Veamos el siguiente ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 
 <!DOCTYPE html>
 <html>
@@ -2351,23 +2485,24 @@ $(document).ready(function(){
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
-	<p><strong>Aviso:</strong> Pulsa dentro de la caja vacía para llenarla con el
+  <p><strong>Aviso:</strong> Pulsa dentro de la caja vacía para llenarla con el
  color de fondo.</p>
 </body>
 </html>
-#+end_src
+\end{verbatim}
 
-**** Establecer múltiples propiedades CSS
+\item Establecer múltiples propiedades CSS
+\label{sec:orgb200db7}
 
 También podemos establecer múltiples valores CSS con el método css(). La sintaxis básica es:
 
-#+begin_src js
+\begin{verbatim}
 $(selector).css({"nombrePropiedad":"valor", "nombrePropiedad":"valor",...})
-#+end_src
+\end{verbatim}
 
 Veamos el siguiente ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2397,27 +2532,32 @@ $(document).ready(function(){
     <button type="button">Añadiendo estilo CSS</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
+\end{enumerate}
 
 
 
 
 
-** Dimensiones en JQuery
+\subsection{Dimensiones en JQuery}
+\label{sec:orgecedafd}
 
 Vamos a aprender como obtener y establecer dimensiones en una caja tal como altura o anchura.
 
 JQuery ofrece varios métodos, tales como height(), innerHeight(), outerHeight(), width(), innerWidth() y outerWidth() para obtener y establecer dimensiones CSS para los elementos. En la siguiente ilustración entenderemos como esos métodos calculan la s dimensiones de una caja.
 
-[[./img/dimensiones-jquery.png]]
+\begin{center}
+\includegraphics[width=.9\linewidth]{./img/dimensiones-jquery.png}
+\end{center}
 
 
 
-*** Métodos width() y height()
+\subsubsection{Métodos width() y height()}
+\label{sec:org46c253e}
 
-Los métodos width() y height() obtienen o establecer la _altura_ y la _anchura_ de los elementos. La altura y anchura no incluye relleno (padding), bode (border) y margen (margin) de el elemento. El siguiente ejemplo nos devolverá la altura y anchura de un elemento div
+Los métodos width() y height() obtienen o establecer la \uline{altura} y la \uline{anchura} de los elementos. La altura y anchura no incluye relleno (padding), bode (border) y margen (margin) de el elemento. El siguiente ejemplo nos devolverá la altura y anchura de un elemento div
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2457,11 +2597,11 @@ $(document).ready(function(){
     <p id="result"></p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 De manera similar podemos establecer al altura y anchura de los elementos incluyendo los parámetros en los métodos width() y height(). El valor puede ser una cadena de texto (número y unidad. ej: 100px, 20em) o un número. En el siguiente ejemplo estableceremos la altura de un elemennto <div> a 400 pixeles y una anchura de 300 píxeles respectivamente.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2498,13 +2638,14 @@ $(document).ready(function(){
     <button type="button">Establece al altura y la anchura</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Métodos innerWidth() y innerHeight()
+\subsubsection{Métodos innerWidth() y innerHeight()}
+\label{sec:orge548e0f}
 
 Los métodos de JQuery innerWidth() e innerHeight() obtienen o establecen el interior de la altura y la anchura de los elementos respectivamente. El interior incluye el relleno pero excluye el borde y el margen de los elementos. En el siguiente ejemplo obtendremos el valor de altura y anchura de un elemento <div>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2542,20 +2683,20 @@ $(document).ready(function(){
  turpis vel, semper malesuada ant.</div>
     <button type="button">Obten la altura y anchura interior</button>
     <p id="result"></p>
-	<hr>
-	<p><strong>Aviso:</strong><b>innerWidth()</b> incluye las propiedades
+  <hr>
+  <p><strong>Aviso:</strong><b>innerWidth()</b> incluye las propiedades
  (<b>width</b> + <b>padding-left</b> + <b>padding-right</b>), e
  <b>innerHeight()</b> incluye (<b>height</b> + <b>padding-top</b> +
  <b>padding-bottom</b>).</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 De igual manera, podemos establecer al altura y anchura interiores. Al alterar el innerWidth() y el innerHeight() también alteramos la altura y la anchura del área de contenido.
 
-Por ejemplo, si la actual altura de un elemento es 300 píxeles y la suma de el relleno izquierdo y derecho es igual a píxeles entonces la nueva altura del elemento para obtener una altura de 4000 será de 350, es decir, *la nueva altura = altura interior - relleno horizontal*. Se puede estimar lo mismo con la altura.
+Por ejemplo, si la actual altura de un elemento es 300 píxeles y la suma de el relleno izquierdo y derecho es igual a píxeles entonces la nueva altura del elemento para obtener una altura de 4000 será de 350, es decir, \textbf{la nueva altura = altura interior - relleno horizontal}. Se puede estimar lo mismo con la altura.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2593,13 +2734,14 @@ $(document).ready(function(){
 </body>
 </html>                                		
 
-#+end_src 
+\end{verbatim}
 
-*** Métodos outerWidth() y outerHeight()
+\subsubsection{Métodos outerWidth() y outerHeight()}
+\label{sec:org12536cf}
 
 Los métodos outerWidth() y outerHeight() sirven para establecer u obtener la altura y anchura exterior. Esto incluye el relleno y el borde pero excluye el margen del elemento. En el siguiente ejemplo devolverá la altura y anchura exteriores de un elemento <div>Y
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2637,17 +2779,17 @@ $(document).ready(function(){
  turpis vel, semper malesuada ant.</div>
     <button type="button">Obtén la altura y anchura exteriores</button>
     <p id="result"></p>
-	<hr>
-	<p><strong>Aviso:</strong><b>outerWidth()</b> incluye las propiedades CSS (<b>width</b> + <b>padding-left</b> + <b>padding-right</b> + <b>border-left</b> + <b>border-right</b>), y el <b>outerHeight()</b> incluye (<b>height</b> + <b>padding-top</b> + <b>padding-bottom</b> + <b>border-top</b> + <b>border-bottom</b>).</p>
+  <hr>
+  <p><strong>Aviso:</strong><b>outerWidth()</b> incluye las propiedades CSS (<b>width</b> + <b>padding-left</b> + <b>padding-right</b> + <b>border-left</b> + <b>border-right</b>), y el <b>outerHeight()</b> incluye (<b>height</b> + <b>padding-top</b> + <b>padding-bottom</b> + <b>border-top</b> + <b>border-bottom</b>).</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-Podemos obtener también la altura y anchura incluyendo relleno y borde al igual que el margen del elemento. Para ello añadiremos el parámetro *true* al método tal como outerWidth(true) y outerHeight(true)
+Podemos obtener también la altura y anchura incluyendo relleno y borde al igual que el margen del elemento. Para ello añadiremos el parámetro \textbf{true} al método tal como outerWidth(true) y outerHeight(true)
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2685,8 +2827,8 @@ $(document).ready(function(){
  turpis vel, semper malesuada ant.</div>
     <button type="button">Obten la altura y anchura exteriores con el margen</button>
     <p id="result"></p>
-	<hr>
-	<p><strong>Note:</strong><b>outerWidth(true)</b> incluye (<b>width</b> +
+  <hr>
+  <p><strong>Note:</strong><b>outerWidth(true)</b> incluye (<b>width</b> +
  <b>padding-left</b> + <b>padding-right</b> + <b>border-left</b> +
  <b>border-right</b> + <b>margin-left</b> + <b>margin-right</b>), y
  <b>outerHeight(true)</b> incluye (<b>height</b> + <b>padding-top</b> +
@@ -2694,15 +2836,17 @@ $(document).ready(function(){
  <b>margin-top</b> + <b>margin-bottom</b>).</p>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 De igual manera podemos establecer la altura y anchura exteriores añadiendo el valor como parámetro a los métodos. Ahora el calculo sería el siguiente para la anchura: 
 
-+ *Altura - (Relleno horizontal + borde horizontal)*
+\begin{itemize}
+\item \textbf{Altura - (Relleno horizontal + borde horizontal)}
+\end{itemize}
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2739,12 +2883,15 @@ $(document).ready(function(){
     <button type="button">Establece la altura y anchura exteriores</button>
 </body>
 </html>                                		
-#+end_src
-* JQuery avanzado
+\end{verbatim}
+\section{JQuery avanzado}
+\label{sec:org9abb39f}
 
-** JQuery Traversing (recorrido)
+\subsection{JQuery Traversing (recorrido)}
+\label{sec:org90a164b}
 
-*** Qué es el traversing
+\subsubsection{Qué es el traversing}
+\label{sec:org855e027}
 
 Los selectores de JQuery nos permiten seleccionar los elementos recorriendo el árbol DOM. Pero en muchas ocasiones necesitamos seleccionar un elemento padre y uno antepasado. Ahí es donde entra en juego el método de recorrido por el DOM. Con esos método por demos ir hacia arriba, abajo y alrededor del árbol DOM muy fácilmente. 
 
@@ -2752,7 +2899,7 @@ El recorrido DOM es una muy prominente característica de JQuery. Para hacer est
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2771,41 +2918,49 @@ Ejemplo:
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
 El código HTML de este ejemplo lo podemos representar como este árbol DOM:
 
- 
-[[./img/arbol-dom.png]]
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./img/arbol-dom.png}
+\end{center}
 
 
 El diagrama anterior muestra las relaciones padre/hijo entre los elementos:
 
-+ El elemento /<body>/ es *padre* del elemento /<div>/ y es el antepasado de todo. El elemento /<div>/ es *padre* de /<h1>,<p>/ y /<ul>/, e *hijo* del elemento /<body>/.
-+ El elemento /<h1>/, /<p>/ y /<ul>/ son *hermanos*, desde que tienen el mismo padre.
-+ El elemento /<h1>/ es un *hijo* del elemento /<div>/ y un *descendiente* del elemento /<body>/. Este elemento no tiene ningún hijo
-+ El elemento /<p>/ es el padre del elemento /<em>/, *hijo* del elemento /<div>/ y *descendiente* del elemento /<body>/. El elemento /<em>/ es un *hijo* del elemento /<p>/ y un *descendiente* de los elementos /<div>/ y /<body>/
+\begin{itemize}
+\item El elemento \emph{<body>} es \textbf{padre} del elemento \emph{<div>} y es el antepasado de todo. El elemento \emph{<div>} es \textbf{padre} de \emph{<h1>,<p>} y \emph{<ul>}, e \textbf{hijo} del elemento \emph{<body>}.
+\item El elemento \emph{<h1>}, \emph{<p>} y \emph{<ul>} son \textbf{hermanos}, desde que tienen el mismo padre.
+\item El elemento \emph{<h1>} es un \textbf{hijo} del elemento \emph{<div>} y un \textbf{descendiente} del elemento \emph{<body>}. Este elemento no tiene ningún hijo
+\item El elemento \emph{<p>} es el padre del elemento \emph{<em>}, \textbf{hijo} del elemento \emph{<div>} y \textbf{descendiente} del elemento \emph{<body>}. El elemento \emph{<em>} es un \textbf{hijo} del elemento \emph{<p>} y un \textbf{descendiente} de los elementos \emph{<div>} y \emph{<body>}
+\end{itemize}
 
-*** Recorriendo el árbol DOM
+\subsubsection{Recorriendo el árbol DOM}
+\label{sec:org1a50ea9}
 
 Ahora que hemos entendido las relaciones lógicas entre los elementos en un árbol DOM. En los siguiente capítulos aprenderemos como hacer operaciones para recorrer el árbol hacia arriba y hacia abajo usando JQuery
 
-** Antepasados
+\subsection{Antepasados}
+\label{sec:orgfcd308f}
 
-*** Recorriendo el árbol DOM hacia arriba
+\subsubsection{Recorriendo el árbol DOM hacia arriba}
+\label{sec:org799532a}
 
 En las relaciones lógicas un antepasado es un padre, abuelo, bisabuelo y así.
 
-JQuery dispone de métodos muy útiles tales como *parent(), parents() y parentsUntil()* que pueden usarse para recorrer el árbol DOM hacia arriba entre uno o múltiples niveles.
+JQuery dispone de métodos muy útiles tales como \textbf{parent(), parents() y parentsUntil()} que pueden usarse para recorrer el árbol DOM hacia arriba entre uno o múltiples niveles.
 
-*** Método parent()
+\subsubsection{Método parent()}
+\label{sec:orgda21fcf}
 
-El método *parent()* es usado para obtener directamente el padre del elemento seleccionado.
+El método \textbf{parent()} es usado para obtener directamente el padre del elemento seleccionado.
 
 En el siguiente ejemplo resaltaremos el padre directo del elemento <li> es cual es <ul> añadiendo la clase .higlight
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2829,15 +2984,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                	
-#+end_src
+\end{verbatim}
 
-*** El método parents()
+\subsubsection{El método parents()}
+\label{sec:org1a51e17}
 
-El método *parents()* es usado para obtener los antepasados de un elemento seleccionado. En el siguiente ejemplo añadiremos un borde alrededor de todos los elementos antepasados del elemento <li>, los cuales son <ul>, <div>, <body> y <html>
+El método \textbf{parents()} es usado para obtener los antepasados de un elemento seleccionado. En el siguiente ejemplo añadiremos un borde alrededor de todos los elementos antepasados del elemento <li>, los cuales son <ul>, <div>, <body> y <html>
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2869,11 +3025,11 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 Podemos opcionalmente incluir uno o más selectores como parámetros en el método parents() para filtrar la búsqueda de los antepasados. En el siguiente ejemplo aplicaremos un borde al antepasado de <li> que son los elementos <div>.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2905,15 +3061,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método parentsUntil()
+\subsubsection{Método parentsUntil()}
+\label{sec:orgb491538}
 
 Este método se usa para obtener todos los antepasados sin incluir el elemento que coincida con el selector. En palabras simples podemos pedir que nos devuelva todos los elementos antepasados entre dos elementos dados.
 
 En el siguiente ejemplo vamos a añadir un bode alrededor de todos los elementos antepasados de <li> excluyendo <html>, es decir, añadiremos un borde a <ul>, <div> y <body>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2945,21 +3102,24 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Descendientes
+\subsection{Descendientes}
+\label{sec:orgebffb1e}
 
-*** Recorriendo el árbol DOM hacia abajo
+\subsubsection{Recorriendo el árbol DOM hacia abajo}
+\label{sec:orgb77b33c}
 
 En las relaciones lógicas un descendiente es un hijo, nieto, gran nieto, y así.
 
-JQuery provee de métodos muy útiles tales como *children()* y *find()* que se pueden usar para recorrer hacia abajo por el árbol DOM uno o varios niveles de manera muy fácil y encontrar u obtener hijos u otros descendientes de un elemento en la jerarquía.
+JQuery provee de métodos muy útiles tales como \textbf{children()} y \textbf{find()} que se pueden usar para recorrer hacia abajo por el árbol DOM uno o varios niveles de manera muy fácil y encontrar u obtener hijos u otros descendientes de un elemento en la jerarquía.
 
-*** Método children()
+\subsubsection{Método children()}
+\label{sec:org286d049}
 
 El método children() es usado para obtener directamente el hijo de un elemento. En el siguiente ejemplo resaltaremos el hijo directo del elemento <ul> el cual es <li> añadiendo la clase .highlight. 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -2988,15 +3148,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método find()
+\subsubsection{El método find()}
+\label{sec:org8381c75}
 
 El método find() es usado para obtener los descendientes de un elemento seleccionado. 
 
 Los métodos find() y children() son similares, excepto que find() busca a través de múltiples niveles en el árbol hasta el último descendiente, mientras que children() solo lo hace un nivel. En el siguiente ejemplo añadiremos un borde alrededor de todos los elementos <li> que sean descendientes del elemento <div>.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3025,12 +3186,12 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
 Sin embargo, si queremos obtener todos los descendientes podemos usar el selector universal
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3059,22 +3220,25 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Hermanos
+\subsection{Hermanos}
+\label{sec:org41e3bcb}
 
-*** Recorriendo el árbol DOM lateralmente
+\subsubsection{Recorriendo el árbol DOM lateralmente}
+\label{sec:org691e700}
 
 En las relaciones lógicas los hermanos son los elementos que tienen el mismo padre.
 
-JQuery provee de varios métodos tales como *siblings(), nest(), nestAll(), nextUntil(), prev(), prevAll() y prevUntil()* que podemos usar.
+JQuery provee de varios métodos tales como \textbf{siblings(), nest(), nestAll(), nextUntil(), prev(), prevAll() y prevUntil()} que podemos usar.
 
-*** Método siblings()
+\subsubsection{Método siblings()}
+\label{sec:org818a356}
 
 El método es usado para obtener el elemento hermano de un elemento seleccionado. En el siguiente ejemplo resaltaremos el hermano de <p> que son <h1> y <ul>.
 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3103,11 +3267,11 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 Opcionalmente podemos incluir uno o más selectores como parámetros en el metodo siblings() para filtrar nuestra búsqueda. En el siguiente ejemplo aplicaremos un borde alrededor de los hermanos de <p> que sea elementos <ul>.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3136,13 +3300,14 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método next()
+\subsubsection{Método next()}
+\label{sec:orgecccec5}
 
 El método next() es usado para para obtener el siguiente hermano del elemento seleccionado. En el siguiente ejemplo vamos a resaltar el próximo hermano de <p> que es <ul>.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3171,13 +3336,14 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método nextAll()
+\subsubsection{Método nextAll()}
+\label{sec:org0ce5af4}
 
 Este método es usado para obtener todos los hermanos que siguen del elemento seleccionado. En el siguiente ejemplo resaltaremos todos los hermanos de <p>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3206,15 +3372,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método nextUntil()
+\subsubsection{El método nextUntil()}
+\label{sec:orgd017bbd}
 
 Este método es usado para obtener todos los hermanos que sigan sin incluir el elemento que coincide con el selector. 
 
 En el siguiente ejemplo resaltaremos los hermanos de <h1> excluyendo <ul>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3243,13 +3410,14 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método prev()
+\subsubsection{El método prev()}
+\label{sec:orgaccccb8}
 
 Este método es usado para obtener el elemento hermano que inmediatamente precede. En el siguiente ejemplo resaltaremos  el hermano previo de <ul> el cual es el elemento <p>.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3278,15 +3446,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** El método prevAll()
+\subsubsection{El método prevAll()}
+\label{sec:orgd5bc163}
 
 Con el obtenemos todos los hermanos que preceden al elemento seleccionado. 
 
 En el siguiente ejemplo resaltaremos a todos los hermanos que preceden a <ul>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3315,15 +3484,16 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método prevUntil()
+\subsubsection{Método prevUntil()}
+\label{sec:orgf5187d4}
 
 Este método es usado para seleccionar a todos los hermanos previos hasta el que coincida con el selector. 
 
 En el siguiente ejemplo vamos a resaltar todos los elementos hermanos previos de <ul> excluyendo al elemento <h1>. 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3352,19 +3522,22 @@ $(document).ready(function(){
     </div>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-** Filtrando elementos
+\subsection{Filtrando elementos}
+\label{sec:org0908862}
 
-*** Filtrando elementos en la selección
+\subsubsection{Filtrando elementos en la selección}
+\label{sec:org8f31aac}
 
-JQuery proporciona varios métodos tales como *filter(), first(), last(), eq(), slice(), has(), not()*, etc, que permiten restringir la búsqueda de elementos en el árbol DOM. 
+JQuery proporciona varios métodos tales como \textbf{filter(), first(), last(), eq(), slice(), has(), not()}, etc, que permiten restringir la búsqueda de elementos en el árbol DOM. 
 
-*** Método first()
+\subsubsection{Método first()}
+\label{sec:org04698ed}
 
 Este método filtra los elementos coincidentes y devuelve el primero de ellos. En el siguiente ejemplo vamos a resaltar el primer elemento <li> dentro del elemento <ul>
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3383,16 +3556,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3400,13 +3573,14 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método last()
+\subsubsection{Método last()}
+\label{sec:org080d321}
 
 Este método devuelve el último de los elementos coincidentes. Ahora vamos a hacer lo mismo que en el ejemplo anterior solo que obteniendo el último elemento que va a ser el que vamos a resaltar.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3425,16 +3599,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3442,16 +3616,17 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método eq()
+\subsubsection{Método eq()}
+\label{sec:org31ebf91}
 
 El método eq() devuelve un único elemento especificado con un número de una serie de elementos que coinciden con la búsqueda. 
 
 En el siguiente ejemplo vamos a resaltar el segundo <li> que están dentro de un elemento <ul>
 
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3470,16 +3645,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3487,18 +3662,19 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
-También se puede especificar un *número negativo* lo que indica que empieza a contar desde el final. 
+También se puede especificar un \textbf{número negativo} lo que indica que empieza a contar desde el final. 
 
-*** Método filter()
+\subsubsection{Método filter()}
+\label{sec:orgae4b95d}
 
 Este método puede tomar el selector o una función como argumentos para filtrar un conjunto de elementos siguiendo un criterio especifico.
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3517,16 +3693,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3534,11 +3710,11 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 En el siguiente ejemplo vamos a obtener los elementos <li> que hayan dentro de <ul> y que sean pares los cuales vamos a resaltar.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3559,16 +3735,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3576,13 +3752,14 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-*** Método has()
+\subsubsection{Método has()}
+\label{sec:org9693086}
 
 El método has() filtra el conjunto de elementos coincidentes y devuelve solo esos elementos que tienen un específico elemento descendiente. En el siguiente ejemplo vamos a resaltar todos los elementos <li> que tengan elementos <ul> como descendientes.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3615,16 +3792,17 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
-*** El método not()
+\subsubsection{El método not()}
+\label{sec:org88f20ec}
 
 Este método  filtra un conjunto de elementos coincidentes y devuelve todos los elementos que están en las codiciones especificadas. Puede ser un selector o una función.
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3643,16 +3821,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3660,18 +3838,19 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 El método not() también puede tomar funciones como argumentos al igual que filter()
 
-*** Método slice()
+\subsubsection{Método slice()}
+\label{sec:org06c6e8b}
 
 El método slice() filtra un conjunto de elementos coincidentes y devulve un rango de índices. El método acepta número de comienzo y final (opcional) como argumentos. 
 
 En el siguiente ejemplo resaltaremos el primero y el segundo elemento <li> dentro de <ul>
 
- 
-#+begin_src html
+
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3690,16 +3869,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h2>Lista desordenada</h2>
+  <h2>Lista desordenada</h2>
     <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
         <li>Cuarto elemento</li>
     </ul>
-	<hr>
-	<h2>Otra lisa desordenada</h2>
-	<ul>
+  <hr>
+  <h2>Otra lisa desordenada</h2>
+  <ul>
         <li>Primer elemento</li>
         <li>Segundo elemento</li>
         <li>Tercer elemento</li>
@@ -3707,50 +3886,55 @@ $(document).ready(function(){
     </ul>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
 El método slice() también puede recibir números negativos, que indica que empezamos a contar posiciones desde el final.
 
-** Ajax en JQuery
+\subsection{Ajax en JQuery}
+\label{sec:org6be5637}
 
-*** Qué es Ajax
+\subsubsection{Qué es Ajax}
+\label{sec:org2aeb402}
 
 Ajax son las siglas de Asynchronous Javascript and XML. Ajax solo significa que se cargan datos desde el servidor hacia el navegador web sin necesidad de recargar la página completamente.
 
 Básicamente, con Ajax se hace uso de un objeto basado en JavaScript llamado XmLHttpRequest que envía y recibe información a y desde un servidor web de manera asíncrona, en segundo plano, sin interferir en la experiencia de usuario.
 
-*** Ajax con JQuery
+\subsubsection{Ajax con JQuery}
+\label{sec:org300b0ee}
 
- Diferentes navegadores implementan Ajax de manera diferente lo que significa que si adoptamos el camino de JavaScript para implementar Ajax habrá que escribir diferente código para los diferentes navegadores para asegurarse de que funciona en todos. 
+Diferentes navegadores implementan Ajax de manera diferente lo que significa que si adoptamos el camino de JavaScript para implementar Ajax habrá que escribir diferente código para los diferentes navegadores para asegurarse de que funciona en todos. 
 
- Pero afortunadamente JQuery simplifica el proceso implementando Ajax teniendo cuidad de las diferencia entre navegadores. Así que JQuery ofrece métodos tales como *load(), $.get(), $.post()*, etc, para implementar Ajax y que funcione correctamente en todos los navegadores.
+Pero afortunadamente JQuery simplifica el proceso implementando Ajax teniendo cuidad de las diferencia entre navegadores. Así que JQuery ofrece métodos tales como \textbf{load(), \$.get(), \$.post()}, etc, para implementar Ajax y que funcione correctamente en todos los navegadores.
 
- En los próximos capítulos veremos los métodos para enviar y recibir datos usando HTTP GET y POST.
+En los próximos capítulos veremos los métodos para enviar y recibir datos usando HTTP GET y POST.
 
-** Load Ajax en JQuery
+\subsection{Load Ajax en JQuery}
+\label{sec:orgb003862}
 
-*** Método load()
+\subsubsection{Método load()}
+\label{sec:orgda65b50}
 
 El método load() carga datos de un servidor y devuelve el código HTML devuelto en un elemento seleccionado. Este método nos ofrece una forma muy simple de cargar datos de manera asíncrona desde un servidor web. 
 
 La sintaxis básica es la siguiente.
 
-#+begin_src js
+\begin{verbatim}
 $(selector).load(URL,data, complete);
-#+end_src
+\end{verbatim}
 
 Veamos esto en un caso práctico. Vamos a crear un fichero HTML llamado "test-contenet.html" y lo salvamos. Y escribimos el siguiente código:
 
-#+begin_src html
+\begin{verbatim}
 <h1>Demo simple de Ajax</h1>
 <p id="hint">Esto es un simple ejemplo sobre como cargar elementos con Ajax.</p>
 <p><img src="sky.jpg" alt="Cielo nuboso"></p>
-#+end_src
+\end{verbatim}
 
 Ahora creamos otro fichero al que vamos a llamar "load-demo.html" y lo salvamos y le agregamos el siguiente código.
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3772,18 +3956,20 @@ $(document).ready(function(){
     <button type="button">Cargar contenido</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
 
 Además, la función de llamada puede tener tres parámetros diferentes:
 
-+ *responseTxt* -- Contiene el contenido resultante si la petición es exitosa
-+ *statusTxt* -- Contiene el estado de la petición tanto si la petición es exitosa o da error.
-+ *jqXHR* -- Contiene el objeto XMLHttpRequest
+\begin{itemize}
+\item \textbf{responseTxt} -- Contiene el contenido resultante si la petición es exitosa
+\item \textbf{statusTxt} -- Contiene el estado de la petición tanto si la petición es exitosa o da error.
+\item \textbf{jqXHR} -- Contiene el objeto XMLHttpRequest
+\end{itemize}
 
 Ejemplo:
 
-#+begin_src html
+\begin{verbatim}
 <!DOCTYPE html>
 <html>
 <head>
@@ -3813,114 +3999,120 @@ $(document).ready(function(){
     <button type="button">Carga el contenido</button>
 </body>
 </html>                                		
-#+end_src
+\end{verbatim}
 
-* Ejercicios
+\section{Ejercicios}
+\label{sec:org5f4ca52}
 
-_Vamos a empezar con algo sencillo: _
+\_Vamos a empezar con algo sencillo: \_
 
-1. Crear un documento HTML con un encabezado, dos párrafos y un botón. Al pulsar el botón mediante el selector $(“*”) se debe ocultar todo. Método hide()
-   1. En el mismo documento HTML anterior. Al pulsar el botón debe ocultarse dicho botón
-   2. En el mismo documento HTML anterior. Suponemos que el encabezado y el primer párrafo tienen el atributo class=”intro”.Deberás ocultar al pulsar
-   3. el botón, dicho párrafo.
-2. Selecciona el primer elemento de la primera lista y oculta dicho elemento.
+\begin{enumerate}
+\item Crear un documento HTML con un encabezado, dos párrafos y un botón. Al pulsar el botón mediante el selector \$(“*”) se debe ocultar todo. Método hide()
+\begin{enumerate}
+\item En el mismo documento HTML anterior. Al pulsar el botón debe ocultarse dicho botón
+\item En el mismo documento HTML anterior. Suponemos que el encabezado y el primer párrafo tienen el atributo class=”intro”.Deberás ocultar al pulsar
+\item el botón, dicho párrafo.
+\end{enumerate}
+\item Selecciona el primer elemento de la primera lista y oculta dicho elemento.
 
-3. Crea un documento con un par de enlaces mediante el atributo href y oculta ambos enlaces. 
+\item Crea un documento con un par de enlaces mediante el atributo href y oculta ambos enlaces.
 
-4. Crea un documento con dos enlaces y dos botones. Uno se tiene que abrir en una nueva ventana (target="_blank") y el otro no. Cada botón debe ocultar uno de los enlaces en función de su atributo target.
+\item Crea un documento con dos enlaces y dos botones. Uno se tiene que abrir en una nueva ventana (target="\(_{\text{blank}}\)") y el otro no. Cada botón debe ocultar uno de los enlaces en función de su atributo target.
 
-5. Crear un documento con una tabla. Poner el fondo de las filas pares en rojo (usar el método .css("background-color","red"). A continuación poner el fondo de las filas impares en verde ..css("background-color","green")
+\item Crear un documento con una tabla. Poner el fondo de las filas pares en rojo (usar el método .css("background-color","red"). A continuación poner el fondo de las filas impares en verde ..css("background-color","green")
 
-6. Crear un documento con un párrafo, el cuál se oculte al clicar dos veces sobre él
+\item Crear un documento con un párrafo, el cuál se oculte al clicar dos veces sobre él
 
-7. Crear un documento con un párrafo tal que aparezca un aviso alert() cuando se presiona el botón izquierdo del ratón.
+\item Crear un documento con un párrafo tal que aparezca un aviso alert() cuando se presiona el botón izquierdo del ratón.
 
-8. Utiliza el método hover() para lanzar un mensaje cuando nos posicionamos sobre un párrafo y otro cuando salgamos de él.
+\item Utiliza el método hover() para lanzar un mensaje cuando nos posicionamos sobre un párrafo y otro cuando salgamos de él.
 
-9. Utiliza los métodos focus() y blur() para cambiar el color de dos cuadros de texto cuando posicionamos el foco y cuando lo retiramos.
+\item Utiliza los métodos focus() y blur() para cambiar el color de dos cuadros de texto cuando posicionamos el foco y cuando lo retiramos.
 
-10. Crea un documento con dos tag div, dentro de cada uno de los cuales debe haber un botón para esconder dichos tag.
+\item Crea un documento con dos tag div, dentro de cada uno de los cuales debe haber un botón para esconder dichos tag.
 
-11. Crea un documento con un botón, tal que al clickarlo como gestor de vento, agrege la opacidad de tres elementos div mediante el método fadeIn(). El primer fadeIn() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos.
+\item Crea un documento con un botón, tal que al clickarlo como gestor de vento, agrege la opacidad de tres elementos div mediante el método fadeIn(). El primer fadeIn() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos.
 
-12. Crea un documento con un botón, tal que al clickarlo nos quite la opacidad de tres elementos div mediante el método fadeOut(). El primer fadeOut() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos
+\item Crea un documento con un botón, tal que al clickarlo nos quite la opacidad de tres elementos div mediante el método fadeOut(). El primer fadeOut() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos
 
-13. Crea un documento con dos capas, tal que al clickar sobre la primera se despliege hacia abajo la segunda mediante el método slideDown().
+\item Crea un documento con dos capas, tal que al clickar sobre la primera se despliege hacia abajo la segunda mediante el método slideDown().
 
-14. Crear un programa, tal que al clickar en un botón se mueva un cuadrado 100 px a la derecha y si dentro del cuadrado pone HELLO aumente el tamaño de la letra.
+\item Crear un programa, tal que al clickar en un botón se mueva un cuadrado 100 px a la derecha y si dentro del cuadrado pone HELLO aumente el tamaño de la letra.
 
-15. En el ejercicio anterior incluir un botón para poder detener el efecto.
+\item En el ejercicio anterior incluir un botón para poder detener el efecto.
 
-16. Mejora el ejercicio anterior añadiendo cuatro botones.
+\item Mejora el ejercicio anterior añadiendo cuatro botones.
 
-    1. Start. Comienza la animación
+\begin{enumerate}
+\item Start. Comienza la animación
 
-    2. Stop. Parar la animación
+\item Stop. Parar la animación
 
-    3. StopAll. Detiene todas las animaciones
+\item StopAll. Detiene todas las animaciones
 
-    4. Stop but finish. Detiene las animaciones pero acabando primero la que se encuentra en ejecución
+\item Stop but finish. Detiene las animaciones pero acabando primero la que se encuentra en ejecución
+\end{enumerate}
 
-17. Crear un programa con un botón, tal que al hacer clic ponga las letras en rojo de un párrafo, lo oculte con un desplazamiento hacia arriba (slideUp) y lo visualice con un desplazamiento hacia abajo (slideDown).
+\item Crear un programa con un botón, tal que al hacer clic ponga las letras en rojo de un párrafo, lo oculte con un desplazamiento hacia arriba (slideUp) y lo visualice con un desplazamiento hacia abajo (slideDown).
 
-18. Mediante tres eventos asociados a tres botones, “SetText”, “SetHTML” y “SetValue” establecer el texto de un primer párrafo a “Hola Mundo ”, establecer el texto de un segundo  párrafo a “Hola Mundo” en negrita y establecer el valor de un cuadro de texto a “Hola Mundo”.
+\item Mediante tres eventos asociados a tres botones, “SetText”, “SetHTML” y “SetValue” establecer el texto de un primer párrafo a “Hola Mundo ”, establecer el texto de un segundo  párrafo a “Hola Mundo” en negrita y establecer el valor de un cuadro de texto a “Hola Mundo”.
 
-19. Cambia los atributos href y title de un enlace a Google, mediante un evento asociado a un botón. Ahora href=”http://www.google.es/intl/es/earth/index.html” y el título será “Google Earth”
+\item Cambia los atributos href y title de un enlace a Google, mediante un evento asociado a un botón. Ahora href=”\url{http://www.google.es/intl/es/earth/index.html}” y el título será “Google Earth”
 
-20. Cambia un enlace a http://google.es mediante un evento asociado a un botón y un callback, en el que el nuevo texto introducido sea /intl/es/earth/index.html
+\item Cambia un enlace a \url{http://google.es} mediante un evento asociado a un botón y un callback, en el que el nuevo texto introducido sea /intl/es/earth/index.html
 
-21. Crear un documento con un párrafo, mediante un evento asociado a un botón debemos añadirle (indiferente principio o final) un párrafo creado con HTML, un párrafo creado con jQuery y un párrafo creado con el DOM de JavaScript.
+\item Crear un documento con un párrafo, mediante un evento asociado a un botón debemos añadirle (indiferente principio o final) un párrafo creado con HTML, un párrafo creado con jQuery y un párrafo creado con el DOM de JavaScript.
 
-22. Crea una capa cuadrada (100 x 300 en amarillo) que contenga un par de párrafos. Borra dichos párrafos con el método empty() como gestor de un evento asociado a un botón.
+\item Crea una capa cuadrada (100 x 300 en amarillo) que contenga un par de párrafos. Borra dichos párrafos con el método empty() como gestor de un evento asociado a un botón.
 
-23. Añade una clase css a distintos elementos de HTML mediante un evento asociado a un botón y como gestor del evento el método addClass. Mediante otro evento asociado a un segundo botón elimina la clase css de los elementos utilizando como gestor el evento removeClass().
+\item Añade una clase css a distintos elementos de HTML mediante un evento asociado a un botón y como gestor del evento el método addClass. Mediante otro evento asociado a un segundo botón elimina la clase css de los elementos utilizando como gestor el evento removeClass().
 
-24. Tenemos un documento con 4 párrafos cada uno con un color de fondo. mediante un evento asociado a un botón devuelve mediante una alerta el color de fondo del primer párrafo.
+\item Tenemos un documento con 4 párrafos cada uno con un color de fondo. mediante un evento asociado a un botón devuelve mediante una alerta el color de fondo del primer párrafo.
 
-25. En el mismo documento anterior, mediante un evento asociado a un botón. Cambia el color de fondo de los cuatro párrafos a amarillo y aumenta el tamaño de la letra
+\item En el mismo documento anterior, mediante un evento asociado a un botón. Cambia el color de fondo de los cuatro párrafos a amarillo y aumenta el tamaño de la letra
 
-26. Mediante un evento asociado a un botón obtener el ancho y alto de una capa cuadrada. Visualizarlo como texto dentro del elemento div.
+\item Mediante un evento asociado a un botón obtener el ancho y alto de una capa cuadrada. Visualizarlo como texto dentro del elemento div.
 
-27. Obtener la altura y anchura del documento y de la ventana como respuesta a un evento asociado a un botón.
+\item Obtener la altura y anchura del documento y de la ventana como respuesta a un evento asociado a un botón.
 
-28. Selecciona de una lista de 5 ciudades, la segunda,  debes resaltarla  con un color de fondo rojo
+\item Selecciona de una lista de 5 ciudades, la segunda,  debes resaltarla  con un color de fondo rojo
 
-29. Crea una tabla de 8 filas, a continuación pon el fondo rojo a todas aquellas que estén por encima de la tercera (2) y pon el fondo azul a todas aquellas que estén por debajo de la tercera (2)
+\item Crea una tabla de 8 filas, a continuación pon el fondo rojo a todas aquellas que estén por encima de la tercera (2) y pon el fondo azul a todas aquellas que estén por debajo de la tercera (2)
 
-30. Selecciona todas las cabeceras de un documento y ponlas en rojo.
+\item Selecciona todas las cabeceras de un documento y ponlas en rojo.
 
-31. Selecciona de una tabla todas las casillas vacías y ponlas un color de fondo amarillo.
+\item Selecciona de una tabla todas las casillas vacías y ponlas un color de fondo amarillo.
 
-32. Selecciona todos los elementos con el atributo href acabado en .com y a continuación resalta dichos elementos en amarillo
+\item Selecciona todos los elementos con el atributo href acabado en .com y a continuación resalta dichos elementos en amarillo
 
-33. Selecciona todos los elementos de tipo input de tu documento y ponlos con un color de fondo rojo
+\item Selecciona todos los elementos de tipo input de tu documento y ponlos con un color de fondo rojo
 
-34. Realiza el mismo ejercicio que el anterior rodeando con un span en color rojo los elementos input de tipo radio y de tipo checkbox.
+\item Realiza el mismo ejercicio que el anterior rodeando con un span en color rojo los elementos input de tipo radio y de tipo checkbox.
 
-35. Crear un documento con un elemento div y dentro del div  un par de párrafos, de tal manera que al hacer clic en un párrafo cambie el color de ambos párrafos.
+\item Crear un documento con un elemento div y dentro del div  un par de párrafos, de tal manera que al hacer clic en un párrafo cambie el color de ambos párrafos.
 
-36. Crear un documento con un párrafo, tal que al hacer clic aumente el tamaño de la letra. Sólo se producirá dicho efecto en dos ocasiones, luego el efecto debe desaparecer.
+\item Crear un documento con un párrafo, tal que al hacer clic aumente el tamaño de la letra. Sólo se producirá dicho efecto en dos ocasiones, luego el efecto debe desaparecer.
 
-37. Crea un documento con dos botones, start y stop. Mediante el primero se debe producir la siguiente animación. Debe aparecer un elemento div cuadrado de 40 x 40, desplazarse a la izquierda 200 px, cambiar de color a azul y ocultarse desplazándose hacia arriba. *Solución*
+\item Crea un documento con dos botones, start y stop. Mediante el primero se debe producir la siguiente animación. Debe aparecer un elemento div cuadrado de 40 x 40, desplazarse a la izquierda 200 px, cambiar de color a azul y ocultarse desplazándose hacia arriba. \textbf{Solución}
 
-38. Contar caracteres en un textarea.Crea un plugin para conseguir que un campo textarea de un formulario, informe en todo momento de los caracteres que ha escrito el usuario. Es decir, vamos a hacer un método del objeto jQuery que servirá para que cuente los caracteres en una capa de texto detrás de un textarea. *Solución*
+\item Contar caracteres en un textarea.Crea un plugin para conseguir que un campo textarea de un formulario, informe en todo momento de los caracteres que ha escrito el usuario. Es decir, vamos a hacer un método del objeto jQuery que servirá para que cuente los caracteres en una capa de texto detrás de un textarea. \textbf{Solución}
 
-39. Seguridad en una clave Crea un plugin que realice lo siguiente. Tendremos un formulario con un campo input password. Con jQuery mostraremos dinámicamente un mensaje al lado del campo con la fortaleza de la clave que haya escrita. A medida que el usuario cambie el contenido del campo, se actualizará el mensaje del lado, mostrando la fortaleza de la nueva clave. (<5 no segura, >5 y <8 medianamente segura, >8 segura) *Solución*
+\item Seguridad en una clave Crea un plugin que realice lo siguiente. Tendremos un formulario con un campo input password. Con jQuery mostraremos dinámicamente un mensaje al lado del campo con la fortaleza de la clave que haya escrita. A medida que el usuario cambie el contenido del campo, se actualizará el mensaje del lado, mostrando la fortaleza de la nueva clave. (<5 no segura, >5 y <8 medianamente segura, >8 segura) \textbf{Solución}
 
-40. Campos adicionales Crear un plugin que permita añadir campos en un formulario. Tendremos un enlace en el formulario con el texto "Más campos" y al pulsarlo, simplemente se inyectará el código HTML para mostrar un campo nuevo en el formulario. *Solución*
+\item Campos adicionales Crear un plugin que permita añadir campos en un formulario. Tendremos un enlace en el formulario con el texto "Más campos" y al pulsarlo, simplemente se inyectará el código HTML para mostrar un campo nuevo en el formulario. \textbf{Solución}
 
-41. Implementar la función tip sobre los elementos del documento.Realiza  un sistema para crear elementos, tal que, al pasar el ratón sobre ellos, muestre un mensaje con una explicación contextual, lo que habitualmente se conoce como "tip" *Solución*
+\item Implementar la función tip sobre los elementos del documento.Realiza  un sistema para crear elementos, tal que, al pasar el ratón sobre ellos, muestre un mensaje con una explicación contextual, lo que habitualmente se conoce como "tip" \textbf{Solución}
 
-42. Crear un programa con jQuery para obtener un menú, tal que cada vez que el usuario introduce el puntero  el item se establece de color blanco mediante un efecto persiana. *Solución*
+\item Crear un programa con jQuery para obtener un menú, tal que cada vez que el usuario introduce el puntero  el item se establece de color blanco mediante un efecto persiana. \textbf{Solución}
 
-43. Validar un formulario con jQuery.Se trata de un formulario en el que hay que introducir el nombre,  mail,  asunto y un mensaje. Si no se introduce alguno de los campos o si el mail es incorrecto nos aparecerá un tip informando de dicho asunto. En el enlace siguiente está el código del programa tan sólo falta la parte de jQuery. *Solución*
+\item Validar un formulario con jQuery.Se trata de un formulario en el que hay que introducir el nombre,  mail,  asunto y un mensaje. Si no se introduce alguno de los campos o si el mail es incorrecto nos aparecerá un tip informando de dicho asunto. En el enlace siguiente está el código del programa tan sólo falta la parte de jQuery. \textbf{Solución}
 
-44. Hacer un efecto tipo acordeón con jQuery.
+\item Hacer un efecto tipo acordeón con jQuery.
 
-45. Hacer un Slidder con JQuery
+\item Hacer un Slidder con JQuery
 
-46. Introduce en un documento el plugin jquery.snow.js para crear el efecto de nevando. Deberás implementar el tamaño mínimo del copo de nieve a 12 (minSize), el tamaño máximo a 18 (maxSize) , la frecuencia con la que cae la nieve a 400 (newOn) *Solución*
+\item Introduce en un documento el plugin jquery.snow.js para crear el efecto de nevando. Deberás implementar el tamaño mínimo del copo de nieve a 12 (minSize), el tamaño máximo a 18 (maxSize) , la frecuencia con la que cae la nieve a 400 (newOn) \textbf{Solución}
 
-47. Realiza un programa en JQuery para que en tu documento aparezcan 8 fotos en orden aleatorio. *Solución*
-
-
+\item Realiza un programa en JQuery para que en tu documento aparezcan 8 fotos en orden aleatorio. \textbf{Solución}
+\end{enumerate}
+\end{document}
