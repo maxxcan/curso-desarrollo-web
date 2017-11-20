@@ -271,7 +271,7 @@ Podemos seleccionar selectores de CSS para hacer nuestra selección más precisa
 <script type="text/javascript">
 $(document).ready(function(){
     // Combinadmos el elemento párrafo con la clase marca
-    $("p.mark").css("background", "yellow");
+    $("p.marca").css("background", "yellow");
   
     // Combinamos span con el id marca
     $("#mark span").css("background", "yellow");
@@ -280,12 +280,12 @@ $(document).ready(function(){
     $("ul li").css("background", "yellow");
   
     // Combinamos dos elementos y el id marca
-    $("ul#mark li").css("background", "red");
+    $("ul#marca li").css("background", "red");
   
     // Combinamos dos marcas y la clase marca
-    $("ul.mark li").css("background", "green");
+    $("ul.marca li").css("background", "green");
   
-    // Highlight all anchor elements with target blank
+    // Resaltamos los elementos 
     $('a[target="_blank"]').css("background", "yellow");
 });
 </script>

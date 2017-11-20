@@ -31,24 +31,27 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "holaMundo2.html")
+                (demo-it-load-file "seleccionPorId.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>
-    <meta charset=\"utf-8\">
-    <title>Documento JQuery</title>
-    <script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>
-    <script type=\"text/javascript\">
-        $(document).ready(function(){
-            $(\"p\").text(\"Hola Mundo!\");
-        });
-    </script>
+<meta charset=\"utf-8\">
+<title>Seleccionando por ID en JQuery</title>
+<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>
+<script type=\"text/javascript\">
+$(document).ready(function(){
+    // Cambia el color del elemento con id marca
+    $(\"#marca\").css(\"background\", \"yellow\");
+});
+</script> 
 </head>")
                 (demo-it-insert "
 <body>
-    <p>No cargado todavía.</p>
+    <p id=\"marca\">Esto es un párrafo.</p>
+    <p>Esto es otro párrafo.</p>
+    <p>Y otro más.</p>
+    <p><strong>Nota:</strong> El valor del id debe ser único.</p>
 </body>
 </html>")
                 )
 (demo-it-start)
-
