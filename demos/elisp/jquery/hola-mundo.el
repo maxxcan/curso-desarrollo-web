@@ -31,27 +31,23 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "seleccionPorAtributos.html")
+                (demo-it-load-file "holaMundo.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>
-<meta charset=\"utf-8\">
-<title>Seleccionando elementos por atributos</title>
-<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>
+    <meta charset=\"utf-8\">
+    <title>Nuestra primer página con JQuery</title>
+     <script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>")
+                (demo-it-insert "
 <script type=\"text/javascript\">
-$(document).ready(function(){
-    
-    $('input[type=\"text\"]').css(\"background\", \"yellow\");
-});
-</script>
+        $(document).ready(function(){
+            $(\"h1\").css(\"color\", \"#0088ff\");
+        });
+    </script>
 </head>")
                 (demo-it-insert "
 <body>
-    <form>
-        <label>Nombre: <input type="text"></label>
-        <label>Contraseña: <input type="password"></label>
-        <input type="submit" value="Entra">
-    </form>
+    <h1>Hola, Mundo!</h1>
 </body>
 </html>")
                 )

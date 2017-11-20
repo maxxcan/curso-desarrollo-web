@@ -41,20 +41,20 @@ la presentación al mismo tiempo"
 <script type=\"text/javascript\">")
                 (demo-it-insert "
 $(document).ready(function(){
-    // Combinadmos el elemento párrafo con la clase marca
-    $(\"p.mark\").css(\"background\", \"yellow\");")
+    // Combinamos el elemento párrafo con la clase marca
+    $(\"p.marca\").css(\"background\", \"yellow\");")
                 (demo-it-insert "
  // Combinamos span con el id marca
-    $(\"#mark span\").css(\"background\", \"yellow\");")
+    $(\"#marca span\").css(\"background\", \"yellow\");")
                 (demo-it-insert "
     // Combinamos dos elementos ul e il
     $(\"ul li\").css(\"background\", \"yellow\");")
                 (demo-it-insert "
     // Combinamos dos elementos y el id marca
-    $(\"ul#mark li\").css(\"background\", \"red\");")
+    $(\"ul#marca li\").css(\"background\", \"red\");")
                 (demo-it-insert "
     // Combinamos dos marcas y la clase marca
-    $(\"ul.mark li\").css(\"background\", \"green\")
+    $(\"ul.marca li\").css(\"background\", \"green\")
 });
 </script>
 </head>")
