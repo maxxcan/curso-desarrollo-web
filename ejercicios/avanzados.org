@@ -1,0 +1,27 @@
+#+TITLE: Ejercicios básicos
+#+AUTHOR: Patricio Martínez
+* Introducción
+
+1. Crear un programa que muestra en el documento html el mensaje "hola mundo"
+2. Escribe las distintas formas de ejecutar un código javascript
+3. Mostrar una ventana emergente con el mensaje "Hola mundo"
+4. Mostrar el mensaje "hola mundo" en la consola del navegador
+* Variables
+
+1. Crear un programa que almacene en variables el valor de la edad, nombre y estado civil de una persona y a continuación lo muestre en pantalla.
+2. Crear un programa en el que se le pida al usuario su nombre y apellido y lo muestre en pantalla.
+3. Crear un programa que tome 2 valores y muestre la suma de éstos.
+* Estructuras de control
+
+1. Hacer un programa donde introduzcamos la nota de un alumno y nos diga si está aprobado o suspenso
+2. Igual que el anterior pero que indique si está suspenso o tiene un aprabado, un notable, un sobresaliente o una matricula.
+3. Hacer un programa donde se solicite dos veces la contraseña a un usuario y se compruebe que es la misma.
+4. Hacer  un programa que permita cargar un número entero positivo de hasta tres cifras y muestre un mensaje indicando si tiene 1, 2, ó 3 cifras. Mostrar un mensaje de error si el número de cifras no es 1, 2 ó 3. 
+5. Realizar un programa que pida cargar una fecha cualquiera, luego verificar si dicha fecha corresponde a Navidad
+6. Escriba un programa que muestre al usuario los nombres de los doce meses del año usando la función alert() y el array meses.
+7. Se carga una fecha (día, mes y año) por teclado. Mostrar un mensaje si corresponde al primer trimestre del año (enero, febrero o marzo).Cargar por teclado el valor numérico del día, mes y año por separado.
+8. Hacer un programa que solicite que se ingrese un valor entre 1 y 5. Luego mostrar  el valor ingresado. Mostrar un mensaje de error en caso de haber ingresado un valor que no se encuentre en dicho rango. Utilizar estructura switch
+* DOM
+1. Crear una página con una serie de botones dispuestos para cambiar el color de fondo de la página a  rojo, verde, azul, amarillo y negro. Cada uno de ellos está  rotulado con el nombre del color que activa.
+* Funciones y Arrays
++ Hacer una función a la cual le envíe tres enteros y los muestre ordenados de menor a mayor. 
