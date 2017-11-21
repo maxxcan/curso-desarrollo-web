@@ -747,11 +747,9 @@ $(document).ready(function(){
     	var mob = /^[1-9]{1}[0-9]{9}$/;
         var currentValue = $("#inputMobile").val();
         if(mob.test(currentValue) == false && currentValue != 10){
-            $("p").html("Número de teléfono inválido
- number").addClass("error").show().fadeOut(1000);
+            $("p").html("Número de teléfono inválido").addClass("error").show().fadeOut(1000);
         } else{
-            $("p").html("Número de teléfono válido
- number").addClass("success").show().fadeOut(1000);
+            $("p").html("Número de teléfono válido").addClass("success").show().fadeOut(1000);
         }
         event.preventDefault();
     });
@@ -761,7 +759,7 @@ $(document).ready(function(){
 <body>
     <form>
         <input type="text" id="inputMobile" maxlength="10"
- placeholder="Introduce un númemro de teléfono">
+ placeholder="Introduce un número de teléfono">
         <input type="submit" value="Submit">
         <p></p>
     </form>
@@ -817,9 +815,9 @@ Este método activa una función cuando la ventana del navegador cambia de tama�
 <script type="text/javascript">
 $(document).ready(function(){
     $(window).resize(function() {
-        $(window).bind("redimensiona", function(){ 
+        $(window).bind("resize", function(){ 
             $("p").text("Altura de la ventana: " + $(window).width() + ", " +
- "Altura de la ventana: " + $(window).height());
+ "Anchura de la ventana: " + $(window).height());
         });
     });
 });
@@ -833,7 +831,7 @@ $(document).ready(function(){
 
 *** Método scroll()
 
-Esto activa la función cuadno detecta que el scroll de un iframe o de la ventana cambia. En este ejemplo se mostrará un mensaje cuadno el scroll del navegador cambia.
+Esto activa la función cuando detecta que el scroll de un iframe o de la ventana cambia. En este ejemplo se mostrará un mensaje cuando el scroll del navegador cambia.
 
 #+begin_src html
 <!DOCTYPE html>
@@ -853,7 +851,7 @@ Esto activa la función cuadno detecta que el scroll de un iframe o de la ventan
         top: 50px;
         display: none;
     }
-    .dummy-content{
+    .principal{
         height: 600px;
         font: 34px sans-serif;
         text-align: center;
@@ -869,11 +867,11 @@ $(document).ready(function(){
 </head> 
 <body>
     <p>Vamos que nos vamos!</p>
-    <div class="dummy-content">Volando voy...</div>
-    <div class="dummy-content">Volando vengo...</div>
-    <div class="dummy-content">Por el camino...</div>
-    <div class="dummy-content">Yo me entretengooo.</div>
-    <div class="dummy-content">salalaaaaa.</div>
+    <div class="principal">Volando voy...</div>
+    <div class="principal">Volando vengo...</div>
+    <div class="principal">Por el camino...</div>
+    <div class="principal">Yo me entretengooo.</div>
+    <div class="principal">salalaaaaa.</div>
 </body>
 </html>                                		
 #+end_src
@@ -1106,7 +1104,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <button type="button" class="to-btn">Fade para esconder los distintos párrafos</button>
+    <button type="button" class="to-btn">Fade para mostrar los distintos párrafos</button>
     <p class="none">Esto es un párrafo.</p>
     <p class="partial">Esto es otro párrafo.</p>
     <p class="complete">Y párrafo.</p>

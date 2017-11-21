@@ -31,25 +31,38 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/jquery/eventosReady.html")
+                (demo-it-load-file "../../html/jquery/eventosDocumentoResize.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>
 <meta charset=\"utf-8\">
-<title></title>
-<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>
+<title>Ejecutando una función cuando redimensionamos la ventana</title>
+<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>
+<style type=\"text/css\">
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: #f0e68c;
+    }
+</style>")
+                (demo-it-insert "
 <script type=\"text/javascript\">
 $(document).ready(function(){
-    alert(\"Hola Mundo!\");
+    $(window).resize(function() {
+        $(window).bind(\"resize\", function(){
+            $(\"p\").text(\"Altura de la ventana: \" + $(window).width() + \", \" +
+ \"Anchura de la ventana: \" + $(window).height());
+        });
+    });
 });
 </script>
 </head>")
                 (demo-it-insert "
 <body>
-    El contenido vendrá aquí
+    <p>Cambia el tamaño de la ventana</p>
 </body>
-</html>
-")
-                )
+</html>")
+
+)
 (demo-it-start)
 
