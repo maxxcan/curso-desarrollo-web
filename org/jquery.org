@@ -1209,7 +1209,7 @@ $(document).ready(function(){
 <body>
     <button type="button">Empieza la animación</button>
     <p>
-    	<img src="/img/champi.jpg" alt="Toad">
+    	<img src="img/toad.png" alt="Toad">
     </p>
 </body>
 </html>                                		
@@ -1404,7 +1404,7 @@ $(document).ready(function(){
     <button type="button" class="back-btn">Atrás</button>
     <button type="button" class="reset-btn">Reset</button>
     <p>
-    	<img src="/examples/images/mushroom.jpg" alt="Mushroom">
+    	<img src="/img/toad.png" alt="Toad">
     </p>
 </body>
 </html>                                		                                		
@@ -1562,7 +1562,7 @@ $(document).ready(function(){
 
 *** Método html()
 
-El método html() es usado para obtener o establecer congtenido HTML de los elementos.
+El método html() es usado para obtener o establecer contenido HTML de los elementos.
 
 **** Obtener contenido HTML con el método html()
 
@@ -1779,7 +1779,7 @@ $(document).ready(function(){
     <button type="button">Discovery</button>
     <button type="button">Atlantis</button>
     <button type="button">Endeavour</button>
-<p><strong><Aviso:></Aviso:>> Pulsa en los botones de arriba.</p>
+<p><strong><Aviso:></Aviso:> Pulsa en los botones de arriba.</p>
     <p>
         <input type="text">
     </p>
