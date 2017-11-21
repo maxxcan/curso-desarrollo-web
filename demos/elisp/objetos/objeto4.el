@@ -17,7 +17,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "objetos4.js")
+                (demo-it-load-file "../../html/objetos/js/objetos4.js")
                 (demo-it-insert "
 /*Sintaxis de creación de métodos de objeto:
   <nombre_método>: function(){

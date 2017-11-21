@@ -17,7 +17,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "objetos3.js")
+                (demo-it-load-file "../../html/objetos/js/objetos3.js")
                 (demo-it-insert "
 /*Sintaxis de acceso a las propiedades de un objeto:
 

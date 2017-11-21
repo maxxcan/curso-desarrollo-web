@@ -32,7 +32,7 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
 
-                (demo-it-load-file "funcionesAnonimas.js")
+                (demo-it-load-file "../../html/funciones/js/funcionesAnonimas.js")
 
                 (demo-it-insert "
 // Sintaxis de una función anónima

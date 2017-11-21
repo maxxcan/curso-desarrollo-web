@@ -31,7 +31,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "sumandoNumeros.html")
+                (demo-it-load-file "../../html/numeros/sumandoNumeros.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>

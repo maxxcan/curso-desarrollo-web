@@ -17,7 +17,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "objetos1.js")
+                (demo-it-load-file "../../html/objetos/js/objetos1.js")
                 (demo-it-insert "
 //DATOS PRIMITIVOS:
 var cadena = \"Ada Lovelace\";

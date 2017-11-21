@@ -17,7 +17,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "parametros-y-argumentos.js")
+                (demo-it-load-file "../../html/funciones/js/parametros-y-argumentos.js")
                 (demo-it-insert "
 /* Parámetros y argumentos
    Función puede tener 0 o más parámetros.

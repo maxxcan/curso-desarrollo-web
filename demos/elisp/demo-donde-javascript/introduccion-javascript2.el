@@ -32,7 +32,7 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 
-                (demo-it-load-file "js/holaMundo.js")
+                (demo-it-load-file "../../html/introduccion/js/holaMundo.js")
                 (demo-it-insert "function holamundo(){
              alert(\"Hola, Mundo!\");
          }")

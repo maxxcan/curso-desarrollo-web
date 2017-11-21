@@ -31,7 +31,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "variables.html")
+                (demo-it-load-file "../../html/sintaxis/variables.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 	<head>

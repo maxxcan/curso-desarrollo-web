@@ -17,7 +17,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "objetos2.js")
+                (demo-it-load-file "../../html/objetos/js/objetos2.js")
                 (demo-it-insert "
 // 3 formas de crear un objeto en JavaScript
 //

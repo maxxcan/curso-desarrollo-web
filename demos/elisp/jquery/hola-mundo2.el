@@ -31,7 +31,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "holaMundo2.html")
+                (demo-it-load-file "../../html/jquery/holaMundo2.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>

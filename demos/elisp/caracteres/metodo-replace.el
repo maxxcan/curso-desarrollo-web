@@ -31,7 +31,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "metodoReplace.html")
+                (demo-it-load-file "../../elisp/caracteres/metodoReplace.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>

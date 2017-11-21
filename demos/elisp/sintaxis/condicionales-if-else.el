@@ -31,7 +31,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "condicionalesIfElse.html")
+                (demo-it-load-file "../../html/sintaxis/condicionalesIfElse.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 	<head>

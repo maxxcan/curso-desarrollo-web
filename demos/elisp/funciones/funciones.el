@@ -17,7 +17,7 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "funciones.js")
+                (demo-it-load-file "../../html/funciones/js/funciones.js")
                 (demo-it-insert "// Una función es un bloque de código que se ejecuta una tarea en particular.
 // Así podemos reutilizar el código.
 // Además hay que invocarla para que se ejecute
