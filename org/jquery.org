@@ -1779,7 +1779,8 @@ $(document).ready(function(){
     <button type="button">Discovery</button>
     <button type="button">Atlantis</button>
     <button type="button">Endeavour</button>
-<p><strong><Aviso:></Aviso:> Pulsa en los botones de arriba.</p>
+<p><strong><Aviso:></Aviso:>
+ Pulsa en los botones de arriba.</p>
     <p>
         <input type="text">
     </p>
