@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Establecer texto con el métodos text()</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".btn-one").click(function(){
+        $("p").text("Esto es un texto de prueba.");
+    });
+    $(".btn-two").click(function(){
+        $("p:first").text("Esto es otro texto de prueba.");
+    });
+    $(".btn-three").click(function(){
+        $("p.empty").text("Esto es otro texto de prueba.");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="btn-one">Establece texto en todos los párrafos</button>
+    <button type="button" class="btn-two">Establece texto en el primer párrafo</button>
+    <button type="button" class="btn-three">Establece texto en el párrafo vacío</button>
+    <p>Esto es un párrafo.</p>
+    <p>Esto es otro párrafo.</p>
+    <p class="empty"></p>
+</body>
+</html>

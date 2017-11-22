@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de una animación con los valores pre-definidos</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    .box{
+        width: 80%;
+        height: 200px;
+        background: #9d7ede;
+        margin-top: 30px;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".box").animate({
+            width: 'toggle'
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button">Animación de cierre</button>
+    <div class="box"></div>
+</body>
+</html>

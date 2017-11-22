@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo cómo obtener texto con text()</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".btn-one").click(function(){
+        var str = $("p").text();
+        alert(str);
+    });
+
+ $(".btn-two").click(function(){
+       var str = $("p:first").text();
+       alert(str);
+    });
+ $(".btn-three").click(function(){
+       var str = $("p.extra").text();
+       alert(str);
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="btn-one">Obteniendo el texto de todos los párrafos</button>
+    <button type="button" class="btn-two">Obteniendo el texto del primer párrafo</button>
+	<button type="button" class="btn-three">Obteniendo el texto del último párrafo</button>
+    <p>Esto es un párrafo.</p>
+    <p>Esto es otro párrafo.</p>
+	<p class="extra">Y uno más.</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de una animación con valores relativos</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    .box{
+        width: 100px;
+        height: 100px;
+        background: #9d7ede;
+        margin-top: 30px;
+        position: relative; /* Required to move element */
+    }
+</style> 
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".box").animate({
+            top: "+=50px",
+            left: "+=50px",
+            width: "+=50px",
+            height: "+=50px"
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button">Empezar animación</button>
+    <div class="box"></div>
+</body>
+</html>
