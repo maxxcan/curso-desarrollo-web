@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+ <title>Ejemplos del efecto Fade-In y Fade-Out</title>
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <style type="text/css">
+     p{
+         padding: 15px;
+         background: #DDA0DD;
+     }
+ </style>
+<script type="text/javascript">
+ $(document).ready(function(){
+     // Mostrando el párrafo
+     $(".out-btn").click(function(){
+         $("p").fadeOut();
+     });
+ // Ocultando el párrafo
+     $(".in-btn").click(function(){
+         $("p").fadeIn();
+     });
+ });
+ </script>
+ </head>
+<body>
+     <button type="button" class="out-btn">largando párrafo</button>
+     <button type="button" class="in-btn">trayendo párrafo</button>
+     <p>Esto amigos es una cosa rosa.</p>
+     <p>Yo soy otra cosa rosa.</p>
+ </body>
+ </html>

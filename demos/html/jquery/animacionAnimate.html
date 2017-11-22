@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de efectos de animación</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    img{
+        position: relative; /* esto es requerido */
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("img").animate({
+            left: 300
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button">Empieza la animación</button>
+    <p>
+    	<img src="img/toad.png" alt="Toad">
+    </p>
+</body>
+</html>

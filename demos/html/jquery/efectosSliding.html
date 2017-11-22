@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de los métodos slideUp() y slideDown()</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 15px;
+        background: #B0C4DE;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Efecto de hacia arriba
+    $(".up-btn").click(function(){
+        $("p").slideUp();
+    });
+ // Efecto de hacia abajo
+    $(".down-btn").click(function(){
+        $("p").slideDown();
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="up-btn">Tira parriba</button> 
+    <button type="button" class="down-btn">Tira pabajo</button>
+    <p>Esto es un párrafo.</p>
+    <p>Esto es otro párrafo.</p>
+</body>
+</html>

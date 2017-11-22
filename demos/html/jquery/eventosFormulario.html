@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejecutando una función cuando cambia un evento</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("select").change(function(){
+        var selectedOption = $(this).find(":selected").val();
+        alert("Te vas de vacaciones a - " + selectedOption);
+    });
+});
+</script>
+</head>
+<body>
+<h2>¿A qué ciudad vas a ir estas vaciones?</h2>
+    <form>
+        <label>Ciudad:</label>
+        <select>
+            <option>Roma</option>
+            <option>Paris</option>
+            <option>New York</option>
+        </select>
+    </form>
+	<p><strong>Aviso:</strong> Selecciona un valor del menú desplegable.</p>
+</body>
+</html>
