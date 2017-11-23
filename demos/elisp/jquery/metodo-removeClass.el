@@ -31,41 +31,40 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/jquery/metodoAppend.html")
+                (demo-it-load-file "../../html/jquery/metodoRemoveClass.html")
                 (demo-it-insert "<!DOCTYPE html>
-<html lang=\"en\">
+<html>
 <head>
-<meta charset=\"UTF-8\">
-<title>Inserting HTML Contents At the End of the Elements in jQuery</title>
-<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>
-<script type=\"text/javascript\">")
+<meta charset=\"utf-8\">
+<title>Eliminando clases en JQuery</title>
+<style type=\"text/css\">
+    .page-header{
+        color: red;
+        text-transform: uppercase;
+    }
+    .highlight{
+        background: yellow;
+    }
+</style>")
                 (demo-it-insert "
+<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>
+<script type=\"text/javascript\">
 $(document).ready(function(){
-    // Append all paragraphs on document ready
-    $(\"p\").append(' <a href=\"#\">quiere saber más?</a>');
-
-
-    // Append a div container on button click
     $(\"button\").click(function(){
-       $(\"#container\").append(\"Esto es un texto de prueba.\");
+        $(\"h1\").removeClass();
+        $(\"p\").removeClass();
     });
 });
 </script>
 </head>")
                 (demo-it-insert "
 <body>
-    <button type=\"button\">Inserta Texto</button>
-    <div id=\"container\">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
- tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
- vel, semper malesuada ante.</p>
-        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
- suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
- at mattis. Suspendisse potenti.</p>
-    </div>
+    <h1 class=\"page-header\">Texto de prueba</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p class=\"hint highlight\"><strong>Nota:</strong> Lorem Ipsum is dummy text.</p>
+    <button type=\"button\">Eliminando clases</button>
 </body>
 </html>")
-
                 )
 (demo-it-start)
 

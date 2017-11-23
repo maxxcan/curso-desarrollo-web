@@ -31,41 +31,38 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/jquery/metodoAppend.html")
+                (demo-it-load-file "../../html/jquery/metodoCssMultiplesPropiedades.html")
                 (demo-it-insert "<!DOCTYPE html>
-<html lang=\"en\">
+<html>
 <head>
-<meta charset=\"UTF-8\">
-<title>Inserting HTML Contents At the End of the Elements in jQuery</title>
-<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>
-<script type=\"text/javascript\">")
+<meta charset=\"utf-8\">
+<title>Establecer el valor CSS de múltiples propiedades</title>
+<style type=\"text/css\">
+    p{
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+    }
+</style>")
                 (demo-it-insert "
+<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"></script>
+<script type=\"text/javascript\">
 $(document).ready(function(){
-    // Append all paragraphs on document ready
-    $(\"p\").append(' <a href=\"#\">quiere saber más?</a>');
-
-
-    // Append a div container on button click
     $(\"button\").click(function(){
-       $(\"#container\").append(\"Esto es un texto de prueba.\");
+        $(\"p\").css({\"background-color\": \"yellow\", \"padding\": \"20px\"});
     });
 });
 </script>
 </head>")
                 (demo-it-insert "
 <body>
-    <button type=\"button\">Inserta Texto</button>
-    <div id=\"container\">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
- tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis
- vel, semper malesuada ante.</p>
-        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi
- suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam
- at mattis. Suspendisse potenti.</p>
-    </div>
-</body>
-</html>")
-
+    <h1>Saludos desde la tierra</h1>
+    <p style=\"background-color:orange;\">Esto es un párrafo.</p>
+    <p style=\"background-color:#ee82ee;\">Esto es otro párrafo.</p>
+    <p style=\"background-color:rgb(139,205,50);\">Y otro más.</p>
+    <p>El último párrafo.</p>
+    <button type=\"button\">Añadiendo estilo CSS</button>
+    </body>
+    </html>")
                 )
 (demo-it-start)
 
