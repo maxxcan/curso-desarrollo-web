@@ -67,5 +67,36 @@ $(document).ready(function(){
     </body>
     </html>")
                 )
-(demo-it-start)
+(demo-it-start)<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Obteniendo valores de una propiedad CSS</title>
+<style type="text/css">
+    div{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        cursor: pointer;
+        display: inline-block;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("div").click(function(){
+        var color = $(this).css("background-color");
+        $("#result").html(color);
+    });
+});
+</script>
+</head>
+<body>
+    <div style="background-color:orange;"></div>
+    <div style="background-color:#ee82ee;"></div>
+    <div style="background-color:rgb(139,205,50);"></div>
+    <div style="background-color:#f00;"></div>
+    <p>El valor del color de fondo es: <b id="result"></b></p>
+    </body>
+    </html>
 

@@ -2098,11 +2098,11 @@ $(document).ready(function(){
 
 *** El método unwrap()
     
-Elimina todo lo que hay alrededor de un elmento. Hace lo contrario que el método wrap()
+Elimina todo lo que hay alrededor de un elemento. Hace lo contrario que el método wrap()
 
 *** El método removeAttr()
 
-Elimina los atributos de un elemento selecciondo.
+Elimina los atributos de un elemento seleccionado.
 
 En el siguiente ejemplo borraremos el atributo href de un elemento <a> al pulsar un botón
 
@@ -2350,8 +2350,7 @@ $(document).ready(function(){
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
-	<p><strong>Aviso:</strong> Pulsa dentro de la caja vacía para llenarla con el
- color de fondo.</p>
+	<p><strong>Aviso:</strong> Pulsa dentro de la caja vacía para llenarla de color.</p>
 </body>
 </html>
 #+end_src

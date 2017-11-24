@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Estableciendo un atributo con attr()</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $('input[type="checkbox"]').attr("checked", "checked");
+    });
+});
+</script>
+</head>
+<body>
+    <p><label><input type="checkbox"></label>Acepto los términos y condiciones</p>
+    <button type="button">Comprueba</button>
+</body>
+</html>
