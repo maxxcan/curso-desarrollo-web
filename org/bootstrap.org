@@ -305,14 +305,13 @@ El siguiente ejemplo creará tres columnas en dispositivos medianos pero en pequ
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
-    /* Some custom styles to beautify this example */
+   
     .demo-content{
         padding: 15px;
         font-size: 18px;
@@ -323,9 +322,7 @@ El siguiente ejemplo creará tres columnas en dispositivos medianos pero en pequ
     .demo-content.bg-alt{
         background: #abb1b8;
     }
-    /* Some custom media query to make 
-       this example even better */
-    @media screen and (max-width: 991px){
+     @media screen and (max-width: 991px){
         .flexible{
             min-height: 150px;
         }
@@ -367,7 +364,6 @@ Ahora la cuestión es como podemos crear semejante diseño responsivo. Vamos a e
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ejemplo de un sistema de varias columnas</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -412,12 +408,11 @@ Ejemplo:
 
 #+begin_src html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Example of Bootstrap 3 Grid System</title>
+<title>Ejemplo de rejilla de 3</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -432,7 +427,6 @@ Ejemplo:
 </style>
 </head>
 <body>
-	<!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the window to understand how the Bootstrap responsive grid system works. -->
     <div class="container">
         <div class="row">
             <div class="col-md-4"><p>Box 1</p></div>
@@ -463,7 +457,6 @@ Ahora vamos a optimizar nuestro diseño para otros dispositivos, empezaremos con
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ejemplo de rejilla para distintos dispositivos</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -507,10 +500,9 @@ Ahora cada 2 columnas col-sm-6 tenemos 12, así que limpiaremos cada 2 filas.
 
 #+begin_src html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ejemplo rejilla para distintos dispositivos</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -560,10 +552,9 @@ De manera similar, podemos adaptar el diseño para dispositivos grandes. Finalme
 
 #+begin_src html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ejemplo de rejilla para distintos dispositivos</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -620,7 +611,7 @@ Ejemplo:
 
 #+begin_src html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -708,10 +699,9 @@ En Bootstrap las rejillas de columnas se pueden anidar, lo que significa que pod
 
 #+begin_src html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Example of Bootstrap 3 Nested Rows and Columns</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -731,7 +721,7 @@ En Bootstrap las rejillas de columnas se pueden anidar, lo que significa que pod
 </style>
 </head>
 <body>
-	<!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the browser window to understand how the Bootstrap responsive grid system works. -->
+
 	<div class="container">
         <div class="row">
             <div class="col-xs-8">
@@ -896,87 +886,87 @@ Veamos el siguiente ejemplo:
 
 ** Creando diseños fluidos con Bootstrap
 
-En Bootstrap podemos usar la clase *.container-fluid* para crear diseños fluidos los cuales usaran el 100% de la vista de usuario.
+ En Bootstrap podemos usar la clase *.container-fluid* para crear diseños fluidos los cuales usaran el 100% de la vista de usuario.
 
-La clase .container-fluid simplemente aplica el margen horizontal con el valor *auto* y al relleno izquierdo y derecho le dejamos 15px de margen (es decir, margin: 0 -15px).
+ La clase .container-fluid simplemente aplica el margen horizontal con el valor *auto* y al relleno izquierdo y derecho le dejamos 15px de margen (es decir, margin: 0 -15px).
 
-Veamos el siguiente código:
+ Veamos el siguiente código:
 
-#+begin_src html
+ #+begin_src html
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Diseño fijo con Bootstrap</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
-    body{
-    	padding-top: 70px;
-    }
-</style>
-</head>
-<body>
-<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="sr-only">Navegación</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Curso de desarrollo web</a>
-		</div>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#" target="_blank">Inicio</a></li>
-				<li><a href="#" target="_blank">Sobre</a></li>
-				<li><a href="#" target="_blank">Contacto</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<div class="container-fluid">
-	<div class="jumbotron">
-		<h1>Aprendiendo a crear páginas web</h1>
-    <p>Hoy en día el navegador se ha convertido el estándar universal ya que lo podemos encontrar en gran cantidad de dispositivos tales como la televisión, ordenadores, tabletas, móviles y un largo etcetera. Por ello, aprender a crear páginas web, de manera rápida y profesional es una gran ventaja que se nos ofrece para tener gran cantidad de oportunidades</p>
-		<p><a href="https://www.maxxcan.com" target="_blank" class="btn btn-success btn-lg">Empieza hoy</a></p>
-	</div>
-	<div class="row">
-		<div class="col-xs-4">
-			<h2>HTML</h2>
-      <p>HTML es el lenguaje de marcado universal y su conocimiento nos dará la posibilidad de crear páginas web. Además su entendimiento básico nos permitirá introducirnos en la compresión de la gran cantidad de tecnología que hay habilitada para crear contenido</p>
-			<p><a href="https://www.maxxcan.com" target="_blank" class="btn btn-success">Quiere saber más? &raquo;</a></p>
-		</div>
-		<div class="col-xs-4">
-			<h2>CSS</h2>
-	    <p>Gracias al CSS podemos enfocarnos en el diseño de nuetra página o aplicación web mientras en otro proceso u otra persona se encarga del contenido</p>	
-			<p><a href="https://www.maxxcan.com" target="_blank" class="btn btn-success">Quiere saber más? &raquo;</a></p>
-		</div>
-		<div class="col-xs-4">
-			<h2>Bootstrap</h2>
-			<p>Bootstrap es un potente framework que nos permite crear de manera sencilla y rápida páginas responsivas de gran calidad</p>
-			<p><a href="http://getbootstrap.com/" target="_blank" class="btn btn-success">Para aprender maś&raquo;</a></p>
-		</div>
-	</div>
-	<hr>
-	<div class="row">
-		<div class="col-xs-12">
-			<footer>
-				<p>&copy; Copyright 2017 Maxxcan - also Republic Tutorial</p>
-			</footer>
-		</div>
-	</div>
-</div>
-</body>
-</html>                                		
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Diseño fijo con Bootstrap</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style type="text/css">
+     body{
+    	 padding-top: 70px;
+     }
+ </style>
+ </head>
+ <body>
+ <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+	 <div class="container-fluid">
+		 <div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+				 <span class="sr-only">Navegación</span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+			 </button>
+			 <a class="navbar-brand" href="#">Curso de desarrollo web</a>
+		 </div>
+		 <div class="collapse navbar-collapse" id="navbarCollapse">
+			 <ul class="nav navbar-nav">
+				 <li class="active"><a href="#" target="_blank">Inicio</a></li>
+				 <li><a href="#" target="_blank">Sobre</a></li>
+				 <li><a href="#" target="_blank">Contacto</a></li>
+			 </ul>
+		 </div>
+	 </div>
+ </nav>
+ <div class="container-fluid">
+	 <div class="jumbotron">
+		 <h1>Aprendiendo a crear páginas web</h1>
+     <p>Hoy en día el navegador se ha convertido el estándar universal ya que lo podemos encontrar en gran cantidad de dispositivos tales como la televisión, ordenadores, tabletas, móviles y un largo etcetera. Por ello, aprender a crear páginas web, de manera rápida y profesional es una gran ventaja que se nos ofrece para tener gran cantidad de oportunidades</p>
+		 <p><a href="https://www.maxxcan.com" target="_blank" class="btn btn-success btn-lg">Empieza hoy</a></p>
+	 </div>
+	 <div class="row">
+		 <div class="col-xs-4">
+			 <h2>HTML</h2>
+       <p>HTML es el lenguaje de marcado universal y su conocimiento nos dará la posibilidad de crear páginas web. Además su entendimiento básico nos permitirá introducirnos en la compresión de la gran cantidad de tecnología que hay habilitada para crear contenido</p>
+			 <p><a href="https://www.maxxcan.com" target="_blank" class="btn btn-success">Quiere saber más? &raquo;</a></p>
+		 </div>
+		 <div class="col-xs-4">
+			 <h2>CSS</h2>
+	     <p>Gracias al CSS podemos enfocarnos en el diseño de nuetra página o aplicación web mientras en otro proceso u otra persona se encarga del contenido</p>	
+			 <p><a href="https://www.maxxcan.com" target="_blank" class="btn btn-success">Quiere saber más? &raquo;</a></p>
+		 </div>
+		 <div class="col-xs-4">
+			 <h2>Bootstrap</h2>
+			 <p>Bootstrap es un potente framework que nos permite crear de manera sencilla y rápida páginas responsivas de gran calidad</p>
+			 <p><a href="http://getbootstrap.com/" target="_blank" class="btn btn-success">Para aprender maś&raquo;</a></p>
+		 </div>
+	 </div>
+	 <hr>
+	 <div class="row">
+		 <div class="col-xs-12">
+			 <footer>
+				 <p>&copy; Copyright 2017 Maxxcan - also Republic Tutorial</p>
+			 </footer>
+		 </div>
+	 </div>
+ </div>
+ </body>
+ </html>                                		
 
-#+end_src
+ #+end_src
 * Tipografía en Bootstrap
 
 ** Trabajando con cabeceras
@@ -3287,6 +3277,6 @@ El menú desplegable tiene básicamente dos componentes el elemento que inicia e
 + La lista desordenada con la clase *.dropdown-menu* es el menú en sí.
 
 * Ejercicios 1ª Parte
-
+  
 
 
