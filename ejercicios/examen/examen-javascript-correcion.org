@@ -1,0 +1,282 @@
+#+TITLE: Examen de JavaScript
+#+AUTHOR: Patricio Martínez
+#+DATE: \today
+#+EMAIL: maxxcan@gmail.com
+#+OPTIONS: toc:nil 
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+#+LaTeX_CLASS_OPTIONS: [addpoints, 12]{exam}
+
+* Qué compañía inventó el lenguaje JavaScript?
+:PROPERTIES:
+:points:   
+:END:
+
+
+   1) Mozilla[x]
+   2) Netscape[]
+   3) Sun[] 
+   4) Microsoft[] 
+
+* JavaScript es un lenguaje de programación
+:PROPERTIES:
+:points:   
+:END:
+   
+   1) Compilado[]
+   2) Interpretado[]
+   3) No estructurado[]
+   4) Ninguna de las anteriores[]
+
+* Qué es el DOM
+:PROPERTIES:
+:points:   
+:END:
+   
+   1) Un atributo[]
+   2) Un videojuego[]
+   3) Una api para documentos HTML y XML[]
+   4) Un elemento[]
+
+* Dónde se puede insertar código JavaScript en un documento HTML
+:PROPERTIES:
+:points:   
+:END:
+   1) En el <head>[]
+   2) En el <body>[]
+   3) Tanto en el <head> como en el <body>[]
+   4) Sólo en el <head> si el documento está en un fichero aparte[]
+
+* El DOM representa una página como un
+:PROPERTIES:
+:points:   
+:END:
+   1) Un árbol[]
+   2) Una tabla[]
+   3) Una lista hash[]
+   4) Ninguna de las anteriores es correcta[] 
+
+* Cual es el acrónimo de DOM
+:PROPERTIES:
+:points:   
+:END:
+   1) Document Object Markup[]
+   2) Document Of Model[]
+   3) Domain Object Model[]
+   4) Ninguna de las anteriores son correctas[]
+
+* Como se pone en JavaScript un comentario de una línea
+:PROPERTIES:
+:points:   
+:END:
+   1) # Comentario[]
+   2) // Comentario[] 
+   3) /* Comentario[]
+   4) Ninguna de las anteriores[]
+
+* Como se genera en JavasScript un número aleatorio 
+:PROPERTIES:
+:points:   
+:END:
+   1) Con Math.rnd()[]
+   2) Con Math.round()[]
+   3) Con Math.random()[]
+   4) Ninguna de las anteriores[]
+
+* En JavaScript las posiciones de los caracteres de una cadena empiezan en 
+:PROPERTIES:
+:points:   
+:END:
+   1) -1[]
+   2) 0 []
+   3) 1 []
+   4) Ninguna de las anteriores[]
+
+* Cual es la forma correcta de crear un Array en JavaScript
+:PROPERTIES:
+:points:   
+:END:
+    1) var txt = new Array:1=("tim"),2=("kim"),3=("jim")[]
+    2) var txt = new Array(1="tim",2="kim",3="jim")[]
+    3) var txt = new Array("tim","kim","jim")[]
+    4) var txt = new Array(1:"tim",2:"kim",3:"jim")[]
+
+* En JavaScript cual es la función que se emplea para convertir una cadena a minúscula 
+:PROPERTIES:
+:points:   
+:END:
+    1) lower()[]
+    2) lowerCase()[]
+    3) toLower()[]
+    4) toLowerCase()[]
+
+* En JavaScript, ¿cómo se muestra una ventana con el mensaje "Hola mundo!"?
+:PROPERTIES:
+:points:   
+:END:
+    1) alert("Hola mundo!");[]
+    2) alertBox = "Hola mundo!";[]
+    3) alertBox("Hola mundo!);[]
+    4) msgBox("Hola mundo!);[]
+
+* En JavaScript, el operador para concatenar cadenas es
+:PROPERTIES:
+:points:   
+:END:
+    1) "_"[]
+    2) "%"[]
+    3) "."[]
+    4) Ninguna de las anteriores[]
+
+* En JavaScript, ¿cómo se llama a una función llamada "miFuncion"?
+:PROPERTIES:
+:points:   
+:END:
+    1) call function miFuncion()[]
+    2) call miFuncion()[]
+    3) miFuncion()[]
+    4) Ninguna de las anteriores es correcta[]
+
+* En JavaScript, para obtener un carácter concreto de una cadena según su posición se emplea la función
+:PROPERTIES:
+:points:   
+:END:
+    1) char()[]
+    2) charAt()[]
+    3) value()[]
+    4) Ninguna de las anteriores[]
+
+* En JavaScript, ¿cómo se escribe un bucle "for" para contar desde 1 hasta 5?
+:PROPERTIES:
+:points:   
+:END:
+    1) for(i <= 5; i++)[]
+    2) for(i = 1; i <= 5; i++)[]
+    3) for i = 1 to 5[]
+    4) Ninguna de las anteriores[]
+
+* En JavaScript, ¿cómo se define una función llamada "miFuncion"?
+:PROPERTIES:
+:points:   
+:END:
+    1) Function:miFuncion()[]
+    2) function->miFuncion()[]
+    3) function miFuncion()[]
+    4) Ninguna de las anteriores es correcta[] 
+
+* En JavaScript, ¿cómo se escribe una sentencia condicional para comprobar que la variable "i" es igual a 5?
+:PROPERTIES:
+:points:   
+:END:
+    1) if i=5 then[]
+    2) if(i=5)[]
+    3) if i==5 then[]
+    4) if(i==5)[]
+
+* En JavaScript, ¿cómo se redondea el número 7.25 al entero más cercano?
+:PROPERTIES:
+:points:   
+:END:
+    1) round(7.25)[]
+    2) Math.round(7.25)[]
+    3) Math.rnd(7.25)[]
+    4) rnd(7.25)[]
+
+* En JavaScript, para finalizar un bucle de tipo "for" se emplea
+:PROPERTIES:
+:points:   
+:END:
+    1) No se puede[]
+    2) Exit for[]
+    3) break[]
+    4) Las anteriores respuestas no son correctas[]
+
+* En una página XHTML, ¿cuál es la forma correcta de hacer referencia a un fichero externo con código JavaScript llamado "xxx.js"?
+:PROPERTIES:
+:points:   
+:END:
+    1) <script name="xxx.js" type="text/javascript" />[]
+    2) <script href="xxx.js" type="text/javascript" />[]
+    3) <script src="xxx.js" type="text/javascript" />[]
+    4) Ninguna de las anteriores[]
+
+* Respecto al final de instrucción en JavaScript
+:PROPERTIES:
+:points:   
+:END:
+    1) Se emplea el punto y coma (;), pero es opcional[]
+    2) No se emplea ningún delimitador[]
+    3) Se emplea el punto y coma (;) y es obligatorio[]
+    4) Ninguna es correcta []
+
+* En JavaScript, ¿cómo se calcula el máximo de los números 2 y 4?
+:PROPERTIES:
+:points:   
+:END:
+    1) ceil(2, 4)[]
+    2) top(2, 4)[]
+    3) Math.ceil(2, 4)[]
+    4) Math.max(2, 4)[]
+
+* En JavaScript, ¿cómo se escribe una sentencia condicional para comprobar que la variable "i" es distinta de 5?
+:PROPERTIES:
+:points:   
+:END:
+    1) if(i <> 5)[]
+    2) if(i != 5)[]
+    3) if i <> 5[]
+    4) if i != 5[]
+
+* ¿Qué etiqueta de HTML se emplea para escribir código JavaScript?
+:PROPERTIES:
+:points:   
+:END:
+    1) <javascript>[]
+    2) <script>[]
+    3) <scripting>[]
+    4) <js>[]
+
+* En JavaScript, ¿cómo se llama el objeto que representa una expresión regular?
+:PROPERTIES:
+:points:   
+:END:
+    1) No hay ningún objeto[]
+    2) ExpReg[]
+    3) RegExp[]
+    4) Rexp[]
+
+* JavaScript fue diseñado por
+:PROPERTIES:
+:points:   
+:END:
+    1) Bill Gates[]
+    2) Bjarne Stroustrup[]
+    3) Brendan Eich[] 
+    4) Dennis M. Ritchie[]
+
+* En una navegador web, para escribir algo en la consola se emplea
+:PROPERTIES:
+:points:   
+:END:
+    1) console.append()[]
+    2) console.log()[]
+    3) console.print()[]
+    4) console.write()[]
+
+* Con Git qué comando usamos para añadir ficheros
+:PROPERTIES:
+:points:   
+:END:
+    1) Git commit[]
+    2) Git push[]
+    3) Git add[]
+    4) Ninguno de los anteriores[]
+
+* Con Git qué comando usamos para subir ficheros al repositorio
+:PROPERTIES:
+:points:   
+:END:
+
+    1) Git commit[]
+    2) Git push[]
+    3) Git add[]
+    4) Ninguno de los anteriores[]
