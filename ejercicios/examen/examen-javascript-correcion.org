@@ -8,33 +8,33 @@
 
 * Qué compañía inventó el lenguaje JavaScript?
 :PROPERTIES:
-:points:   
+:points:   1
 :END:
 
 
-   1) Mozilla[x]
-   2) Netscape[]
+   1) Mozilla[]
+   2) Netscape[x]
    3) Sun[] 
    4) Microsoft[] 
 
 * JavaScript es un lenguaje de programación
 :PROPERTIES:
-:points:   
+:points:   1
 :END:
    
    1) Compilado[]
-   2) Interpretado[]
+   2) Interpretado[x]
    3) No estructurado[]
    4) Ninguna de las anteriores[]
 
 * Qué es el DOM
 :PROPERTIES:
-:points:   
+:points:   1
 :END:
    
    1) Un atributo[]
    2) Un videojuego[]
-   3) Una api para documentos HTML y XML[]
+   3) Una api para documentos HTML y XML[x]
    4) Un elemento[]
 
 * Dónde se puede insertar código JavaScript en un documento HTML
@@ -43,14 +43,14 @@
 :END:
    1) En el <head>[]
    2) En el <body>[]
-   3) Tanto en el <head> como en el <body>[]
+   3) Tanto en el <head> como en el <body>[x]
    4) Sólo en el <head> si el documento está en un fichero aparte[]
 
 * El DOM representa una página como un
 :PROPERTIES:
 :points:   
 :END:
-   1) Un árbol[]
+   1) Un árbol[x]
    2) Una tabla[]
    3) Una lista hash[]
    4) Ninguna de las anteriores es correcta[] 
@@ -62,14 +62,14 @@
    1) Document Object Markup[]
    2) Document Of Model[]
    3) Domain Object Model[]
-   4) Ninguna de las anteriores son correctas[]
+   4) Ninguna de las anteriores son correctas[x]
 
 * Como se pone en JavaScript un comentario de una línea
 :PROPERTIES:
 :points:   
 :END:
    1) # Comentario[]
-   2) // Comentario[] 
+   2) // Comentario[x] 
    3) /* Comentario[]
    4) Ninguna de las anteriores[]
 
@@ -79,7 +79,7 @@
 :END:
    1) Con Math.rnd()[]
    2) Con Math.round()[]
-   3) Con Math.random()[]
+   3) Con Math.random()[x]
    4) Ninguna de las anteriores[]
 
 * En JavaScript las posiciones de los caracteres de una cadena empiezan en 
@@ -87,7 +87,7 @@
 :points:   
 :END:
    1) -1[]
-   2) 0 []
+   2) 0 [x]
    3) 1 []
    4) Ninguna de las anteriores[]
 
@@ -97,23 +97,23 @@
 :END:
     1) var txt = new Array:1=("tim"),2=("kim"),3=("jim")[]
     2) var txt = new Array(1="tim",2="kim",3="jim")[]
-    3) var txt = new Array("tim","kim","jim")[]
+    3) var txt = new Array("tim","kim","jim")[x]
     4) var txt = new Array(1:"tim",2:"kim",3:"jim")[]
 
 * En JavaScript cual es la función que se emplea para convertir una cadena a minúscula 
 :PROPERTIES:
-:points:   
+:points:  0 
 :END:
     1) lower()[]
     2) lowerCase()[]
     3) toLower()[]
-    4) toLowerCase()[]
+    4) toLowerCase()[x]
 
 * En JavaScript, ¿cómo se muestra una ventana con el mensaje "Hola mundo!"?
 :PROPERTIES:
 :points:   
 :END:
-    1) alert("Hola mundo!");[]
+    1) alert("Hola mundo!");[x]
     2) alertBox = "Hola mundo!";[]
     3) alertBox("Hola mundo!);[]
     4) msgBox("Hola mundo!);[]
@@ -125,7 +125,7 @@
     1) "_"[]
     2) "%"[]
     3) "."[]
-    4) Ninguna de las anteriores[]
+    4) Ninguna de las anteriores[x]
 
 * En JavaScript, ¿cómo se llama a una función llamada "miFuncion"?
 :PROPERTIES:
@@ -133,7 +133,7 @@
 :END:
     1) call function miFuncion()[]
     2) call miFuncion()[]
-    3) miFuncion()[]
+    3) miFuncion()[x]
     4) Ninguna de las anteriores es correcta[]
 
 * En JavaScript, para obtener un carácter concreto de una cadena según su posición se emplea la función
@@ -141,7 +141,7 @@
 :points:   
 :END:
     1) char()[]
-    2) charAt()[]
+    2) charAt()[x]
     3) value()[]
     4) Ninguna de las anteriores[]
 
@@ -150,7 +150,7 @@
 :points:   
 :END:
     1) for(i <= 5; i++)[]
-    2) for(i = 1; i <= 5; i++)[]
+    2) for(i = 1; i <= 5; i++)[x]
     3) for i = 1 to 5[]
     4) Ninguna de las anteriores[]
 
@@ -160,7 +160,7 @@
 :END:
     1) Function:miFuncion()[]
     2) function->miFuncion()[]
-    3) function miFuncion()[]
+    3) function miFuncion()[x]
     4) Ninguna de las anteriores es correcta[] 
 
 * En JavaScript, ¿cómo se escribe una sentencia condicional para comprobar que la variable "i" es igual a 5?
@@ -170,14 +170,14 @@
     1) if i=5 then[]
     2) if(i=5)[]
     3) if i==5 then[]
-    4) if(i==5)[]
+    4) if(i==5)[x]
 
 * En JavaScript, ¿cómo se redondea el número 7.25 al entero más cercano?
 :PROPERTIES:
 :points:   
 :END:
     1) round(7.25)[]
-    2) Math.round(7.25)[]
+    2) Math.round(7.25)[x]
     3) Math.rnd(7.25)[]
     4) rnd(7.25)[]
 
@@ -187,7 +187,7 @@
 :END:
     1) No se puede[]
     2) Exit for[]
-    3) break[]
+    3) break[x]
     4) Las anteriores respuestas no son correctas[]
 
 * En una página XHTML, ¿cuál es la forma correcta de hacer referencia a un fichero externo con código JavaScript llamado "xxx.js"?
@@ -196,7 +196,7 @@
 :END:
     1) <script name="xxx.js" type="text/javascript" />[]
     2) <script href="xxx.js" type="text/javascript" />[]
-    3) <script src="xxx.js" type="text/javascript" />[]
+    3) <script src="xxx.js" type="text/javascript" />[x]
     4) Ninguna de las anteriores[]
 
 * Respecto al final de instrucción en JavaScript
@@ -205,7 +205,7 @@
 :END:
     1) Se emplea el punto y coma (;), pero es opcional[]
     2) No se emplea ningún delimitador[]
-    3) Se emplea el punto y coma (;) y es obligatorio[]
+    3) Se emplea el punto y coma (;) y es obligatorio[x]
     4) Ninguna es correcta []
 
 * En JavaScript, ¿cómo se calcula el máximo de los números 2 y 4?
@@ -215,14 +215,14 @@
     1) ceil(2, 4)[]
     2) top(2, 4)[]
     3) Math.ceil(2, 4)[]
-    4) Math.max(2, 4)[]
+    4) Math.max(2, 4)[x]
 
 * En JavaScript, ¿cómo se escribe una sentencia condicional para comprobar que la variable "i" es distinta de 5?
 :PROPERTIES:
 :points:   
 :END:
     1) if(i <> 5)[]
-    2) if(i != 5)[]
+    2) if(i != 5)[x]
     3) if i <> 5[]
     4) if i != 5[]
 
@@ -231,7 +231,7 @@
 :points:   
 :END:
     1) <javascript>[]
-    2) <script>[]
+    2) <script>[x]
     3) <scripting>[]
     4) <js>[]
 
@@ -241,7 +241,7 @@
 :END:
     1) No hay ningún objeto[]
     2) ExpReg[]
-    3) RegExp[]
+    3) RegExp[x]
     4) Rexp[]
 
 * JavaScript fue diseñado por
@@ -250,7 +250,7 @@
 :END:
     1) Bill Gates[]
     2) Bjarne Stroustrup[]
-    3) Brendan Eich[] 
+    3) Brendan Eich[x] 
     4) Dennis M. Ritchie[]
 
 * En una navegador web, para escribir algo en la consola se emplea
@@ -258,7 +258,7 @@
 :points:   
 :END:
     1) console.append()[]
-    2) console.log()[]
+    2) console.log()[x]
     3) console.print()[]
     4) console.write()[]
 
@@ -268,7 +268,7 @@
 :END:
     1) Git commit[]
     2) Git push[]
-    3) Git add[]
+    3) Git add[x]
     4) Ninguno de los anteriores[]
 
 * Con Git qué comando usamos para subir ficheros al repositorio
@@ -277,6 +277,6 @@
 :END:
 
     1) Git commit[]
-    2) Git push[]
+    2) Git push[x]
     3) Git add[]
     4) Ninguno de los anteriores[]
