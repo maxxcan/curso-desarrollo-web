@@ -16,26 +16,32 @@
 * Introducción a JavaScript
 ** Por qué JavaScript
 
-Junto con HTML y CSS es lenguaje más importante para desarrollo web
+   Junto con HTML y CSS es lenguaje más importante para desarrollo web
 
 [[./img/html-css-js-logos.png]]
 * Características
 
 1. Se ejecuta en el lado del cliente. Aunque también se puede ejecutar en el lado del servidor pero no es lo habitual.
+#+BEAMER: \pause
 2. Lenguaje interpretado. El navegador interpreta el lenguaje si necesidad de compilador 
+#+BEAMER: \pause
 3. Lenguaje basado en objetos.
+#+BEAMER: \pause
 4. Lenguaje Imperativo y estructurado. Usa las estructuras básicas
+#+BEAMER: \pause
 5. Lenguaje Objetual, con tipificación débil y dinámica.
 * El curso
 
 + Para principiantes
+#+BEAMER: \pause
 + Con ejemplos prácticos
+#+BEAMER: \pause
 + Podréis bajaros el código desde mi github
+#+BEAMER: \pause
 + Está basado en el tutorial de JavaScript de W3CSchools
 * Contacto
 
 *Os podréis poner en contacto conmigo a través de mi correo o a través de twitter*
 
 + Correo: maxxcan@gmail.com
-+ twitter: @maxxcan
-* 
++ twitter: @maxxcan 
