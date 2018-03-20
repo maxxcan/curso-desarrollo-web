@@ -30,6 +30,7 @@ la presentación al mismo tiempo"
 ;; Funciones para esta presentación
 
 (demo-it-create :advance-mode
+                :single-window
                 :insert-fast :show-block-headers
                 (demo-it-load-file "../../html/sintaxis/funciones.html")
                 (demo-it-insert "<!DOCTYPE html>
