@@ -44,12 +44,12 @@ la presentación al mismo tiempo"
 ")
                 (demo-it-insert "
 <script>
-var carName = \"Volvo\";
-myFunction();
+var nombreCoche = \"Volvo\";
+miFuncion();
 
-function myFunction() {
+function miFuncion() {
     document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + carName;
+    \"Puedo  mostrar \" + nombreCoche;
 }
 </script>
 
