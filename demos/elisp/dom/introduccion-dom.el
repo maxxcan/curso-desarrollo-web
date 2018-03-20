@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,19 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
-                (demo-it-insert "<!DOCTYPE html>
-<html>
-<head>
-<meta charset=\"UTF-8\">
+                (titulo)
+                (demo-it-load-file "../../html/dom/introduccionDom.html")
+                (demo-it-insert "<html>
 <body>
 
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
-
 <p id=\"demo\"></p>
-")
-                (demo-it-insert "
+
 <script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
-}
+document.getElementsById(\"demo\").innerHTML = \"Hola Mundo\";
 </script>
-
+;; getElementsById es un método
+;; innerHTML es una propiedad. Es la forma más fácil para obtener o reemplazar contenido de elementos
 </body>
-</html>
-")
+</html>")
                 )
-
 (demo-it-start)

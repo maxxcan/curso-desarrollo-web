@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,35 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
+                (titulo)
+                (demo-it-load-file "../../html/dom/buscandoElementosEtiqueta2.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>
-<meta charset=\"UTF-8\">
+<meta charset=\"utf-8\">
+</head>
+
 <body>
 
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
+<h3>En el siguiente ejemplo buscaremos todos los elementos con el id=”main” y entonces todos los elementos <p> dentro del “main”:</h3>")
+                (demo-it-insert "
+<p>Hola Mundo!</p>
 
-<p id=\"demo\"></p>
-")
+<div id=\"main\">
+<p>El DOM es muy útil</p>
+<p>Este ejemplo demuestra el método <b>getElementsByTagName</b></p>
+</div>
+
+<p id=\"demo\"></p>")
                 (demo-it-insert "
 <script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
-}
+var x = document.getElementById(\"main\");
+var y = x.getElementsByTagName(\"p\");
+document.getElementById(\"demo\").innerHTML = 
+'El primer párrafo (index 0) dentro de \"main\" es: ' + y[0].innerHTML;
 </script>
 
 </body>
-</html>
-")
+</html>")
                 )
-
 (demo-it-start)

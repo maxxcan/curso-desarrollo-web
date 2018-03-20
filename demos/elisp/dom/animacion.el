@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,54 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
+                (titulo)
+                (demo-it-load-file "../../html/dom/animacion.html")
                 (demo-it-insert "<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset=\"UTF-8\">
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>")
+                (demo-it-insert "
 <body>
 
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
+<p>
+<button onclick=\"myMove()\">Pulsa</button>
+</p> 
 
-<p id=\"demo\"></p>
-")
+<div id =\"container\">
+<div id =\"animate\"></div>
+</div>")
                 (demo-it-insert "
 <script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
+function myMove() {
+  var elem = document.getElementById(\"animate\");
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
 }
 </script>
 
 </body>
-</html>
-")
+</html>")
                 )
-
 (demo-it-start)

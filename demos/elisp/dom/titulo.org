@@ -1,0 +1,16 @@
+#+TITLE: El HTML DOM y JavaScript
+
+* Qué es el HTML DOM (Document Object Model)
+
+* Buscando elementos
+
+** Buscando elementos por su ID
+** Buscando elemenots por su etiqueta
+** Buscando elementos por el nombre de su clase
+** Buscando elementos por su selector CSS
+* Modificando elementos
+** Cambiando el valor de un atributo
+** Cambiando el estilo
+* Usando eventos
+** Cambiando un elemento al pulsar un botón
+** Ejemplo de animaciones con HTML DOM

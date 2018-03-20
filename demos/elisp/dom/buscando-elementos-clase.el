@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,26 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
+                (titulo)
+                (demo-it-load-file "../../html/dom/buscandoElementosClase.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
-<head>
-<meta charset=\"UTF-8\">
 <body>
 
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
+<p>Buscando elementos por su clase</p>
 
-<p id=\"demo\"></p>
-")
+<p class=\"intro\">DOM es muy útil.</p>
+<p class=\"intro\">Con este ejemplo demostramos el método <b>getElementsByClassName</b></p>
+
+<p id=\"demo\"></p>")
                 (demo-it-insert "
 <script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
-}
+var x = document.getElementsByClassName(\"intro\");
+document.getElementById(\"demo\").innerHTML = 
+'El primer párrafo  (index 0) con la  clase=\"intro\": ' + x[0].innerHTML;
 </script>
 
 </body>
-</html>
-")
+</html>")
                 )
-
 (demo-it-start)

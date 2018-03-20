@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,28 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
+                (titulo)
+                (demo-it-load-file "../../html/dom/buscandoElementosEtiqueta.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>
-<meta charset=\"UTF-8\">
+<meta charset=\"utf-8\">
+</head>
 <body>
+<h3>Vamos a buscar los elementos <b>P</b></h3>
 
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
+<p>Hola Mundo</p>
+<p>Este es un ejemplo del métodod <b>getElementsByTagName</b></p>
 
-<p id=\"demo\"></p>
-")
+<p id=\"demo\"></p>")
                 (demo-it-insert "
 <script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
-}
+var x = document.getElementsByTagName(\"p\");
+document.getElementById(\"demo\").innerHTML = 
+'El primer párrafo (index 0) es: ' + x[0].innerHTML;
 </script>
 
 </body>
-</html>
-")
+</html>")
                 )
-
 (demo-it-start)

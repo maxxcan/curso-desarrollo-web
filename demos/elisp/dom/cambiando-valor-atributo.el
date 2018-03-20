@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,21 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
+                (titulo)
+                (demo-it-load-file "../../html/dom/cambiandoValorAtributo.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
-<head>
-<meta charset=\"UTF-8\">
 <body>
 
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
-
-<p id=\"demo\"></p>
-")
+<img id=\"image\" src=\"gatito.gif\" width=\"160\" height=\"120\">")
                 (demo-it-insert "
 <script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
-}
+document.getElementById(\"image\").src = \"landscape.jpg\";
 </script>
 
-</body>
-</html>
-")
-                )
+<p>esto era un gatito pero lo hemos cambiado por un paisaje</p>
 
+</body>
+</html>")
+                )
 (demo-it-start)

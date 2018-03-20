@@ -15,7 +15,7 @@ la presentación al mismo tiempo"
 (defun limpiar ()
   (interactive)
   (ignore-errors
-    (kill-buffer "holaMundo.html")))
+    (kill-buffer "introduccion-dom.html")))
 
 (defun titulo()
   "Muestra el título de la presentación"
@@ -31,31 +31,17 @@ la presentación al mismo tiempo"
 
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
-                (demo-it-load-file "../../html/sintaxis/ambitoVariables3.html")
+                (demo-it-load-file "../../html/dom/usandoEventos.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
-<head>
-<meta charset=\"UTF-8\">
 <body>
-
-<p>A una variable global se puede acceder desde cualquier función o script de la página web.</p>
-
-<p id=\"demo\"></p>
-")
+<h3>veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
                 (demo-it-insert "
-<script>
-var nombreCoche = \"Volvo\";
-miFuncion();
-
-function miFuncion() {
-    document.getElementById(\"demo\").innerHTML =
-    \"Puedo  mostrar \" + nombreCoche;
-}
-</script>
+<button type=\"button\"
+onclick=\"document.getElementById('id1').style.color = 'red'\">
+Pulsame!</button>
 
 </body>
-</html>
-")
+</html>")
                 )
-
 (demo-it-start)

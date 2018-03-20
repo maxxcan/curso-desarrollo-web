@@ -4695,7 +4695,7 @@ Para buscar un elemento HTML con un determinado nombre de clase usamos *getEleme
 <html>
 <body>
 
-<p>Hello World!</p>
+<p>Buscando elementos por su clase</p>
 
 <p class="intro">DOM es muy útil.</p>
 <p class="intro">Con este ejemplo demostramos el método <b>getElementsByClassName</b></p>
