@@ -45,14 +45,14 @@ la presentación al mismo tiempo"
 ")
                 (demo-it-insert "
 <script>
-myFunction();
+miFuncion();
 document.getElementById(\"demo\").innerHTML =
-\"The type of carName is \" + typeof carName;
+\"El tipo de la variable es \" + typeof nombreCoche;
 ")
 
                 (demo-it-insert "
-function myFunction() {
-    var carName = \"Volvo\";
+function miFuncion() {
+    var nombreCoche = \"Volvo\";
 }
 </script>
 
