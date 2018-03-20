@@ -302,6 +302,7 @@ Ejemplo
 function myFunction(){
 document.getElementById("demo").innerHTML = "Párrafo cambiado";
 }
+</script>
 </body>
 </html>
 #+end_src
