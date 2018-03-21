@@ -5237,7 +5237,7 @@ Ejemplo:
 <html>
 <head>
 <script>
-function myFunction() {
+function miFuncion() {
     var x = document.getElementById("fnombre");
     x.value = x.value.toUpperCase();
 }
@@ -5245,7 +5245,7 @@ function myFunction() {
 </head>
 <body>
 
-Escribe tu nombre: <input type="text" id="fnombre" onchange="myFunction()">
+Escribe tu nombre: <input type="text" id="fnombre" onchange="miFuncion()">
 
 
 </body>
