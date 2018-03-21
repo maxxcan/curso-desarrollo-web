@@ -14,3 +14,11 @@
 * Usando eventos
 ** Cambiando un elemento al pulsar un botón
 ** Ejemplo de animaciones con HTML DOM
+** Atributos de eventos
+** Evento onload
+** Evento onchange 
+** Evento onmouseover y onmouseout
+** Eventos mouseclick
+** Eventos onfocus
+** Eventos onmouseover
+** Colección de objetos
