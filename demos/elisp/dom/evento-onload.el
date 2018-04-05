@@ -32,15 +32,24 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 (titulo)
-                (demo-it-load-file "../../html/dom/usandoEventos.html")
+                (demo-it-load-file "../../html/dom/eventoOnload.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
-<body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+<body onload=\"checkCookies()\">
+
+<p id=\"demo\"></p>")
                 (demo-it-insert "
-<button type=\"button\"
-onclick=\"document.getElementById('id1').style.color = 'red'\">
-Pulsame!</button>
+<script>
+function checkCookies() {
+    var text = \"\";
+    if (navigator.cookieEnabled == true) {
+        text = \"Las cuquis están habilitadas.\";
+    } else {
+        text = \"Las cuquis no están habilitadas.\";
+    }
+    document.getElementById(\"demo\").innerHTML = text;
+}
+</script>
 
 </body>
 </html>")

@@ -2239,7 +2239,7 @@ slice() extrae una parte de una cadena de texto y devuelve la parte extraída co
 Ejemplo:
 
 #+begin_src js
-var str = "Manzana, Plántano, Kiwi";
+var str = "Manzana, Plátano, Kiwi";
 var res = str.slice(9,16)
 #+end_src
 
@@ -2258,7 +2258,7 @@ Ejemplo:
 <p id="demo"></p>
 
 <script>
-var str = "Manzana, Plántano, Kiwi";
+var str = "Manzana, Plátano, Kiwi";
 var res = str.slice(9,16);
 document.getElementById("demo").innerHTML = res; 
 </script>
@@ -5131,7 +5131,7 @@ function changeText(id) {
 
 *** Atributos de eventos
 
-Para asignar eventoss a elementos html podemos usar atributos de eventos.
+Para asignar eventos a elementos html podemos usar atributos de eventos.
 
 Ejemplo:
 
@@ -5237,7 +5237,7 @@ Ejemplo:
 <html>
 <head>
 <script>
-function myFunction() {
+function miFuncion() {
     var x = document.getElementById("fnombre");
     x.value = x.value.toUpperCase();
 }
@@ -5245,7 +5245,7 @@ function myFunction() {
 </head>
 <body>
 
-Escribe tu nombre: <input type="text" id="fnombre" onchange="myFunction()">
+Escribe tu nombre: <input type="text" id="fnombre" onchange="miFuncion()">
 
 
 </body>
@@ -5324,13 +5324,13 @@ Con onload:
 <head>
 
 <script>
-function mymessage() {
-    alert("This message was triggered from the onload event");
+function miMensaje() {
+    alert("Este mensaje es patrocinado por un evento onload");
 }
 </script>
 </head>
 
-<body onload="mymessage()">
+<body onload="miMensaje()">
 </body>
 
 </html>
@@ -5345,14 +5345,14 @@ Con onfocus:
 <html>
 <head>
 <script>
-function myFunction(x) {
+function miFuncion(x) {
     x.style.background = "yellow";
 }
 </script>
 </head>
 <body>
 
-Escribe tu nombre: <input type="text" onfocus="myFunction(this)">
+Escribe tu nombre: <input type="text" onfocus="miFuncion(this)">
 
 <p>Cuando la caja de texto obtiene el foco, ésta cambia el fondo de color</p>
 

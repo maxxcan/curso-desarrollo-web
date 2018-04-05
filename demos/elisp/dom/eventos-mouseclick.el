@@ -32,17 +32,30 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 (titulo)
-                (demo-it-load-file "../../html/dom/usandoEventos.html")
+                (demo-it-load-file "../../html/dom/eventoMouseClick.html")
                 (demo-it-insert "<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+<h3>Vamos a ver los  eventos onmousedown, onmouseseup y onclick que son todos parte de mouse-click</h3>
+
+<div onmousedown=\"mDown(this)\" onmouseup=\"mUp(this)\"
+style=\"background-color:#D94A38;width:90px;height:20px;padding:40px;\">
+Púlsame</div>")
                 (demo-it-insert "
-<button type=\"button\"
-onclick=\"document.getElementById('id1').style.color = 'red'\">
-Pulsame!</button>
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = \"#1ec5e5\";
+    obj.innerHTML = \"Pulsado\";
+}
+
+function mUp(obj) {
+    obj.style.backgroundColor=\"#D94A38\";
+    obj.innerHTML=\"Gracias\";
+}
+</script>
 
 </body>
 </html>")
                 )
-(demo-it-start)
+(demo-it-insert)

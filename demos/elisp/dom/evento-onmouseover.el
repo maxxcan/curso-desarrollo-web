@@ -32,15 +32,24 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 (titulo)
-                (demo-it-load-file "../../html/dom/usandoEventos.html")
+                (demo-it-load-file "../../html/dom/eventoOnmouseover.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+
+<div onmouseover=\"mOver(this)\" onmouseout=\"mOut(this)\" 
+style=\"background-color:#D94A38;width:120px;height:20px;padding:40px;\">
+Tócame</div>")
                 (demo-it-insert "
-<button type=\"button\"
-onclick=\"document.getElementById('id1').style.color = 'red'\">
-Pulsame!</button>
+<script>
+function mOver(obj) {
+    obj.innerHTML = \"Tócame\";
+}
+
+function mOut(obj) {
+    obj.innerHTML = \"Gracias, sigue tocando @-@\";
+}
+</script>
 
 </body>
 </html>")

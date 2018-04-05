@@ -32,15 +32,27 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 (titulo)
-                (demo-it-load-file "../../html/dom/usandoEventos.html")
+                (demo-it-load-file "../../html/dom/coleccionObjetos.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+
+<h2>Colecciones de objetos</h2>
+<h3>Cuando usamos el método getElementById éste devuelve una colección de objetos HTML Una colección de objetos es como un
+Array. Así que para luego acceder a ellos usamos la misma forma que con la que accedemos a los elementos de los Arrays.</h3>
+
+<p>Hola Mundo!</p>
+
+<p>Adios Mundo cruel!</p>
+
+<p id=\"demo\"></p>")
                 (demo-it-insert "
-<button type=\"button\"
-onclick=\"document.getElementById('id1').style.color = 'red'\">
-Pulsame!</button>
+<script>
+var myCollection = document.getElementsByTagName(\"p\");
+document.getElementById(\"demo\").innerHTML =
+\"El segundo objeto de la colección es: \" +
+myCollection[1].innerHTML;
+</script>
 
 </body>
 </html>")

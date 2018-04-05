@@ -32,15 +32,22 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 (titulo)
-                (demo-it-load-file "../../html/dom/usandoEventos.html")
+                (demo-it-load-file "../../html/dom/atributosEventos.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+
+<p>Este botón da la hora.</p>
+
+<button onclick=\"displayDate()\">Qué hora es?</button>")
                 (demo-it-insert "
-<button type=\"button\"
-onclick=\"document.getElementById('id1').style.color = 'red'\">
-Pulsame!</button>
+<script>
+function displayDate() {
+    document.getElementById(\"demo\").innerHTML = Date();
+}
+</script>
+
+<p id=\"demo\"></p>
 
 </body>
 </html>")

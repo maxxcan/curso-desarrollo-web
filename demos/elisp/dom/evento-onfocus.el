@@ -32,15 +32,22 @@ la presentación al mismo tiempo"
 (demo-it-create :advance-mode
                 :insert-fast :show-block-headers
                 (titulo)
-                (demo-it-load-file "../../html/dom/usandoEventos.html")
+                (demo-it-load-file "../../html/dom/eventoOnfocus.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
-<body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+<head>
+<script>
+function miFuncion(x) {
+    x.style.background = \"yellow\";
+}
+</script>
+</head>")
                 (demo-it-insert "
-<button type=\"button\"
-onclick=\"document.getElementById('id1').style.color = 'red'\">
-Pulsame!</button>
+<body>
+
+Escribe tu nombre: <input type=\"text\" onfocus=\"miFuncion(this)\">
+
+<p>Cuando la caja de texto obtiene el foco, ésta cambia el fondo de color</p>
 
 </body>
 </html>")
