@@ -5,7 +5,7 @@
 * Buscando elementos
 
 ** Buscando elementos por su ID
-** Buscando elemenots por su etiqueta
+** Buscando elementos por su etiqueta
 ** Buscando elementos por el nombre de su clase
 ** Buscando elementos por su selector CSS
 * Modificando elementos
