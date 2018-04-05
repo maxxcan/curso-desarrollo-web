@@ -47,7 +47,7 @@ la presentación al mismo tiempo"
 ")
                 (demo-it-insert "
 <script>
-var str = \"Manzana, Plántano, Kiwi\";
+var str = \"Manzana, Plátano, Kiwi\";
 var res = str.slice(9,16);
 document.getElementById(\"demo\").innerHTML = res; 
 </script>
