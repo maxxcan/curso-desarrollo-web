@@ -1,0 +1,21 @@
+#+TITLE: Desarrollo Web avanzado
+#+AUTHOR: Patricio Martínez
+#+DATE: <2018-04-15 dom>
+
+
+* Introducción
+* Css avanzado
+* Bases de datos
+* Automatización de procesos
+* Gestores de paquetes
+* Frameworks
+** Historia de los frameworks
+
+[[img/]]
+
+
+** Los mejores frameworks en Javascript
+*** Angular2
+*** React
+*** Vuejs
+

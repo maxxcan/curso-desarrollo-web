@@ -54,5 +54,7 @@ document.getElementById(\"demo\").innerHTML = txt.length;
 </body>
 </html>
 ")
+                (forward-line -8)
+                (demo-it-insert "Hola Mundo")
                 )
 (demo-it-start)
