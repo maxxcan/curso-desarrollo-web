@@ -8,13 +8,29 @@
 * Bases de datos
 * Automatización de procesos
 * Gestores de paquetes
-* Frameworks
+* Frameworks(I)
 ** Historia de los frameworks
 
-[[img/]]
+#+ATTR_LATEX: :width 200px
+[[./img/historia-de-los-frameworks1.png]]
 
+** Historia de los frameworks 
 
-** Los mejores frameworks en Javascript
+#+ATTR_LATEX: :width 200px
+[[./img/historia-de-los-frameworks2.png]]
+
+* Frameworks(II)
+** Qué es un framework 
+
+Un framework podemos definirla como una estructura o *marco de trabajo* en la que estandarizamos unos *conceptos*, *prácticas* y *criterios* para enfocar un tipo de problema. 
+
+Entre otras cosas un software tiene:
+
+- Programas
+- Bibliotecas
+- Lenguaje interpretado
+
+* Los mejores frameworks en Javascript
 *** Angular2
 *** React
 *** Vuejs
