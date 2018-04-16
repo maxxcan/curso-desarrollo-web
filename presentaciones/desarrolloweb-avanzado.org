@@ -36,6 +36,10 @@ Si nos queremos ahorrar tener que saber SQL o al menos no tener que conocerlo en
 
 Las bases de datos más comunes son:
 
+* Bases de datos 
+
+Tipos de gestores de bases de datos
+
 Relacionales:
 
 - *Mysql* 
@@ -43,6 +47,12 @@ Relacionales:
 - *Postgresql* 
 - *Oracle* 
 
+* Bases de datos 
+
+No Relacionales
+
+- CouchDb
+- MongoDB
 
 * Automatización de procesos
 
@@ -63,9 +73,14 @@ que estemos usando para automatizar nuestro trabajo.
 
 Para realizar esto existe una tecnología llamada *Motores de plantillas web*. Éstos permiten separar por un lado el trabajo del diseñador y por otro el del desarrollador para crear documentos web.
 
-#+ATTR_LATEX: :float wrap :width 250px :center
+* Motores de plantillas Web
+
+#+ATTR_LATEX: :width 10px
 [[./img/tempwebengine.png]] 
 
+* Motores de plantillas Web
+
+Un buen ejemplos es [[https://mustache.github.io/][Mostache]]
 
 * Gestores de paquetes 
 
@@ -73,6 +88,8 @@ Otra forma de automatizar es la de tener un gestor de las librerías que usamos.
 
 1. La de descargar de internet si usamos librerías de código abierto, aquellas que necesitemos. 
 2. Poder crear un fichero con el listado de todas las librerías que estamos usando en nuestro proyecto.
+
+* Gestores de paquetes
 
 Algunos gestores conocidos de librerías son: 
 
@@ -85,6 +102,8 @@ Algunos gestores conocidos de librerías son:
 
 Finalmente una buena idea sería tener una serie de plantillas y árbol de directorio o estructura ya estandarizada ya que es la que usaremos en la mayor parte de nuestros
 proyectos. Resulta que en Internet hay muchas plantillas y estructuras ya creadas y licenciadas como open source en sitios como Github y otros *repositorios*. 
+
+* Estructura de directorios y plantillas
 
 Existen además programas que nos descargan esas plantillas y nos construyen esas estructuras de directorios. Por ejemplo, tenemos a:
 
@@ -104,17 +123,17 @@ Y luego tenemos programas que andan un poco entre lo uno y lo otro o hace ambas 
 - PHPcomposer
 - etc
 
-* Frameworks(I)
+* Frameworks
 ** Historia de los frameworks
 
-#+ATTR_LATEX: :width 200px
+#+ATTR_LATEX: :width 100px
 [[./img/historia-de-los-frameworks1.png]]
 
 ** Historia de los frameworks 
 
 #+ATTR_LATEX: :width 200px
 [[./img/historia-de-los-frameworks2.png]]
-* Frameworks(II)
+* Frameworks
 ** Qué es un framework 
 
 Un framework podemos definirla como una estructura o *marco de trabajo* en la que estandarizamos unos *conceptos*, *prácticas* y *criterios* para enfocar un tipo de problema. 
@@ -124,6 +143,8 @@ Entre otras cosas un software tiene:
 - Programas
 - Bibliotecas
 - Lenguaje interpretado
+
+* Frameworks
 
 Los mejores frameworks en Javascript
 *** Angular2
