@@ -1,0 +1,159 @@
+% Created 2018-04-16 lun 18:54
+% Intended LaTeX compiler: pdflatex
+\documentclass[t]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usetheme{Madrid}
+\usepackage{mathpazo}
+\usepackage{stmaryrd}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\usetheme{default}
+\author{Patricio Martínez}
+\date{\textit{<2017-11-14 mar>}}
+\title{Programación orientada a objetos}
+\hypersetup{
+ pdfauthor={Patricio Martínez},
+ pdftitle={Programación orientada a objetos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{frame}[label={sec:orgaa21e36}]{Introducción}
+A lo largo de la historia han habido varias evoluciones en la informática que la ha mejorada mucho hasta nuestros días:
+
+Esta evolución ha sido gracias a:
+
+\begin{itemize}
+\item Avances tecnológicos
+\item Avances conceptuales
+\item Avances en cuanto al enfoque de la programación
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org9f73577}]{Un poco de historia}
+\alert{Simula 67}
+
+Se desarrolló en el año \alert{1967} pero no se reconoció hasta tiempo después. 
+
+Inspirados en el tenemos:
+
+\begin{itemize}
+\item Smalltak (1969- 1972)
+\item C++ (1983)
+\item Y muchos otros
+\end{itemize}
+
+\begin{block}{Tipos de programación}
+\begin{itemize}
+\item Programación lineal
+\item Programación estructurada
+\item Programación funcional
+\item Programación orientada a objetos
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org5dddb92}]{Qué es la POO (OOP)}
+Es un conjunto de técnicas que nos permiten incrementar enormemente nuestro proceso de producción de software aumentando drásticamente nuestra productividad y permitiéndonos además abordar proyectos de mucha mayor envergadura.
+
+Usando estas técnicas, nos aseguramos la re-usabilidad de nuestro código.
+\end{frame}
+
+\begin{frame}[label={sec:org5f2757c}]{Características y conceptos}
+\begin{block}{Definición de Clase}
+Es una abstracción que hacemos de nuestra experiencia sensible. Una \alert{clase define} las propiedades y métodos necesarios para \alert{crear objetos}.
+
+También tenemos las \alert{superclases y clases virtuales o abstractas}. 
+\end{block}
+
+\begin{block}{Definición de Objeto}
+Un objeto es un conjunto de datos y métodos. Lo importante es que ambos están intrínsecamente ligados y forman una única unidad conceptual y operacional.
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgb4462f1}]{Herencia}
+Esta es una de las características más importantes ya que nos permite reutilizar mucho código o incluso usar código creado por otra persona. 
+
+Dos palabras claves son \alert{this} y \alert{super} 
+\end{frame}
+
+\begin{frame}[label={sec:org8ef1bf3}]{Encapsulación}
+Llamamos encapsulación al \alert{intrínseco vínculo entre datos y métodos} y al modo de acceder y modificar las propiedades. 
+\end{frame}
+
+\begin{frame}[label={sec:org38ca51c}]{Polimorfismo}
+El polimorfismo es la capacidad de los objetos de ante el mismo mensaje responder de distinto modo
+\end{frame}
+
+\begin{frame}[label={sec:org7b4eeb5}]{Sobrecarga}
+Es un tipo de polimorfismo donde varios métodos pueden tener el mismo nombre si el tipo de parámetro que reciben o el número de ellos es distinto. 
+
+\begin{center}
+\begin{tabular}{ll}
+Write(int i); & Escribe un entero\\
+Write(long I); & Escribe un long\\
+Write(float f); & Escribe un flotante\\
+Write(string s); & Escribe una cadena de texto\\
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org19b1a4d}]{Constructores y destructores}
+Para utilizar un objeto hay que construirlo o crearlo y para ello se usa el \emph{Constructor de la Clase}. Para ello dependiendo del lenguaje existen dos procedimientos. 
+
+\begin{enumerate}
+\item Utilizando un método especial usando una \alert{palabra reservada}
+\item Usando un operador especial normalmente \alert{new}
+\end{enumerate}
+
+Los \alert{destructores} hacen justo lo contrario que los constructores. 
+
+
+La mayoría de los lenguajes tienen un constructor y un destructor \alert{por defecto}.
+\end{frame}
+
+\begin{frame}[label={sec:orgb762c82}]{Accesibilidad de Datos y Métodos}
+Indican la \alert{visibilidad} que tiene una variable o método. 
+
+\begin{block}{Públicos}
+Son visibles dentro y fuera de la clase
+
+Usan la palabra reservada \alert{public}
+\end{block}
+
+\begin{block}{Protegidos}
+Son visibles dentro de su clase y las clases heredadas.
+
+Usan la palabra reservada \alert{protected}
+\end{block}
+
+
+\begin{block}{Privados}
+Solo son accesibles desde dentro de la clase en la que existen 
+
+Usan la palabra reservada \alert{private} 
+
+
+
+Lo normal es ver \alert{Métodos públicos} y \alert{propiedades protegidas o privadas}. 
+\end{block}
+\end{frame}
+\end{document}

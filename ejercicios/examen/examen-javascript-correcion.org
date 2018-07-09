@@ -39,7 +39,7 @@
 
 * Dónde se puede insertar código JavaScript en un documento HTML
 :PROPERTIES:
-:points:   
+:points: 1   
 :END:
    1) En el <head>[]
    2) En el <body>[]
@@ -273,10 +273,31 @@
 
 * Con Git qué comando usamos para subir ficheros al repositorio
 :PROPERTIES:
-:points:   
+:points: 0   
 :END:
 
     1) Git commit[]
     2) Git push[x]
     3) Git add[]
     4) Ninguno de los anteriores[]
+
+
+#+BEGIN_SRC emacs-lisp 
+(setq total-points 0)    ; counter for the total points
+
+;; now loop over headlines
+(org-element-map 
+    (org-element-parse-buffer 'headline) 'headline 
+  ;; function to print headline title and points
+  (lambda (headline) 
+    (let ((points (org-element-property :POINTS headline))
+          (title  (org-element-property :title headline)))
+      (if points (progn
+                   (setq total-points (+ total-points (string-to-number points)))
+                   (princ (format "title=%s\nPOINTS=%s\n\n" title points)))))))
+
+(princ (format "Puntos totales = %s" total-points))
+#+END_SRC
+
+#+RESULTS:
+: Puntos totales = 4

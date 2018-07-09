@@ -1,6 +1,6 @@
 #+TITLE: presentacion-introduccion-javascript
 #+AUTHOR: Patricio Martínez
-#+DATE: <2017-11-07 mar>
+#+DATE: \today
 #+EMAIL: maxxcan@gmail.com
 #+OPTIONS: toc:nil num:nil d:t
 #+STARTUP: beamer

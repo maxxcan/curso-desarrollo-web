@@ -42,6 +42,7 @@ la presentación al mismo tiempo"
 	<body>
 		<script>")
                 (demo-it-insert "
+var x = 5;
 //Operador de igualdad (==)
 			alert(\"x==8 es \"+(x==8)); //Devuelve false
 			alert(\"x==5 es \"+(x==5)); //Devuelve true
