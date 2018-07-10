@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Introducción a los objetos</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<p>Creando un método de objeto</p>
+
+<p>Un método es una definición de función, guardada como un valor de una propiedad.</p>
+
+<p id="demo"></p>
+<script>
+var persona = {
+    nombre: "Paquito",
+    apellido: "Chocolatero",
+    id: 8899,
+    nombreCompleto: function(){
+         return this.nombre + " " + this.apellido;
+    }
+};
+
+document.getElementById("demo").innerHTML = persona.nombreCompleto();
+</script>
+</body>
+</html>
