@@ -34,6 +34,7 @@ la presentación al mismo tiempo"
                 (demo-it-load-file "../../html/dom/usandoEventos2.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
+<head><meta charset=\"utf-8\"></head>
 <body>
 
 <h3>Otro ejemplo sería como podemos alterar la visibilidad de un elemento HTML</h3>

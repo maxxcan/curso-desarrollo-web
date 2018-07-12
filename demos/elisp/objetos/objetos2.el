@@ -52,7 +52,7 @@ var charle = new Persona (\"Charle\", \"Babbage\", 21);
 
 /* this (palabra reservada):
    - Hace referencia al propietario de la función que está invocándose
-   - Hacer referencia al objeto donde la función es un método.*/
+   - Hace referencia al objeto donde la función es un método.*/
 ")
                 )
 (demo-it-start)

@@ -34,14 +34,15 @@ la presentación al mismo tiempo"
                 (titulo)
                 (demo-it-load-file "../../html/dom/eventoMouseClick.html")
                 (demo-it-insert "<!DOCTYPE html>
-<!DOCTYPE html>
 <html>
+<head><meta charset=\"utf-8\"></head>
 <body>
 <h3>Vamos a ver los  eventos onmousedown, onmouseseup y onclick que son todos parte de mouse-click</h3>
 
 <div onmousedown=\"mDown(this)\" onmouseup=\"mUp(this)\"
 style=\"background-color:#D94A38;width:90px;height:20px;padding:40px;\">
 Púlsame</div>")
+                
                 (demo-it-insert "
 <script>
 function mDown(obj) {
@@ -58,4 +59,4 @@ function mUp(obj) {
 </body>
 </html>")
                 )
-(demo-it-insert)
+(demo-it-start)

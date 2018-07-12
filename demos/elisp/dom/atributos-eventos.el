@@ -35,6 +35,7 @@ la presentación al mismo tiempo"
                 (demo-it-load-file "../../html/dom/atributosEventos.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
+<head><meta charset=\"utf-8\">
 <body>
 
 <p>Este botón da la hora.</p>

@@ -36,6 +36,7 @@ la presentación al mismo tiempo"
                 (demo-it-insert "<!DOCTYPE html>
 <html>
 <head>
+<meta charset=\"utf-8\">
 <script>
 function miFuncion(x) {
     x.style.background = \"yellow\";

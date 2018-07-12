@@ -35,8 +35,9 @@ la presentación al mismo tiempo"
                 (demo-it-load-file "../../html/dom/usandoEventos.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
+<head><meta charset=\"utf-8\"></head>
 <body>
-<h3 id="id1">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
+<h3 id=\"id1\">Veremos un ejemplo de como cambiar un elemento al pulsar un botón</h3>")
                 (demo-it-insert "
 <button type=\"button\"
 onclick=\"document.getElementById('id1').style.color = 'red'\">

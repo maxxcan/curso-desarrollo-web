@@ -35,6 +35,7 @@ la presentación al mismo tiempo"
                 (demo-it-load-file "../../html/dom/coleccionObjetos.html")
                 (demo-it-insert "<!DOCTYPE html>
 <html>
+<head><meta charset=\"utf-8\"></head>
 <body>
 
 <h2>Colecciones de objetos</h2>
