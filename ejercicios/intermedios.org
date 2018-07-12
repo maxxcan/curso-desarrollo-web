@@ -1,0 +1,11 @@
+#+TITLE: Ejercicios intermedios de JavaScrip
+#+AUTHOR: Patricio Martínez Cano
+#+DATE: <2018-07-12 jue>
+
+1) Escribe un programa que de un número aleatorio entre 1 y 10. El usuario podrá introducir en una caja de texto el número que piense que es. El programa le dirá si ha acertado, se ha quedado por arriba o por abajo. 
+2) Escribe un programa que calcule los días que quedan hasta Navidad. (25 de Diciembre)
+3) Escribe un programa que calcule la suma, la resta, la multiplicación y división de dos números dados por el usuario en cajas de entrada. 
+4) Escribe un programa que convierta de grados Celsius a grados Fahrenheit de una temperatura dada por el usuario en caja de entrada. 
+5) Escribe un programa que cogiendo un número dado nos diga si es primo o no.
+6) Escribe un programa que nos de una frase a partir de unas palabras introducidas por el usuario
+ 
