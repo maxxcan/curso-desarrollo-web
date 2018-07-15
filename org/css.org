@@ -1,0 +1,423 @@
+#+TITLE: Introducción a Css
+#+AUTHOR: Patricio Martínez
+#+email: patricio@argonauta
+#+date: <2018-07-15 dom>
+
+* Introducción 
+
+
+Css realmente no es un lenguaje de programación Es un lenguaje de /hojas de estilo/, es decir, te permite aplicar estilos de manera selectiva a elementos en documentos HTML. Por ejemplo, para seleccionar *todos* los elementos de párrafos en una página HTML y volver el texto de ellos de color rojo se ha de escribir los siguiente: 
+
+#+BEGIN_SRC css
+  p {
+  color: red;
+  }
+#+END_SRC
+
+El nombre de CSS viene de *Cascading Style Sheets* u hojas de estilo en cascada. Así que resumiendo el CSS es: 
+
++ Es un estándar para las hojas de estilo en cascada 
++ CSS describe como los elementos HTML son mostrados en la pantalla, el papel o en cualquier otro medio
++ CSS ahorra mucho trabajo ya que puede controlar múltiples páginas webs a la vez
+
+* Sintaxis de CSS y selectores 
+
+** Sintaxis CSS
+
+Una regla CSS consiste de un selector y un bloque de declaración 
+
+
+[[./img/regla-css.png]]
+
+El selector apunta al elemento HTML al que le queremos aplicar el estilo.
+
+El bloque declaración incluye una o más declaraciones separadas por punto y coma. 
+
+Cada declaración incluye un nombre de propiedad CSS y un valor separado por dos puntos. 
+
+Una declaración CSS siempre termina en un punto y coma, y un bloque declaración está rodeado por llaves. 
+
+Todo esto lo resumimos en el siguiente ejemplo:
+
+#+BEGIN_SRC css
+  p {
+    color: red;
+  text-align: center;
+  }
+#+END_SRC
+
+** Selector CSS 
+
+Los selectores son usados para "encontrar" (o seleccionar) elementos HTML o sus nombres, id, clases, atributos y más. 
+
+** El selector elemento
+
+El elemento selector selecciona elementos basados en el nombre.
+
+Podemos seleccionar todos los elementos <p> de una página. 
+
+#+BEGIN_SRC css
+  p {
+  text-align: center;
+  color: red;
+  }
+
+#+END_SRC
+
+** El selector id 
+
+El selector id usa el atributo id de un elemento HTML para seleccionar un elemento específico. 
+
+El id de un elemento debería ser único en un página, así el selector id puede seleccionar un único elemento.
+
+Para seleccionar un elemento con un id específico, escribimos almohadilla (#), seguido del id del elemento. 
+
+La siguiente regla se aplica al elemento HTML que tengan por id demo. 
+
+#+BEGIN_SRC css
+  #demo {
+  text-align: center;
+  color: red;
+  }
+#+END_SRC
+
+NOTA: Un nombre de id no puede empezar con un número. 
+
+** El selector Class (o selector de clase)
+
+
+El selector class selecciona elementos con un atributo de clase específico. 
+
+Para seleccionar elementos con una clase específica, escribimos el carácter punto (.) seguido del nombre de la clase. 
+
+#+BEGIN_SRC css
+  .center {
+  text-align: center;
+  color: red;
+  }
+#+END_SRC
+
+También podemos especificar que solo unos elementos HTML específicos sean afectados por una clase. En el ejemplo haremos que solo los elemenos <p> con la clase "center" serán alineados. 
+
+#+BEGIN_SRC css
+  p.center {
+  text-align: center;
+  color: red;
+  }
+#+END_SRC
+
+Los elementos HTML pueden tener más de una clase. 
+
+#+BEGIN_SRC html
+
+<p class="center large">Este párrafo referencia a dos clases.</p>
+
+#+END_SRC
+
+** Selector de atributo 
+
+Un selector de atributo nos permite seleccionar elementos por su atributo. Veamos un ejemplo 
+
+#+BEGIN_SRC css
+  a[target] {
+  background-color: yellow;
+  }
+
+
+
+#+END_SRC
+
+*** Selector de atributo con valor 
+
+Podemos seleccionar un atributo de un valor específico entre varios. Veamos el siguiente ejemplo:
+
+#+BEGIN_SRC css
+  a[target="_blank"] {
+  background-color: yellow;
+  }
+#+END_SRC
+
+** Selectores de pseudo-clases 
+
+Estos selectores seleccionan los elementos especificados pero solo cuando estén en un estado específico. Por ejemplo cuando el puntero esté sobre él.
+
+#+BEGIN_SRC css
+a.hightlight:hover {
+color: red;
+background-color: yellow;
+}
+
+#+END_SRC
+
+** Agrupando selectores 
+
+Si tenemos elementos con la misma definición de estilo como esto: 
+
+#+BEGIN_SRC css
+  h1 {
+  text-align: center;
+  color: red;
+  }
+
+  h2 {
+  text-align: center;
+  color: red;
+  }
+
+  p {
+  text-align: center;
+  color: red;
+  }
+
+#+END_SRC
+
+Será mejor agruparlos por selector para minimizar el código. Para agrupar selectores se ponen éstos uno al lado de otro separado por comas. 
+
+El ejemplo anterior lo podemos escribir más simplificado de la siguiente forma:
+
+#+BEGIN_SRC css
+  h1, h2, p {
+  text-align: center;
+  color: red;
+  }
+#+END_SRC
+
+** Comentarios en CSS
+
+Los comentarios son usados para explicar el código. 
+
+Los comentarios en CSS comienzan con /* y terminan con */. Los comentarios pueden tener varias líneas. 
+
+#+BEGIN_SRC css
+  p {: ;
+  color: red;
+  /* Esto es un comentario de una línea */ 
+  text-align: center;
+  }
+
+  /* Esto es un comentario
+  de varias líneas */
+
+#+END_SRC
+
+* Formas de insertar CSS 
+
+Hay tres formas de insertar CSS en nuestro documento HTML 
+
++ Dentro de los elementos
++ Hojas de estilo internas 
++ Usando hojas de estilo externas
+
+** Dentro de los elementos  
+
+Un estilo puede ser aplicado a un único elemento. Para usar elementos en línea, añadimos el atributo de estilo al elemento relevante. El atributo de estilo puden contener cualquier propiedad CSS. Veamos el siguiente ejemplo:
+
+#+BEGIN_SRC html
+<h1 style="color:blue;margin-left:30px;">Esto es una cabecera</h1>
+#+END_SRC
+
+** Hojas de estilo internas
+
+Una hoja de estilo internas puede ser usadas en una única página la cual queremos que tenga un estilo único.
+
+Las hojas de estilo internas se definen con el elemento <style> dentro de la sección <head> del documento HTML
+
+#+BEGIN_SRC html
+  <head>
+  <style>
+  body {
+  background-color: linen;
+  }
+
+  h1 {
+  color: maroon;
+  margin-left: 40px;
+  }
+  </style>
+  </head>
+#+END_SRC
+
+* Hojas de estilo externas 
+
+Con una hoja de estilo externa podemos cambiar el aspecto de una website entero solo con un fichero. 
+
+Cada página debe incluir una referencia a esa hoja de estilo con el elemento <link>. El elemento <link> va dentro de la sección <head>.
+
+#+BEGIN_SRC html
+<head>
+<link rel="stylesheet" type="text/css" href="miestilo.css">
+</head>
+#+END_SRC
+
+La hoja de estilo no tendrá ningún elemento html y deberá salvarse con la extensión .css. Nuestro fichero miestilo.css podría tener este aspecto:
+
+#+BEGIN_SRC css
+  body {
+  background-color: lightblue;
+  }
+
+  h1 {
+  color:navy;
+  margin-left: 20px;}
+#+END_SRC
+
+** Múltiples hojas de estilo 
+
+Si algunas propiedades han sido definidas para el mismo selector (elemento) en diferentes hojas de estilo, el valor de la última hoja de estilo será usada.
+
+Por ejemplo:
+
+Asumamos que tenemos una hoja de estilo externa que tiene el siguiente estilo para elemento <h1>:
+
+#+BEGIN_SRC css
+  h1 {
+  color: navy;
+  }
+#+END_SRC
+
+Entonces, asumimos que también tenemos una hoja de estilo interna con el siguiente estilo para el elemento <h1>:
+
+#+BEGIN_SRC css
+h1 {
+color: orange;
+}
+#+END_SRC
+
+El estilo interno es definido después del enlace externo a la hoja de estilo, así que los h1 será naranjas:
+
+#+BEGIN_SRC html
+<head>
+<link rel="stylesheet" type="text/css" href="miestilo.css">
+<style>
+h1 {
+color: orange;
+}
+</style>
+</head>
+#+END_SRC
+
+Sin embargo si el estilo interna es definido antes del enlace externo, los elementos <h1> será azul marino. 
+
+#+BEGIN_SRC html
+<head>
+<style>
+h1 {
+color: orange;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="miestilo.css">
+</head>
+#+END_SRC
+
+** Ordenar en cascada
+
+¿Qué estilo se utilizará cuando no se especifica más de un estilo de un elemento HTML?
+
+En general podemos decir que todos los estilos caerán en cascada en un nuevo estilo "virtual" con las siguientes reglas, donde habrá un orden de prioridades, que son de más prioridad a menor
+
+1) Estilo en línea (dentro de un elemento HTML)
+2) Estilo externo e interno en la sección de cabecera (dentro de <head>)
+3) Estilo del navegador por defecto 
+
+
+* Cajas y cajas, todo se trata de cajas 
+
+
+Una cosa que notarás sobre la escritura de CSS es que trata mucho sobre cajas — ajustando su tamaño, color, posición, etc. Puedes pensar en
+la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra.
+
+[[./img/cajas.jpg]]
+
+
+No es de extrañar que, el diseño de CSS este basado principalmente en el modelo de caja. Cada uno de los bloques que instala espacio en tu
+página tiene propiedades como estas:
+
+1. relleno(padding), el espacio alrededor del contenido (ej: alrededor del texto de un párrafo)
+2. marco(border), la línea que se encuentra fuera del relleno
+3. margen(margin), el espacio fuera del elemento que lo separa de los demás.
+
+
+[[./img/modelo-de-caja.png]]
+
+
+Bien, ¡iniciemos y agregamos más CSS a nuestra página! Sigue añadiendo estas reglas nuevas al final de la página, y no temas experimentar
+cambiando los valores para ver como resulta.
+
+Cambiando el color de la página
+
+#+BEGIN_SRC css
+
+  html {
+    background-color: #00539F;
+  }
+#+END_SRC
+
+Ordenando el Cuerpo
+
+#+BEGIN_SRC css
+  body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #FF9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+  }
+#+END_SRC
+
+Ahora el elemento body. Éste tiene varias declaraciones, así que revisemos una por una:
+
+- width: 600px; — esto hará que el cuerpo siempre tenga 600 pixeles de ancho.
+- margin: 0 auto; — Cuando seleccionas dos valores dentro de propiedades como margin o padding, el primer valor afectara los lados superior
+ (top) e inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierda (left) y derecha (right) (aquí, auto es un valor
+ especial que divide el espacio disponible entre derecha e izquierda). Puedes esar esta propiedad con uno, dos, tres o cuatro valores como se
+ explica  aqui.
+- background-color: #FF9500; — como antes, éste selecciona el color de fondo de un elemento. He usado un naranja rojizo para el  body en
+contraste con el azul oscuro de el elemento html. Sigue y experimenta. Siéntete libre de usar white o cualquiera que sea de tu agrado.
+- padding: 0 20px 20px 20px; — tenemos 4 valores puestos en el relleno, para dar un poco de espacio alrededor del contenido. Esta vez no
+ pondremos relleno en la parte de arriba del body, 20 pixeles a la izquierda, abajo y derecha. Los valores se ponen: arribar, derecha, abajo e
+ izquierda, en ese orden.
+- border: 5px solid black; — éste simplemente coloca un borde de 5 pixeles de ancho, continuo y de color negro alrededor del body.
+
+Posicionando y dando estilo a nuestro título de página principal
+
+#+BEGIN_SRC css
+  h1 {
+    margin: 0;
+    padding: 20px 0;    
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
+  }
+#+END_SRC
+
+Puedes haber notado que hay un hueco horrible en la parte superior del body. Esto sucede porque los navegadores vienen con estilos por
+defecto, ¡incluso cuando aún no se ha aplicado ningún archivo CSS! Esto podría parecer una mala idea, pero queremos que aun una página sin
+estilizar sea legible. Para deshacernos de este espacio eliminamos el estilo por defecto,  agregando margin: 0;.
+
+Enseguida, hemos puesto un relleno arriba y abajo del título de 20 pixeles,  e hicimos que el color del texto sea el mismo que el color de fondo
+del html.
+
+Una propiedad muy interesante que hemos usado aquí es text-shadow, que aplica una sombra al texto del elemento. Sus cuatro valores son
+como sigue:
+
+- El primer valor en pixeles asigna el desplazamiento horizontal de la sombra desde el texto— que tan lejos la mueve a la derecha: un
+ valor negativo la moverá a la izquierda.
+- El segundo valor en pixeles asigna el desplazamiento vertical de la sombra desde el texto — que tan lejos la mueve hacia abajo, en este
+ ejemplo, un valor negativo la desplazaría hacia arriba.
+- El tercer valor en pixeles asigna radio de desenfoque de la sombra — un valor grande es igual a una sombra borrosa.
++ El cuarto valor asigna el color base de la sombra.
+
+Una vez más, trata de experimentar con diferentes valores para ver como resulta.
+
+Centrando la imagen:
+
+#+BEGIN_SRC css
+  img {
+  display: block;
+  margin: 0 auto;}
+#+END_SRC
+
+Finalmente, centraremos la imagen para hacer que luzca mejor. Podemos usar nuevamente el truco del margin: 0 auto que usamos antes para
+el body, pero tenemos que hacer algo más. El elemento body es un elemento en nivel de bloque (block-level), lo que significa que tomará
+espacio en la pagina y que puede tener otros valores de espacio aplicables como margen. Las imágenes, por otra parte, son elementos inline,
+lo que quiere decir que no puedes aplicarles márgenes, debemos dar a la imagen un comportamiento de block-level usando display: block;.
+
