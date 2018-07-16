@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejecutando una función pulsando un elemento</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: khaki;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).slideUp();
+    });
+});
+</script>
+</head>
+<body>
+    <p>Pínchame y desapareceré.</p>
+    <p>Pínchame y desapareceré.</p>
+    <p>Pínchame y desapareceré.</p>
+</body>
+</html>

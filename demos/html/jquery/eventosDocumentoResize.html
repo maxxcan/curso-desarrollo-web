@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejecutando una función cuando redimensionamos la ventana</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: #f0e68c;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(window).resize(function() {
+        $(window).bind("resize", function(){
+            $("p").text("Altura de la ventana: " + $(window).width() + ", " +
+ "Anchura de la ventana: " + $(window).height());
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <p>Cambia el tamaño de la ventana</p>
+</body>
+</html>

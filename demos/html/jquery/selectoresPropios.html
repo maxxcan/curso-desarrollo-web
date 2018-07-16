@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Selectores propios de JQuery</title>
+<style type="text/css">
+    /* Añadiendo estilo */
+    *{
+        padding: 5px;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Selecciona las filas pares
+    $("tr:odd").css("background", "yellow");
+    // Selecciona las filas impares
+    $("tr:even").css("background", "orange");
+    // Selecciona el primer párrafo de un elemento
+    $("p:first").css("background", "red");
+    // Selecciona el último párrafo de un elemento
+    $("p:last").css("background", "green");
+    // Selecciona todo lo tipo text dentro de un formulario
+    $("form :text").css("background", "purple");
+    // Selecciona todo lo tipo password de un formulario
+    $("form :password").css("background", "blue");
+    // Selecciona todo los input de un formulario
+    $("form :submit").css("background", "violet");
+});
+</script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nombre</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+                <td>1</td>
+                <td>Paquito Chocolatero</td>
+                <td>paco_elsobrao@mail.com</td>
+            </tr>
+ <tr>
+                <td>2</td>
+                <td>Juan Pérez</td>
+                <td>juansinmiedo@mail.com</td>
+            </tr>
+ <tr>
+                <td>3</td>
+                <td>John Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+ <p>Esto es un párrafo.</p>
+    <p>Esto es otro.</p>
+    <p>Que cansinos que sois.</p>
+    <form>
+        <label>Nombre: <input type="text"></label>
+        <label>Contraseña: <input type="password"></label>
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+</html>

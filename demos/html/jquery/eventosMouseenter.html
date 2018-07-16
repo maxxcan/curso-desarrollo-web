@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejecutando una función con el método mouseenter()</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: #f2f2f2;
+    }
+    p.highlight{
+        background: red;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("p").mouseenter(function(){
+        $(this).addClass("highlight");
+    });
+    $("p").mouseleave(function(){
+        $(this).removeClass("highlight");
+    });
+});
+</script>
+</head>
+<body>
+
+    <p>Tócame papi.</p>
+    <p>Tócame papi.</p>
+    <p>Tócame papi.</p>
+</body>
+</html>

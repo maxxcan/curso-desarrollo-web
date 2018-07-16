@@ -386,7 +386,7 @@ $(document).ready(function(){
     <p>Esto es otro.</p>
     <p>Que cansinos que sois.</p>
     <form>
-        <label>Nombre: <input type="text"></label>
+        <label>Nombre: <input type="text"></label> 
         <label>Contraseña: <input type="password"></label>
         <input type="submit" value="Sign In">
     </form>
@@ -431,7 +431,7 @@ $(document).ready(function(){
 
 *** Método click()
 
-El método *click() de JQuery une una función manejadora de eventos al elemento seleccionado por un evento "click". La función es ejectuado cuando el usuario pulsa el elemento. En el siguiente ejemplo esconderemos un elemento <p> de una página cuando son pulsado.
+El método *click() de JQuery une una función manejadora de eventos al elemento seleccionado por un evento "click". La función es ejecutada cuando el usuario pulsa el elemento. En el siguiente ejemplo esconderemos un elemento <p> de una página cuando son pulsado.
 
 #+begin_src html
 <!DOCTYPE html>
