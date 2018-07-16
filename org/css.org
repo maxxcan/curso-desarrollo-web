@@ -421,3 +421,134 @@ el body, pero tenemos que hacer algo más. El elemento body es un elemento en ni
 espacio en la pagina y que puede tener otros valores de espacio aplicables como margen. Las imágenes, por otra parte, son elementos inline,
 lo que quiere decir que no puedes aplicarles márgenes, debemos dar a la imagen un comportamiento de block-level usando display: block;.
 
+* Color en CSS 
+
+Los colores en CSS son especificados con nombres de colores, o valores RGB, HEX, HSL, RGBA y HSLA.
+
+** Nombres de colores 
+
+Podemos especificar un color específico usando un nombre de color: 
+
+[[./img/nombre-colores.png]]
+
+
+HTML soporta [[https://www.w3schools.com/colors/colors_names.asp][140 nombres de colores]].
+
+** Valores para colores 
+
+En HTML los colores también pueden ser especificados usando valores RGB, HSL, RGBA, o HSLA
+
+Como ejemplo tenemos el color "Tomato" en valores rgb, hexadecimal y hsl:
+
+[[./img/tomate-valores.png]]
+
+
+Y aquí tenemos el mismo color pero con un 50% de transparencia: 
+
+[[./img/tomate-valores-trans.png]]
+
+
+Ejemplo: 
+
+#+BEGIN_SRC html
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+
+<p>Color tomate en varios valores:</p>
+
+<h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
+<h1 style="background-color:#ff6347;">#ff6347</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+
+<p>El mismo color pero con un 50% de transparencia</p>
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
+
+</body>
+</html>
+
+#+END_SRC
+
+*** Valor RGB 
+
+En html, un color puede ser especificado con un valor RGB usando esta fórmula: 
+
+*rgb(red, green, blue)*
+
+Cada parámetro define un color (verde, azul o rojo) definido con una intensidad de color entre 0 y 255.
+
+Por ejemplo: 
+
+
+[[./img/valores-rgb.png]]
+
+#+BEGIN_SRC html
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h1>
+<h1 style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h1>
+<h1 style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</h1>
+<h1 style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</h1>
+<h1 style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</h1>
+<h1 style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</h1>
+
+</body>
+</html>
+
+#+END_SRC
+
+*** Valor hexadecimal 
+
+En HTML, un color puede ser especificado usando un valor hexadecimal en la siguiente forma: 
+
+*#rrggbb* 
+
+Donde rr(rojo), gg(verde) y bb(azul) son valores hexadecimales entre 00 y ff. 
+
+Veamos los siguientes ejemplos: 
+
+[[./img/valores-hex.png]]
+
+
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="background-color:#000000;">#000000</h1>
+<h1 style="background-color:#3c3c3c;">#3c3c3c</h1>
+<h1 style="background-color:#787878;">#787878</h1>
+<h1 style="background-color:#b4b4b4;">#b4b4b4</h1>
+<h1 style="background-color:#f0f0f0;">#f0f0f0</h1>
+<h1 style="background-color:#ffffff;">#ffffff</h1>
+
+</body>
+</html>
+
+#+END_SRC
+
+
+*** Valores HSL 
+
+En HTML, un color puede ser especificado usando tonalidad (hue), saturación (saturation) y luminosidad (lightness) en la forma: 
+
+*hsl (hue, saturation, lightness)* 
+
+La tonalidad es un grado en la rueda de color de 0 a 360. 0 es rojo, 120 es verde y 240 es azul. 
+
+La saturación es un porcentaje donde 0% significa una capa de gris y un 100% es el color completo.
+
+La luminosidad es también un porcentaje donde 0% es negro, 50% es ni negro ni claro y 100% es blanco. 
+
+Ejemplos: 
+
+[[./img/hsl-valores.png]]
+
+
+
