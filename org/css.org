@@ -319,7 +319,6 @@ En general podemos decir que todos los estilos caerán en cascada en un nuevo es
 2) Estilo externo e interno en la sección de cabecera (dentro de <head>)
 3) Estilo del navegador por defecto 
 
-
 * Cajas y cajas, todo se trata de cajas 
 
 
@@ -550,5 +549,33 @@ Ejemplos:
 
 [[./img/hsl-valores.png]]
 
+
+
+*** Valor RGBA 
+
+El valor RGBA es igual que el valor RGB solo que se le añada un valor alfa de opacidad. 
+
+Así un valor RGBA es especificado con:
+
+*rgba(red, green, blue, alpha)* 
+
+El parámetro alfa es un número entre 0.0 (totalmente transparente) y 1.0 (nada transparente): 
+
+Ejemplo: 
+
+ 
+[[./img/valores.rgba.png]]
+
+
+
+*** Valores HSLA 
+
+Los valores de color HSLA son una extensión de los valores de color HSL con un canal alfa de transparencia. Así un valor de color HSLA es especificado con:
+
+*hsla(hue, saturation, lightness, alpha)* 
+
+Ejemplo:
+
+[[./img/valores.hsla.png]]
 
 
