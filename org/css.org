@@ -579,3 +579,58 @@ Ejemplo:
 [[./img/valores.hsla.png]]
 
 
+* Pseudo clases 
+
+
+Las pseudo clases son un estado especial de un elemento. Por ejemplo, puede ser usado para: 
+
+1. Estilo de un elemento cuando el ratón pasa por encima de un elemento 
+2. Estilos diferentes de un enlace si ha sido visitado o no
+3. Estilo de un elemento cuando tiene el foco
+
+La sintaxis de las pseudo clases es: 
+
+#+BEGIN_SRC css
+selector:pseudo-clase {
+propiedad:valor;
+}
+#+END_SRC
+
+Veamos lo en un ejemplo:
+
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<style>
+/* enlace no visitado */
+a:link {
+    color: red;
+}
+
+/* enlace visitado */
+a:visited {
+    color: green;
+}
+
+/* ratón sobre un enlace */
+a:hover {
+    color: hotpink;
+}
+
+/* enlace seleccionado */
+a:active {
+    color: blue;
+}
+</style>
+</head>
+<body>
+
+<p><b><a href="http://www.maxxcan.com" target="_blank">Esto es un enlace</a></b></p>
+<p><b>Nota:</b> a:hover DEBE venir después de un a:link y a:visited definido en el CSS en orden para ser efectivo.</p>
+<p><b>Note:</b> a:active DEBE venir después de un a:hover defininido en el CSS en orden para ser efectivo.</p>
+
+</body>
+</html>
+
+#+END_SRC
