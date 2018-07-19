@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de llamada a otra función mietras mostramos/ocultamos</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 15px;
+        background: #F0E68C;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Muestra un mensaje de alerta depués de esconder un párrafo
+    $(".hide-btn").click(function(){
+        $("p").hide("slow", function(){
+            
+            alert("El efecto de ocultación ha terminado.");
+        });
+    });
+ // Muestra un mensaje de alerta depués de mostrar un párrafo
+    $(".show-btn").click(function(){
+        $("p").show("slow", function(){
+           alert("El efecto de mostrado ha terminado.");
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="hide-btn">Esconde el párrafo</button> 
+    <button type="button" class="show-btn">Muestra el párrafo</button>
+    <p>Esto es un párrafo.</p>
+</body>
+</html>

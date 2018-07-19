@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de parada de una animación con stop()</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    img{
+        position: relative; /* propiedad requerida */
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Empieza la animación
+    $(".start-btn").click(function(){
+      $("img").animate({left: "+=150px"}, 2000);
+    });
+    // Stop running animation
+    $(".stop-btn").click(function(){
+      $("img").stop();
+    });
+    // Start animation in the opposite direction
+    $(".back-btn").click(function(){
+      $("img").animate({left: "-=150px"}, 2000);
+    });
+    // Reset to default
+    $(".reset-btn").click(function(){
+       $("img").animate({left: "0"}, "fast");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="start-btn">Empezar</button>
+    <button type="button" class="stop-btn">Parar</button>
+    <button type="button" class="back-btn">Atrás</button>
+    <button type="button" class="reset-btn">Reset</button>
+    <p>
+    	<img src="img/toad.png" alt="Toad">
+    </p>
+</body>
+</html>
