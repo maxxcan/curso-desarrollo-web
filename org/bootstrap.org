@@ -728,8 +728,8 @@ En Bootstrap las rejillas de columnas se pueden anidar, lo que significa que pod
                 <div class="main-content"></div>
             </div>
             <div class="col-xs-4">
-                <!--Nested rows within a column-->
-                <div class="row">
+                <!--Nested rows within a column--> 
+               <div class="row">
                     <div class="col-xs-12">
                         <div class="sidebar-content"></div>
                     </div>
