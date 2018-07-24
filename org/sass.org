@@ -333,14 +333,14 @@ white
 La funcionalidad básica de SassScript es el uso de variables para almacenar valores que utilizas una y otra vez en tus hojas de estilos. Para ello, utiliza cualquier palabra como nombre de la variable, añádele el símbolo $ por delante y establece su valor como si fuera una propiedad CSS normal. Si por ejemplo defines una variable de la siguiente manera:
 
 #+begin_src scss
-$width: 5em;
+$anchura: 5em;
 #+end_src
 
 Ahora ya puedes utilizar la variable llamada $width como valor de cualquier propiedad CSS:
 
 #+begin_src scss
 #main {
-  width: $width;
+  width: $anchura;
 }
 #+end_src
 
