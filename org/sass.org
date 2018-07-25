@@ -86,7 +86,7 @@ Sass permite anidar las reglas CSS para que las hojas de estilos sean más conci
   color: #00ff00;
   width: 97%;
  
-  .redbox {
+  .caja-roja {
     background-color: #ff0000;
     color: #000000;
   }
@@ -101,7 +101,7 @@ El código Sass anterior se convierte automáticamente en el siguiente código C
   color: #00ff00;
   width: 97%;
 }
-#main p .redbox {
+#main p .caja-roja {
     background-color: #ff0000;
     color: #000000;
 }
@@ -370,20 +370,20 @@ SassScript soporta y reconoce estos dos tipos de cadenas. En general, el archivo
 La única excepción es cuando se utiliza la interpolación #{} que se explica en los próximos capítulos. En este caso, las cadenas siempre se generan sin comillas. Ejemplo:
 
 #+begin_src scss
-@mixin firefox-message($selector) {
+@mixin mensaje-de-firefox($selector) {
   body.firefox #{$selector}:before {
-    content: "Hi, Firefox users!";
+    content: "Hola, usuarios de Firefox!";
   }
 }
  
-@include firefox-message(".header");
+@include mensaje-de-firefox(".header");
 #+end_src
 
 El código Sass anterior se compila a:
 
 #+begin_src css
 body.firefox .header:before {
-  content: "Hi, Firefox users!";
+  content: "Hola, usuarios de Firefox!";
 }
 
 #+end_src
@@ -669,7 +669,7 @@ SassScript soporta el uso de los tradicionales operadores and, or y not sobre lo
 Sass no define ningún operador específico para las listas de elementos, ya que estas se manipulan mediante las funciones especiales que se explican en los siguientes capítulos.
 
 ** Paréntesis
-
+   
 Puedes añadir paréntesis a cualquier expresión Sass para afectar al orden en el que se realizan las operaciones:
 
 #+begin_src scss
@@ -849,45 +849,45 @@ Esto resultarán en:
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans");
 #+end_src
 
-** Hojas de estilo parciales
+*** Hojas de estilo parciales
 
-Si quieres importar un archivo SCSS o Sass pero no quieres que se compile como archivo CSS, utiliza un guión bajo como primer carácter del nombre del archivo. De esta manera, Sass no generará un archivo CSS para esa hoja de estilos, pero podrás utilizarla importándola dentro de otra hoja de estilos. Este tipo de archivos que no se compilan se denominan "hojas de estilos parciales" o simplemente "parciales" (en inglés, "partials").
+ Si quieres importar un archivo SCSS o Sass pero no quieres que se compile como archivo CSS, utiliza un guión bajo como primer carácter del nombre del archivo. De esta manera, Sass no generará un archivo CSS para esa hoja de estilos, pero podrás utilizarla importándola dentro de otra hoja de estilos. Este tipo de archivos que no se compilan se denominan "hojas de estilos parciales" o simplemente "parciales" (en inglés, "partials").
 
-Aunque el nombre del archivo tenga un guión bajo, no es necesario indicarlo en la regla @import. Así por ejemplo, si creas un archivo llamado _colors.scss, entonces no se generará un archivo _colors.css. Sin embargo, podrás utilizarlo en tus hojas de estilos con la regla @import "colors";, que importará el archivo _colors.scss.
+ Aunque el nombre del archivo tenga un guión bajo, no es necesario indicarlo en la regla @import. Así por ejemplo, si creas un archivo llamado _colors.scss, entonces no se generará un archivo _colors.css. Sin embargo, podrás utilizarlo en tus hojas de estilos con la regla @import "colors";, que importará el archivo _colors.scss.
 
-Obviamente no puedes tener en un mismo directorio una hoja de estilos normal y una parcial con el mismo nombre. Siguiendo el ejemplo anterior, en el mismo directorio no puedes tener un archivo llamado _colors.scss y otro llamado colors.scss.
+ Obviamente no puedes tener en un mismo directorio una hoja de estilos normal y una parcial con el mismo nombre. Siguiendo el ejemplo anterior, en el mismo directorio no puedes tener un archivo llamado _colors.scss y otro llamado colors.scss.
 
-** Anidando reglas @import
+*** Anidando reglas @import
 
-Normalmente las reglas @import se colocan en el primer nivel jerárquico de la hoja de estilos. No obstante, también es posible colocarlas dentro de reglas CSS y reglas @media.
+ Normalmente las reglas @import se colocan en el primer nivel jerárquico de la hoja de estilos. No obstante, también es posible colocarlas dentro de reglas CSS y reglas @media.
 
-El funcionamiento de las reglas anidadas es el mismo, pero todos los contenidos importados se incluyen en el mismo nivel en el que se hayan importado. Si por ejemplo el archivo example.scss contiene lo siguiente:
+ El funcionamiento de las reglas anidadas es el mismo, pero todos los contenidos importados se incluyen en el mismo nivel en el que se hayan importado. Si por ejemplo el archivo example.scss contiene lo siguiente:
 
-#+begin_src scss
-.example {
-  color: red;
-}
-#+end_src
+ #+begin_src scss
+ .ejemplo {
+   color: red;
+ }
+ #+end_src
 
-Si importas este archivo dentro de una regla CSS:
+ Si importas este archivo dentro de una regla CSS:
 
-#+begin_src css
-#main {
-  @import "example";
-}
-#+end_src
+ #+begin_src css
+ #main {
+   @import "ejemplo";
+ }
+ #+end_src
 
-El archivo css compilado será:
+ El archivo css compilado será:
 
-#+begin_src css
-#main .example {
-  color: red;
-}
-#+end_src
+ #+begin_src css
+ #main .ejemplo {
+   color: red;
+ }
+ #+end_src
 
-Los archivos importados con reglas @import anidadas no pueden contener elementos y directivas que sólo pueden colocarse en el primer nivel jerárquico de las hojas de estilos, como @mixin o @charset.
+ Los archivos importados con reglas @import anidadas no pueden contener elementos y directivas que sólo pueden colocarse en el primer nivel jerárquico de las hojas de estilos, como @mixin o @charset.
 
-Tampoco es posible anidar reglas @import dentro de los mixin y las directivas de control.
+ Tampoco es posible anidar reglas @import dentro de los mixin y las directivas de control.
 
 ** La regla @media
 
@@ -926,6 +926,7 @@ Las reglas @media también se pueden anidar entre sí. El resultado la combinaci
     }
   }
 }
+
 #+end_src
 
 Dará lugar a:
@@ -979,7 +980,7 @@ Los estilos CSS podrían ser los siguientes:
   border: 1px #f00;
   background-color: #fdd;
 }
-.seriousError {
+.errorSerio {
   border-width: 3px;
 }
 #+end_src
@@ -993,7 +994,7 @@ Gracias a la regla @extend puedes evitar todos estos problemas. Esta regla le in
   border: 1px #f00;
   background-color: #fdd;
 }
-.seriousError {
+.errorSerio {
   @extend .error;
   border-width: 3px;
 }
@@ -1002,12 +1003,12 @@ Gracias a la regla @extend puedes evitar todos estos problemas. Esta regla le in
 El código anterior se compila de la siguiente manera:
 
 #+begin_src css
-.error, .seriousError {
+.error, .errorSerio {
   border: 1px #f00;
   background-color: #fdd;
 }
  
-.seriousError {
+.errorSerio {
   border-width: 3px;
 }
 #+end_src
@@ -1034,7 +1035,7 @@ Si ahora añades en tus páginas un elemento como <div class="seriousError intru
 .error.intrusion {
   background-image: url("/image/hacked.png");
 }
-.seriousError {
+.errorSerio {
   @extend .error;
   border-width: 3px;
 }
@@ -1043,16 +1044,16 @@ Si ahora añades en tus páginas un elemento como <div class="seriousError intru
 Este código Sass dará el siguiente código css:
 
 #+begin_src css
-.error, .seriousError {
+.error, .errorSerio {
   border: 1px #f00;
   background-color: #fdd;
 }
  
-.error.intrusion, .seriousError.intrusion {
+.error.intrusion, .errorSerio.intrusion {
   background-image: url("/image/hacked.png");
 }
  
-.seriousError {
+.errorSerio {
   border-width: 3px;
 }
 #+end_src
@@ -1115,28 +1116,28 @@ Los selectores pueden extender de más de un selector para heredar todos sus est
   border: 1px #f00;
   background-color: #fdd;
 }
-.attention {
+.atencion {
   font-size: 3em;
   background-color: #ff0;
 }
-.seriousError {
+.errorSerio {
   @extend .error;
   @extend .attention;
   border-width: 3px;
 }
 El código Sass anterior se compila de la siguiente manera:
 
-.error, .seriousError {
+.error, .errorSerio {
   border: 1px #f00;
   background-color: #fdd;
 }
  
-.attention, .seriousError {
+.atencion, .errorSerio {
   font-size: 3em;
   background-color: #ff0;
 }
  
-.seriousError {
+.errorSerio {
   border-width: 3px;
 }
 
@@ -1155,11 +1156,11 @@ Sass también permite extender de un selector que a su vez extiende de otro sele
   border: 1px #f00;
   background-color: #fdd;
 }
-.seriousError {
+.errorSerio {
   @extend .error;
   border-width: 3px;
 }
-.criticalError {
+.errorCritico {
   @extend .seriousError;
   position: fixed;
   top: 10%;
@@ -1172,16 +1173,16 @@ Sass también permite extender de un selector que a su vez extiende de otro sele
 Ahora aplicar la clase .seriousError equivale también a aplicar la clase .error y la clase .criticalError equivale a aplicar también las clases .seriousError y .error. El código Sass anterior se compila de la siguiente manera:
 
 #+begin_src css
-.error, .seriousError, .criticalError {
+.error, .errorSerio, .errorCritico {
   border: 1px #f00;
   background-color: #fdd;
 }
  
-.seriousError, .criticalError {
+.errorSerio, .errorCritico {
   border-width: 3px;
 }
  
-.criticalError {
+.errorCritico {
   position: fixed;
   top: 10%;
   bottom: 10%;
@@ -1459,6 +1460,7 @@ Ejemplo:
 }
 #+end_src
 
+*** 
 * Directivas de control y expresiones
 
 SassScript define algunas directivas de control básicas y expresiones para incluir estilos solamente si se cumplen determinadas condiciones o para incluir el mismo estilo varias veces con ligeras variaciones.
@@ -1492,13 +1494,13 @@ p {
 La directiva @if puede ir seguida de una o más directivas @else if y una directiva @else. Si la expresión evaluada por @if es false o null, Sass evalúa por orden el resto de directivas @else if hasta que alguna no devuelva false o null. Si ninguna directiva @else if llega a ejecutarse, se ejecuta la directiva @else si existe. Ejemplo:
 
 #+begin_src scss
-$type: monster;
+$type: monstruo;
 p {
-  @if $type == ocean {
+  @if $type == oceano {
     color: blue;
   } @else if $type == matador {
     color: red;
-  } @else if $type == monster {
+  } @else if $type == monstruo {
     color: green;
   } @else {
     color: black;
@@ -1549,7 +1551,7 @@ La sintaxis habitual de la directiva @each es la siguiente @each $var in <lista 
 El funcionamiento de @each es el siguiente: se recorre toda la lista o mapa y en cada iteración, se asigna un valor diferente a la variable $var antes de compilar los estilos. Ejemplo:
 
 #+begin_src scss
-@each $animal in puma, sea-slug, egret, salamander {
+@each $animal in puma, caballo, oso, cebra {
   .#{$animal}-icon {
     background-image: url('/images/#{$animal}.png');
   }
@@ -1562,14 +1564,14 @@ Esto compila en:
 .puma-icon {
   background-image: url('/images/puma.png');
 }
-.sea-slug-icon {
-  background-image: url('/images/sea-slug.png');
+.caballo-icon {
+  background-image: url('/images/caballo.png');
 }
-.egret-icon {
-  background-image: url('/images/egret.png');
+.oso-icon {
+  background-image: url('/images/oso.png');
 }
-.salamander-icon {
-  background-image: url('/images/salamander.png');
+.cebra-icon {
+  background-image: url('/images/cebra.png');
 }
 #+end_src
 
@@ -1579,8 +1581,8 @@ La directiva @each también puede utilizar varias variables de forma simultánea
 
 #+begin_src scss
 @each $animal, $color, $cursor in (puma, black, default),
-                                  (sea-slug, blue, pointer),
-                                  (egret, white, move) {
+                                  (caballo, brown, pointer),
+                                  (oso, white, move) {
   .#{$animal}-icon {
     background-image: url('/images/#{$animal}.png');
     border: 2px solid $color;
@@ -1598,12 +1600,12 @@ Esto compila en:
   cursor: default;
 }
 .sea-slug-icon {
-  background-image: url('/images/sea-slug.png');
-  border: 2px solid blue;
+  background-image: url('/images/caballo.png');
+  border: 2px solid brown;
   cursor: pointer;
 }
 .egret-icon {
-  background-image: url('/images/egret.png');
+  background-image: url('/images/oso.png');
   border: 2px solid white;
   cursor: move;
 }
@@ -1671,7 +1673,7 @@ Los /mixins/ permiten definir estilos reutilizables en toda la hoja de estilos s
 Los mixins se definen con la directiva @mixin seguida del nombre del mixin (y opcionalmente una lista de argumentos) y seguida por el bloque de contenidos que definen los estilos del mixin. El siguiente ejemplo define un mixin sin argumentos llamado large-text:
 
 #+begin_src scss
-@mixin large-text {
+@mixin texto-largo {
   font: {
     family: Arial;
     size: 20px;
@@ -1702,8 +1704,8 @@ Además de estilos, los mixins también pueden contener selectores, incluso con 
 Los mixins se incluyen en las hojas de estilos mediante la directiva @include seguida del nombre del mixin y opcionalmente por una lista de argumentos. El resultado es que todos los estilos definidos por el mixin se incluyen en el mismo punto en el que se llama al mixin. Ejemplo:
 
 #+begin_src scss
-.page-title {
-  @include large-text;
+.texto-pagina {
+  @include texto-largo;
   padding: 4px;
   margin-top: 10px;
 }
@@ -1712,7 +1714,7 @@ Los mixins se incluyen en las hojas de estilos mediante la directiva @include se
 Esto compila en:
 
 #+begin_src css
-.page-title {
+.titulo-pagina {
   font-family: Arial;
   font-size: 20px;
   font-weight: bold;
@@ -1725,14 +1727,14 @@ Esto compila en:
 Los mixins también se pueden incluir en el nivel jerárquico superior de la hoja de estilos, es decir, fuera de cualquier selector o regla. Obviamente, estos mixins no pueden incluir ninguna referencia al selector padre, ya que se produciría un error. Ejemplo:
 
 #+begin_src scss
-@mixin silly-links {
+@mixin enlace-tonto {
   a {
     color: blue;
     background-color: red;
   }
 }
  
-@include silly-links;
+@include enlace-tonto;
 #+end_src
 
 Esto se compila de la siguiente manera:
@@ -1747,13 +1749,16 @@ a {
 Los mixins también pueden incluir en su interior otros mixins. Ejemplo:
 
 #+begin_src scss
-@mixin compound {
-  @include highlighted-background;
-  @include header-text;
+
+@mixin fondo-resaltado { background-color: #fc0; }
+@mixin texto-cabecera { font-size: 20px; }
+
+@mixin compuesto {
+  @include fondo-resaltado;
+  @include texto-cabecera;
 }
  
-@mixin highlighted-background { background-color: #fc0; }
-@mixin header-text { font-size: 20px; }
+
 #+end_src
 
 Aunque no es muy habitual, los mixins también pueden incluirse a sí mismos de manera recursiva. En las versiones de Sass anteriores a la 3.3 esta recursividad no estaba permitida.
@@ -1765,7 +1770,7 @@ Los argumentos de los mixins pueden estar formados por cualquier expresión Sass
 Cuando se define un mixin, los argumentos se definen como una serie de variables separadas por comas, y todo ello encerrado entre paréntesis. Después, cuando se utiliza un mixin deben pasarse los valores de los argumentos en ese mismo orden. Ejemplo:
 
 #+begin_src scss
-@mixin sexy-border($color, $width) {
+@mixin borde-sexy($color, $width) {
   border: {
     color: $color;
     width: $width;
@@ -1773,7 +1778,7 @@ Cuando se define un mixin, los argumentos se definen como una serie de variables
   }
 }
  
-p { @include sexy-border(blue, 1in); }
+p { @include borde-sexy(blue, 1in); }
 #+end_src
 
 Este código se compila como:
@@ -1789,7 +1794,7 @@ p {
 Los mixins también pueden especificar valores por defecto para sus argumentos. De esta manera, si al llamar a un mixin no se pasa el valor de ese argumento, se utiliza en su lugar el valor por defecto. Ejemplo:
 
 #+begin_src scss
-@mixin sexy-border($color, $width: 1in) {
+@mixin borde-sexy($color, $width: 1in) {
   border: {
     color: $color;
     width: $width;
@@ -1822,8 +1827,8 @@ h1 {
 Cuando se utiliza un mixin también es posible indicar el nombre de sus argumentos:
 
 #+begin_src scss
-p { @include sexy-border($color: blue); }
-h1 { @include sexy-border($color: blue, $width: 2in); }
+p { @include borde-sexy($color: blue); }
+h1 { @include borde-sexy($color: blue, $width: 2in); }
 #+end_src
 
 Aunque esta sintaxis es menos concisa que la anterior, hace que las hojas de estilos sean más fáciles de leer. Además permite que los mixins tengan interfaces más flexibles y fáciles de usar, aún cuando incluyan muchos argumentos.
@@ -1879,6 +1884,7 @@ $value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
   @include colors($value-map...);
 }
 
+
 #+end_src
 
 Esto compila a:
@@ -1910,6 +1916,7 @@ Los argumentos variables pueden servir por ejemplo para crear un mixin que modif
 .stylish {
   // El argumento $width se pasa con nombre al mixin "stylish-mixin"
   @include wrapped-stylish-mixin(#00ff00, $width: 100px);
+
 }
 #+end_src
 
