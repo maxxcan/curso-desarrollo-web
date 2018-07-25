@@ -1868,20 +1868,20 @@ Los argumentos variables también contienen todos los argumentos con nombre pasa
 Los argumentos variables también se pueden utilizar cuando se llama a un mixin. Utilizando la misma sintaxis de los tres puntos (...) puedes expandir una lista de valores para pasar cada elemento de la lista como si fuera un argumento. Cuando esta sintaxis se utiliza con mapas, cada par clave: valor se transforma en un argumento con el nombre clave. Ejemplo:
 
 #+begin_src scss
-@mixin colors($text, $background, $border) {
-  color: $text;
-  background-color: $background;
-  border-color: $border;
+@mixin colores($texto, $fondo, $borde) {
+  color: $texto;
+  background-color: $fondo;
+  border-color: $borde;
 }
  
-$values: #ff0000, #00ff00, #0000ff;
-.primary {
+$valores: #ff0000, #00ff00, #0000ff;
+.primario {
   @include colors($values...);
 }
  
-$value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
-.secondary {
-  @include colors($value-map...);
+$mapa-de-valores: (texto: #00ff00, fondo: #0000ff, borde: #ff0000);
+.secundario {
+  @include colors($mapa-de-valores...);
 }
 
 
@@ -1890,13 +1890,13 @@ $value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
 Esto compila a:
 
 #+begin_src css
-.primary {
+.primario {
   color: #ff0000;
   background-color: #00ff00;
   border-color: #0000ff;
 }
  
-.secondary {
+.secundario {
   color: #0000ff;
   background-color: #ff0000;
   border-color: #00ff00;
@@ -1965,20 +1965,20 @@ Los bloques de contenidos pasados a los mixins se evalúan en el contexto en el 
 
 #+begin_src scss
 $color: white;
-@mixin colors($color: blue) {
+@mixin colores($color: blue) {
   background-color: $color;
   @content;
   border-color: $color;
 }
 .colors {
-  @include colors { color: $color; }
+  @include colores { color: $color; }
 }
 #+end_src
 
 Que compila a:
 
 #+begin_src css
-.colors {
+.colores {
   background-color: blue;
   color: white;
   border-color: blue;
