@@ -1875,12 +1875,12 @@ Los argumentos variables también se pueden utilizar cuando se llama a un mixin.
  
 $valores: #ff0000, #00ff00, #0000ff;
 .primario {
-  @include colors($values...);
+  @include colores($valores...);
 }
  
 $mapa-de-valores: (texto: #00ff00, fondo: #0000ff, borde: #ff0000);
 .secundario {
-  @include colors($mapa-de-valores...);
+  @include colores($mapa-de-valores...);
 }
 
 
