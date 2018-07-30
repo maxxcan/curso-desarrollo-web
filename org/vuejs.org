@@ -1,0 +1,268 @@
+#+title: Introducción a VueJS
+#+author: Patricio Martínez
+#+email: maxxcan@argonauta
+
+
+* Prefacio 
+
+
+La mejor información la tenemos en la propia guía de la Web Oficial https://es-vuejs.github.io/vuejs.org/v2/guide/
+
+* Qué es VueJS
+
+VueJS es un framework progresivo de JavaScript usado para desarrollar interfaces web interactivas. Está enfocado en la parte de la vista, lo que es el front-end. Es muy fácil integrar con otros proyectos y librerías. 
+
+
+* Características de VueJS
+
+** Virtual DOM 
+
+VirtualJS hace uso del Virtual DOM, el cual es usado en otros frameworks como React, Ember, etc. Los cambios no se hacen directamente en el DOM, en vez de eso una réplica del DOM es creada la cual está presente en el formulario de JavaScript de la estructura de datos. Cualquier cambio que sea hecho, se hace sobre esa estructura de datos y más tarde es comparada con la estructura original. Los cambios finales serán entonces actualizados al DOM real. Esto es bueno en terminos de optimización, ya que los cambios son menos pesados y se pueden realizar más rápidos. 
+
+**  Unión de datos 
+
+La unión de datos (o data binding) ayuda a manipular o asignar valores a los atributos HTML, cambiar estilos, asignar clases con la ayuda de la directiva de unión llamada *v-bind* disponible en VueJS
+
+** Componentes 
+
+Los componentes son una importante característica de VueJS que ayhuda a crear elementos propios, los cuales pueden ser reutilizados en HTML. 
+
+** Manejador de Eventos 
+
+*v-on* es el atributo añadido a los elementos DOM para escuchar eventos en VueJS
+
+** Animaciones/Transiciones 
+
+VueJS provee de varios mecanismos para aplicar transiciones a elementos HTML cuando ellos son añadidos o modificados o eliminados desde el DOM. VueJS tiene componnentes que necesitan envolver el elemento en el que queremos que se produzca el efecto de la transición. Podemos añadir fácilmente librerías de animación de terceros y también añadir más interactividad a la interfaces. 
+
+** Propiedades Calculadas 
+
+Esta es una de las características más importantes de VueJS. Ayuda a escuchar los cambios hecho en los elementos de la UI y realiza los cálculos necesarios. Así, no hay necesidad de código para esto. 
+
+** Plantillas 
+
+VueJS provee plantillas basadas en HTML que unen el DOM con las instancias de datos de Vue. Vue compila la plantilla dentro de las funciones de renderizado del DOM virtual. Podemos hacer uso de las plantillas y sus funciones de renderizado y así podemos sustituir la plantilla con la función de renderizado. 
+
+** Directivas                            
+
+VueJS tiene directivas como *v-if, v-else, v-on, v-bind y v-model*, las cuales son usadas para mejorar distitnas acciones en el frontend. 
+
+** Observadores 
+
+Los observadores (watchers) están aplicados a los elementos de datos que cambian. Por ejemplo, los elementos de entrada de los formularios. 
+
+** Encaminado 
+
+La navegación entre páginas es mejorada con la ayuda del vue-router. 
+
+** Poco peso
+
+Los scripts de VueJS son muy ligeros y su mejora es muy rápida
+
+** Vue-cli
+
+VueJS puede ser instalado gracias al comando en línea *vue-cli*. Éste ayuda a la construcción y compilación de una forma fácil. 
+
+* Configurando el entorno de desarrollo para VueJS
+
+Hay muchas formas de instalar VueJS. Algunas de esas formas las veremos más adelante
+
+** Usando el tag <script> directamente en el fichero HTML 
+
+#+BEGIN_SRC html
+  <html>
+  <head>
+  <script type = "text/javascript" src = "vue.min.js"></script>
+  </head>
+  <body></body>
+  </html>
+#+END_SRC
+
+Una vez hecho esto podemos ir a la [[https://vuejs.org/v2/guide/installation.html][página de instalación]] de VueJS  y descargarnos lo necesario. Hay dos versiones una para producción y otra para desarrollo. La versión de desarrollo no está minimizada, por otro lado la versión de producción está minimizada. 
+
+** Usando CDN
+
+TAmbién podmeos usar el archivo VueJS desde la biblioteca de CDN. El enlace es el siguietne: 
+
+Además también está disponible en jsDelivr y cnjs. 
+
+** Usando NPM 
+
+Para aplicaciones granes con VueJS es recomendable instalar el paquete npm. Éste viene con Browserify y Webpack y otras herramientas necesarias, las cuales ayudarán al desarrollo. Para instalarlo usando npm tendremos que ejecutar el siguiente comando: 
+
+#+BEGIN_SRC bash
+npm install vue
+#+END_SRC
+
+** Usando la herramienta de comandos de Vue 
+
+VueJS también proporciona una herramienta de consola CLI para instalar vue y comenzar con la activación del servidor. Para instalar usando CLI, necesitamos tenerlo instalado con el siguiente comando: 
+
+#+BEGIN_SRC bash
+npm install -g vue-cli
+#+END_SRC
+
+Ahora crearemos el proyecto con el siguiente comando:
+
+#+BEGIN_SRC bash
+vue create webpack miproyecto
+#+END_SRC
+
+Una vez terminado el proceso usaremos los siguiente comandos:
+
+#+BEGIN_SRC bash
+cd miproyecto
+npm install 
+npm run dev
+#+END_SRC
+
+Una vez hecho esto abriremos el navegador e ingresando en la dirección *http://localhost:8080* obtendremos lo siguiente:
+
+
+
+La estructura del proyecto es la siguiente:
+
+
+* Introducción 
+
+VueJS es un framework de javascript para construir interfaces de usuario. Esto hace que la parte principal esté enfocada en la capa de la vista y esto es muy fácil de entender. La versión de Vue que estamos usando ahora es la 2.0.
+
+Como Vue es básicamente construido para desarrolladores de frontend, vamos a lidiar con muchos archivos  HTML, JavaScript y CSS. Para entender los detalles, empezaremos con un ejemplo simple.
+
+En este ejemplo, vamos a usar la versión de desarrollo de VueJS
+
+Ejemplo: 
+
+#+BEGIN_SRC html
+  <html>
+  <head>
+  <title>Introducción a VueJS</title>
+  <script type="text/javascript" src="js/vue.js"></script>
+  </head>
+  <body>
+  <div id= "intro" style ="text-align:center;">
+  <h1>{{ message }}</h1>
+  </div>
+  <script type = "text/javascript">
+  var vue_det = new Vue({
+  el:'#intro',
+  data: {
+  message: 'MI primera tarea en VueJS'
+  }
+  });
+  <script>
+  </body>
+  </html>
+#+END_SRC
+
+Esta es la primera aplicación que hemos creado usando VueJS. 
+
+Podemos cambiar el mensaje usando la extensión de vue-devtools para firefox o Chrome
+
+
+* Instancias 
+
+Para empezar con VueJS, necesitamos craer una instancia de Vue, la cual es llamada instancia raíz.
+
+** Sintaxis 
+
+#+BEGIN_SRC js
+  var app = new Vue({
+      //opciones 
+  })
+#+END_SRC
+
+Echemos un vistazo al ejemplo anterior para entender lo que necesita para ser parte del constructor Vue.
+
+#+BEGIN_SRC html
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+      <div id = "vue_det">
+         <h1>Firstname : {{firstname}}</h1>
+         <h1>Lastname : {{lastname}}</h1>
+         <h1>{{mydetails()}}</h1>
+      </div>
+      <script type = "text/javascript" src = "js/vue_instance.js"></script>
+   </body>
+</html>
+#+END_SRC
+
+Veamos el fichero vue_instance.js
+
+#+BEGIN_SRC js
+  var vm = new Vue({
+      el:'#vue_det',
+      data: {
+          firstname : "Ria",
+          lastname : "Singh",
+          address  : "Mumbai"
+      },
+      methods: {
+          mydetails: function(){
+              return "I am "+this.firstname +" "+this.lastname;
+          } 
+      }
+  })
+#+END_SRC
+
+Para VueJS hay un parámetro llamado *el*. Éste toma el id del elemento DOM. En el ejemplo anterior tenemos el id #vue_det. Est el id del elemento div el cual está presente en el fichero html. 
+
+#+BEGIN_SRC html
+<div id="vue_det"></div>
+#+END_SRC
+
+Lo siguiente es definir el objeto data. Obtener sus valores y asignarlos dentro de un div. 
+
+#+BEGIN_SRC html
+<div id = "vue_det">
+   <h1>Firstname : {{firstname}}</h1>
+   <h1>Lastname : {{lastname}}</h1>
+</div>
+#+END_SRC
+
+También tenemos un método donde hemos definido una función que devuelve un valor. La asignaremos dentro de un div:
+
+#+BEGIN_SRC html
+<h1>{{mydetails()}}</h1>
+#+END_SRC
+
+* Plantillas 
+
+Ahora vamos a aprender como obtener una salida en un formulario. 
+
+Para entender esto, vamos a considerar el siguiente ejemplo:
+
+#+BEGIN_SRC html
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+      <div id = "vue_det">
+         <h1>Firstname : {{firstname}}</h1>
+         <h1>Lastname : {{lastname}}</h1>
+         <div>{{htmlcontent}}</div>
+      </div>
+      <script type = "text/javascript" src = "js/vue_template.js"></script>
+   </body>
+</html>
+#+END_SRC
+
+Fichero vue_template.js
+
+#+BEGIN_SRC js
+var vm = new Vue({
+   el: '#vue_det',
+   data: {
+      firstname : "Ria",
+      lastname  : "Singh",
+      htmlcontent : "<div><h1>Vue Js Template</h1></div>"
+   }
+})
+#+END_SRC
+
