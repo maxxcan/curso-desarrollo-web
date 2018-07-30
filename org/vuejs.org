@@ -266,3 +266,82 @@ var vm = new Vue({
 })
 #+END_SRC
 
+Con esto lo que vamos a ver en el navegador es lo siguiente:
+
+
+
+Si vemos el contenido html está mostrado igual que la variable htmlcontent, y esto no es lo que queremos. Queremos que muestre un html adecuado en el navegador.
+
+Para esto, usamos la directiva *v-html*. Así en el momento que asignamos la directiva v-html al elemento html, VueJS sabrá que debe mostrar contenido html bien formado. Si añadimos esa directiva notaremos el cambio.
+
+#+BEGIN_SRC html
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+      <div id = "vue_det">
+         <h1>Firstname : {{firstname}}</h1>
+         <h1>Lastname : {{lastname}}</h1>
+         <div v-html = "htmlcontent"></div>
+      </div>
+      <script type = "text/javascript" src = "js/vue_template.js"></script>
+   </body>
+</html>
+#+END_SRC
+
+Ahora, no necesitamos las dobles llaves para mostrar el contenido html. 
+
+#+BEGIN_SRC js
+var vm = new Vue({
+   el: '#vue_det',
+   data: {
+      firstname : "Ria",
+      lastname  : "Singh",
+      htmlcontent : "<div><h1>Vue Js Template</h1></div>"
+   }
+})
+#+END_SRC
+
+ 
+* Componentes
+
+Los componentes en VueJS es uno de las características más importantes de VueJS para crear nuestros propios elementos y poder reutilizarlos. 
+
+Veamos el siguiente ejemplo y creemos un componente: 
+
+Ejemplo: 
+
+#+BEGIN_SRC html
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+      <div id = "component_test">
+         <testcomponent></testcomponent>
+      </div>
+      <div id = "component_test1">
+         <testcomponent></testcomponent>
+      </div>
+      <script type = "text/javascript" src = "js/vue_component.js"></script>
+   </body>
+</html>
+#+END_SRC
+
+Fichero vue_component.js 
+
+#+BEGIN_SRC js
+Vue.component('testcomponent',{
+   template : '<div><h1>This is coming from component</h1></div>'
+});
+var vm = new Vue({
+   el: '#component_test'
+});
+var vm1 = new Vue({
+   el: '#component_test1'
+});
+#+END_SRC
+
