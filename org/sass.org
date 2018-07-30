@@ -1881,7 +1881,7 @@ $valores: #ff0000, #00ff00, #0000ff;
 $mapa-de-valores: (texto: #00ff00, fondo: #0000ff, borde: #ff0000);
 .secundario {
   @include colores($mapa-de-valores...);
-}
+} 
 
 
 #+end_src
@@ -2119,3 +2119,5 @@ Los importadores de Sass se encargan de encontrar los archivos Sass adecuados a 
 Cada importador se encarga de gestionar un tipo diferente de importación. Todos ellos se pueden configurar en la opción de configuración :load_paths y se pueden utilizar junto a los importadores normales del sistema de archivos.
 
 Cuando se resuelve el valor de una directiva @import, Sass recorre todos los importadores registrados hasta encontrar con alguno que pueda importar el valor indicado. Los importadores propios siempre deben heredar de la clase {Sass::Importers::Base}.
+
+Hablaremos más en el siguiente curso de FullStack
