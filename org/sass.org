@@ -1161,7 +1161,7 @@ Sass también permite extender de un selector que a su vez extiende de otro sele
   border-width: 3px;
 }
 .errorCritico {
-  @extend .seriousError;
+  @extend .errorSerio;
   position: fixed;
   top: 10%;
   bottom: 10%;
@@ -1460,7 +1460,6 @@ Ejemplo:
 }
 #+end_src
 
-*** 
 * Directivas de control y expresiones
 
 SassScript define algunas directivas de control básicas y expresiones para incluir estilos solamente si se cumplen determinadas condiciones o para incluir el mismo estilo varias veces con ligeras variaciones.
