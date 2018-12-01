@@ -10,14 +10,78 @@ La mejor información la tenemos en la propia guía de la Web Oficial https://es
 
 * Qué es VueJS
 
-VueJS es un framework progresivo de JavaScript usado para desarrollar interfaces web interactivas. Está enfocado en la parte de la vista, lo que es el front-end. Es muy fácil integrar con otros proyectos y librerías. 
+VueJS es un framework progresivo de JavaScript usado para desarrollar interfaces web interactivas. Está enfocado en la parte de la vista, lo que es el front-end. Es muy fácil integrar con otros proyectos y librerías. Por otro lado, Vue también es perfectamente capaz de soportar aplicaciones sofisticadas de una sola página (SPA) cuando se utiliza en combinación con *herramientas modernas y librerías compatibles*.
 
+** Empezando     
+
+La manera más sencilla de probar Vue.js es haciendo un sencillo "hola mundo". Para ello vamos a crear dos ficheros uno html y otro javascript con la parte de vuejs.
+
+Además vamos a crear un fichero package.json para poder usar el paquete npm llamado "live-server" que nos creará un servidor muy liviano para pode probar nuestra aplicación. Así que los pasos a seguir son:
+
+Instalar live-server:
+
+#+BEGIN_SRC shell
+sudo npm install -g live-server
+#+END_SRC
+
+Y crear el fichero package.json con el comando:
+
+#+BEGIN_SRC shell
+npm init 
+#+END_SRC
+
+Una vez hecho esto añadimos al fichero package.json creado lo siguiente:
+
+#+BEGIN_SRC npm
+"scripts": {
+"server": "live-server ."
+}
+#+END_SRC
+
+Para ejecutarlo escribiremos:
+
+#+BEGIN_SRC shell
+npm run server
+#+END_SRC
+
+
+Ahora vamos a crear los dos ficheros, primero el html:
+
+#+BEGIN_SRC html 
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Introducción a VueJS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/superhero/bootstrap.css">
+    </head>
+    <body>
+      <div id="saludo">
+        <h1>{{message}}</h1>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="vue.js"></script>
+  </body>
+</html>
+#+END_SRC
+
+
+Y nuestro fichero javascript lo llamaremos vue.js y llevará el siguiente código:
+
+#+BEGIN_SRC js
+var vm = new Vue({
+    el:'#saludo',
+    data: {
+        message: "Hola Mundo"
+    }
+});
+#+END_SRC
 
 * Características de VueJS
 
 ** Virtual DOM 
 
-VirtualJS hace uso del Virtual DOM, el cual es usado en otros frameworks como React, Ember, etc. Los cambios no se hacen directamente en el DOM, en vez de eso una réplica del DOM es creada la cual está presente en el formulario de JavaScript de la estructura de datos. Cualquier cambio que sea hecho, se hace sobre esa estructura de datos y más tarde es comparada con la estructura original. Los cambios finales serán entonces actualizados al DOM real. Esto es bueno en terminos de optimización, ya que los cambios son menos pesados y se pueden realizar más rápidos. 
+VirtualJS hace uso del Virtual DOM, el cual es usado en otros frameworks como React, Ember, etc. Los cambios no se hacen directamente en el DOM, en vez de eso una réplica del DOM es creada la cual está presente en el formulario de JavaScript de la estructura de datos. Cualquier cambio que sea hecho, se hace sobre esa estructura de datos y más tarde es comparada con la estructura original. Los cambios finales serán entonces actualizados al DOM real. Esto es bueno en términos de optimización, ya que los cambios son menos pesados y se pueden realizar más rápidos. 
 
 **  Unión de datos 
 
@@ -25,15 +89,15 @@ La unión de datos (o data binding) ayuda a manipular o asignar valores a los at
 
 ** Componentes 
 
-Los componentes son una importante característica de VueJS que ayhuda a crear elementos propios, los cuales pueden ser reutilizados en HTML. 
+Los componentes son una importante característica de VueJS que ayuda a crear elementos propios, los cuales pueden ser reutilizados en HTML. 
 
 ** Manejador de Eventos 
 
 *v-on* es el atributo añadido a los elementos DOM para escuchar eventos en VueJS
 
 ** Animaciones/Transiciones 
-
-VueJS provee de varios mecanismos para aplicar transiciones a elementos HTML cuando ellos son añadidos o modificados o eliminados desde el DOM. VueJS tiene componnentes que necesitan envolver el elemento en el que queremos que se produzca el efecto de la transición. Podemos añadir fácilmente librerías de animación de terceros y también añadir más interactividad a la interfaces. 
+   
+VueJS provee de varios mecanismos para aplicar transiciones a elementos HTML cuando ellos son añadidos o modificados o eliminados desde el DOM. VueJS tiene componentes que necesitan envolver el elemento en el que queremos que se produzca el efecto de la transición. Podemos añadir fácilmente librerías de animación de terceros y también añadir más interactividad a la interfaces. 
 
 ** Propiedades Calculadas 
 
@@ -43,9 +107,9 @@ Esta es una de las características más importantes de VueJS. Ayuda a escuchar 
 
 VueJS provee plantillas basadas en HTML que unen el DOM con las instancias de datos de Vue. Vue compila la plantilla dentro de las funciones de renderizado del DOM virtual. Podemos hacer uso de las plantillas y sus funciones de renderizado y así podemos sustituir la plantilla con la función de renderizado. 
 
-** Directivas                            
+** Directivas 
 
-VueJS tiene directivas como *v-if, v-else, v-on, v-bind y v-model*, las cuales son usadas para mejorar distitnas acciones en el frontend. 
+VueJS tiene directivas como *v-if, v-else, v-on, v-bind y v-model*, las cuales son usadas para mejorar distintas acciones en el frontend. 
 
 ** Observadores 
 
@@ -53,7 +117,7 @@ Los observadores (watchers) están aplicados a los elementos de datos que cambia
 
 ** Encaminado 
 
-La navegación entre páginas es mejorada con la ayuda del vue-router. 
+   La navegación entre páginas es mejorada con la ayuda del vue-router. 
 
 ** Poco peso
 
@@ -82,7 +146,7 @@ Una vez hecho esto podemos ir a la [[https://vuejs.org/v2/guide/installation.htm
 
 ** Usando CDN
 
-TAmbién podmeos usar el archivo VueJS desde la biblioteca de CDN. El enlace es el siguietne: 
+También podemos usar el archivo VueJS desde la biblioteca de CDN. El enlace es el siguiente: 
 
 Además también está disponible en jsDelivr y cnjs. 
 
@@ -122,7 +186,6 @@ Una vez hecho esto abriremos el navegador e ingresando en la dirección *http://
 
 La estructura del proyecto es la siguiente:
 
-
 * Introducción 
 
 VueJS es un framework de javascript para construir interfaces de usuario. Esto hace que la parte principal esté enfocada en la capa de la vista y esto es muy fácil de entender. La versión de Vue que estamos usando ahora es la 2.0.
@@ -159,10 +222,9 @@ Esta es la primera aplicación que hemos creado usando VueJS.
 
 Podemos cambiar el mensaje usando la extensión de vue-devtools para firefox o Chrome
 
-
 * Instancias 
 
-Para empezar con VueJS, necesitamos craer una instancia de Vue, la cual es llamada instancia raíz.
+Para empezar con VueJS, necesitamos crear una instancia de Vue, la cual es llamada instancia raíz.
 
 ** Sintaxis 
 
@@ -209,7 +271,7 @@ Veamos el fichero vue_instance.js
   })
 #+END_SRC
 
-Para VueJS hay un parámetro llamado *el*. Éste toma el id del elemento DOM. En el ejemplo anterior tenemos el id #vue_det. Est el id del elemento div el cual está presente en el fichero html. 
+Para VueJS hay un parámetro llamado *el*. Éste toma el id del elemento DOM. En el ejemplo anterior tenemos el id #vue_det. Está el id del elemento div el cual está presente en el fichero html. 
 
 #+BEGIN_SRC html
 <div id="vue_det"></div>
@@ -304,8 +366,7 @@ var vm = new Vue({
 })
 #+END_SRC
 
- 
-* Componentes
+ * Componentes
 
 Los componentes en VueJS es uno de las características más importantes de VueJS para crear nuestros propios elementos y poder reutilizarlos. 
 

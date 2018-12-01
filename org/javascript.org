@@ -97,6 +97,7 @@ Existen diversas librerías para realizar MVC en javascript, entre las más popu
 + AngularJS
 + Angular2
 + React
++ VueJS
 + etc
 
 ** NodeJS
