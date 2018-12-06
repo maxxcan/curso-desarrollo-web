@@ -593,7 +593,7 @@ Adivínalo tú solo que seguro que los sabes guapi.
 *** El método keypress()
 
 Este método activa la une la función manejadora al elemento seleccionado (normalmente formularios) cuando el navegador recibe entrada del teclado por parte del usuario. El siguiente ejemplo se muestra un mensaje cuando el teclado es pulsado y además cuenta cuantas veces es pulsado el teclado:
-
+ps -
 #+begin_src html
 <!DOCTYPE html>
 <html>
@@ -977,7 +977,7 @@ Al mismo tiempo que ocultamos/mostramos un elemento podemos hacer una llamada a 
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ejemplo de llamada a otra función mietras mostramos/ocultamos</title>
+<title>Ejemplo de llamada a otra función mientras mostramos/ocultamos</title>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <style type="text/css">
     p{

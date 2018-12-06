@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplo de rejilla con 3 columnas</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    /* Some custom styles to beautify this example */
+    .demo-content{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 300px;
+        background: #dbdfe5;
+        margin-bottom: 10px;
+    }
+    .demo-content.bg-alt{
+        background: #abb1b8;
+    }
+</style>
+</head>
+<body>
+	<div class="container">
+        <!--Fila con 4 columnas-->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+            <div class="col-md-4">
+            	<div class="demo-content bg-alt">.col-md-4</div>
+            </div>
+            <div class="col-md-4">
+            	<div class="demo-content">.col-md-4</div>
+            </div>
+        </div>
+        <hr>
+        <!--Filas con tres columnas con relación 1:4:1-->
+        <div class="row">
+            <div class="col-md-2">
+            	<div class="demo-content">.col-md-2</div>
+            </div>
+            <div class="col-md-8">
+            	<div class="demo-content bg-alt">.col-md-8</div>
+            </div>
+            <div class="col-md-2">
+            	<div class="demo-content">.col-md-2</div>
+            </div>
+        </div>
+        <hr>
+        <!--Fila con 3 columnas-->
+        <div class="row">
+            <div class="col-md-3">
+            	<div class="demo-content">.col-md-3</div>
+            </div>
+            <div class="col-md-7">
+            	<div class="demo-content bg-alt">.col-md-7</div>
+            </div>
+            <div class="col-md-2">
+            	<div class="demo-content">.col-md-2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
