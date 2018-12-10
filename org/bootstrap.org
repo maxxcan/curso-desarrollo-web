@@ -3277,10 +3277,7 @@ El menú desplegable tiene básicamente dos componentes el elemento que inicia e
 + La lista desordenada con la clase *.dropdown-menu* es el menú en sí.
 
 * Ejercicios 1ª Parte
- añsldfjañskdfjñakdfñasdfsañlsadjfñasj
-asdñlfjasdñfjsdañfj
-sadñfñasdasdfñlkasdjfñskjfañsdjakñf
-añslkdfñaskdjfñ
+
 
 * Bootstrap para dormir por las noches  
 

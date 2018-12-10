@@ -578,7 +578,6 @@ Ejemplo:
 
 [[./img/valores.hsla.png]]
 
-
 * Pseudo clases 
 
 

@@ -45,6 +45,7 @@ npm run server
 #+END_SRC
 
 
+
 Ahora vamos a crear los dos ficheros, primero el html:
 
 #+BEGIN_SRC html 
@@ -163,13 +164,13 @@ npm install vue
 VueJS también proporciona una herramienta de consola CLI para instalar vue y comenzar con la activación del servidor. Para instalar usando CLI, necesitamos tenerlo instalado con el siguiente comando: 
 
 #+BEGIN_SRC bash
-npm install -g vue-cli
+npm install -g @vue/cli-init
 #+END_SRC
 
 Ahora crearemos el proyecto con el siguiente comando:
 
 #+BEGIN_SRC bash
-vue create webpack miproyecto
+vue create miproyecto
 #+END_SRC
 
 Una vez terminado el proceso usaremos los siguiente comandos:
@@ -366,7 +367,7 @@ var vm = new Vue({
 })
 #+END_SRC
 
- * Componentes
+* Componentes
 
 Los componentes en VueJS es uno de las características más importantes de VueJS para crear nuestros propios elementos y poder reutilizarlos. 
 
@@ -406,3 +407,128 @@ var vm1 = new Vue({
 });
 #+END_SRC
 
+En el fichero html, hemos creado dos div con id component_test y component_test1. En el fichero .js mostrado a continuación dos instancias son creadas con el ids de div. Hemos creado un componente común para ser usado con las dos instancias de las vistas. 
+
+Para crear un componente, se sigue la siguiente sintaxis:
+
+#+BEGIN_SRC js
+Vue.component('nombredelcomponente',{// opciones});
+#+END_SRC
+
+Una vez que el componente es creado, el nombre del componente se convertirá en el elemento custom y el mismo puede ser usado en la instancia de Vue como elemento creado, es decir, dentro del div con el id *component_test* y *component_test1*
+
+En el fichero js, hemos usado un componente test como el nombre del componente y el mismo nombre es usado como el elemento custom dentro de los divs.
+
+Ejemplo 
+
+#+BEGIN_SRC html
+<div id = "component_test">
+<testcomponent></testcomponent>
+</div>
+<div id = "component_test1">
+<testcomponent></testcomponent>
+</div>
+#+END_SRC
+
+En el componente creado en el fichero js, hemos añadido una plantilla la cual le asignaremos una instancia HTML como vemos en el siguiente código.
+
+#+BEGIN_SRC js
+Vue.component('testcomponent', {
+template : '<div><h1>This is coming from component</h1></div>'
+});
+#+END_SRC
+
+Una vez ejecutado lo veremos en el navegador.
+
+Los componentes son dados a la etiqueta del  elemento customizado, por ejemplo, <testcomponent></testcomponent>. Sin embargo, cuando inspeccionamos el mismo en el navegador, notaremos que el tag custom en html plano presenta en la plantilla como se muestra en la siguiente captura de pantalla.
+
+También podemos hacer componentes como una parte de la instancia de vue tal como muestra el siguiente código.
+
+#+BEGIN_SRC js
+  var vm = new Vue({
+      el: '#component_test',
+      components:{
+          'testcomponent': {
+              template : '<div><h1>This is coming from component</h1></div>'>>
+          }
+      }
+  });
+#+END_SRC
+
+Esto es llamado *registro local* y el componente será parte de solo una instancia de vue creada. 
+
+Así, hemos visto los componentes básico con las opciones básicas. Ahora, vamos a añadir más opciones tales como datos y métodos. Solo como una instancia de Vue tenemos datos y métodos, componentes compartidos al mismo tiempo. Por lo tanto, extenderemos el código, el cual hemos visto con datos y métodos.
+
+Ejemplo:
+
+#+BEGIN_SRC html
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+      <div id = "component_test">
+         <testcomponent></testcomponent>
+      </div>
+      <div id = "component_test1">
+         <testcomponent></testcomponent>
+      </div>
+      <script type = "text/javascript" src = "js/vue_component.js"></script>
+   </body>
+</html>
+#+END_SRC
+
+Fichero vue_component.js
+
+#+BEGIN_SRC js
+Vue.component('testcomponent',{
+   template : '<div v-on:mouseover = "changename()" v-on:mouseout = "originalname();"><h1>Custom Component created by <span id = "name">{{name}}</span></h1></div>',
+   data: function() {
+      return {
+         name : "Ria"
+      }
+   },
+   methods:{
+      changename : function() {
+         this.name = "Ben";
+      },
+      originalname: function() {
+         this.name = "Ria";
+      }
+   }
+});
+var vm = new Vue({
+   el: '#component_test'
+});
+var vm1 = new Vue({
+   el: '#component_test1'
+});
+#+END_SRC
+
+
+* Propiedades calculadas
+
+Ya hemos visto métodos para instancias de Vue y componentes. Las propiedades calculadas son como métodos pero con algunas diferencias en comparación a los métodos, las cuales discutiremos en adelante.
+
+Al final, seremos capaces de tomar la decisión de usar métodos o propiedades calculadas.
+
+Para entender a las propiedades computadas usaremos un ejemplo.
+
+#+BEGIN_SRC html
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+      <div id = "computed_props">
+         FirstName : <input type = "text" v-model = "firstname" /> <br/><br/>
+         LastName : <input type = "text" v-model = "lastname"/> <br/><br/>
+         <h1>My name is {{firstname}} {{lastname}}</h1>
+         <h1>Using computed method : {{getfullname}}</h1>
+      </div>
+      <script type = "text/javascript" src = "js/vue_computedprops.js"></script>
+   </body>
+</html>
+#+END_SRC
