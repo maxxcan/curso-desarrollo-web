@@ -1,5 +1,23 @@
-+ CodeWars
-+ CodeCombat
-+ Code Academy
-+ Code School
-+ Udacity
+#+title: Recursos para desarrollo Web
+
+* Páginas para aprender o mejorar nuestra programación
+- CodeWars
+- CodeCombat
+- Code Academy
+- Code School
+- Udacity
+
+* Páginas de diseño
+
+- https://www.creativebloq.com/web-design/parallax-scrolling-1131762
+- https://hackr.io/blog/10-best-javascript-frameworks-2018
+- https://tutorialzine.com/2018/11/10-interesting-javascript-and-css-libraries-for-november-2018
+- https://hipertextual.com/archivo/2014/07/alternativas-twitter-bootstrap/
+- https://scotch.io/tutorials/getting-started-with-sass
+- https://www.cssdesignawards.com/articles/15-excellent-jquery-plugins-to-spice-up-your-sites/44/
+- https://quiwiq.com/analitica-web/herramientas-para-analizar-la-velocidad-de-tu-web-y-saber-que-debes-mejorar/2485
+- https://www.designrush.com/trends
+- https://www.mockplus.com/blog/post/best-website-design-2018
+- https://makeawebsitehub.com/best-web-design-software/
+- http://www.gloobs.com/blog/24-ejemplos-de-html5-jquery-css3-alucinante/
+ 
