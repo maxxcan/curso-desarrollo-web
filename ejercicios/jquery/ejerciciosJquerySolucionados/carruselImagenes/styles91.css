@@ -1,0 +1,79 @@
+#contenedorSlider, #contenedorB, .parpadeo {
+	display: block;
+}
+
+.imagen, .parpadeo, .subtitular, .titular, .cajaTextos, .fondoOscuro, .titulo {
+	position: absolute;
+}
+
+.parpadeo, .fondoOscuro, .titular {
+	width: 100%;
+	height: 100%;
+}
+
+#contenedorSlider, #contenedorB {
+	overflow: hidden;
+	position: relative;
+	margin: auto;
+	margin-top: 35px;
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.sombraIzquierda {
+   box-shadow:	-8px -2px 16px #000;
+   -webkit-box-shadow:	-8px -2px 16px #000;
+   -moz-box-shadow:	-8px -2px 16px #000;
+}
+
+.links {
+	display: none;
+}
+
+.parpadeo {
+	background: white;
+}
+
+.cajaTextos {
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid black;
+}
+
+.cajaTextos * {
+	font-family: "Trebuchet MS", Arial;
+	font-size: 13px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.fondoOscuro {
+	background: #000;
+	opacity: 0.45;
+	filter: Alpha(opacity=45);
+}
+
+.titular, .subtitular {
+	padding-left: 15px;
+}
+
+.titular {
+	line-height: 50px;
+}
+
+#contenedorB .titular {
+	line-height: 70px !important;
+}
+
+.subtitular {
+	line-height: 16px;
+	font-size: 45px;
+}
+
+#contenedorB .subtitular {
+	line-height: 24px !important;
+}
+.titulo {
+	bottom: -2px;
+	left: 41px;
+}
