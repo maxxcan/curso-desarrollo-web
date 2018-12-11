@@ -73,7 +73,7 @@ Y nuestro fichero javascript lo llamaremos vue.js y llevará el siguiente códig
 var vm = new Vue({
     el:'#saludo',
     data: {
-        message: "Hola Mundo"
+        message: "Hola"
     }
 });
 #+END_SRC

@@ -1147,7 +1147,7 @@ Para formatear texto en Bootstrap podemos usar las etiquetas *<strong>,<i>,<smal
     <p><i>Texto en itálica</i></p>
     <p><mark>Texto resaltado</mark></p>
     <p><small>Texto pequeño</small></p>
-    <p><strong>Texto fuertemente emfatizado</strong></p>
+    <p><strong>Texto fuertemente enfatizado</strong></p>
     <p>Esto es un <sub>subíndice</sub> y un <sup>superíndice</sup></p>
     <p><ins>Texto insertado</ins></p>
     <p><del>Texto eliminado</del></p>
