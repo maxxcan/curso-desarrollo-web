@@ -1,6 +1,16 @@
 #+TITLE: Introducción a Bootstrap
-#+AUTHOR: Patricio Martínez
-#+EMAIL: maxxcan@gmail.coma
+#+AUTHOR: Patricio Martínez Cano
+#+EMAIL: maxxcan@gmail.com
+#+LATEX_CLASS: book
+#+LATEX_CLASS_OPTIONS: [a4paper, twoside]
+#+LANGUAGE: es
+#+latex_header:\usepackage[spanish]{babel}
+#+latex_header: \usepackage{fancyhdr}
+#+latex_header: \usepackage{geometry}
+#+latex_header: \geometry{headheight = 0.8in}
+#+latex_header: \pagestyle{fancy}
+#+latex_header: \fancypagestyle{\fancyhf{}\fancyhead[CE]{\includegraphics[height=0.4in, keepaspectratio=true]{eoi.png}}}
+#+latex_header: \renewcommand\headrule{\makebox[\textwidth]{\rule{0.5\headwidth}{\headrulewidth}} \vskip-\headrulewidth}
 
 * Introducción
 
@@ -3276,9 +3286,5 @@ El menú desplegable tiene básicamente dos componentes el elemento que inicia e
 + El elemento *.caret* dentro del elemento disparador crea un pequeño triangulo que indica que ese elemento contiene un menú
 + La lista desordenada con la clase *.dropdown-menu* es el menú en sí.
 
-* Ejercicios 1ª Parte
-
-
-* Bootstrap para dormir por las noches  
 
 

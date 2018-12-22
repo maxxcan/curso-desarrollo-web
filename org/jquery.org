@@ -1,13 +1,17 @@
 #+TITLE: Introducción a JQuery
-#+AUTHOR: Patricio Martínez
+#+AUTHOR: Patricio Martínez Cano
 #+EMAIL: maxxcan@gmail.com
-#+DATE: \today
-#+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [a4paper, oneside]
+#+LATEX_CLASS: book
+#+LATEX_CLASS_OPTIONS: [a4paper, twoside]
 #+LANGUAGE: es
+#+latex_header:\usepackage[spanish]{babel}
+#+latex_header: \usepackage{fancyhdr}
+#+latex_header: \usepackage{geometry}
+#+latex_header: \geometry{headheight = 0.8in}
+#+latex_header: \pagestyle{fancy}
+#+latex_header: \fancypagestyle{\fancyhf{}\fancyhead[CE]{\includegraphics[height=0.4in, keepaspectratio=true]{eoi.png}}}
+#+latex_header: \renewcommand\headrule{\makebox[\textwidth]{\rule{0.5\headwidth}{\headrulewidth}} \vskip-\headrulewidth}
 
-#+latex_header:\textwidth=17cm
-#+latex_header:\oddsidemargin=0.5cm
 
 * Introducción
 
